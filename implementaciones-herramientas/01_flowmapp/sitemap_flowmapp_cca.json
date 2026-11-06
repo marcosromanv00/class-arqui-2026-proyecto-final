@@ -1,0 +1,98 @@
+{
+  "project": "Cámara de Comercio de Alajuela (CCA) - Rediseño de Arquitectura",
+  "version": "2.0.0",
+  "tool": "FlowMapp",
+  "author": "Equipo Consultor EIF-511 UNA (Marcos Román, Emanuel Soto, Allan Arce)",
+  "nodes": [
+    {
+      "id": "node-1",
+      "title": "Inicio (Home Portal CCA)",
+      "level": 0,
+      "url": "/",
+      "type": "landing",
+      "sections": ["Hero de Afiliación", "Buscador Predictivo", "Accesos Rápidos a Trámites", "Directorio Destacado", "Bolsa de Empleo", "Noticias y Eventos", "Pie de Página Institucional"]
+    },
+    {
+      "id": "node-2",
+      "parentId": "node-1",
+      "title": "1. Institucional y Gobernanza",
+      "level": 1,
+      "url": "/institucional",
+      "type": "content_hub",
+      "children": [
+        {"id": "node-2-1", "title": "Quiénes Somos (Misión, Visión, Valores)", "url": "/institucional/quienes-somos"},
+        {"id": "node-2-2", "title": "Junta Directiva y Liderazgo", "url": "/institucional/junta-directiva"},
+        {"id": "node-2-3", "title": "Estatutos y Transparencia Legal", "url": "/institucional/estatutos"},
+        {"id": "node-2-4", "title": "Historia y Centenario del Comercio Alajuelense", "url": "/institucional/historia"}
+      ]
+    },
+    {
+      "id": "node-3",
+      "parentId": "node-1",
+      "title": "2. Afiliaciones y Membresías",
+      "level": 1,
+      "url": "/afiliaciones",
+      "type": "transactional_hub",
+      "children": [
+        {"id": "node-3-1", "title": "Planes y Tarifas de Afiliación (Pyme, Corporativo)", "url": "/afiliaciones/planes"},
+        {"id": "node-3-2", "title": "Formulario de Afiliación Digital en Línea", "url": "/afiliaciones/registro"},
+        {"id": "node-3-3", "title": "Pasarela de Pago (SINPE Móvil / Tarjeta BAC)", "url": "/afiliaciones/pago"},
+        {"id": "node-3-4", "title": "Portal de Autoservicio del Afiliado", "url": "/afiliaciones/portal-socios"}
+      ]
+    },
+    {
+      "id": "node-4",
+      "parentId": "node-1",
+      "title": "3. Directorio Comercial de Alajuela",
+      "level": 1,
+      "url": "/directorio",
+      "type": "search_directory",
+      "children": [
+        {"id": "node-4-1", "title": "Búsqueda Avanzada y Filtros por Cantón", "url": "/directorio/busqueda"},
+        {"id": "node-4-2", "title": "Categorías Comerciales (Industria, Salud, Servicios)", "url": "/directorio/categorias"},
+        {"id": "node-4-3", "title": "Ficha de Perfil del Comercio Afiliado", "url": "/directorio/comercio/:slug"},
+        {"id": "node-4-4", "title": "Convenios y Descuentos para Afiliados", "url": "/directorio/convenios"}
+      ]
+    },
+    {
+      "id": "node-5",
+      "parentId": "node-1",
+      "title": "4. Servicios al Comercio",
+      "level": 1,
+      "url": "/servicios",
+      "type": "services_hub",
+      "children": [
+        {"id": "node-5-1", "title": "Asesoría Legal y Tributaria Pyme", "url": "/servicios/asesoria-legal"},
+        {"id": "node-5-2", "title": "Alquiler de Instalaciones y Salones para Eventos", "url": "/servicios/alquiler-salones"},
+        {"id": "node-5-3", "title": "Capacitación Empresarial y Webinars", "url": "/servicios/capacitaciones"},
+        {"id": "node-5-4", "title": "Bolsa de Empleo Cantonal", "url": "/servicios/bolsa-empleo"}
+      ]
+    },
+    {
+      "id": "node-6",
+      "parentId": "node-1",
+      "title": "5. Prensa y Actualidad",
+      "level": 1,
+      "url": "/actualidad",
+      "type": "news_hub",
+      "children": [
+        {"id": "node-6-1", "title": "Comunicados Oficiales", "url": "/actualidad/comunicados"},
+        {"id": "node-6-2", "title": "Boletín Económico y Comercial", "url": "/actualidad/boletin"},
+        {"id": "node-6-3", "title": "Galería de Eventos y Aniversarios", "url": "/actualidad/galeria"}
+      ]
+    },
+    {
+      "id": "node-7",
+      "parentId": "node-1",
+      "title": "6. Contacto y Soporte",
+      "level": 1,
+      "url": "/contacto",
+      "type": "contact",
+      "children": [
+        {"id": "node-7-1", "title": "Ubicación Central y Canales de Atención (WhatsApp/Tel)", "url": "/contacto/oficinas"},
+        {"id": "node-7-2", "title": "Buzón de Consultas y Denuncias Comerciales", "url": "/contacto/formulario"},
+        {"id": "node-7-3", "title": "Preguntas Frecuentes (FAQ)", "url": "/contacto/faq"}
+      ]
+    }
+  ]
+}

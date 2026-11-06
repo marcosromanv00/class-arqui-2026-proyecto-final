@@ -1,0 +1,38 @@
+{
+  "project": "Cámara de Comercio de Alajuela (CCA)",
+  "tool": "Octopus.do",
+  "wireframe_blocks_mapping": {
+    "Inicio": {
+      "blocks": [
+        {"type": "Header", "description": "Barra superior con logo CCA, buscador universal y botón CTA Afiliarse"},
+        {"type": "Hero", "description": "Titular de valor, subtítulo y 2 botones de acción: Afiliar Negocio / Directorio"},
+        {"type": "Feature Cards", "description": "Rejilla 3x1 de accesos prioritarios: Directorio, Bolsa de Empleo, Trámites"},
+        {"type": "Stats", "description": "Métricas de confianza: +650 comercios, 98 años, 14 cantones"},
+        {"type": "Grid List", "description": "Directorio destacado con comercios verificados y buscador Algolia"},
+        {"type": "CTA Banner", "description": "Llamado a formalización y digitalización del comercio local"},
+        {"type": "Footer", "description": "Pie de página institucional en 4 columnas con datos de contacto físico y legal"}
+      ]
+    },
+    "Afiliaciones": {
+      "blocks": [
+        {"type": "Header", "description": "Navegación consistente"},
+        {"type": "Pricing Table", "description": "Tabla comparativa de planes Pyme (₡15.000) vs Corporativo (₡35.000)"},
+        {"type": "Steps Wizard", "description": "Indicador de progreso de 3 pasos: Datos, Representante, Pago"},
+        {"type": "Form", "description": "Campos de entrada con validación Zod y máscaras de cédula"},
+        {"type": "Payment Module", "description": "Selector SINPE Móvil / Tarjeta con campo de comprobante bancario"},
+        {"type": "FAQ Accordion", "description": "Dudas frecuentes sobre deducibilidad de la cuota ante Hacienda"},
+        {"type": "Footer", "description": "Pie de página estándar"}
+      ]
+    },
+    "Directorio": {
+      "blocks": [
+        {"type": "Header", "description": "Navegación consistente"},
+        {"type": "Search Bar Large", "description": "Caja de búsqueda con predictivo y tags populares"},
+        {"type": "Filter Sidebar", "description": "Facetas por Cantón, Sector Comercial y Beneficio Exclusivo"},
+        {"type": "Results Grid", "description": "Tarjetas de comercios con insignia de Verificado y botón WhatsApp"},
+        {"type": "Pagination", "description": "Control de páginas o carga infinita"},
+        {"type": "Footer", "description": "Pie de página estándar"}
+      ]
+    }
+  }
+}

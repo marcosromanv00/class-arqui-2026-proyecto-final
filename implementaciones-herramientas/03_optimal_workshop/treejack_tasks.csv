@@ -1,0 +1,4 @@
+Task Number,Task Scenario and Instruction,Correct Destination Node,Success Criteria
+1,"Usted es dueño de una pizzería en Alajuela y desea afiliar su negocio a la Cámara pagando la cuota mensual mediante SINPE Móvil. ¿Dónde realizaría este trámite?","Home CCA > Afiliaciones y Membresías > Pasarela de Pago SINPE y Tarjeta",Directo en nivel 3 de Afiliaciones
+2,"Usted está buscando empleo en el área de contabilidad dentro de la provincia de Alajuela y quiere revisar las vacantes disponibles publicadas por comercios locales. ¿Hacia dónde navegaría?","Home CCA > Servicios al Comercio > Bolsa de Empleo Cantonal",Directo en nivel 3 de Servicios
+3,"Usted es un comerciante afiliado y desea consultar qué clínicas dentales o centros de salud ofrecen tarifas especiales o descuentos para miembros de la Cámara. ¿Dónde buscaría esta información?","Home CCA > Directorio Comercial de Alajuela > Convenios y Descuentos Exclusivos",Directo en nivel 3 de Directorio

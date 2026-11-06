@@ -1,0 +1,29 @@
+Inicio (Home Portal CCA)
+	1. Institucional y Gobernanza
+		1.1 Quiénes Somos (Misión, Visión, Valores)
+		1.2 Junta Directiva y Liderazgo
+		1.3 Estatutos y Transparencia Legal
+		1.4 Historia y Centenario del Comercio
+	2. Afiliaciones y Membresías
+		2.1 Planes y Tarifas de Afiliación
+		2.2 Formulario de Registro Digital
+		2.3 Pasarela de Pago SINPE y BAC
+		2.4 Portal de Autoservicio del Afiliado
+	3. Directorio Comercial de Alajuela
+		3.1 Buscador Inteligente y Filtros por Cantón
+		3.2 Categorías Comerciales
+		3.3 Ficha Oficial del Comercio Afiliado
+		3.4 Convenios y Descuentos Exclusivos
+	4. Servicios al Comercio
+		4.1 Asesoría Legal y Tributaria Pyme
+		4.2 Alquiler de Salones y Auditorio
+		4.3 Capacitación y Academia Empresarial
+		4.4 Bolsa de Empleo Cantonal
+	5. Prensa y Actualidad
+		5.1 Comunicados Oficiales
+		5.2 Boletín Económico Alajuela
+		5.3 Galería de Eventos Institucionales
+	6. Contacto y Soporte
+		6.1 Oficinas Centrales y Horarios
+		6.2 Formulario de Atención y Denuncias
+		6.3 Preguntas Frecuentes (FAQ)

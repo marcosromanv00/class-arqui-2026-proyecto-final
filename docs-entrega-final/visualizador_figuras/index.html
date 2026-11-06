@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banco de Figuras, Gráficos y Evidencias Visuales | Consultoría CCA (EIF-511)</title>
+  
+  <!-- Tipografía Serena (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg: #0b1320;
+      --surface: #131d2e;
+      --surface-card: #18253a;
+      --border: #24354f;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --primary: #38bdf8;
+      --primary-dark: #0284c7;
+      --accent-gold: #f59e0b;
+      --accent-emerald: #10b981;
+      --accent-rose: #f43f5e;
+      --font-sans: "Inter", -apple-system, sans-serif;
+      --font-mono: "JetBrains Mono", monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding-bottom: 80px;
+    }
+
+    .top-toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 19, 32, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .toolbar-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .badge-route {
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--primary);
+      padding: 3px 10px;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+
+    .nav-tabs {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }
+
+    .nav-btn {
+      background: var(--surface);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+    }
+
+    .nav-btn:hover, .nav-btn.active {
+      background: var(--primary);
+      color: #04101d;
+      font-weight: 600;
+      border-color: var(--primary);
+    }
+
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 32px 24px;
+    }
+
+    .intro-banner {
+      background: linear-gradient(135deg, rgba(2, 132, 199, 0.15), rgba(16, 185, 129, 0.1));
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 32px;
+    }
+
+    .figure-frame {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 48px;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.4);
+      position: relative;
+    }
+
+    .figure-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .figure-num {
+      color: var(--primary);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+    }
+
+    .figure-title {
+      color: #fff;
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    .figure-desc {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-top: 6px;
+      max-width: 800px;
+    }
+
+    .figure-meta-tag {
+      background: var(--surface-card);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-family: var(--font-mono);
+    }
+
+    .canvas-box {
+      background: #ffffff;
+      color: #0f172a;
+      border-radius: 8px;
+      padding: 32px;
+      overflow-x: auto;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.06);
+    }
+
+    /* Diagramas y Componentes Gráficos Nativos */
+    .sitemap-tree {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      font-size: 0.85rem;
+    }
+
+    .tree-node {
+      background: #0f223a;
+      color: #ffffff;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-weight: 600;
+      text-align: center;
+      border: 1px solid #1e3a5f;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .tree-branch-container {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .tree-column {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      min-width: 190px;
+      background: #f8fafc;
+      padding: 16px;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .tree-col-head {
+      background: #2563eb;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-weight: 600;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    .tree-leaf {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      color: #334155;
+      text-align: center;
+    }
+
+    /* Tablas de Alta Definición */
+    .render-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+      text-align: left;
+    }
+
+    .render-table th {
+      background: #0f223a;
+      color: #ffffff;
+      padding: 12px 16px;
+      font-weight: 600;
+      border: 1px solid #1e3a5f;
+    }
+
+    .render-table td {
+      padding: 12px 16px;
+      border: 1px solid #e2e8f0;
+      color: #1e293b;
+    }
+
+    .render-table tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+
+    /* Gráficos de Barras / Métricas */
+    .metrics-bar-group {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .metric-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .metric-label {
+      width: 220px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #1e293b;
+    }
+
+    .metric-bar-outer {
+      flex: 1;
+      height: 24px;
+      background: #e2e8f0;
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+    }
+
+    .metric-bar-inner {
+      height: 100%;
+      background: #0284c7;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 8px;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 600;
+      font-family: var(--font-mono);
+    }
+
+    /* Pipeline Diagram */
+    .pipeline-grid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .pipeline-step {
+      flex: 1;
+      min-width: 170px;
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .pipeline-step-title {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #0f223a;
+      margin-bottom: 6px;
+    }
+
+    .pipeline-step-desc {
+      font-size: 0.775rem;
+      color: #475569;
+    }
+
+    .pipeline-arrow {
+      font-size: 1.5rem;
+      color: #64748b;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="top-toolbar">
+    <div class="toolbar-title">
+      <span>Cámara de Comercio de Alajuela</span>
+      <span class="badge-route">Ruta Privada: entrega_final/visualizador_figuras/index.html</span>
+    </div>
+    <div style="font-size: 0.8rem; color: var(--text-muted);">
+      Haga captura con <strong>Win + Shift + S</strong> o guarde la imagen para el informe escrito.
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="intro-banner">
+      <h2 style="font-size: 1.25rem; color: #fff; margin-bottom: 6px;">Banco Gráfico de Alta Fidelidad para Documento de Consultoría</h2>
+      <p style="font-size: 0.9rem; color: var(--text-muted);">
+        Todas las figuras renderizadas a continuación están compuestas en lienzo blanco neutro con tipografía Inter, ratios de contraste WCAG AAA y cero artefactos visuales, listas para ser capturadas e insertadas en el documento de Word y PDF de la entrega final.
+      </p>
+    </div>
+
+    <!-- ==========================================
+         FIGURA 1: DIAGNÓSTICO HEURÍSTICO & REDIRECCIÓN 301
+         ========================================== -->
+    <article class="figure-frame" id="fig1">
+      <div class="figure-header">
+        <div>
+          <span class="figure-num">Figura 1</span>
+          <h2 class="figure-title">Diagnóstico Heurístico del Sitio Previo y Resolución Canónica 301</h2>
+          <p class="figure-desc">Comparativa entre la patología de duplicidad de homepages, dominios no canónicos y la arquitectura de consolidación.</p>
+        </div>
+        <span class="figure-meta-tag">Semana 1-3 · Diagnóstico</span>
+      </div>
+
+      <div class="canvas-box">
+        <table class="render-table">
+          <thead>
+            <tr>
+              <th>Ruta / Dominio Auditado</th>
+              <th>Estado Previo (WordPress Monolítico)</th>
+              <th>Impacto en el Usuario / Negocio</th>
+              <th>Solución Canónica Implementada</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>camara-alajuela.com</strong></td>
+              <td>Error HTTP 404 (Servidor caído)</td>
+              <td>Pérdida de tráfico orgánico y fuga de afiliados potenciales.</td>
+              <td>Redirección permanente <strong>301 Redirect</strong> hacia el dominio oficial.</td>
+            </tr>
+            <tr>
+              <td><strong>/home</strong> vs <strong>/</strong></td>
+              <td>Dos páginas de inicio activas con contenidos dispares.</td>
+              <td>Desorientación, canibalización SEO y sobrecarga cognitiva.</td>
+              <td>Consolidación en una <strong>Homepage Canónica Única (<code>/</code>)</strong>.</td>
+            </tr>
+            <tr>
+              <td><strong>/oferentes/</strong></td>
+              <td>Mensaje vacío: <em>"No hay ofertas que coincidan"</em>.</td>
+              <td>Inutilización del servicio de vinculación laboral de la Cámara.</td>
+              <td>Rediseño como <strong>Bolsa de Empleo Regional</strong> estructurada.</td>
+            </tr>
+            <tr>
+              <td><strong>/directorio/</strong></td>
+              <td>Lista estática dividida en categorías desiertas (3-4 clics ciegos).</td>
+              <td>Frustración severa del consumidor para contactar comercios locales.</td>
+              <td><strong>Directorio Facetado</strong> con búsqueda instantánea y geolocalización.</td>
+            </tr>
+            <tr>
+              <td><strong>/documentos/</strong></td>
+              <td>Un único PDF aislado de 62 KB para afiliarse.</td>
+              <td>Fricción total: exigía imprimir, llenar a mano y llevar a la oficina.</td>
+              <td><strong>Wizard de Afiliación Digital</strong> de 3 pasos con cálculo en línea.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <!-- ==========================================
+         FIGURA 2: SITEMAP TAXONÓMICO OFICIAL (FLOWMAPP)
+         ========================================== -->
+    <article class="figure-frame" id="fig2">
+      <div class="figure-header">
+        <div>
+          <span class="figure-num">Figura 2</span>
+          <h2 class="figure-title">Arquitectura Taxonómica del Nuevo Portal Web (Sitemap Macro)</h2>
+          <p class="figure-desc">Modelado en FlowMapp con 26 nodos informativos organizados en 3 niveles de profundidad y 5 ramas maestras.</p>
+        </div>
+        <span class="figure-meta-tag">Semana 4 · FlowMapp</span>
+      </div>
+
+      <div class="canvas-box">
+        <div class="sitemap-tree">
+          <div class="tree-node" style="font-size: 1rem; padding: 12px 28px;">
+            HOMEPAGE CANÓNICA ( / )<br>
+            <span style="font-size: 0.75rem; font-weight: 400; color: #94a3b8;">Hero Search · Acceso 4x1 · Vitrina de Asociados</span>
+          </div>
+
+          <div style="width: 2px; height: 20px; background: #64748b;"></div>
+
+          <div class="tree-branch-container">
+            <!-- Rama 1: Directorio -->
+            <div class="tree-column">
+              <div class="tree-col-head">1. DIRECTORIO</div>
+              <div class="tree-leaf">1.1 Búsqueda Instantánea</div>
+              <div class="tree-leaf">1.2 Filtros Facetados (Sector)</div>
+              <div class="tree-leaf">1.3 Filtro por Distrito</div>
+              <div class="tree-leaf">1.4 Ficha Detallada de Comercio</div>
+            </div>
+
+            <!-- Rama 2: Servicios -->
+            <div class="tree-column">
+              <div class="tree-col-head">2. SERVICIOS</div>
+              <div class="tree-leaf">2.1 Asesoría Legal / Tributaria</div>
+              <div class="tree-leaf">2.2 Capacitaciones Técnicas</div>
+              <div class="tree-leaf">2.3 Convenios y Alianzas</div>
+              <div class="tree-leaf">2.4 Trámites de Patentes</div>
+            </div>
+
+            <!-- Rama 3: Bolsa de Empleo -->
+            <div class="tree-column">
+              <div class="tree-col-head">3. BOLSA DE EMPLEO</div>
+              <div class="tree-leaf">3.1 Catálogo de Vacantes</div>
+              <div class="tree-leaf">3.2 Postulación Digital</div>
+              <div class="tree-leaf">3.3 Publicar Vacante (Empresas)</div>
+            </div>
+
+            <!-- Rama 4: Afiliarse -->
+            <div class="tree-column">
+              <div class="tree-col-head">4. AFILIARSE</div>
+              <div class="tree-leaf">4.1 Beneficios de Membresía</div>
+              <div class="tree-leaf">4.2 Wizard de Registro (3 Pasos)</div>
+              <div class="tree-leaf">4.3 Pasarela de Pago Seguro</div>
+              <div class="tree-leaf">4.4 Pantalla de Confirmación</div>
+            </div>
+
+            <!-- Rama 5: La Cámara -->
+            <div class="tree-column">
+              <div class="tree-col-head">5. LA CÁMARA</div>
+              <div class="tree-leaf">5.1 Misión y Reseña Histórica</div>
+              <div class="tree-leaf">5.2 Junta Directiva</div>
+              <div class="tree-leaf">5.3 Contacto & Sede Alajuela</div>
+            </div>
+          </div>
+
+          <!-- Footer Utilitario -->
+          <div style="margin-top: 20px; width: 100%; max-width: 800px; background: #e2e8f0; border-radius: 6px; padding: 12px; text-align: center; border: 1px dashed #94a3b8;">
+            <strong style="color: #0f223a;">Categoría Emergente Utilitaria (Footer Común Persistente):</strong>
+            <div style="display: flex; justify-content: center; gap: 16px; margin-top: 6px; font-size: 0.8rem; color: #475569;">
+              <span>• Preguntas Frecuentes (FAQ)</span>
+              <span>• Política de Privacidad & Datos</span>
+              <span>• Reglamentos Gremiales</span>
+              <span>• Enlace Waze & Logística</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ==========================================
+         FIGURA 3: CARD SORTING & TREE TESTING (OPTIMAL WORKSHOP)
+         ========================================== -->
+    <article class="figure-frame" id="fig3">
+      <div class="figure-header">
+        <div>
+          <span class="figure-num">Figura 3</span>
+          <h2 class="figure-title">Validación Empírica: Dendrograma de Card Sorting y Tasas de Tree Testing</h2>
+          <p class="figure-desc">Resultados experimentales en OptimalSort (26 tarjetas) y Treejack para 3 tareas críticas.</p>
+        </div>
+        <span class="figure-meta-tag">Semana 6 · Optimal Workshop</span>
+      </div>
+
+      <div class="canvas-box">
+        <h4 style="font-size: 0.95rem; margin-bottom: 12px; color: #0f223a;">1. Matriz de Similitud y Porcentaje de Acuerdo (OptimalSort)</h4>
+        <table class="render-table" style="margin-bottom: 24px;">
+          <thead>
+            <tr>
+              <th>Núcleo Conceptual Identificado</th>
+              <th>Tarjetas Informadas Asignadas</th>
+              <th>% Acuerdo Participantes</th>
+              <th>Hallazgo Metodológico</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Núcleo de Servicios Gremiales</strong></td>
+              <td>Asesoría Legal, Capacitaciones, Convenios, Empleo</td>
+              <td style="color: #059669; font-weight: 600;">100% (Unánime)</td>
+              <td>Cohesión absoluta entre la oferta transaccional de apoyo a pymes.</td>
+            </tr>
+            <tr>
+              <td><strong>Núcleo de Afiliación Digital</strong></td>
+              <td>Beneficios, Formulario Wizard, Aranceles, Reglamentos</td>
+              <td style="color: #059669; font-weight: 600;">100% (Unánime)</td>
+              <td>Identificado como flujo secuencial autónomo orientado a conversión.</td>
+            </tr>
+            <tr>
+              <td><strong>Núcleo Institucional</strong></td>
+              <td>Quiénes Somos, Misión, Junta Directiva</td>
+              <td style="color: #059669; font-weight: 600;">100% (Unánime)</td>
+              <td>Confirmación de jerarquía institucional en navegación principal.</td>
+            </tr>
+            <tr>
+              <td><strong>Categoría Emergente "Footer"</strong></td>
+              <td>Preguntas Frecuentes, Políticas de Privacidad</td>
+              <td style="color: #2563eb; font-weight: 600;">100% (Descubrimiento)</td>
+              <td>Los participantes agruparon de forma espontánea estas páginas fuera del menú principal.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4 style="font-size: 0.95rem; margin-bottom: 12px; color: #0f223a;">2. Desempeño en Tareas de Encontrabilidad (Treejack Tree Testing)</h4>
+        <div class="metrics-bar-group">
+          <div class="metric-row">
+            <div class="metric-label">Tarea 1: Localizar Wizard de Afiliación</div>
+            <div class="metric-bar-outer">
+              <div class="metric-bar-inner" style="width: 95%;">95% Éxito Directo (18 seg)</div>
+            </div>
+          </div>
+          <div class="metric-row">
+            <div class="metric-label">Tarea 2: Filtrar Taller en El Coyol</div>
+            <div class="metric-bar-outer">
+              <div class="metric-bar-inner" style="width: 90%; background: #059669;">90% Éxito Directo (14 seg)</div>
+            </div>
+          </div>
+          <div class="metric-row">
+            <div class="metric-label">Tarea 3: Postularse a Empleo Contable</div>
+            <div class="metric-bar-outer">
+              <div class="metric-bar-inner" style="width: 92%; background: #2563eb;">92% Éxito Directo (22 seg)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ==========================================
+         FIGURA 4: PIPELINE DE BÚSQUEDA INSTANTÁNEA (ALGOLIA)
+         ========================================== -->
+    <article class="figure-frame" id="fig4">
+      <div class="figure-header">
+        <div>
+          <span class="figure-num">Figura 4</span>
+          <h2 class="figure-title">Arquitectura del Motor de Búsqueda Instantánea y Facetas</h2>
+          <p class="figure-desc">Pipeline de indexación, tolerancia a errores tipográficos y recuperación instantánea en menos de 20ms.</p>
+        </div>
+        <span class="figure-meta-tag">Semana 10 · Algolia + Azure Search</span>
+      </div>
+
+      <div class="canvas-box">
+        <div class="pipeline-grid">
+          <div class="pipeline-step">
+            <div class="pipeline-step-title">1. Entrada del Usuario</div>
+            <div class="pipeline-step-desc">Término escrito (ej: <em>"mecanico en coyol"</em> con error tipográfico)</div>
+          </div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-step">
+            <div class="pipeline-step-title">2. Normalizador Semántico</div>
+            <div class="pipeline-step-desc">Eliminación de diacríticos, minúsculas y mapeo de sinónimos locales costarricenses</div>
+          </div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-step">
+            <div class="pipeline-step-title">3. Índice Invertido</div>
+            <div class="pipeline-step-desc">Cruce de <code>searchableAttributes</code> (nombre, sector, tags, dirección)</div>
+          </div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-step">
+            <div class="pipeline-step-title">4. Filtrado Facetado</div>
+            <div class="pipeline-step-desc">Intersección de <code>districtFacet</code> y <code>sectorFacet</code> en cliente</div>
+          </div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-step" style="background: #ecfdf5; border-color: #10b981;">
+            <div class="pipeline-step-title" style="color: #059669;">5. Despliegue Instantáneo</div>
+            <div class="pipeline-step-desc">Fichas con badge de Verificado CCA en <20ms</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ==========================================
+         FIGURA 5: CUSTOMER JOURNEY MAP (MIRO)
+         ========================================== -->
+    <article class="figure-frame" id="fig5">
+      <div class="figure-header">
+        <div>
+          <span class="figure-num">Figura 5</span>
+          <h2 class="figure-title">Customer Journey Map del Afiliado: Don Carlos y Licda. Valeria</h2>
+          <p class="figure-desc">Modelado de la experiencia en Miro a través de 4 fases, emociones y puntos de contacto.</p>
+        </div>
+        <span class="figure-meta-tag">Semana 12 · Miro (CJM)</span>
+      </div>
+
+      <div class="canvas-box">
+        <table class="render-table">
+          <thead>
+            <tr>
+              <th>Fase del Journey</th>
+              <th>Puntos de Contacto</th>
+              <th>Pensamiento / Emoción</th>
+              <th>Puntos de Dolor Resueltos</th>
+              <th>Oportunidad de Arquitectura</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1. Descubrimiento</strong></td>
+              <td>Buscador Google, Enlace de Municipalidad, Portada CCA.</td>
+              <td><em>"¿Para qué sirve asociarme si tengo patente?"</em> (Escéptico)</td>
+              <td>Se elimina la página vacía; se expone propuesta de valor clara y vitrina de empresas alajuelenses.</td>
+              <td>Barra de búsqueda en Hero y selector de perfiles sin fricción.</td>
+            </tr>
+            <tr>
+              <td><strong>2. Evaluación</strong></td>
+              <td>Directorio Comercial, Tabla de Planes, FAQ.</td>
+              <td><em>"Quiero ver si mi competencia está asociada y qué costo tiene."</em> (Analítico)</td>
+              <td>Transparencia total de cuotas (₡15.000 / ₡35.000 / ₡75.000) sin PDFs ocultos.</td>
+              <td>Calculadora e-commerce interactiva con IVA desglegado y ahorro anual.</td>
+            </tr>
+            <tr>
+              <td><strong>3. Afiliación Digital</strong></td>
+              <td>Wizard por pasos, Pasarela SINPE / Tarjeta.</td>
+              <td><em>"Espero que no me pidan ir a hacer fila a las oficinas."</em> (Exigente)</td>
+              <td>De un trámite manual de 5 días a un flujo en línea de 3 minutos con radicado digital.</td>
+              <td>Validación de cédula jurídica reactiva y confirmación con código único.</td>
+            </tr>
+            <tr>
+              <td><strong>4. Fidelización & Uso</strong></td>
+              <td>Bolsa de Empleo, Asesoría Legal, Networking.</td>
+              <td><em>"Necesito un contador y contratar un mecánico."</em> (Satisfecho)</td>
+              <td>Bolsa de empleo antes inactiva ahora permite publicar vacantes y filtrar currículos locales.</td>
+              <td>Asistente Virtual CCA con RAG para resolver dudas 24/7 sobre trámites.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <!-- ==========================================
+         FIGURA 6: ARQUITECTURA RAG DEL ASISTENTE VIRTUAL IA
+         ========================================== -->
+    <article class="figure-frame" id="fig6">
+      <div class="figure-header">
+        <div>
+          <span class="figure-num">Figura 6</span>
+          <h2 class="figure-title">Arquitectura del Asistente Virtual Institucional (RAG + AI Generativa)</h2>
+          <p class="figure-desc">Estructura de recuperación contextual para responder sobre reglamentos y trámites sin alucinaciones.</p>
+        </div>
+        <span class="figure-meta-tag">Semana 13 · IA Generativa</span>
+      </div>
+
+      <div class="canvas-box">
+        <div class="pipeline-grid">
+          <div class="pipeline-step">
+            <div class="pipeline-step-title">Consulta Usuario</div>
+            <div class="pipeline-step-desc">Pregunta en lenguaje natural sobre costos o trámites de patentes</div>
+          </div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-step">
+            <div class="pipeline-step-title">Filtro de Intención</div>
+            <div class="pipeline-step-desc">Detección de tópicos: Membresía, Municipalidad, Directorio o Empleo</div>
+          </div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-step">
+            <div class="pipeline-step-title">Base RAG Institucional</div>
+            <div class="pipeline-step-desc">Estatutos de la CCA, Ley de Patentes de Alajuela y Catálogo 2026</div>
+          </div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-step" style="background: #f8fafc; border-color: #0284c7;">
+            <div class="pipeline-step-title" style="color: #0284c7;">Respuesta con Respaldo</div>
+            <div class="pipeline-step-desc">Texto explicativo + Canal directo de WhatsApp (+506 8888-2222)</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+</body>
+</html>

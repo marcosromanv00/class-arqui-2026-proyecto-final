@@ -1,0 +1,62 @@
+[
+  {
+    "id": "persona-1",
+    "name": "Don Álvaro Solano Montero",
+    "role": "Dueño de Ferretería Familiar",
+    "age": 56,
+    "location": "Alajuela Centro (Calle Ancha)",
+    "digital_comfort": "Bajo - Intermedio (Utiliza WhatsApp comercial, llamadas y banca en línea móvil básica)",
+    "business_profile": "Ferretería con 22 años de operación continua en el centro de Alajuela, 6 colaboradores fijos.",
+    "quote": "Necesito que asociarme a la Cámara me dé beneficios de verdad, como convenios en pólizas del INS o descuentos en gasolineras, pero no quiero ir a perder una mañana haciendo filas ni que me pidan fotocopias.",
+    "frustrations_legacy_site": [
+      "El sitio viejo no tenía botón de afiliarse; solo un correo al que nadie respondía.",
+      "No podía pagar la cuota de la cámara por SINPE Móvil ni consultar mi estado de cuenta.",
+      "El directorio de comercios era un archivo PDF desactualizado del 2018 donde su ferretería ni aparecía."
+    ],
+    "goals": [
+      "Completar la afiliación de su negocio en menos de 5 minutos desde su teléfono celular.",
+      "Tener su comercio verificado en el Directorio Digital con botón directo a su WhatsApp.",
+      "Acceder a asesoría tributaria sobre facturación electrónica de Hacienda sin costo adicional."
+    ]
+  },
+  {
+    "id": "persona-2",
+    "name": "Licda. Sofía Arguedas Mora",
+    "role": "Socia Directora de Bufete Corporativo",
+    "age": 38,
+    "location": "El Coyol de Alajuela",
+    "digital_comfort": "Avanzado (Laptop Mac, iPhone, LinkedIn, firma digital nacional, plataformas cloud)",
+    "business_profile": "Bufete especializado en derecho corporativo y tributario para empresas de zonas francas del Coyol, 12 abogados.",
+    "quote": "Buscamos visibilidad estratégica con las grandes pymes de la provincia y queremos publicar nuestras vacantes de asistentes legales en la bolsa de empleo de la Cámara.",
+    "frustrations_legacy_site": [
+      "La bolsa de empleo del sitio anterior estaba rota; arrojaba errores 404 al intentar enviar un CV.",
+      "Cero visibilidad en motores de búsqueda (Google) para servicios profesionales en Alajuela.",
+      "Poco prestigio visual: la página proyectaba abandono institucional y falta de modernidad."
+    ],
+    "goals": [
+      "Posicionar su despacho en la categoría de 'Servicios Profesionales' con sello de Afiliado Verificado.",
+      "Gestionar y publicar 3 plazas de empleo para estudiantes y egresados de derecho y administración.",
+      "Alquilar el auditorio principal de la Cámara para impartir charlas sobre reformas fiscales."
+    ]
+  },
+  {
+    "id": "persona-3",
+    "name": "Kevin Chaves Brenes",
+    "role": "Emprendedor Tecnológico y E-Commerce",
+    "age": 27,
+    "location": "San Antonio de Tejar / Virtual",
+    "digital_comfort": "Nativo Digital (Desarrollo web, pasarelas de pago, Instagram Ads, marketplaces)",
+    "business_profile": "Tienda en línea de productos de café de especialidad y tecnología artesanal, 2 años en el mercado.",
+    "quote": "Quiero formalizar mi negocio ante la Municipalidad y Hacienda, y aprovechar los convenios de la Cámara para envíos con Correos de Costa Rica.",
+    "frustrations_legacy_site": [
+      "No había ninguna información sobre cómo obtener patente comercial o convenios de logística.",
+      "Nula optimización para dispositivos móviles: los menús se desbordaban de la pantalla.",
+      "Falta de buscador interno rápido: imposible encontrar reglamentos o requisitos."
+    ],
+    "goals": [
+      "Acceder a los convenios institucionales de la Cámara para abaratar costos de logística.",
+      "Pagar la membresía anual con tarjeta de débito o SINPE Móvil recibiendo factura electrónica 4.3 inmediata.",
+      "Resolver dudas estatutarias al instante mediante un canal de asistencia inteligente o chat oficial."
+    ]
+  }
+]

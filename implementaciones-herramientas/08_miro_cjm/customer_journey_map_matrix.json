@@ -1,0 +1,56 @@
+{
+  "persona": "Don Álvaro Solano Montero (Dueño de Ferretería Familiar en Alajuela Centro)",
+  "goal": "Formalizar su negocio, afiliarse a la Cámara y obtener convenios de descuento para materiales y seguros.",
+  "stages": [
+    {
+      "stage_id": 1,
+      "name": "1. Descubrimiento y Necesidad",
+      "user_actions": "Escucha de otros comerciantes que la CCA ofrece convenios médicos y capacitaciones; busca 'Cámara de Comercio de Alajuela' en Google desde su móvil.",
+      "touchpoints": "Búsqueda en Google, Perfil de Facebook de la CCA, Enlace a nuevo portal web.",
+      "thoughts": "¿Seguirá existiendo la Cámara? ¿Cobrarán muy caro? Ojalá no me hagan ir a hacer fila a las oficinas centrales.",
+      "emotional_state": "Neutral (3/5)",
+      "pain_points": "En el sitio anterior no se encontraban requisitos ni tarifas claras.",
+      "opportunities": "SEO local optimizado para términos como 'afiliarse camara alajuela' y botón directo de Afiliación en el Hero."
+    },
+    {
+      "stage_id": 2,
+      "name": "2. Evaluación de Beneficios",
+      "user_actions": "Revisa la tabla comparativa de planes Pyme (₡15.000/mes) y el Directorio Comercial para ver a su competencia.",
+      "touchpoints": "Página /afiliaciones/planes, Buscador predictivo de comercios, Testimonios en video.",
+      "thoughts": "¿Valdrá la pena pagar ₡15.000 mensuales? Si me dan 10% en seguros del INS y fletes bonificados, se paga solo.",
+      "emotional_state": "Interesado y Positivo (4/5)",
+      "pain_points": "Dudas sobre si la cuota es deducible de impuestos ante Tributación Directa.",
+      "opportunities": "Insignia explícita: '100% deducible de Impuesto sobre la Renta' y calculadora interactiva de retorno de inversión del afiliado."
+    },
+    {
+      "stage_id": 3,
+      "name": "3. Afiliación Digital y Pago",
+      "user_actions": "Completa el formulario en 3 pasos con su cédula jurídica y realiza la transferencia por SINPE Móvil digitando el comprobante.",
+      "touchpoints": "Wizard de 3 pasos, Integración SINPE Móvil al 8492-3925, Validación Zod en tiempo real.",
+      "thoughts": "¡Qué rápido! No me pidieron personería jurídica física porque la validaron automáticamente.",
+      "emotional_state": "Muy Satisfecho (5/5)",
+      "pain_points": "Temor a que el pago por SINPE no quede registrado automáticamente.",
+      "opportunities": "Envío inmediato de confirmación por WhatsApp y correo con comprobante digital y factura electrónica 4.3."
+    },
+    {
+      "stage_id": 4,
+      "name": "4. Publicación en Directorio",
+      "user_actions": "Verifica que su ferretería aparece en el Directorio con el sello 'Afiliado Verificado CCA' y el botón de WhatsApp directo.",
+      "touchpoints": "Ficha de Comercio /directorio/comercio/el-candado, Notificación por WhatsApp.",
+      "thoughts": "Ahora los clientes de toda la provincia pueden encontrarme y saber que somos un negocio formal.",
+      "emotional_state": "Orgulloso y Satisfecho (5/5)",
+      "pain_points": "Falta de fotografías de alta calidad de su local.",
+      "opportunities": "Beneficio de bienvenida: Fotógrafo profesional de la Cámara visita el local para la ficha del Directorio."
+    },
+    {
+      "stage_id": 5,
+      "name": "5. Fidelización y Renovación",
+      "user_actions": "Inscribe a 2 colaboradores en el taller virtual de Facturación Electrónica y descarga su carnet digital.",
+      "touchpoints": "Portal de Autoservicio del Afiliado, Boletín Mensual por Correo, Carnet con código QR.",
+      "thoughts": "La membresía nos ha ahorrado dinero en capacitaciones. Definitivamente renuevo el próximo año.",
+      "emotional_state": "Fiel y Promotor (5/5)",
+      "pain_points": "Olvidar la fecha límite de pago de la mensualidad.",
+      "opportunities": "Recordatorios amigables automáticos por WhatsApp 3 días antes del vencimiento con botón de pago rápido."
+    }
+  ]
+}
