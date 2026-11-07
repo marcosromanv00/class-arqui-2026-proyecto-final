@@ -12,7 +12,32 @@ export interface Merchant {
   featured: boolean;
   memberSince: string;
   convenioDescuento: string;
+  ahorroEstimado: string;
   description: string;
+}
+
+export interface JobVacancy {
+  id: string;
+  title: string;
+  company: string;
+  canton: string;
+  district: string;
+  type: "Tiempo Completo" | "Medio Tiempo" | "Híbrido";
+  salaryRange: string;
+  postedDate: string;
+  category: "Administración" | "Logística" | "Tecnología" | "Ventas" | "Gastronomía";
+  description: string;
+  requirements: string[];
+}
+
+export interface MunicipalProcedure {
+  id: string;
+  title: string;
+  institution: string;
+  timeEstimate: string;
+  cost: string;
+  summary: string;
+  steps: string[];
 }
 
 export const MERCHANTS_DATA: Merchant[] = [
@@ -30,6 +55,7 @@ export const MERCHANTS_DATA: Merchant[] = [
     featured: true,
     memberSince: "1998",
     convenioDescuento: "15% en desayunos y almuerzos ejecutivos para afiliados CCA",
+    ahorroEstimado: "₡18.000 / mes en alimentación corporativa",
     description: "Auténtica comida criolla alajuelense, café de origen de las laderas del Poás y repostería artesanal con más de 25 años de servicio."
   },
   {
@@ -46,6 +72,7 @@ export const MERCHANTS_DATA: Merchant[] = [
     featured: true,
     memberSince: "2012",
     convenioDescuento: "20% en aros oftálmicos y examen visual de cortesía",
+    ahorroEstimado: "₡35.000 por colaborador en salud ocupacional",
     description: "Salud visual integral, optometría avanzada, lentes digitales y terapia visual para comerciantes y sus colaboradores."
   },
   {
@@ -62,6 +89,7 @@ export const MERCHANTS_DATA: Merchant[] = [
     featured: true,
     memberSince: "2020",
     convenioDescuento: "Diagnóstico de ciberseguridad gratuito + 10% en licencias Cloud",
+    ahorroEstimado: "₡75.000 en consultoría de seguridad",
     description: "Transformación digital, facturación electrónica certificada por Hacienda y modernización tecnológica de pymes de Occidente."
   },
   {
@@ -78,6 +106,7 @@ export const MERCHANTS_DATA: Merchant[] = [
     featured: false,
     memberSince: "2005",
     convenioDescuento: "Precios de mayoreo desde ₡50.000 para proyectos comerciales",
+    ahorroEstimado: "12% de descuento directo en suministros",
     description: "Distribuidor mayorista y minorista de materiales para construcción, acabados y herramientas industriales en la región occidental."
   },
   {
@@ -94,6 +123,7 @@ export const MERCHANTS_DATA: Merchant[] = [
     featured: true,
     memberSince: "2015",
     convenioDescuento: "Primera asesoría fiscal de cierre fiscal sin costo",
+    ahorroEstimado: "₡60.000 en honorarios contables",
     description: "Defensa tributaria, planeamiento de renta bajo Ley 7092 y estructuración legal corporativa para empresas del cantón central."
   },
   {
@@ -110,6 +140,7 @@ export const MERCHANTS_DATA: Merchant[] = [
     featured: false,
     memberSince: "2018",
     convenioDescuento: "12% de descuento en sacos de café de especialidad para oficinas",
+    ahorroEstimado: "₡15.000 / pedido para eventos empresariales",
     description: "Micro-lote de café arábica de altura, cataciones y envíos de café recién tostado a toda la provincia de Alajuela."
   },
   {
@@ -126,6 +157,7 @@ export const MERCHANTS_DATA: Merchant[] = [
     featured: false,
     memberSince: "2017",
     convenioDescuento: "Tarifa preferencial en fletes consolidados San José - Alajuela - Puntarenas",
+    ahorroEstimado: "15% de ahorro en envíos intercantonales",
     description: "Transporte terrestre de carga liviana y pesada con monitoreo satelital en tiempo real para el comercio minorista."
   },
   {
@@ -142,43 +174,138 @@ export const MERCHANTS_DATA: Merchant[] = [
     featured: false,
     memberSince: "2009",
     convenioDescuento: "5% adicional en insumos orgánicos certificados",
+    ahorroEstimado: "₡22.000 / compra al por mayor",
     description: "Suministros agropecuarios, herramientas de precisión y tecnología de riego para productores de la cuenca cafetalera."
+  }
+];
+
+export const JOB_VACANCIES_DATA: JobVacancy[] = [
+  {
+    id: "vac-001",
+    title: "Asistente Contable y Tributario",
+    company: "Bufete Valverde & Asoc. (Afiliado CCA-005)",
+    canton: "Alajuela",
+    district: "Alajuela Centro",
+    type: "Tiempo Completo",
+    salaryRange: "₡480.000 - ₡550.000",
+    postedDate: "Hace 2 días",
+    category: "Administración",
+    description: "Gestión de declaraciones D-101 y D-104 en ATV, conciliaciones bancarias y facturación electrónica de comercios afiliados.",
+    requirements: ["Técnico medio en Contabilidad o estudiante universitario", "Manejo de Excel intermedio", "Experiencia mínima 1 año"]
+  },
+  {
+    id: "vac-002",
+    title: "Supervisor de Logística e Inventario",
+    company: "Parque Empresarial El Coyol (Socio Corporativo)",
+    canton: "Alajuela",
+    district: "El Coyol",
+    type: "Tiempo Completo",
+    salaryRange: "₡580.000 - ₡680.000",
+    postedDate: "Hace 4 días",
+    category: "Logística",
+    description: "Coordinación de despachos y recepción de mercancías con zonas francas. Control de stock WMS y enlaces con transportistas.",
+    requirements: ["Bachillerato en Logística o Administración", "Licencia B1 al día", "Residir en Alajuela o alrededores"]
+  },
+  {
+    id: "vac-003",
+    title: "Técnico de Soporte Cloud & Redes",
+    company: "Innovatech Soluciones Cloud (Afiliado CCA-003)",
+    canton: "Grecia",
+    district: "Grecia Centro",
+    type: "Híbrido",
+    salaryRange: "₡650.000 - ₡750.000",
+    postedDate: "Esta semana",
+    category: "Tecnología",
+    description: "Configuración de redes de datos, servidores locales y migraciones a la nube para pymes de la región occidental.",
+    requirements: ["Certificación CCNA o afín", "Experiencia en Linux/Windows Server", "Disponibilidad de giras en Alajuela"]
+  },
+  {
+    id: "vac-004",
+    title: "Asesor de Ventas de Mostrador",
+    company: "Ferretería & Materiales San Ramón (Afiliado CCA-004)",
+    canton: "San Ramón",
+    district: "San Ramón",
+    type: "Tiempo Completo",
+    salaryRange: "₡400.000 - ₡450.000 + comisiones",
+    postedDate: "Hace 6 días",
+    category: "Ventas",
+    description: "Atención al cliente en mostrador ferretero, cotización de proyectos constructivos y manejo de caja registradora.",
+    requirements: ["Secundaria completa", "Vocación de servicio comercial", "Conocimiento básico de herramientas"]
+  }
+];
+
+export const MUNICIPAL_PROCEDURES_DATA: MunicipalProcedure[] = [
+  {
+    id: "proc-patente",
+    title: "Obtención de Patente Comercial Alajuela",
+    institution: "Municipalidad de Alajuela & Ventanilla Única CCA",
+    timeEstimate: "5 a 8 días hábiles con acompañamiento CCA",
+    cost: "Trámite municipal + Asesoría sin costo para afiliados",
+    summary: "Guía paso a paso para apertura formal de locales comerciales, oficinas y bodegas en el cantón central.",
+    steps: [
+      "1. Certificación de Uso de Suelo compatible emitida por Desarrollo Urbano municipal.",
+      "2. Permiso Sanitario de Funcionamiento del Área Rectora de Salud de Alajuela.",
+      "3. Póliza de Riesgos del Trabajo del Instituto Nacional de Seguros (INS).",
+      "4. Estar al día en obligaciones con la CCSS, FODESAF y Tributación Directa.",
+      "5. Presentación formal de solicitud en ventanilla física o digital de la CCA."
+    ]
+  },
+  {
+    id: "proc-arbitraje",
+    title: "Centro de Arbitraje y Mediación Mercantil",
+    institution: "Cámara de Comercio de Alajuela (Fundada 1983)",
+    timeEstimate: "Resolución promedio en 15 días hábiles",
+    cost: "Tarifa preferencial para agremiados",
+    summary: "Mecanismo alternativo de resolución de controversias entre comerciantes para evitar litigios judiciales prolongados.",
+    steps: [
+      "1. Solicitud de apertura de mediación con resumen de la discrepancia contractual.",
+      "2. Notificación formal y convocatoria a las partes en la Sede Gremial CCA.",
+      "3. Sesión asistida por abogado mediador colegiado acreditado.",
+      "4. Firma de Acta de Conciliación con carácter de cosa juzgada material."
+    ]
   }
 ];
 
 export const PILLARS_DATA = [
   {
-    title: "Arbitraje y Resolución de Disputas Comerciales",
-    tagline: "Seguridad jurídica para el ecosistema productivo",
-    description: "Centro neutral de mediación y arbitraje para resolver controversias entre socios, clientes y proveedores sin acudir a procesos judiciales lentos.",
-    icon: "Scale"
+    title: "Arbitraje y Mediación Mercantil",
+    tagline: "Seguridad jurídica para el comercio local",
+    description: "Centro neutral de mediación para dirimir controversias entre socios, clientes y proveedores con fuerza de cosa juzgada, sin litigios judiciales lentos.",
+    icon: "Scale",
+    actionText: "Ver reglamento de arbitraje",
+    actionHref: "#servicios"
   },
   {
-    title: "Comercio Global y Certificación de Origen",
-    tagline: "Ventanilla única de exportación alajuelense",
-    description: "Emisión de certificados de origen y acuerdos preferenciales para empresas de zonas francas y agroindustrias de la provincia.",
-    icon: "Globe"
+    title: "Trámites Municipales y Patentes",
+    tagline: "Acompañamiento en formalización cantonal",
+    description: "Ventanilla de enlace técnico con la Municipalidad de Alajuela y Ministerio de Salud para agilizar licencias comerciales y uso de suelo.",
+    icon: "FileCheck",
+    actionText: "Consultar guía de patentes",
+    actionHref: "#tramites"
   },
   {
-    title: "Estándares y Políticas Mercantiles",
-    tagline: "Voz representativa ante instituciones de gobierno",
-    description: "Defensa activa contra la sobrerregulación, trámites municipales redundantes y promoción de incentivos para inversión en Alajuela.",
-    icon: "FileCheck"
+    title: "Bolsa de Empleo y Talento Local",
+    tagline: "Conectando empresas y fuerza laboral",
+    description: "Plataforma de intermediación laboral para comercios tradicionales, pymes de servicios y empresas de zonas francas en El Coyol.",
+    icon: "Globe",
+    actionText: "Explorar vacantes activas",
+    actionHref: "#empleo"
   },
   {
-    title: "Innovación y Sostenibilidad Gremial",
-    tagline: "Preparando a las pymes para la economía del 2030",
-    description: "Capacitaciones continuas en facturación digital, canales de venta transfronterizos y descarbonización de cadenas de suministro.",
-    icon: "Lightbulb"
+    title: "Capacitaciones y Alianzas Comerciales",
+    tagline: "Preparando al comercio para el futuro",
+    description: "Talleres continuos en reforma fiscal (Ley 7092), comercio electrónico y más de 40 convenios con tarifas preferenciales para socios.",
+    icon: "Lightbulb",
+    actionText: "Ver catálogo de convenios",
+    actionHref: "#directorio"
   }
 ];
 
 export const STATS_DATA = [
   { number: "+840", label: "Comercios Afiliados Verificados", detail: "En los 16 cantones de la provincia de Alajuela" },
-  { number: "₡125M", label: "Ahorro Anual en Convenios", detail: "Beneficios médicos, fiscales y logísticos directos" },
-  { number: "98.4%", label: "Resolución Efectiva de Mediaciones", detail: "Centro de Arbitraje y Conciliación Gremial" },
-  { number: "4 Min", label: "Tiempo de Afiliación Digital", detail: "Reducción histórica frente al trámite presencial de 5 días" },
+  { number: "₡125M", label: "Ahorro Anual en Convenios", detail: "Beneficios médicos, fiscales y logísticos directos para socios" },
+  { number: "98.4%", label: "Resolución en Mediaciones", detail: "Efectividad del Centro de Conciliación y Arbitraje Gremial" },
+  { number: "4 Min", label: "Tiempo de Afiliación Digital", detail: "Reducción radical frente al trámite presencial histórico de 5 días" },
   { number: "100%", label: "Deducción de Impuesto de Renta", detail: "Cuota gremial deducible al 100% bajo la Ley Costarricense 7092" },
-  { number: "+42 Años", label: "Liderazgo Gremial en Costa Rica", detail: "Fundada en 1983 defendiendo el sector productivo" }
+  { number: "+42 Años", label: "Liderazgo Gremial en Costa Rica", detail: "Fundada en 1983 defendiendo el sector productivo de Alajuela" }
 ];
-
