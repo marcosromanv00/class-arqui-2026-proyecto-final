@@ -1,0 +1,78 @@
+{
+  "color": {
+    "brand": {
+      "primary": { "value": "#991b1b", "type": "color", "description": "Rojo Carmín Institucional CCA (Header, Botones primarios, Acentos cardinales)" },
+      "primary_hover": { "value": "#7f1d1d", "type": "color" },
+      "primary_light": { "value": "#fef2f2", "type": "color", "description": "Fondo suave de advertencias y destacados" },
+      "primary_border": { "value": "#fecaca", "type": "color" },
+      "graphite": { "value": "#09090b", "type": "color", "description": "Negro Grafito CCA (Titulares H1, Monograma, Footer)" },
+      "graphite_surface": { "value": "#18181b", "type": "color" }
+    },
+    "neutral": {
+      "background": { "value": "#ffffff", "type": "color", "description": "Fondo principal de la aplicación (80% blanco)" },
+      "surface": { "value": "#ffffff", "type": "color", "description": "Tarjetas táctiles y modales" },
+      "surface_alt": { "value": "#f8fafc", "type": "color" },
+      "border": { "value": "#e2e8f0", "type": "color" },
+      "text_primary": { "value": "#09090b", "type": "color", "description": "Texto principal de alto contraste WCAG AAA" },
+      "text_secondary": { "value": "#475569", "type": "color" },
+      "text_muted": { "value": "#94a3b8", "type": "color" }
+    },
+    "feedback": {
+      "success": { "value": "#059669", "type": "color" },
+      "success_bg": { "value": "#ecfdf5", "type": "color" },
+      "warning": { "value": "#d97706", "type": "color" },
+      "error": { "value": "#dc2626", "type": "color" },
+      "error_bg": { "value": "#fef2f2", "type": "color" }
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "heading": { "value": "Outfit, system-ui, sans-serif", "type": "fontFamilies" },
+      "body": { "value": "Inter, system-ui, sans-serif", "type": "fontFamilies" }
+    },
+    "fontSize": {
+      "xs": { "value": "0.75rem", "type": "fontSizes" },
+      "sm": { "value": "0.875rem", "type": "fontSizes" },
+      "base": { "value": "1rem", "type": "fontSizes" },
+      "lg": { "value": "1.125rem", "type": "fontSizes" },
+      "xl": { "value": "1.25rem", "type": "fontSizes" },
+      "2xl": { "value": "1.5rem", "type": "fontSizes" },
+      "3xl": { "value": "1.875rem", "type": "fontSizes" },
+      "4xl": { "value": "2.25rem", "type": "fontSizes" }
+    },
+    "fontWeight": {
+      "normal": { "value": "400", "type": "fontWeights" },
+      "medium": { "value": "500", "type": "fontWeights" },
+      "semibold": { "value": "600", "type": "fontWeights" }
+    }
+  },
+  "spacing": {
+    "1": { "value": "4px", "type": "spacing" },
+    "2": { "value": "8px", "type": "spacing" },
+    "3": { "value": "12px", "type": "spacing" },
+    "4": { "value": "16px", "type": "spacing" },
+    "6": { "value": "24px", "type": "spacing" },
+    "8": { "value": "32px", "type": "spacing" },
+    "12": { "value": "48px", "type": "spacing" },
+    "16": { "value": "64px", "type": "spacing" }
+  },
+  "borderRadius": {
+    "sm": { "value": "6px", "type": "borderRadius" },
+    "md": { "value": "12px", "type": "borderRadius" },
+    "lg": { "value": "16px", "type": "borderRadius" },
+    "xl": { "value": "24px", "type": "borderRadius" },
+    "full": { "value": "9999px", "type": "borderRadius" }
+  },
+  "elevation": {
+    "clay_card": {
+      "value": "0 10px 25px -5px rgba(0, 0, 0, 0.04), 0 8px 10px -6px rgba(0, 0, 0, 0.02), inset 0 2px 4px 0 rgba(255, 255, 255, 0.95), inset 0 -2px 4px 0 rgba(0, 0, 0, 0.03)",
+      "type": "boxShadow",
+      "description": "Sombra táctil Claymorphic para tarjetas institucionales"
+    },
+    "clay_button": {
+      "value": "0 6px 14px -3px rgba(153, 27, 27, 0.35), inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.35), inset 0 -2px 3px 0 rgba(0, 0, 0, 0.2)",
+      "type": "boxShadow",
+      "description": "Sombra y bisel interno táctil para botones principales en Rojo Carmín"
+    }
+  }
+}

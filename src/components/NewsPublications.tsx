@@ -1,126 +1,101 @@
-import { ArrowUpRight, FileText, Download } from "lucide-react";
+import { ArrowUpRight, ArrowRight } from "lucide-react";
 
 export function NewsPublications() {
-  const publications = [
-    {
-      title: "Informe Trimestral del Comercio Alajuelense 2026",
-      category: "Economía & Mercado",
-      date: "Noviembre 2026",
-      description: "Análisis del impacto de la inflación, tasas de interés bancarias y perspectivas de crecimiento para pymes del cantón central y Occidente.",
-      isPrimary: true
-    },
+  const secondaryPublications = [
     {
       title: "Guía Práctica para la Deducibilidad Fiscal de Cuotas (Ley 7092)",
       category: "Marco Tributario",
       date: "Octubre 2026",
-      description: "Instructivo paso a paso para contadores y gerentes financieros sobre la aplicación del Artículo 8 en declaraciones D-101.",
-      isPrimary: false
+      href: "#afiliacion"
     },
     {
       title: "Reglamento del Centro de Mediación y Arbitraje Mercantil CCA",
       category: "Resolución de Disputas",
       date: "Septiembre 2026",
-      description: "Estatuto oficial de procedimientos rápidos de conciliación para evitar litigios judiciales onerosos entre comerciantes.",
-      isPrimary: false
+      href: "#servicios"
     },
     {
-      title: "Plan Estratégico de Conectividad Logística Aeropuerto Juan Santamaría",
-      category: "Infraestructura & Exportación",
+      title: "Plan de Conectividad Logística Aeropuerto Juan Santamaría y El Coyol",
+      category: "Infraestructura & Zonas Francas",
       date: "Agosto 2026",
-      description: "Propuesta de la Cámara para agilizar el desalmacenaje aduanal y el flujo de mercancías hacia zonas francas de El Coyol.",
-      isPrimary: false
+      href: "#empleo"
     },
     {
-      title: "Manual de Formalización Rápida de Nuevos Emprendimientos",
+      title: "Manual de Formalización Rápida y Patentes para Nuevos Emprendimientos",
       category: "Desarrollo Pyme",
       date: "Julio 2026",
-      description: "Hoja de ruta simplificada para permisos municipales de salud, pólizas del INS y registro en el Ministerio de Hacienda.",
-      isPrimary: false
+      href: "#tramites"
     }
   ];
 
   return (
-    <section id="publicaciones" className="border-b border-slate-200/80 bg-white py-16 lg:py-24">
+    <section id="publicaciones" className="bg-white py-16 sm:py-20 border-b border-neutral-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Cabecera de Publicaciones */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-slate-200/80 pb-8 mb-10 gap-4">
-          <div>
-            <p className="text-xs uppercase font-bold tracking-widest text-[#991b1b] mb-2">
-              Investigación Gremial & Prensa
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#09090b] tracking-tight">
-              Últimas publicaciones e informes
-            </h2>
-            <p className="mt-2 text-sm text-slate-600 max-w-xl leading-relaxed">
-              Documentos de valor gremial, estudios económicos de la provincia y guías normativas para la toma de decisiones empresariales.
-            </p>
-          </div>
-          <span className="inline-flex items-center gap-1 text-xs font-bold text-slate-800 hover:text-[#991b1b] cursor-pointer">
-            Ver archivo histórico <ArrowUpRight className="w-3.5 h-3.5 text-[#991b1b]" />
-          </span>
+        {/* Cabecera estilo ICC */}
+        <div className="flex items-end justify-between mb-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#09090b] tracking-tight">
+            Últimas publicaciones e informes
+          </h2>
+          <a
+            href="#publicaciones"
+            className="hidden sm:inline-flex items-center gap-1 text-xs font-semibold text-neutral-600 hover:text-black transition-colors"
+          >
+            <span>Ver todo</span>
+            <ArrowRight className="w-3.5 h-3.5" />
+          </a>
         </div>
 
-        {/* Retícula Editorial: Tarjeta Monumental en Grafito a la izquierda + tarjetas apiladas en blanco */}
+        {/* Retícula estilo ICC: Tarjeta Grande Roja a la izquierda con foto + Grilla 2x2 a la derecha */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
           
-          {/* Tarjeta Destacada en Negro Grafito con Acentos Carmín (Contraste Sobrio) */}
-          <div className="lg:col-span-5 bg-[#09090b] text-white rounded-2xl p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden group shadow-md border border-slate-800">
-            <div className="space-y-4">
-              <span className="text-[10px] font-bold uppercase tracking-widest bg-[#991b1b] text-white px-2.5 py-1 rounded-md inline-block shadow-xs">
-                Informe Trimestral Destacado
+          {/* Tarjeta Grande a la izquierda (5 columnas) */}
+          <div className="lg:col-span-5 bg-[#991b1b] text-white flex flex-col justify-between overflow-hidden group">
+            <div className="p-8 sm:p-10 space-y-4">
+              <span className="text-[11px] font-semibold uppercase tracking-wider text-red-200">
+                Informe Trimestral de Inteligencia
               </span>
-              <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight leading-snug">
+              <h3 className="text-2xl sm:text-3xl font-bold tracking-tight leading-snug">
                 Informe Trimestral de Inteligencia Comercial Alajuela 2026
               </h3>
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
-                Auditoría técnica de la balanza comercial provincial, dinamismo en parques de El Coyol y perspectivas de inversión para pymes de los 16 cantones.
+              <p className="text-xs text-red-100 font-mono pt-2">
+                Noviembre 2026 · Edición Provincial
               </p>
             </div>
 
-            <div className="mt-10 pt-6 border-t border-slate-800 flex items-center justify-between">
-              <span className="text-xs text-slate-400 font-mono">Edición Noviembre 2026 · PDF 4.2 MB</span>
-              <button className="clay-button-secondary inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-slate-900 bg-white hover:bg-slate-100 transition-all rounded-lg">
-                <Download className="w-3.5 h-3.5 text-[#991b1b]" /> 
-                <span>Descargar</span>
-              </button>
+            {/* Fotografía inferior integrada idéntica a ICC */}
+            <div className="aspect-[16/10] w-full overflow-hidden bg-neutral-900">
+              <img
+                src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1000&q=80"
+                alt="Presentación del informe trimestral en la Cámara de Comercio de Alajuela"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+              />
             </div>
           </div>
 
-          {/* Grilla 2x2 de Publicaciones en Claymorph Cards Blancas */}
-          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {publications.slice(1).map((pub, idx) => (
-              <div
+          {/* Grilla 2x2 a la derecha (7 columnas) */}
+          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+            {secondaryPublications.map((item, idx) => (
+              <a
                 key={idx}
-                className="clay-card rounded-2xl bg-white border border-slate-200/90 hover:border-red-300 transition-all p-6 flex flex-col justify-between group shadow-2xs"
+                href={item.href}
+                className="p-6 bg-neutral-50 border border-neutral-200 hover:border-neutral-900 transition-colors flex flex-col justify-between h-56 sm:h-64 group"
               >
                 <div>
-                  <div className="flex items-center justify-between text-[11px] mb-2.5 text-slate-400">
-                    <span className="font-bold text-[#991b1b] uppercase tracking-wider text-[10px] bg-red-50 px-2 py-0.5 rounded border border-red-100">
-                      {pub.category}
-                    </span>
-                    <span className="font-mono text-[10px] text-slate-500">{pub.date}</span>
-                  </div>
-
-                  <h4 className="text-sm font-bold text-[#09090b] leading-snug group-hover:text-[#991b1b] transition-colors">
-                    {pub.title}
-                  </h4>
-
-                  <p className="mt-2 text-xs text-slate-600 leading-relaxed line-clamp-3">
-                    {pub.description}
-                  </p>
-                </div>
-
-                <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
-                  <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-500">
-                    <FileText className="w-3.5 h-3.5 text-slate-400" /> Documento Oficial
+                  <span className="text-[11px] font-medium text-neutral-500 uppercase tracking-wider block mb-2">
+                    {item.category}
                   </span>
-                  <a href="#tramites" className="font-bold text-slate-900 group-hover:text-[#991b1b] transition-colors flex items-center gap-0.5">
-                    <span>Consultar</span>
-                    <ArrowUpRight className="w-3 h-3 text-[#991b1b]" />
-                  </a>
+                  <h4 className="text-base sm:text-lg font-bold text-[#09090b] group-hover:text-[#991b1b] transition-colors leading-snug">
+                    {item.title}
+                  </h4>
                 </div>
-              </div>
+
+                <div className="flex items-center justify-between text-xs text-neutral-400 font-mono border-t border-neutral-200/80 pt-3">
+                  <span>{item.date}</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 text-neutral-400 group-hover:text-[#991b1b] transition-colors" />
+                </div>
+              </a>
             ))}
           </div>
 

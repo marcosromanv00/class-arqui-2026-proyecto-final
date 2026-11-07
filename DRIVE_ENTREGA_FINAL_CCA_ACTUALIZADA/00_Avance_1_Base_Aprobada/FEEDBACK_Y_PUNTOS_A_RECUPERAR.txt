@@ -1,0 +1,16 @@
+DIAGNÓSTICO DEL AVANCE 1 Y PUNTOS A RECUPERAR
+Curso: EIF-511 Arquitectura de Información · Docente: MSc. Cynthia Bolaños Espinoza
+Calificación Obtenida en Avance 1: 13.5 / 15.0 (90 / 100)
+
+BRECHAS A SUBSANAR EN LA ENTREGA FINAL PARA ALCANZAR EL 100%:
+1. Calidad general del avance (-1.0 pt):
+   Validación débil con N=2 participantes simulados y consenso artificial del 100%.
+   Acción Correctiva: Marcos Román ejecuta estudio real en Optimal Workshop con N=18 usuarios reales,
+   matriz de similitud con dispersión y sección de "Ajustes derivados de los resultados" (polyhierarchy).
+
+2. Wireframes preliminares (-0.5 pts):
+   Evidencia visual limitada en el reporte. Se remitió solo al link de Figma sin capturas en el documento.
+   Acción Correctiva: Emanuel Soto inserta 4 capturas HD de las interfaces finales (Home, Directorio,
+   Ficha y Afiliación) y figuras técnicas de Sitemap y Checkout en el Capítulo 7.
+
+TOTAL A RECUPERAR: +1.5 PUNTOS -> NOTA META: 15.0 / 15.0 (100%)
