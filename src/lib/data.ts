@@ -181,3 +181,4 @@ export const STATS_DATA = [
   { number: "100%", label: "Deducción de Impuesto de Renta", detail: "Cuota gremial deducible al 100% bajo la Ley Costarricense 7092" },
   { number: "+42 Años", label: "Liderazgo Gremial en Costa Rica", detail: "Fundada en 1983 defendiendo el sector productivo" }
 ];
+

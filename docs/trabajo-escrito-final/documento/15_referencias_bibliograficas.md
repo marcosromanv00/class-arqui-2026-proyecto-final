@@ -18,6 +18,12 @@ Gomez-Uribe, C. A., & Hunt, N. (2015). The Netflix recommender system: Algorithm
 
 Hogan, B. P. (2020). *Build Websites with Hugo: Fast Web Development with Markdown*. The Pragmatic Bookshelf.
 
+Kuric, E., Demcak, P., & Krajcovic, M. (2025a). *Card sorting simulator: Augmenting design of logical information architectures with large language models*. arXiv. https://doi.org/10.48550/arXiv.2505.09478
+
+Kuric, E., Demcak, P., & Krajcovic, M. (2025b). *Card sorting with fewer cards and the same mental models? A re-examination of an established practice*. arXiv. https://doi.org/10.48550/arXiv.2509.03232
+
+Ladisa, P., Plate, H., Martinez, M., & Barais, O. (2023). SoK: Taxonomy of attacks on open-source software supply chains. *IEEE Symposium on Security and Privacy (S&P)*, 1509-1526. https://doi.org/10.1109/SP46215.2023.10179304
+
 Nielsen, J., & Budiu, R. (2013). *Mobile Usability*. New Riders.
 
 Nielsen, J., & Pernice, K. (2010). *Eyetracking Web Usability*. New Riders.

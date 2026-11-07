@@ -375,3 +375,4 @@ export function AffiliationWizard() {
     </section>
   );
 }
+
