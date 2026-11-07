@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { MERCHANTS_DATA, Merchant } from "@/lib/data";
-import { Search, MapPin, Phone, MessageSquare, CheckCircle, Tag, Filter } from "lucide-react";
+import { Search, MapPin, Phone, MessageSquare, CheckCircle, Tag, Filter, Briefcase, Sparkles } from "lucide-react";
 
 export function DirectorySection() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -17,7 +17,8 @@ export function DirectorySection() {
       const matchesSearch =
         m.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         m.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        m.convenioDescuento.toLowerCase().includes(searchQuery.toLowerCase());
+        m.convenioDescuento.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        m.district.toLowerCase().includes(searchQuery.toLowerCase());
 
       const matchesCanton = selectedCanton === "Todos" || m.canton === selectedCanton;
       const matchesCategory = selectedCategory === "Todos" || m.category === selectedCategory;
@@ -27,57 +28,61 @@ export function DirectorySection() {
   }, [searchQuery, selectedCanton, selectedCategory]);
 
   return (
-    <section id="directorio" className="border-b border-slate-200 bg-slate-50/50 py-16 lg:py-24">
+    <section id="directorio" className="border-b border-slate-200/80 bg-white py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Cabecera de Sección */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-slate-200 pb-8 mb-10 gap-6">
+        {/* Cabecera de Sección (80% fondo blanco, tipografía serena) */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-slate-200/80 pb-8 mb-10 gap-6">
           <div>
-            <p className="text-xs uppercase font-extrabold tracking-widest text-sky-600 mb-2">
-              Directorio de Confianza
+            <p className="text-xs uppercase font-bold tracking-widest text-[#991b1b] mb-2">
+              Directorio de Confianza Comercial
             </p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#09090b] tracking-tight">
               Comercios y Servicios Verificados
             </h2>
-            <p className="mt-2 text-sm text-slate-600 max-w-xl">
-              Filtre por cantón y sector económico. Conecte de inmediato vía WhatsApp con empresas afiliadas formalmente a la Cámara.
+            <p className="mt-2.5 text-sm text-slate-600 max-w-xl leading-relaxed">
+              Consulte empresas formalmente afiliadas a la Cámara en los 16 cantones. Contacto directo por WhatsApp y visualización de convenios de ahorro gremial.
             </p>
           </div>
 
-          <div className="text-xs text-slate-500 font-semibold bg-white border border-slate-200 px-3 py-2 self-start md:self-end">
-            Mostrando <span className="text-slate-950 font-bold">{filteredMerchants.length}</span> de {MERCHANTS_DATA.length} afiliados registrados
+          <div 
+            id="directorio-results-count"
+            className="text-xs text-slate-600 font-semibold bg-slate-50 border border-slate-200 px-3.5 py-2 rounded-xl self-start md:self-end shadow-2xs"
+          >
+            Mostrando <span className="text-[#991b1b] font-bold">{filteredMerchants.length}</span> de {MERCHANTS_DATA.length} comercios auditados
           </div>
         </div>
 
-        {/* Barra de Filtros Facetados (Estilo Limpio de Arquitectura de Información) */}
-        <div className="bg-white border border-slate-200 p-5 mb-8 shadow-xs space-y-4">
+        {/* Barra de Filtros Facetados Claymorphic (Estructura Algolia / Maze compatible) */}
+        <div className="clay-card p-6 mb-8 bg-white rounded-2xl border border-slate-200/90 shadow-sm space-y-4">
           
           {/* Buscador de texto predictivo */}
           <div className="relative">
-            <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+            <Search className="w-4 h-4 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2" />
             <input
+              id="directorio-search-input"
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Buscar por nombre, producto, servicio o convenio de descuento (ej: café, fiscal, óptica)..."
-              className="w-full pl-10 pr-4 py-2.5 text-sm bg-slate-50 border border-slate-200 focus:bg-white focus:border-slate-950 focus:outline-hidden transition-colors"
+              placeholder="Buscar por nombre comercial, producto, distrito o convenio de descuento (ej: café, fiscal, óptica)..."
+              className="w-full pl-11 pr-4 py-3 text-sm bg-slate-50/80 border border-slate-200 rounded-xl focus:bg-white focus:border-[#991b1b] focus:ring-1 focus:ring-[#991b1b] focus:outline-hidden transition-all text-slate-900"
             />
           </div>
 
-          {/* Filtros por Categoría y Cantón */}
-          <div className="flex flex-wrap items-center gap-4 pt-2 border-t border-slate-100 text-xs">
-            <span className="flex items-center gap-1 font-bold text-slate-700 uppercase tracking-wider text-[10px]">
-              <Filter className="w-3 h-3" /> Cantón:
+          {/* Filtros por Categoría y Cantón en Clay-pills */}
+          <div className="flex flex-wrap items-center gap-4 pt-3 border-t border-slate-100 text-xs">
+            <span className="flex items-center gap-1.5 font-bold text-slate-700 uppercase tracking-wider text-[11px]">
+              <Filter className="w-3.5 h-3.5 text-slate-400" /> Cantón:
             </span>
-            <div className="flex flex-wrap gap-1">
+            <div id="directorio-filter-canton" className="flex flex-wrap gap-1.5">
               {cantons.map((canton) => (
                 <button
                   key={canton}
                   onClick={() => setSelectedCanton(canton)}
-                  className={`px-2.5 py-1 text-xs font-medium transition-colors ${
+                  className={`px-3 py-1.5 text-xs font-semibold rounded-lg transition-all ${
                     selectedCanton === canton
-                      ? "bg-slate-950 text-white"
-                      : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+                      ? "bg-[#991b1b] text-white shadow-[0_2px_8px_rgba(153,27,27,0.35)]"
+                      : "bg-slate-100/80 text-slate-700 hover:bg-slate-200"
                   }`}
                 >
                   {canton}
@@ -87,18 +92,18 @@ export function DirectorySection() {
 
             <div className="w-full md:w-auto h-px md:h-4 bg-slate-200 hidden md:block" />
 
-            <span className="flex items-center gap-1 font-bold text-slate-700 uppercase tracking-wider text-[10px]">
+            <span className="flex items-center gap-1.5 font-bold text-slate-700 uppercase tracking-wider text-[11px]">
               Sector:
             </span>
-            <div className="flex flex-wrap gap-1">
+            <div id="directorio-filter-category" className="flex flex-wrap gap-1.5">
               {categories.map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
-                  className={`px-2.5 py-1 text-xs font-medium transition-colors ${
+                  className={`px-3 py-1.5 text-xs font-semibold rounded-lg transition-all ${
                     selectedCategory === cat
-                      ? "bg-slate-950 text-white"
-                      : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+                      ? "bg-[#09090b] text-white shadow-[0_2px_8px_rgba(9,9,11,0.35)]"
+                      : "bg-slate-100/80 text-slate-700 hover:bg-slate-200"
                   }`}
                 >
                   {cat}
@@ -109,9 +114,28 @@ export function DirectorySection() {
 
         </div>
 
-        {/* Cuadrícula de Comercios */}
+        {/* Polijerarquía: Enlace cruzado con Bolsa de Empleo (Optimal Sorting N=18) */}
+        <div className="mb-8 p-4 bg-red-50/40 border border-red-200/80 rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs">
+          <div className="flex items-center gap-2.5 text-slate-800">
+            <div className="w-8 h-8 rounded-lg bg-red-100 text-[#991b1b] flex items-center justify-center shrink-0">
+              <Briefcase className="w-4 h-4" />
+            </div>
+            <div>
+              <span className="font-bold text-[#991b1b]">Bolsa de Empleo Cantonal vinculada:</span>
+              <span className="text-slate-600 ml-1.5">Consulte vacantes activas publicadas por las empresas agremiadas en El Coyol y Alajuela Centro.</span>
+            </div>
+          </div>
+          <a
+            href="#empleo"
+            className="clay-button-secondary text-xs px-3.5 py-1.5 font-semibold text-[#991b1b] hover:text-[#7f1d1d] shrink-0"
+          >
+            Ver vacantes abiertas
+          </a>
+        </div>
+
+        {/* Cuadrícula de Comercios en Claymorph Cards */}
         {filteredMerchants.length === 0 ? (
-          <div className="bg-white border border-slate-200 p-12 text-center">
+          <div className="clay-card rounded-2xl bg-white border border-slate-200 p-12 text-center">
             <p className="text-base font-bold text-slate-800">No se encontraron comercios con esos criterios.</p>
             <p className="text-xs text-slate-500 mt-1">Intente restablecer los filtros de cantón o sector.</p>
             <button
@@ -120,7 +144,7 @@ export function DirectorySection() {
                 setSelectedCanton("Todos");
                 setSelectedCategory("Todos");
               }}
-              className="mt-4 px-4 py-2 bg-slate-950 text-white text-xs font-semibold uppercase tracking-wider"
+              className="clay-button-primary mt-4 px-4 py-2 text-xs uppercase tracking-wider"
             >
               Restablecer filtros
             </button>
@@ -130,29 +154,30 @@ export function DirectorySection() {
             {filteredMerchants.map((merchant) => (
               <div
                 key={merchant.id}
-                className="bg-white border border-slate-200 hover:border-slate-950 transition-colors p-6 flex flex-col justify-between group shadow-xs"
+                data-merchant-id={merchant.id}
+                className="clay-card rounded-2xl bg-white border border-slate-200/90 p-6 flex flex-col justify-between group"
               >
                 <div>
                   
                   {/* Categoría y Cantón */}
                   <div className="flex items-center justify-between text-xs mb-3">
-                    <span className="font-bold text-sky-600 uppercase tracking-widest text-[10px]">
+                    <span className="font-bold text-[#991b1b] uppercase tracking-wider text-[10px] bg-red-50 px-2 py-0.5 rounded-md border border-red-100">
                       {merchant.category}
                     </span>
-                    <span className="inline-flex items-center gap-1 text-slate-500 font-medium">
+                    <span className="inline-flex items-center gap-1 text-slate-500 font-medium text-[11px]">
                       <MapPin className="w-3 h-3 text-slate-400" />
-                      {merchant.canton}
+                      {merchant.district}, {merchant.canton}
                     </span>
                   </div>
 
                   {/* Nombre y Verificación */}
                   <div className="flex items-start gap-1.5">
-                    <h3 className="text-base font-extrabold text-slate-950 leading-snug group-hover:text-sky-600 transition-colors">
+                    <h3 className="text-base font-bold text-[#09090b] leading-snug group-hover:text-[#991b1b] transition-colors">
                       {merchant.name}
                     </h3>
                     {merchant.verified && (
-                      <span title="Afiliado Verificado CCA" className="inline-flex">
-                        <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span title="Afiliado Verificado CCA" className="inline-flex shrink-0 mt-0.5">
+                        <CheckCircle className="w-4 h-4 text-emerald-600" />
                       </span>
                     )}
                   </div>
@@ -162,15 +187,19 @@ export function DirectorySection() {
                     {merchant.description}
                   </p>
 
-                  {/* Convenio de Descuento (Doble anclaje taxonómico) */}
+                  {/* Convenio de Descuento con ROI Estimado (Validación Card Sorting N=18) */}
                   {merchant.convenioDescuento && (
-                    <div className="mt-4 p-2.5 bg-amber-50/60 border border-amber-200/80 rounded-none text-xs text-amber-900 flex items-start gap-2">
-                      <Tag className="w-3.5 h-3.5 text-amber-700 shrink-0 mt-0.5" />
-                      <div>
-                        <span className="font-bold block text-[10px] uppercase tracking-wide text-amber-800">
-                          Convenio Oficial CCA
-                        </span>
-                        <span className="leading-snug text-[11px]">{merchant.convenioDescuento}</span>
+                    <div className="mt-4 p-3 bg-slate-50 border border-slate-200/80 rounded-xl text-xs space-y-1">
+                      <div className="flex items-center gap-1.5 text-slate-800 font-semibold text-[11px]">
+                        <Tag className="w-3.5 h-3.5 text-[#991b1b]" />
+                        <span>Convenio CCA:</span>
+                      </div>
+                      <p className="text-[11px] text-slate-600 leading-snug">
+                        {merchant.convenioDescuento}
+                      </p>
+                      <div className="pt-1 flex items-center gap-1 text-[10px] font-bold text-emerald-700">
+                        <Sparkles className="w-3 h-3" />
+                        <span>ROI estimado: {merchant.ahorroEstimado}</span>
                       </div>
                     </div>
                   )}
@@ -189,17 +218,17 @@ export function DirectorySection() {
                 {/* Botón WhatsApp Directo (Soluciona 4 clics ciegos del sitio anterior) */}
                 <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
                   <span className="text-[10px] font-semibold text-slate-400 uppercase tracking-widest">
-                    Miembro desde {merchant.memberSince}
+                    Socio desde {merchant.memberSince}
                   </span>
                   
                   <a
                     href={`https://wa.me/${merchant.whatsapp}?text=Hola%20${encodeURIComponent(merchant.name)},%20los%20contacto%20a%20través%20del%20Directorio%20Oficial%20de%20la%20Cámara%20de%20Comercio%20de%20Alajuela.`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-slate-900 bg-slate-100 hover:bg-emerald-600 hover:text-white transition-colors"
+                    className="clay-button-secondary inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-emerald-800 bg-emerald-50/70 border-emerald-200 hover:bg-emerald-600 hover:text-white transition-all rounded-lg"
                   >
                     <MessageSquare className="w-3.5 h-3.5" />
-                    WhatsApp
+                    <span>WhatsApp</span>
                   </a>
                 </div>
 
