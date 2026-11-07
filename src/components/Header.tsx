@@ -2,83 +2,82 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Search, ChevronDown, Menu, X, ArrowUpRight, Briefcase } from "lucide-react";
+import { Search, ChevronDown, Menu, X, ArrowUpRight } from "lucide-react";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.03)]">
+    <header className="sticky top-0 z-50 bg-white border-b border-neutral-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           
-          {/* Logo CCA con identidad Rojo Carmín y Grafito */}
-          <Link href="/" className="flex items-center gap-3.5 group">
-            <div className="w-11 h-11 bg-[#991b1b] text-white rounded-xl flex items-center justify-center font-bold text-lg tracking-tight shadow-[0_6px_12px_-2px_rgba(153,27,27,0.35),inset_0_1.5px_2px_rgba(255,255,255,0.35)] group-hover:bg-[#7f1d1d] transition-all">
+          {/* Logo CCA estilo ICC puro */}
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="w-10 h-10 bg-[#09090b] text-white flex items-center justify-center font-bold text-base tracking-tight group-hover:bg-[#991b1b] transition-colors">
               CCA
             </div>
             <div className="flex flex-col">
-              <span className="font-extrabold text-base tracking-tight text-[#09090b] uppercase leading-none">
+              <span className="font-bold text-sm tracking-tight text-[#09090b] uppercase leading-tight">
                 Cámara de Comercio
               </span>
-              <span className="text-xs text-slate-500 font-medium tracking-widest uppercase mt-0.5">
+              <span className="text-[11px] text-neutral-500 font-normal tracking-wider uppercase">
                 Alajuela · Costa Rica · 1983
               </span>
             </div>
           </Link>
 
-          {/* Navegación Desktop */}
-          <nav className="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-700">
+          {/* Navegación Desktop estilo ICC */}
+          <nav className="hidden lg:flex items-center gap-7 text-[13px] font-medium text-neutral-700">
             <div className="relative group cursor-pointer py-2">
-              <span className="flex items-center gap-1 group-hover:text-[#991b1b] transition-colors">
-                Institucional <ChevronDown className="w-3.5 h-3.5 text-slate-400 group-hover:text-[#991b1b] transition-transform group-hover:rotate-180" />
+              <span className="flex items-center gap-1 group-hover:text-black transition-colors">
+                Institucional <ChevronDown className="w-3.5 h-3.5 text-neutral-400 group-hover:text-black transition-transform group-hover:rotate-180" />
               </span>
-              <div className="absolute top-full left-0 w-64 bg-white border border-slate-200 rounded-xl shadow-xl opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all p-3 space-y-1">
-                <Link href="#impacto" className="block px-3 py-2 text-xs rounded-lg hover:bg-red-50/60 text-slate-700 hover:text-[#991b1b] font-medium">
-                  Voz Gremial & Reseña 1983
+              <div className="absolute top-full left-0 w-56 bg-white border border-neutral-200 shadow-lg opacity-0 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all p-2 space-y-0.5">
+                <Link href="#manifiesto" className="block px-3 py-2 text-xs hover:bg-neutral-50 text-neutral-700 hover:text-black">
+                  Voz de la Economía Cantonal
                 </Link>
-                <Link href="#pilares" className="block px-3 py-2 text-xs rounded-lg hover:bg-red-50/60 text-slate-700 hover:text-[#991b1b] font-medium">
+                <Link href="#estadisticas" className="block px-3 py-2 text-xs hover:bg-neutral-50 text-neutral-700 hover:text-black">
+                  Nuestro Impacto en Cifras
+                </Link>
+                <Link href="#servicios" className="block px-3 py-2 text-xs hover:bg-neutral-50 text-neutral-700 hover:text-black">
                   Pilares de Actuación
-                </Link>
-                <Link href="#estadisticas" className="block px-3 py-2 text-xs rounded-lg hover:bg-red-50/60 text-slate-700 hover:text-[#991b1b] font-medium">
-                  Impacto en Cifras
                 </Link>
               </div>
             </div>
 
-            <Link href="#directorio" className="hover:text-[#991b1b] transition-colors">
+            <Link href="#directorio" className="hover:text-black transition-colors">
               Directorio Comercial
             </Link>
 
-            <Link href="#empleo" className="flex items-center gap-1.5 hover:text-[#991b1b] transition-colors">
-              <Briefcase className="w-3.5 h-3.5 text-slate-400" />
-              Bolsa de Empleo
+            <Link href="#servicios" className="hover:text-black transition-colors">
+              Servicios & Arbitraje
             </Link>
 
-            <Link href="#servicios" className="hover:text-[#991b1b] transition-colors">
-              Servicios & Patentes
+            <Link href="#publicaciones" className="hover:text-black transition-colors">
+              Publicaciones & Informes
             </Link>
 
-            <Link href="#publicaciones" className="hover:text-[#991b1b] transition-colors">
-              Prensa & Informes
+            <Link href="#contacto" className="hover:text-black transition-colors">
+              Contacto
             </Link>
           </nav>
 
-          {/* Acciones principales */}
-          <div className="hidden sm:flex items-center gap-3">
+          {/* Acciones principales estilo ICC */}
+          <div className="hidden sm:flex items-center gap-4">
             <a
               href="#directorio"
               id="header-search-btn"
-              className="clay-button-secondary inline-flex items-center gap-1.5 text-xs px-3.5 py-2.5 transition-colors"
+              className="inline-flex items-center gap-1.5 text-xs text-neutral-600 hover:text-black transition-colors py-2"
             >
-              <Search className="w-3.5 h-3.5 text-slate-400" />
-              <span>Buscar comercio</span>
+              <Search className="w-3.5 h-3.5 text-neutral-400" />
+              <span>Buscar</span>
             </a>
 
             <a
               href="#afiliacion"
               id="header-affiliate-cta"
-              className="clay-button-primary inline-flex items-center gap-1.5 text-xs px-4 py-2.5 transition-colors uppercase tracking-wider font-semibold"
+              className="btn-icc-primary px-4 py-2.5 text-xs inline-flex items-center gap-1.5"
             >
               <span>Afiliarse</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
@@ -89,7 +88,7 @@ export function Header() {
           <div className="flex lg:hidden items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-slate-700 hover:text-[#991b1b]"
+              className="p-2 text-neutral-800 hover:text-black"
               aria-label="Abrir menú"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -101,49 +100,49 @@ export function Header() {
 
       {/* Menú Móvil Desplegable */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-b border-slate-200 bg-white px-4 pt-3 pb-6 space-y-4 shadow-lg">
+        <div className="lg:hidden border-b border-neutral-200 bg-white px-4 pt-3 pb-6 space-y-4">
           <div className="space-y-1">
             <Link
-              href="#impacto"
+              href="#manifiesto"
               onClick={() => setMobileMenuOpen(false)}
-              className="block px-3 py-2 text-sm font-medium text-slate-800 hover:bg-red-50 hover:text-[#991b1b] rounded-lg"
+              className="block px-3 py-2 text-sm font-medium text-neutral-800 hover:bg-neutral-50"
             >
               Institucional (Historia 1983)
             </Link>
             <Link
               href="#directorio"
               onClick={() => setMobileMenuOpen(false)}
-              className="block px-3 py-2 text-sm font-medium text-slate-800 hover:bg-red-50 hover:text-[#991b1b] rounded-lg"
+              className="block px-3 py-2 text-sm font-medium text-neutral-800 hover:bg-neutral-50"
             >
-              Directorio de Comercios
-            </Link>
-            <Link
-              href="#empleo"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block px-3 py-2 text-sm font-medium text-slate-800 hover:bg-red-50 hover:text-[#991b1b] rounded-lg"
-            >
-              Bolsa de Empleo Cantonal
+              Directorio Comercial
             </Link>
             <Link
               href="#servicios"
               onClick={() => setMobileMenuOpen(false)}
-              className="block px-3 py-2 text-sm font-medium text-slate-800 hover:bg-red-50 hover:text-[#991b1b] rounded-lg"
+              className="block px-3 py-2 text-sm font-medium text-neutral-800 hover:bg-neutral-50"
             >
-              Servicios, Patentes & Arbitraje
+              Servicios & Arbitraje
             </Link>
             <Link
               href="#publicaciones"
               onClick={() => setMobileMenuOpen(false)}
-              className="block px-3 py-2 text-sm font-medium text-slate-800 hover:bg-red-50 hover:text-[#991b1b] rounded-lg"
+              className="block px-3 py-2 text-sm font-medium text-neutral-800 hover:bg-neutral-50"
             >
-              Publicaciones & Prensa
+              Publicaciones & Informes
+            </Link>
+            <Link
+              href="#contacto"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block px-3 py-2 text-sm font-medium text-neutral-800 hover:bg-neutral-50"
+            >
+              Contacto
             </Link>
           </div>
-          <div className="pt-2 flex flex-col gap-2">
+          <div className="pt-2">
             <a
               href="#afiliacion"
               onClick={() => setMobileMenuOpen(false)}
-              className="clay-button-primary w-full text-center py-2.5 font-semibold text-xs uppercase tracking-wider"
+              className="btn-icc-primary w-full text-center py-2.5 block text-xs"
             >
               Afiliar mi empresa
             </a>
