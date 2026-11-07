@@ -1,0 +1,47 @@
+{
+  "test_name": "Evaluación de Usabilidad Prototipo Alta Fidelidad CCA",
+  "platform": "Maze.co",
+  "figma_prototype_url": "https://www.figma.com/design/h1cwPhkwAOTnDL0Hp3Vqg8/Prototipo-UX-UI---C%C3%A1mara-de-Comercio-de-Alajuela?node-id=20-297&t=32u9KsQuGYp766H5-0",
+  "blocks": [
+    {
+      "block_id": 1,
+      "type": "welcome_screen",
+      "title": "Bienvenido al Estudio de Usabilidad de la Cámara de Comercio de Alajuela",
+      "description": "Su participación nos ayudará a evaluar el nuevo portal digital de la Cámara. Realizará 2 tareas sencillas sobre un prototipo interactivo y finalizará con un breve cuestionario. No evaluamos sus conocimientos, sino el diseño de la plataforma."
+    },
+    {
+      "block_id": 2,
+      "type": "mission",
+      "title": "Misión 1: Afiliar un negocio a la Cámara con pago SINPE Móvil",
+      "scenario": "Imagine que usted es dueño de una pizzería en Alajuela y desea afiliar su empresa a la Cámara en el plan Pyme pagando la cuota inicial mediante SINPE Móvil.",
+      "task": "Navegue desde la página principal hasta completar el formulario de registro y confirmar el comprobante de pago.",
+      "expected_path": [
+        "Home CCA",
+        "Página de Planes y Tarifas",
+        "Formulario de Afiliación",
+        "Pasarela de Pago SINPE",
+        "Pantalla de Confirmación de Afiliación"
+      ]
+    },
+    {
+      "block_id": 3,
+      "type": "mission",
+      "title": "Misión 2: Encontrar una vacante contable en la Bolsa de Empleo",
+      "scenario": "Usted está buscando empleo formal y desea verificar si alguna empresa asociada a la Cámara está contratando en el área de contabilidad.",
+      "task": "Localice la sección de Bolsa de Empleo y acceda a la descripción de una vacante.",
+      "expected_path": [
+        "Home CCA",
+        "Menú Servicios al Comercio",
+        "Bolsa de Empleo Cantonal",
+        "Ficha Detallada de Vacante"
+      ]
+    },
+    {
+      "block_id": 4,
+      "type": "sus_questionnaire",
+      "title": "Evaluación Global de Usabilidad (Escala SUS)",
+      "total_questions": 10,
+      "scale": "1 (Totalmente en desacuerdo) a 5 (Totalmente de acuerdo)"
+    }
+  ]
+}
