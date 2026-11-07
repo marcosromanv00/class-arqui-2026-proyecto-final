@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { StatsFootprint } from "@/components/StatsFootprint";
 import { DirectorySection } from "@/components/DirectorySection";
+import { EmploymentExchange } from "@/components/EmploymentExchange";
 import { ServicesPillars } from "@/components/ServicesPillars";
 import { NewsPublications } from "@/components/NewsPublications";
 import { AffiliationWizard } from "@/components/AffiliationWizard";
@@ -15,6 +16,7 @@ export default function Home() {
         <Hero />
         <StatsFootprint />
         <DirectorySection />
+        <EmploymentExchange />
         <ServicesPillars />
         <NewsPublications />
         <AffiliationWizard />

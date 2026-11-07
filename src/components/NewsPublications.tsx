@@ -40,68 +40,69 @@ export function NewsPublications() {
   ];
 
   return (
-    <section id="publicaciones" className="border-b border-slate-200 bg-slate-50/40 py-16 lg:py-24">
+    <section id="publicaciones" className="border-b border-slate-200/80 bg-white py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Cabecera de Publicaciones */}
-        <div className="flex items-end justify-between border-b border-slate-200 pb-8 mb-10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-slate-200/80 pb-8 mb-10 gap-4">
           <div>
-            <p className="text-xs uppercase font-extrabold tracking-widest text-sky-600 mb-2">
-              Investigación & Prensa
+            <p className="text-xs uppercase font-bold tracking-widest text-[#991b1b] mb-2">
+              Investigación Gremial & Prensa
             </p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#09090b] tracking-tight">
               Últimas publicaciones e informes
             </h2>
-            <p className="mt-2 text-sm text-slate-600">
-              Documentos de valor gremial, estudios económicos y guías normativas para la toma de decisiones empresariales.
+            <p className="mt-2 text-sm text-slate-600 max-w-xl leading-relaxed">
+              Documentos de valor gremial, estudios económicos de la provincia y guías normativas para la toma de decisiones empresariales.
             </p>
           </div>
-          <span className="hidden sm:inline-flex items-center gap-1 text-xs font-bold text-slate-900 hover:text-sky-600 cursor-pointer">
-            Ver archivo histórico <ArrowUpRight className="w-3.5 h-3.5" />
+          <span className="inline-flex items-center gap-1 text-xs font-bold text-slate-800 hover:text-[#991b1b] cursor-pointer">
+            Ver archivo histórico <ArrowUpRight className="w-3.5 h-3.5 text-[#991b1b]" />
           </span>
         </div>
 
-        {/* Retícula estilo ICC: Tarjeta Azul Gigante a la izquierda + tarjetas apiladas */}
+        {/* Retícula Editorial: Tarjeta Monumental en Grafito a la izquierda + tarjetas apiladas en blanco */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
           
-          {/* Tarjeta Azul Monumental estilo ICC */}
-          <div className="lg:col-span-5 bg-sky-600 text-white p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden group">
+          {/* Tarjeta Destacada en Negro Grafito con Acentos Carmín (Contraste Sobrio) */}
+          <div className="lg:col-span-5 bg-[#09090b] text-white rounded-2xl p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden group shadow-md border border-slate-800">
             <div className="space-y-4">
-              <span className="text-[11px] font-extrabold uppercase tracking-widest bg-white/20 text-white px-2.5 py-1 inline-block">
-                Informe Destacado
+              <span className="text-[10px] font-bold uppercase tracking-widest bg-[#991b1b] text-white px-2.5 py-1 rounded-md inline-block shadow-xs">
+                Informe Trimestral Destacado
               </span>
               <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight leading-snug">
                 Informe Trimestral de Inteligencia Comercial Alajuela 2026
               </h3>
-              <p className="text-sm text-sky-100 leading-relaxed font-normal">
-                Auditoría detallada de la balanza comercial provincial, empleo formal y dinamismo en zonas francas.
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
+                Auditoría técnica de la balanza comercial provincial, dinamismo en parques de El Coyol y perspectivas de inversión para pymes de los 16 cantones.
               </p>
             </div>
 
-            <div className="mt-12 pt-6 border-t border-sky-400/40 flex items-center justify-between">
-              <span className="text-xs text-sky-200 font-mono">Edición Noviembre 2026 · PDF 4.2 MB</span>
-              <button className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white text-slate-950 text-xs font-bold hover:bg-slate-100 transition-colors">
-                <Download className="w-3.5 h-3.5" /> Descargar
+            <div className="mt-10 pt-6 border-t border-slate-800 flex items-center justify-between">
+              <span className="text-xs text-slate-400 font-mono">Edición Noviembre 2026 · PDF 4.2 MB</span>
+              <button className="clay-button-secondary inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-slate-900 bg-white hover:bg-slate-100 transition-all rounded-lg">
+                <Download className="w-3.5 h-3.5 text-[#991b1b]" /> 
+                <span>Descargar</span>
               </button>
             </div>
           </div>
 
-          {/* Grilla 2x2 de Publicaciones estilo ICC */}
+          {/* Grilla 2x2 de Publicaciones en Claymorph Cards Blancas */}
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
             {publications.slice(1).map((pub, idx) => (
               <div
                 key={idx}
-                className="bg-white border border-slate-200 hover:border-slate-950 transition-colors p-6 flex flex-col justify-between group shadow-xs"
+                className="clay-card rounded-2xl bg-white border border-slate-200/90 hover:border-red-300 transition-all p-6 flex flex-col justify-between group shadow-2xs"
               >
                 <div>
-                  <div className="flex items-center justify-between text-[11px] mb-2 text-slate-400">
-                    <span className="font-bold text-sky-600 uppercase tracking-widest text-[10px]">
+                  <div className="flex items-center justify-between text-[11px] mb-2.5 text-slate-400">
+                    <span className="font-bold text-[#991b1b] uppercase tracking-wider text-[10px] bg-red-50 px-2 py-0.5 rounded border border-red-100">
                       {pub.category}
                     </span>
-                    <span className="font-mono text-[10px]">{pub.date}</span>
+                    <span className="font-mono text-[10px] text-slate-500">{pub.date}</span>
                   </div>
 
-                  <h4 className="text-sm font-bold text-slate-950 leading-snug group-hover:text-sky-600 transition-colors">
+                  <h4 className="text-sm font-bold text-[#09090b] leading-snug group-hover:text-[#991b1b] transition-colors">
                     {pub.title}
                   </h4>
 
@@ -114,8 +115,9 @@ export function NewsPublications() {
                   <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-500">
                     <FileText className="w-3.5 h-3.5 text-slate-400" /> Documento Oficial
                   </span>
-                  <a href="#afiliacion" className="font-bold text-slate-900 group-hover:text-sky-600 transition-colors flex items-center gap-0.5">
-                    Consultar <ArrowUpRight className="w-3 h-3" />
+                  <a href="#tramites" className="font-bold text-slate-900 group-hover:text-[#991b1b] transition-colors flex items-center gap-0.5">
+                    <span>Consultar</span>
+                    <ArrowUpRight className="w-3 h-3 text-[#991b1b]" />
                   </a>
                 </div>
               </div>
@@ -128,4 +130,3 @@ export function NewsPublications() {
     </section>
   );
 }
-
