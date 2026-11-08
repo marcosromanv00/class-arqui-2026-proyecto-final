@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Mail, Phone, MapPin, ArrowUp } from "lucide-react";
 
 export function Footer() {
@@ -73,61 +74,49 @@ export function Footer() {
 
           <div className="space-y-2.5">
             <h3 className="font-semibold text-white text-sm">
-              Servicios & Trámites
+              Servicios al Comercio
             </h3>
             <ul className="space-y-2 text-stone-300">
-              <li><a href="#tramites" className="hover:text-white transition-colors">Centro de Conciliación y Arbitraje</a></li>
-              <li><a href="#tramites" className="hover:text-white transition-colors">Guía de patente comercial municipal</a></li>
-              <li><a href="#servicios" className="hover:text-white transition-colors">Convenios y beneficios médicos</a></li>
-              <li><a href="#afiliacion" className="hover:text-white transition-colors">Deducción de cuota (Art. 8 Ley 7092)</a></li>
-              <li><a href="#afiliacion" className="hover:text-white transition-colors">Formulario de afiliación</a></li>
+              <li><Link href="/servicios/arbitraje" className="hover:text-white transition-colors">Centro de Arbitraje y Mediación Mercantil</Link></li>
+              <li><Link href="/servicios/tramites" className="hover:text-white transition-colors">Guía de Trámites y Patente Municipal</Link></li>
+              <li><Link href="/servicios/convenios" className="hover:text-white transition-colors">Convenios y Descuentos Comerciales</Link></li>
+              <li><Link href="/afiliarse" className="hover:text-white transition-colors">Planes y Tarifas de Afiliación</Link></li>
+              <li><Link href="/afiliarse" className="hover:text-white transition-colors">Formulario de Afiliación Digital (SINPE)</Link></li>
             </ul>
           </div>
 
           <div className="space-y-2.5">
             <h3 className="font-semibold text-white text-sm">
-              Comunidad Empresarial
+              Institucional y Directorio
             </h3>
             <ul className="space-y-2 text-stone-300">
-              <li><a href="#directorio" className="hover:text-white transition-colors">Directorio oficial de asociados</a></li>
-              <li><a href="#empleo" className="hover:text-white transition-colors">Bolsa de empleo provincial</a></li>
-              <li><a href="#publicaciones" className="hover:text-white transition-colors">Observatorio económico y reportes</a></li>
-              <li><a href="#manifiesto" className="hover:text-white transition-colors">Historia y representación gremial</a></li>
-              <li><a href="#contacto" className="hover:text-white transition-colors">Salas de conferencias y reuniones</a></li>
+              <li><Link href="/directorio" className="hover:text-white transition-colors">Directorio Comercial de Alajuela</Link></li>
+              <li><Link href="/empleo" className="hover:text-white transition-colors">Bolsa de Empleo Cantonal</Link></li>
+              <li><Link href="/la-camara" className="hover:text-white transition-colors">Quiénes Somos (Misión, Visión, Valores)</Link></li>
+              <li><Link href="/la-camara#junta" className="hover:text-white transition-colors">Junta Directiva y Liderazgo</Link></li>
+              <li><Link href="/la-camara#estatutos" className="hover:text-white transition-colors">Estatutos y Transparencia Legal</Link></li>
             </ul>
           </div>
 
           <div className="space-y-3">
             <h3 className="font-semibold text-white text-sm">
-              Atención al Público
+              Contacto y Soporte
             </h3>
             <p className="text-stone-300 leading-relaxed">
               Lunes a viernes de 8:00 a. m. a 5:00 p. m. en jornada continua.
             </p>
+            <div className="space-y-1.5 text-xs text-stone-300 pt-1">
+              <p><Link href="/faq" className="hover:text-white transition-colors underline underline-offset-4">Preguntas Frecuentes (FAQ)</Link></p>
+              <p><Link href="/contacto" className="hover:text-white transition-colors underline underline-offset-4">Buzón de Consultas y Denuncias</Link></p>
+            </div>
             <div className="flex items-center gap-4 pt-2 text-stone-300">
               <a
                 href="https://wa.me/50687030792"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-white transition-colors text-xs underline underline-offset-4"
+                className="hover:text-white transition-colors text-xs underline underline-offset-4 font-mono"
               >
-                WhatsApp Oficial
-              </a>
-              <a
-                href="https://www.facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white transition-colors text-xs underline underline-offset-4"
-              >
-                Facebook
-              </a>
-              <a
-                href="https://www.linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white transition-colors text-xs underline underline-offset-4"
-              >
-                LinkedIn
+                Canal Oficial de WhatsApp
               </a>
             </div>
           </div>
@@ -136,13 +125,13 @@ export function Footer() {
         {/* Colophon & Botón de Volver Arriba */}
         <div className="pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between text-xs text-stone-400 gap-4">
           <p>© 2026 Cámara de Comercio de Alajuela. Fundada en 1983. Todos los derechos reservados.</p>
-          <a
-            href="#inicio"
+          <Link
+            href="/"
             className="text-stone-300 hover:text-white transition-colors inline-flex items-center gap-1.5 underline underline-offset-4"
           >
             <span>Volver al inicio</span>
             <ArrowUp className="w-3.5 h-3.5" />
-          </a>
+          </Link>
         </div>
       </div>
     </footer>
