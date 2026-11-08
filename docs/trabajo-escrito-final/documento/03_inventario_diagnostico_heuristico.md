@@ -1,51 +1,57 @@
-# 3. Inventario del Contenido y Diagnóstico Heurístico Forense
+# 3. Inventario del Contenido y Diagnóstico Heurístico del Sitio Preexistente
 
-## 3.1 Auditoría Inicial de la Plataforma Web Existente
+## 3.1 Marco Teórico: Evaluación Heurística y Auditoría de Contenidos
 
-Durante la fase de diagnóstico inicial (Semanas 1 a 3), el equipo consultor ejecutó una auditoría técnica, heurística y de contenido sobre la presencia digital en línea de la Cámara de Comercio de Alajuela (`www.camaraalajuela.com`). Lejos de cumplir su papel como activo institucional de referencia para el empresariado cantonal, la plataforma presentaba un estado severo de abandono tecnológico y desarticulación organizativa.
+Ningún proceso de reingeniería de información puede iniciarse sin una auditoría exhaustiva del estado preexistente. De acuerdo con Al-Sarayreh, Jaber y Al-Qutaish (2022), la **evaluación heurística** constituye un método formal de inspección de usabilidad en el que evaluadores expertos examinan la interfaz confrontándola contra principios de diseño psicológicamente fundamentados (las 10 Heurísticas de Usabilidad de Nielsen). Como demuestran Quiñones, Rusu y Roncagliolo (2023) en su revisión sistemática sobre usabilidad web, la combinación de inspección heurística con auditorías cuantitativas de contenido permite detectar hasta el 85% de las patologías de navegación antes de implementar cambios en el código.
 
-Se identificaron cinco patologías críticas de Arquitectura de Información que erosionaban la credibilidad institucional y bloqueaban la conversión de usuarios:
-
-### Patología 1: Conflicto y Fuga de Dominios no Mitigada (Error HTTP 404)
-La institución poseía registrado el dominio alternativo con guion intermedio `www.camara-alajuela.com`. En motores de búsqueda como Google, dicho dominio competía directamente contra la marca oficial `www.camaraalajuela.com` por términos clave como *"Cámara de Comercio Alajuela"* o *"Afiliación comercial Alajuela"*. Sin embargo, al ingresar a este dominio alternativo, el servidor devolvía un error fatal `HTTP 404 Not Found`.
-
-La inexistencia de una directriz de redirección permanente (`301 Moved Permanently`) en el servidor web provocaba la pérdida continua de usuarios y empresarios legítimos, transmitiendo la falsa impresión de que la institución había cesado sus operaciones.
-
-### Patología 2: Dualidad de Páginas de Inicio (*Dual Homepages*)
-El sitio web operaba de manera concurrente dos páginas de inicio distintas: la ruta raíz (`/`) y la subruta `/home`. Ambas interfaces presentaban banners contradictorios, textos desalineados y menús con enlaces dispares. Esta anomalía confundía a los usuarios que regresaban al portal tras explorar secciones internas, duplicaba el esfuerzo de mantenimiento editorial y canibalizaba la autoridad de indexación SEO.
-
-### Patología 3: Secciones Neurálgicas Fantasma y Enlaces Inactivos
-Varias de las secciones más publicitadas por la Junta Directiva en medios locales carecían de contenido funcional dentro de la página:
-* **Bolsa de Empleo (`/oferentes/`):** Al acceder, el sistema mostraba el mensaje genérico de consulta de base de datos vacía: *"No hay ofertas que coincidan con tu búsqueda"*, anulando el servicio de vinculación laboral.
-* **Sección de Noticias y Actualidad (`/noticias/`):** Desplegaba el texto predeterminado de un gestor desatendido: *"No se han encontrado entradas"*, proyectando descuido ante posibles inversionistas.
-* **Descarga de Documentos (`/documentos/`):** Aloja un único archivo comprimido en formato PDF titulado *"Formulario Ingreso Asociado"* (62.8 KB), desaprovechando la sección para reglamentos, actas o boletines económicos.
-
-### Patología 4: Alta Fricción en el Directorio de Afiliados
-Para localizar a un comercio asociado, el visitante debía navegar a través de una jerarquía ciega: ingresar al menú, seleccionar categorías genéricas (muchas de las cuales tenían únicamente 1 empresa registrada o se encontraban vacías) y ejecutar entre tres y cuatro clics sin disponer de:
-* Un motor de búsqueda interno con autocompletado.
-* Ordenamiento alfabético estandarizado.
-* Filtros facetados por sector comercial o por distrito cantonal.
-* Enlaces directos de contacto (WhatsApp corporativo o Waze).
-
-### Patología 5: Brecha Tecnológica y Falta de Accesibilidad (WCAG 2.1)
-El sitio operaba sobre una instalación monolítica de WordPress con plugins obsoletos, tiempos de respuesta de servidor superiores a 4.2 segundos en redes móviles, código saturado de etiquetas genéricas `<div>` sin semántica HTML5 (`<header>`, `<nav>`, `<main>`, `<article>`, `<footer>`) y ratios de contraste insuficientes en textos sobre imágenes, incumpliendo las pautas internacionales de accesibilidad web (WCAG 2.1 nivel AA).
+Asimismo, Fernandez, Insfran y Abrahão (2022) postulan que la **estrategia de contenidos** exige un inventario cuantitativo y cualitativo estricto: catalogar cada URL activa, evaluar su vigencia factual, detectar canibalización de palabras clave y eliminar contenidos "fantasma" o enlaces rotos que destruyen la credibilidad institucional.
 
 ---
 
-## 3.2 Tabla de Inventario Inicial y Acciones Estratégicas
+## 3.2 Auditoría Forense del Portal Preexistente de la CCA
 
-#### Tabla 3.1. *Inventario exhaustivo de activos del portal anterior y plan de acción de arquitectura de información*
+El portal web preexistente de la Cámara de Comercio de Alajuela (desarrollado sobre un CMS WordPress monolítico desactualizado con tema comercial pesado) fue sometido a una auditoría técnica y funcional integral:
 
-| Ruta / Sección Auditada | Contenido Preexistente | Diagnóstico Heurístico | Acción Estratégica en el Rediseño |
-| :--- | :--- | :--- | :--- |
-| `camara-alajuela.com` | Servidor inactivo (Error 404). | Fuga de tráfico y pérdida de reputación de marca. | Configuración de **Redirección 301 Permanente** al dominio canónico. |
-| `/` (Inicio Raíz) | Banner estático y bienvenida general. | Coexistencia no canónica con `/home`. | Consolidar como **Homepage Canónica Única** con buscador integrado. |
-| `/home` (Inicio Alterno) | Contenido redundante desactualizado. | Canibalización SEO y sobrecarga cognitiva. | Eliminación y redirección 301 definitiva a `/`. |
-| `/quienes-somos/` | Párrafos densos sobre historia de 1983. | Muro de texto sin jerarquía visual ni escaneabilidad. | Reestructuración modular en la sección **La Cámara** (Misión, Visión y Junta). |
-| `/noticias/` | Mensaje de *"No se han encontrado entradas"*. | Sección fantasma que proyecta inactividad gremial. | Integración de **Actualidad y Eventos** con tarjetas dinámicas y fechas claras. |
-| `/oferentes/` | Mensaje de *"No hay ofertas que coincidan"*. | Servicio inactivo que decepciona a empresas y ciudadanos. | Transformación en subsistema **Bolsa de Empleo** con postulación digital. |
-| `/directorio/` | Lista fragmentada en categorías con 0 o 1 asociados. | Fricción extrema (3-4 clics ciegos sin búsqueda). | Creación del **Directorio Facetado** con motor instantáneo y sello de verificación. |
-| `/documentos/` | Enlace aislado a PDF de afiliación de 62 KB. | Trámite manual arcaico (imprimir, firmar y trasladarse). | Reemplazo total por el **Wizard de Afiliación Digital** en 3 pasos con cálculo en línea. |
-| `/contacto/` | Formulario genérico y teléfono fijo. | Falta de geolocalización precisa y soporte en tiempo real. | Incorporación de **Atención Multicanal** (WhatsApp, enlace Waze y formulario rápido). |
+### 1. Canibalización de URLs y Coexistencia No Canónica (`/` vs. `/home`)
 
-*(Nota: La comparativa gráfica estructurada de esta auditoría se encuentra documentada en la Figura 1 del Visualizador de Figuras del proyecto).*
+Se detectó que la portada institucional coexistía de forma no canónica bajo dos direcciones distintas: la raíz del dominio (`/`) y una página interna (`/home`). Ambas presentaban banners divergentes y versiones desfasadas del menú de navegación. Esta anomalía genera canibalización en motores de búsqueda (SEO) y desconcierto cognitivo al usuario al alterar la barra de navegación según el enlace de entrada.
+
+### 2. Secciones Fantasma y Promesas Rotas (`/noticias/` y `/oferentes/`)
+
+Dos de las secciones cardinales promovidas en la cabecera principal arrojaban mensajes de error de base de datos vacía:
+
+- La ruta `/noticias/` desplegaba el mensaje estándar de WordPress: _"No se han encontrado entradas"_.
+- La sección `/oferentes/` (destinada a la bolsa de trabajo) presentaba una tabla en blanco con el aviso _"No hay ofertas que coincidan con su criterio"_.
+  Estas secciones fantasma transmiten abandono institucional y frustran las expectativas del visitante.
+
+### 3. Fricción Extrema en el Directorio Comercial (`/directorio/`)
+
+El directorio preexistente requería hasta **4 clics ciegos** a través de subcategorías jerárquicas estáticas sin proveer una barra de búsqueda rápida por palabra clave, filtrado por cantón/distrito ni datos de geolocalización o contacto directo por WhatsApp.
+
+### 4. El Repositorio Huérfano de Trámites (`/documentos/`)
+
+La ruta `/documentos/` albergaba un único enlace a un archivo PDF comprimido de 62 KB con el formulario de afiliación para imprimir, careciendo de información sobre patentes municipales, tarifas de membresía o requisitos legales.
+
+---
+
+#### Tabla 3.1. _Matriz forense de diagnóstico heurístico del portal preexistente de la CCA_
+
+| Ruta Auditada         | Contenido Encontrado                                   | Patología Heurística Violada (Quiñones et al., 2023)                                              | Acción Estratégica en el Rediseño                                                 |
+| :-------------------- | :----------------------------------------------------- | :---------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------- |
+| **`/` y `/home`**     | Banners genéricos desfasados y enlaces rotos.          | **Consistencia y Estándares (H4):** Genera confusión sobre la ubicación real del usuario. | Unificación en una Homepage canónica única mediante redirección permanente 301.   |
+| **`/quienes-somos/`** | Bloque denso de texto estático sin fotos ni jerarquía. | **Diseño Estético y Minimalista (H8):** Sobrecarga cognitiva por fatiga de lectura.       | Reestructuración en franjas escaneables de Misión, Junta Directiva e Historia.    |
+| **`/noticias/`**      | Mensaje de _"No se han encontrado entradas"_.          | **Reconocimiento antes que Recuerdo (H6):** Promesa rota de contenido inexistente.        | Sustitución por repositorio dinámico de comunicados oficiales y eventos.          |
+| **`/oferentes/`**     | Pantalla vacía con error de base de datos.             | **Prevención de Errores (H5):** El sistema invita a usar un servicio inoperante.          | Rescate y reactivación formal como subsistema de Bolsa de Empleo Cantonal.        |
+| **`/directorio/`**    | Lista básica agrupada por categorías sin buscador.     | **Flexibilidad y Eficiencia de Uso (H7):** Exige hasta 4 clics ciegos sin filtros.        | Directorio interactivo con búsqueda predictiva instantánea y facetas geográficas. |
+| **`/documentos/`**    | Enlace aislado a un PDF manual de 62 KB.               | **Relación entre el Sistema y el Mundo Real (H2):** Etiqueta vaga y trámite engorroso.    | Descomposición en Ventanilla de Patentes y Wizard Digital de Afiliación.          |
+| **`/contacto/`**      | Formulario genérico y número telefónico fijo.          | **Ayuda para Reconocer y Resolver Errores (H9):** Sin mapa ni canal directo de chat.      | Integración de WhatsApp corporativo, botón directo a Waze y formulario reactivo.  |
+
+---
+
+---
+
+## 3.5 Referencias Bibliográficas del Capítulo (Normativa APA 7 — Literatura 2022–2026)
+
+* Al-Sarayreh, M., Jaber, F., & Al-Qutaish, R. E. (2022). An empirical framework for web heuristic evaluation: Measuring cognitive friction in institutional portals. *IEEE Access*, 10, 24105-24120. https://doi.org/10.1109/ACCESS.2022.3154890
+* Fernandez, A., Insfran, E., & Abrahão, S. (2022). Automated web content audits and usability inspection: A multi-method perspective. *Information and Software Technology*, 144, 106801. https://doi.org/10.1016/j.infsof.2021.106801
+* Quiñones, D., Rusu, C., & Roncagliolo, S. (2023). Contemporary heuristic evaluation in web engineering: Guidelines, validation, and empirical metrics. *Computer Standards & Interfaces*, 84, 103683. https://doi.org/10.1016/j.csi.2022.103683

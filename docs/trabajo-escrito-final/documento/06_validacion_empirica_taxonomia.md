@@ -91,8 +91,10 @@ El promedio global de **86% en éxito directo** y **96.3% en éxito total** rati
 
 ---
 
-## 6.5 Referencias Bibliográficas del Capítulo (Normativa APA 7)
+---
 
-- Kuric, E., Demcak, P., & Krajcovic, M. (2025a). _Card sorting simulator: Augmenting design of logical information architectures with large language models_. arXiv. https://doi.org/10.48550/arXiv.2505.09478
-- Kuric, E., Demcak, P., & Krajcovic, M. (2025b). _Card sorting with fewer cards and the same mental models? A re-examination of an established practice_. arXiv. https://doi.org/10.48550/arXiv.2509.03232
-- Ladisa, P., Plate, H., Martinez, M., & Barais, O. (2023). SoK: Taxonomy of attacks on open-source software supply chains. _IEEE Symposium on Security and Privacy (S&P)_, 1509-1526. https://doi.org/10.1109/SP46215.2023.10179304
+## 6.5 Referencias Bibliográficas del Capítulo (Normativa APA 7 — Literatura 2022–2026)
+
+* Kuric, E., Demcak, P., & Krajcovic, M. (2025a). Card sorting simulator: Augmenting design of logical information architectures with large language models. *arXiv:2505.09478*. https://doi.org/10.48550/arXiv.2505.09478
+* Kuric, E., Demcak, P., & Krajcovic, M. (2025b). Card sorting with fewer cards and the same mental models? A re-examination of an established practice. *arXiv:2509.03232*. https://doi.org/10.48550/arXiv.2509.03232
+* Ladisa, P., Plate, H., Martinez, M., & Barais, O. (2023). SoK: Taxonomy of attacks on open-source software supply chains. *IEEE Symposium on Security and Privacy (S&P)*, 1509-1526. https://doi.org/10.1109/SP46215.2023.10179304

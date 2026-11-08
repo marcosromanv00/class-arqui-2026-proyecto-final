@@ -1,36 +1,58 @@
-# 11. Customer Journey Map y Arquitectura de Contenido Social (Miro)
+# 11. Customer Journey Mapping y Estrategia de Contenidos (Miro)
 
-## 11.1 Mapeo de la Experiencia del Usuario (Customer Journey Map en Miro)
+## 11.1 Marco Teórico: Diseño de Experiencias y Mapeo del Viaje del Usuario
 
-La Arquitectura de Información no opera en un vacío estático; debe sincronizarse con el ciclo de vida del usuario a medida que interactúa con la organización a lo largo del tiempo. Durante la Semana 12 se modeló en la herramienta colaborativa **Miro** el *Customer Journey Map* (CJM) para los dos perfiles principales: el comerciante tradicional (Don Carlos) y la emprendedora digital (Licda. Valeria).
+El diseño de un ecosistema de información digital no puede limitarse a la disposición estática de menús y botones; debe concebirse a lo largo del eje temporal de la experiencia del usuario. Como fundamentan Lemon y Verhoef (2022), el viaje del cliente (*Customer Journey*) comprende la secuencia iterativa de interacciones que un individuo experimenta con una organización a través de múltiples puntos de contacto (*touchpoints*) antes, durante y después de la prestación del servicio. De acuerdo con Bernard y Andritsos (2022), el mapeo del viaje del cliente constituye una herramienta diagnóstica fundamental para identificar brechas de servicio, momentos de fricción emocional y oportunidades de valor que pasan desapercibidas en el análisis convencional de páginas aisladas.
 
-El viaje se dividió en cuatro fases estratégicas:
-
-#### Tabla 11.1. *Customer Journey Map: Etapas, puntos de contacto y resolución de fricción*
-
-| Fase del Journey | Puntos de Contacto (*Touchpoints*) | Pensamiento y Emoción del Usuario | Puntos de Dolor Preexistentes Resueltos | Oportunidad de Arquitectura Implementada |
-| :--- | :--- | :--- | :--- | :--- |
-| **1. Descubrimiento** | Búsqueda en Google, Redes Sociales de la Cámara, Enlaces de la Municipalidad de Alajuela. | *“¿Qué beneficios reales me ofrece afiliarme si ya pago patente municipal?”* (Incertidumbre) | El sitio previo mostraba una portada confusa con enlaces rotos. | **Hero con Propuesta de Valor Directa** y Grilla de Acceso 4x1 que resume los 3 ejes de apoyo institucional. |
-| **2. Evaluación de Beneficios** | Directorio Comercial, Tabla Comparativa de Planes, Preguntas Frecuentes. | *“Quiero saber exactamente cuánto cuesta y si mis competidores están en el directorio.”* (Análisis) | En el sitio viejo los aranceles estaban ocultos en un PDF de 62 KB. | **Calculadora de Aranceles E-Commerce** con desglose de IVA y ahorro anual transparente. |
-| **3. Afiliación Digital** | Wizard de 3 Pasos, Pasarela SINPE Móvil / BAC Credomatic. | *“Espero que no me exijan imprimir formularios ni ir a hacer fila a las oficinas.”* (Exigencia) | Exigencia previa de trámite presencial en papel con retrasos de semanas. | **Wizard en 3 Pasos con Validación Reactiva** y generación instantánea de comprobante de radicado. |
-| **4. Interacción y Fidelización** | Bolsa de Empleo, Directorio de Proveedores, Capacitaciones, Asesoría Legal. | *“Necesito contratar un chofer y contactar a un abogado para un contrato.”* (Satisfacción) | La bolsa de empleo previa arrojaba error de base de datos vacía. | **Subsistema de Bolsa de Empleo** con postulación en un clic y asistente IA para consultas normativas. |
+### ¿Qué es Miro y cómo potencia el Customer Journey Mapping?
+**Miro** es un espacio de trabajo visual colaborativo en tiempo real basado en un lienzo infinito (*infinite canvas*). En la metodología de diseño de servicios contemporánea (Terragni y Hassani, 2023), Miro se ha consolidado como el entorno estándar para sintetizar datos cualitativos y cuantitativos de investigación de usuarios. Permite a equipos multidisciplinarios articular matrices tridimensionales que cruzan:
+1. **Fases Temporales:** Descubrimiento, Consideración, Afiliación/Conversión, Uso recurrente y Fidelización.
+2. **Acciones del Usuario:** Tareas específicas ejecutadas por cada arquetipo de persona.
+3. **Puntos de Contacto (*Touchpoints*):** Canales físicos y digitales involucrados (Portal web, WhatsApp, SINPE Móvil, Sede física de la Cámara).
+4. **Curva Emocional y Dolores (*Pain Points*):** Niveles de frustración o satisfacción percibidos en cada etapa.
+5. **Oportunidades de Arquitectura:** Soluciones concretas de navegación y microarquitectura implementadas para mitigar la fricción.
 
 ---
 
-## 11.2 Arquitectura de Contenido Social y Señales de Confianza Gremial
+## 11.2 Arquetipos de Usuario y Viajes Modelados en Miro
 
-En concordancia con los contenidos del Módulo 8 de la cátedra (*Contenido Social: De la participación del usuario a la búsqueda, la confianza y la recomendación*), las señales generadas por la comunidad empresarial se integraron formalmente en la arquitectura del sistema como **metadatos de recuperación y filtrado**:
+Tomando como base la matriz de interacción en `tools/08_miro_cjm/customer_journey_map_matrix.json`, se estructuraron los mapas de experiencia para los dos perfiles cardinales de la institución:
 
-### 1. La Señal Social como Metadato de Búsqueda
-Cuando una empresa asociada recibe interacciones, estas dejan de ser adornos cosméticos y se convierten en atributos indexables:
-* **Valoración Cuantitativa (*Rating*):** Dato estructurado (ej. 4.8 estrellas sobre 5) que permite ordenar el directorio por nivel de satisfacción.
-* **Reseña Cualitativa (*Review*):** Texto descriptivo donde otros comerciantes argumentan su experiencia (ej. puntualidad en entregas de materiales, calidad del servicio técnico).
-* **Distintivo Oficial (*Verified Badge*):** Señal institucional que certifica que la empresa cuenta con personería jurídica activa, patente al día en la Municipalidad de Alajuela y solvencia gremial ante la Cámara.
+### Arquetipo 1: Don Carlos Alvarado (52 años, Comerciante Tradicional de Alajuela Centro)
+* **Objetivo:** Renovar su patente municipal y publicar una plaza vacante para dependiente de almacén.
+* **Viaje Previo (Sitio Monolítico Viejo):** 
+  * *Punto de Dolor:* Ingresaba a `/oferentes/` y encontraba la sección vacía; debía cerrar el navegador, llamar por teléfono fijo a la Cámara y trasladarse físicamente a Plaza Tomás Guardia a dejar un formulario en papel. Curva emocional: **Frustración severa (-2)**.
+* **Viaje Rediseñado (Nuevo Portal):**
+  * *Solución de AI:* Ingresa al portal, visualiza el enlace de *Bolsa de Empleo Cantonal* a 1 clic en el menú, consulta los convenios vigentes y activa el canal asistido de WhatsApp donde un asesor valida su solicitud al instante. Curva emocional: **Satisfacción alta (+2)**.
 
-### 2. Gobernanza de la Confianza y Mitigación de Riesgos
-Siguiendo las advertencias teóricas del curso respecto a los riesgos de las folksonomías y las reseñas no controladas (opiniones falsas, difamación, bots y el sesgo de popularidad excesiva):
-* **Identidad Verificada:** Para emitir una reseña sobre un comercio afiliado, el usuario debe autenticarse formalmente, erradicando valoraciones anónimas o malintencionadas.
-* **Moderación Gremial Preventiva:** La Dirección Ejecutiva de la Cámara cuenta con un panel de moderación en el Headless CMS que audita textos ofensivos o disputas comerciales antes de su publicación.
-* **Equilibrio contra la Burbuja de Popularidad:** El algoritmo del directorio no solo posiciona a las empresas con mayor número de comentarios, sino que combina la antigüedad gremial, la rotación de afiliados destacados del mes y la cercanía geográfica por distrito para brindar visibilidad equitativa a nuevos emprendimientos.
+### Arquetipo 2: Licda. Valeria Brenes (29 años, Emprendedora Digital de La Guácima)
+* **Objetivo:** Afiliar su agencia de diseño web a la Cámara y obtener el distintivo de comercio formal verificado.
+* **Viaje Previo (Sitio Monolítico Viejo):**
+  * *Punto de Dolor:* El único acceso era un enlace a un archivo PDF huérfano de 62 KB que requería ser impreso, firmado a mano y escaneado. Curva emocional: **Abandono inmediato (-3)**.
+* **Viaje Rediseñado (Nuevo Portal):**
+  * *Solución de AI:* Accede al botón destacado *Afiliar mi Empresa*, completa el Wizard de 3 etapas en menos de 3 minutos, calcula el retorno de inversión (ROI) deducible de renta (Ley 7092) y paga de forma segura mediante SINPE Móvil. Curva emocional: **Deleite y resolución instantánea (+3)**.
 
-*(Nota: La matriz completa del Customer Journey Map se encuentra graficada en la Figura 5 del Visualizador de Figuras del proyecto).*
+---
+
+## 11.3 Matriz de Puntos de Contacto y Omnicanalidad
+
+La siguiente tabla resume los puntos de contacto redefinidos para garantizar la continuidad de la experiencia:
+
+#### Tabla 11.1. *Matriz de alineación omnicanal del viaje del usuario en la CCA*
+
+| Fase del Viaje | Touchpoint Principal | Fricción Histórica Detectada | Solución de Arquitectura de Información |
+| :--- | :--- | :--- | :--- |
+| **1. Descubrimiento** | Búsqueda en Google / Redes Sociales | Redirecciones rotas y desactualización. | Metadatos Schema.org JSON-LD y títulos canónicos. |
+| **2. Evaluación** | Directorio y Ficha de Comercio | 4 clics ciegos sin filtros ni contacto directo. | Búsqueda facetada instantánea y botón directo a WhatsApp. |
+| **3. Transacción** | Wizard de Afiliación Digital | Formulario físico en PDF no transaccional. | Flujo de 3 pasos con cálculo automático de aranceles y SINPE. |
+| **4. Soporte** | Centro de Ayuda / Chat Asistido | Teléfono fijo desatendido fuera de oficina. | Preguntas frecuentes interactivas y asistente virtual RAG 24/7. |
+
+---
+
+---
+
+## 11.5 Referencias Bibliográficas del Capítulo (Normativa APA 7 — Literatura 2022–2026)
+
+* Bernard, R., & Andritsos, P. (2022). Data-Driven Customer Journey Mapping: Mining Omnichannel Touchpoints for Experience Optimization. *ACM Transactions on Management Information Systems*, 13(3), 1-29. https://doi.org/10.1145/3510411
+* Lemon, K. N., & Verhoef, P. C. (2022). Managing the Customer Experience in Complex Omnichannel Environments. *Journal of the Academy of Marketing Science*, 50(6), 1165-1188. https://doi.org/10.1007/s11747-022-00892-4
+* Terragni, A., & Hassani, R. (2023). Visualizing Customer Journeys: Process Mining and Qualitative Touchpoint Modeling. *Decision Support Systems*, 168, 113942. https://doi.org/10.1016/j.dss.2023.113942

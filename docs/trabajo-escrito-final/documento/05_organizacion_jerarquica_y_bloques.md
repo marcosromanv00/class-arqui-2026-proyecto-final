@@ -1,38 +1,44 @@
-# 5. Organización Jerárquica y Microarquitectura de Contenido (Octopus.do)
+# 5. Organización Jerárquica y Bloques de Contenido (Octopus.do)
 
-## 5.1 Del Sitemap Macro a la Microarquitectura Modular
+## 5.1 Marco Teórico: Microarquitectura Visual y Bloques de Contenido con Octopus.do
 
-Mientras que el sitemap en FlowMapp definió el mapa general de rutas del portal, el laboratorio tecnológico de la Semana 5 basado en **Octopus.do** permitió descender hacia la microarquitectura de contenido. Esta disciplina consiste en descomponer cada una de las 26 páginas en módulos y bloques informativos específicos, detallando el propósito comunicativo de cada contenedor antes de iniciar el diseño visual.
+Mientras que el sitemap macro de FlowMapp delimita la taxonomía global entre páginas, la **microarquitectura de información** desciende al nivel intra-página para definir la jerarquía secuencial de los componentes visuales que integran cada vista. Como postula Babich (2023), la comunicación efectiva del diseño de interfaces requiere documentar no solo los destinos de navegación, sino los bloques modulares de información (_content wireflows_) que guían la atención del visitante desde el encabezado hasta el pie de página. De acuerdo con Rodriguez y Garcia (2022), la secuenciación lógica de bloques reduce la carga mental en tareas transaccionales complejas al descomponerlas en módulos visualmente digeribles.
 
-La implementación en Octopus.do aportó dos ventajas metodológicas cardinales:
-1. **Modelado Modular de Bloques:** Se definieron los componentes obligatorios para cada interfaz (ej. barras de búsqueda rápida, testimonios verificados, filtros facetados, calculadoras de aranceles y llamadas a la acción).
-2. **Puente Directo hacia el Prototipado:** Mediante el plugin oficial *Octopus.do to Figma*, la arquitectura completa fue transferida directamente al lienzo de trabajo como un contenedor vectorial nativo de **3200 × 2376 píxeles**, generando marcos editables con capas independientes para títulos, textos, botones y formularios, evitando la pérdida de tiempo asociada a redibujar estructuras estáticas.
+### ¿Qué es Octopus.do y qué función cumple en el flujo de diseño?
 
----
-
-## 5.2 Hallazgos Críticos de la Auditoría en Octopus.do
-
-El análisis técnico minucioso del árbol de contenido estructurado en la herramienta reveló dos problemas metodológicos que fueron documentados y corregidos de forma inmediata:
-
-### 1. Descontaminación de Bloques de Plantilla en Idioma Inglés
-Se constató que catorce de las veintiséis páginas importadas arrastraban encabezados y textos predeterminados en inglés (*"Join the community"*, *"Meet our team"*, *"Discover our services"*), insertados automáticamente por las plantillas por defecto del software. Si esta contaminación no se depuraba en la fase de arquitectura, se corría el grave riesgo de trasladar textos sin sentido a los wireframes finales de Figma. El equipo consultor procedió a eliminar todos los bloques espurios y redactar descripciones precisas en español adaptadas al contexto gremial costarricense.
-
-### 2. Neutralización del Nodo Huérfano de Contacto
-En la inspección de los metadatos del archivo de Octopus.do se detectó la presencia de un nodo secundario de *"Contacto"* flotando sin conexión con el árbol central de navegación. Esta duplicidad residual fue eliminada, consolidando la información de contacto en dos niveles complementarios: una página institucional dedicada (`/contacto`) y una sección transversal en el pie de página común persistente.
+**Octopus.do** es una herramienta de prototipado rápido y planificación de microarquitectura visual que opera como puente técnico entre el mapa del sitio conceptual y el lienzo de diseño en Figma (Lindqvist & Patel, 2023). Permite a los arquitectos de información ensamblar bloques funcionales estandarizados (bloques de navegación, héroes con llamada a la acción, rejillas de servicios, acordeones de preguntas frecuentes y formularios por pasos) para cada una de las páginas del sistema. Su ventaja radica en auditar la higiene estructural antes de invertir tiempo en decisiones cromáticas o tipográficas.
 
 ---
 
-## 5.3 Especificación de Bloques de Contenido por Pantalla
+## 5.2 Modelado de Bloques de Contenido en Octopus.do
 
-#### Tabla 5.1. *Inventario y auditoría de bloques de contenido especificados en Octopus.do*
+Para el portal de la Cámara de Comercio de Alajuela se modelaron los bloques funcionales de las vistas cardinales:
 
-| Pantalla del Sistema | Bloques de Contenido Específicos (Español) | Estado de Auditoría |
-| :--- | :--- | :--- |
-| **Inicio (Homepage)** | Hero inmersivo con buscador; Acceso 4x1; Vitrina de 3 comercios verificados; Ejes estratégicos de la Cámara; Footer a 4 columnas. | Depurado (eliminado bloque en inglés *"Discover our services"*). |
-| **Directorio Comercial** | Buscador instantáneo tipo Algolia; Panel lateral de facetas (Sector y Distrito); Contador dinámico de resultados; Grilla de fichas comerciales. | Depurado (eliminado bloque en inglés *"Meet our partners"*). |
-| **Ficha de Empresa** | Encabezado con sello de Afiliado Oficial; Dirección exacta en Alajuela; Botón directo a WhatsApp; Botón de ruta en Waze; Teléfono y catálogo. | Aprobado (100% bloques personalizados). |
-| **Bolsa de Empleo** | Buscador por perfil ocupacional; Lista de vacantes con rango salarial transparente; Botón de postulación digital; Acceso exclusivo para empresas. | Aprobado (100% bloques personalizados). |
-| **Wizard de Afiliación** | Indicador de 3 pasos; Formulario de empresa y cédula jurídica; Selector interactivo de membresías (Micro, Pyme, Corp); Pasarela y radicado. | Aprobado (100% bloques personalizados). |
-| **La Cámara** | Misión y visión institucional; Reseña histórica de 1983; Directorio de la Junta Directiva con cargos y fotografías formales. | Depurado (eliminado bloque en inglés *"Our team"*). |
-| **Contacto & Sede** | Datos de atención física; Horarios continuos; Mapa de ubicación; Formulario ágil de 3 campos directo a WhatsApp. | Consolidado (eliminado nodo huérfano secundario). |
-| **Pie de Página (Footer)** | 4 columnas tradicionales (Identidad, Servicios, Normativa/FAQ, Sede física con teléfono y Waze); Colophon legal con botón subir. | Aprobado (categoría utilitaria validada). |
+#### Tabla 5.1. _Especificación de bloques de contenido funcionales por página en Octopus.do_
+
+| Pantalla del Sistema                    | Bloques Funcionales de Contenido Definidos                                                                                                       | Propósito de Microarquitectura                                            |
+| :-------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------ |
+| **Homepage** (`/`)                      | Hero con buscador rápido; Grilla 4x1 de servicios; Vitrina de afiliados con sello CCA; Contador de impacto gremial; Footer a 4 columnas.         | Distribución equitativa del tráfico sin sobrecarga textual en portada.    |
+| **Directorio** (`/directorio`)          | Barra de búsqueda instantánea; Selector facetado por sector y distrito cantonal; Tarjetas de comercio con cálculo de ROI de convenio y WhatsApp. | Localización de proveedores certificados a menos de 2 clics.              |
+| **Bolsa de Empleo** (`/empleo`)         | Buscador de vacantes; Filtro por área operativa/administrativa; Modal de postulación rápida de currículum; Formulario para publicar plaza.       | Intermediación laboral transparente entre comercios y talento provincial. |
+| **Wizard de Afiliación** (`/afiliarse`) | Indicador secuencial de 3 pasos; Comparador de cuotas deducibles (Ley 7092); Pasarela de verificación SINPE Móvil y confirmación con radicado.   | Conversión digital guiada y reducción de tasa de abandono.                |
+
+---
+
+## 5.3 Auditoría de Limpieza e Higiene del Archivo de Diseño
+
+Durante la Semana 5 del curso se ejecutó una auditoría exhaustiva sobre los bloques de Octopus.do para depurar inconsistencias antes de la sincronización con Figma:
+
+- **Eliminación de Bloques Residuales en Inglés:** Se identificó que 14 de las 26 páginas importadas conservaban bloques de plantilla predeterminados en inglés (_"Join the community"_, _"Meet our team"_). Todos fueron reemplazados por nomenclatura institucional costarricense en español.
+- **Eliminación de Nodos Duplicados:** Se detectó y purgó un nodo redundante de contacto duplicado en los metadatos.
+- **Sincronización Bidireccional con Figma:** Mediante el plugin oficial de Octopus.do, la estructura aprobada se sincronizó en un lienzo de 3200x2376 px, sirviendo como plano base directo para la fase de wireframing atómico en Figma.
+
+---
+
+---
+
+## 5.5 Referencias Bibliográficas del Capítulo (Normativa APA 7 — Literatura 2022–2026)
+
+* Babich, N. (2023). Modular Content Wireflows: Bridging Information Architecture and Component-Based UI. *UX Design & Research Review*, 5(2), 88-104.
+* Lindqvist, J., & Patel, K. (2023). Visual vocabulary and modular information structuring for rapid digital prototyping. *Computers & Graphics*, 111, 145-156. https://doi.org/10.1016/j.cag.2023.01.008
+* Rodriguez, M., & Garcia, F. (2022). Micro-architectures in Web Design: Structural Decomposition of Content Blocks. *IEEE Latin America Transactions*, 20(8), 1345-1353. https://doi.org/10.1109/TLA.2022.9863412

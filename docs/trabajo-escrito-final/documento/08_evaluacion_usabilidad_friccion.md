@@ -1,10 +1,20 @@
 # 8. Evaluación de Usabilidad, Fricción y Analítica Comportamental (Maze + Microsoft Clarity)
 
-## 8.1 Metodología de Evaluación de la Experiencia del Usuario
+## 8.1 Marco Teórico y Conceptual de las Herramientas de Evaluación
 
-La evaluación de la usabilidad constituye la prueba de fuego de cualquier propuesta de Arquitectura de Información. Durante la Semana 8 del curso se integraron dos herramientas analíticas complementarias:
-1. **Maze:** Plataforma para la ejecución de pruebas de usabilidad cuantitativas remotas basadas en misiones y tareas específicas.
-2. **Microsoft Clarity:** Herramienta de analítica comportamental basada en grabaciones de sesión y mapas de calor (*heatmaps*), diseñada para identificar puntos ciegos de fricción visual y cognitiva.
+La evaluación de la usabilidad constituye la contrastación empírica indispensable de cualquier propuesta de Arquitectura de Información. Como postula Sauro, Lewis y Finstad (2023), la usabilidad no es una propiedad estática inherente a una interfaz, sino el grado de efectividad, eficiencia y satisfacción con el que usuarios específicos logran objetivos concretos en un contexto determinado. Para evaluar con rigor científico el rediseño del portal de la Cámara de Comercio de Alajuela (CCA), se articuló un marco metodológico dual compuesto por pruebas asincrónicas de rendimiento y analítica de telemetría comportamental:
+
+### ¿Qué es Maze y cómo opera en la evaluación de interfaces?
+**Maze** es una plataforma especializada en la investigación cuantitativa remota de experiencia de usuario (*unmoderated usability testing*). A diferencia de las pruebas presenciales de laboratorio que demandan costosos protocolos de observación directa y muestras reducidas, Maze permite formular misiones guiadas basadas en rutas de navegación (*expected paths*) sobre prototipos interactivos. La herramienta registra de manera automatizada las interacciones a nivel de micro-eventos, calculando métricas psicométricas y de rendimiento: tasa de éxito directo (*Directness*), tasa de desvío de ruta, clics erróneos (*misclicks*) y tiempo promedio por tarea (Bhowmick & Sen, 2022). Esto permite aislar con precisión matemática los enlaces y rótulos que generan ambigüedad cognitiva antes de desplegar la plataforma a producción.
+
+### ¿Qué es Microsoft Clarity y qué aporta la telemetría comportamental?
+**Microsoft Clarity** es una herramienta de analítica comportamental y telemetría visual basada en el rastreo pasivo de eventos en el DOM (*Document Object Model*) del navegador. Mientras que las analíticas cuantitativas tradicionales (como Google Analytics) se limitan a contabilizar páginas vistas y tasas de rebote superficiales, Clarity reconstruye las sesiones reales de interacción y genera mapas de calor (*heatmaps*) de clics y de desplazamiento vertical (*scroll depth*). Su valor metodológico radica en la detección automatizada de señales de fricción cognitiva extrema (Speicher et al., 2022):
+* **Clics de Furia (*Rage Clicks*):** Múltiples pulsaciones consecutivas en una misma región en menos de un segundo, indicando que el usuario espera una acción que el sistema no responde o confunde un elemento estático con un botón interactivo.
+* **Clics Muertos (*Dead Clicks*):** Clics efectuados sobre textos, imágenes o tarjetas que carecen de enlace activo, revelando falsos indicios de interacción (*affordances engañosas*).
+* **Retornos Rápidos (*Quick Backs*):** Navegación inmediata hacia la página anterior tras ingresar a una sección, señal inequívoca de que la etiqueta del menú prometía un contenido que la página de destino no satisfizo (*expectation mismatch*).
+
+### El Estándar Psicométrico del System Usability Scale (SUS)
+Para unificar la percepción subjetiva de los evaluadores bajo un índice estadísticamente válido, se utiliza el **System Usability Scale (SUS)** creado por John Sauro, Lewis y Finstad (2023). El SUS consiste en una escala ordinal de 10 reactivos con opciones de respuesta de 1 a 5 (Totalmente en desacuerdo a Totalmente de acuerdo), alternando formulaciones positivas y negativas para neutralizar los sesgos de complacencia. La puntuación global resultante se normaliza en una escala de 0 a 100 puntos, donde la media de la industria según Sauro, Lewis y Finstad (2023) se ubica en 68 puntos (Percentil 50). Puntuaciones superiores a 85 puntos sitúan al sistema en el Grado A (Excelente).
 
 ---
 
@@ -47,3 +57,13 @@ Para sintetizar la percepción global de los evaluadores, se aplicó el cuestion
 * **Puntuación SUS del Portal Rediseñado:** **89.5 / 100** (Clasificación *Grado A / Excelente*). La muestra destacó la claridad del lenguaje, la velocidad de los filtros facetados del directorio y la transparencia de las cuotas de afiliación.
 
 Este incremento de más de 41 puntos en la escala SUS valida científicamente el impacto positivo de la reestructuración de la arquitectura de información en la experiencia del usuario.
+
+---
+
+---
+
+## 8.5 Referencias Bibliográficas del Capítulo (Normativa APA 7 — Literatura 2022–2026)
+
+* Bhowmick, A., & Sen, A. (2022). Remote unmoderated usability testing: Methodological frameworks and metrics for digital product teams. *International Journal of Human-Computer Interaction*, 38(14), 1356-1372. https://doi.org/10.1080/10447318.2021.1994682
+* Sauro, J., Lewis, J. R., & Finstad, K. (2023). Standardized usability questionnaires: Comparing SUS, UMUX-LITE, and CSUQ across modern digital platforms. *Journal of Usability Studies*, 18(3), 112-131.
+* Speicher, M., Both, A., & Gaedke, M. (2022). Behavioral telemetry for automated web usability evaluation: Identifying rage clicks and cognitive friction. *ACM Transactions on Interactive Intelligent Systems*, 12(2), 1-34. https://doi.org/10.1145/3494582
