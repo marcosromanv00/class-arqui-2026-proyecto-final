@@ -12,6 +12,7 @@
 * Boytsov, L., & Nyberg, E. (2022). Approximate dictionary matching and typographical error tolerance in low-latency search engines. Information Retrieval Journal, 25(3), 245-271. https://doi.org/10.1007/s10791-022-09411-9
 * Chasanidou, D., & Karahasanovic, A. (2022). Persona generation in digital innovation: How empirical archetypes guide interface requirements. Computers in Human Behavior, 134, 107312. https://doi.org/10.1016/j.chb.2022.107312
 * Fernandez, A., Insfran, E., & Abrahão, S. (2022). Automated web content audits and usability inspection: A multi-method perspective. Information and Software Technology, 144, 106801. https://doi.org/10.1016/j.infsof.2021.106801
+* Frost, B. (2016). Atomic design. Brad Frost. https://atomicdesign.bradfrost.com/
 * Frost, B. (2023). Atomic Design Systems: Evolving Component-Driven Architectures for Enterprise Web. Modern Web Design Journal, 4(1), 12-29.
 * Gao, L., & Callan, J. (2022). Approximate nearest neighbor search and inverted indexing for real-time information retrieval. ACM Transactions on Information Systems, 40(4), 1-32. https://doi.org/10.1145/3503918
 * Gao, Y., Xiong, Y., Wang, X., Wang, K., & Dai, N. (2023). Retrieval-Augmented Generation for Large Language Models: A Survey. arXiv:2312.10997. https://doi.org/10.48550/arXiv.2312.10997
@@ -19,6 +20,7 @@
 * Ibekwe, C. O., & Newman, R. (2023). Information architecture and cognitive load in pervasive digital environments: A contemporary review. ACM Computing Surveys, 55(11), 1-32. https://doi.org/10.1145/3588435
 * International Organization for Standardization [ISO]. (2022). ISO 9241-210: Human-Centred Design for Interactive Systems: Principles and Guidelines. Geneva: ISO. https://www.iso.org/standard/77520.html
 * Jansen, B. J., Salminen, J., & Guan, K. W. (2023). Data-Driven Personas: Models and Methods for User Understanding. ACM Transactions on Computer-Human Interaction, 30(4), 1-38. https://doi.org/10.1145/3577011
+* Kalbach, J. (2020). Mapping experiences: A complete guide to customer alignment through journeys, blueprints, and diagrams (2nd ed.). OReilly Media.
 * Kalbach, J. (2023). Mapping Experience Ecosystems: Structural Visualizations for Complex Information Spaces. Journal of Information Architecture, 7(2), 45-62.
 * Koren, Y., & Tunkelang, D. (2023). Modern Faceted Search and Dynamic Filtering in Large-Scale E-Commerce. ACM Computing Surveys, 56(2), 1-35. https://doi.org/10.1145/3604803
 * Kuric, E., Demcak, P., & Krajcovic, M. (2025a). Card sorting simulator: Augmenting design of logical information architectures with large language models. arXiv:2505.09478. https://doi.org/10.48550/arXiv.2505.09478
@@ -31,14 +33,18 @@
 * Ministerio de Hacienda de Costa Rica. (2023). Resolución General sobre Comprobantes Electrónicos y Deducibilidad Tributaria de Cuotas Gremiales (DGT-R-012-2023). San José: Dirección General de Tributación.
 * Morville, P. (2022). The Future of Findability: Information Architecture in Connected and Omnichannel Realities. Journal of Information Architecture, 6(2), 1-18.
 * Morville, P., & Arango, J. (2023). Pervasive Information Architecture: Designing Cross-Channel User Experiences (2nd ed.). Journal of Information Architecture, 7(1), 15-29.
+* Nielsen, J., & Pernice, K. (2010). Eyetracking web usability. New Riders.
 * Norman, D. A. (2023). Design for a Better World: Meaningful, Sustainable, Humanity-Centered. MIT Press. https://doi.org/10.7551/mitpress/14995.001.0001
 * Pernice, K., & Budiu, R. (2022). Eye-Tracking in Modern Web Interfaces: Visual Saliency, F-Patterns, and Z-Scans on High-Resolution Screens. Nielsen Norman Group Research Series, 18(3), 1-42.
 * Quiñones, D., Rusu, C., & Roncagliolo, S. (2023). Contemporary heuristic evaluation in web engineering: Guidelines, validation, and empirical metrics. Computer Standards & Interfaces, 84, 103683. https://doi.org/10.1016/j.csi.2022.103683
 * Reimers, N., & Gurevych, I. (2022). Semantic Textual Similarity using Sentence Embeddings in Domain-Specific Knowledge Bases. Computational Linguistics, 48(4), 987-1014. https://doi.org/10.1162/coli_a_00452
 * Rodriguez, M., & Garcia, F. (2022). Micro-architectures in Web Design: Structural Decomposition of Content Blocks. IEEE Latin America Transactions, 20(8), 1345-1353. https://doi.org/10.1109/TLA.2022.9863412
+* Rosenfeld, L., Morville, P., & Arango, J. (2015). Information architecture: For the web and beyond (4th ed.). OReilly Media.
 * Salminen, J., Sengün, S., Jung, S. G., & Jansen, B. J. (2022). Does a persona design matter? An empirical study on persona formatting and readability. International Journal of Human-Computer Studies, 160, 102764. https://doi.org/10.1016/j.ijhcs.2021.102764
 * Sauro, J., Lewis, J. R., & Finstad, K. (2023). Standardized usability questionnaires: Comparing SUS, UMUX-LITE, and CSUQ across modern digital platforms. Journal of Usability Studies, 18(3), 112-131.
 * Speicher, M., Both, A., & Gaedke, M. (2022). Behavioral telemetry for automated web usability evaluation: Identifying rage clicks and cognitive friction. ACM Transactions on Interactive Intelligent Systems, 12(2), 1-34. https://doi.org/10.1145/3494582
+* Strapi. (s.f.). Strapi 5 documentation. Recuperado el 8 de noviembre de 2026, de https://docs.strapi.io/
 * Terragni, A., & Hassani, R. (2023). Visualizing Customer Journeys: Process Mining and Qualitative Touchpoint Modeling. Decision Support Systems, 168, 113942. https://doi.org/10.1016/j.dss.2023.113942
 * Vartiainen, E., & Rossi, M. (2022). Navigation depth vs. breadth trade-offs in mobile and responsive web architectures. ACM Transactions on the Web, 16(3), 1-28. https://doi.org/10.1145/3511598
 * Wagemans, J., & de Wit, L. (2022). Gestalt principles revisited: Contemporary grouping mechanisms in visual digital interfaces. Frontiers in Psychology, 13, 891234. https://doi.org/10.3389/fpsyg.2022.891234
+* Wagemans, J., Elder, J. H., Kubovy, M., Palmer, S. E., Peterson, M. A., Singh, M., & von der Heydt, R. (2012). A century of Gestalt psychology in visual perception: I. Perceptual grouping and figure–ground organization. Psychological Bulletin, 138(6), 1172–1217. https://doi.org/10.1037/a0029333

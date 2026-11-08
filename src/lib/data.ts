@@ -550,7 +550,7 @@ export const FAQ_DATA: FaqItem[] = [
     id: "faq-02",
     category: "Afiliación y Cuotas",
     question: "¿Cuáles son las tarifas y cómo se realiza el pago?",
-    answer: "Disponemos de 3 planes adaptados al tamaño de cada empresa: Plan Micro (₡15.000/mes), Plan Pyme (₡28.000/mes) y Plan Corporativo (₡65.000/mes). El pago se realiza de manera 100% digital a través de SINPE Móvil al 8492-3925 o transferencia BAC Credomatic, emitiéndose de inmediato el recibo oficial timbrado."
+    answer: "Disponemos de 2 planes adaptados al tamaño de cada empresa: Plan Comercio y Pyme (₡15.000/mes) y Plan Empresa e Industria (₡35.000/mes). El pago se realiza de manera 100% digital a través de SINPE Móvil al 8703-0792 o transferencia bancaria, emitiéndose de inmediato el recibo oficial y constancia deducible de renta."
   },
   {
     id: "faq-03",

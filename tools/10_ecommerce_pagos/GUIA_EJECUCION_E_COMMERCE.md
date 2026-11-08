@@ -14,7 +14,7 @@ Resolver el bloqueo transaccional más grave del sitio histórico de la Cámara 
 
 #### Paso 1: Configuración de la Pasarela SINPE Móvil
 1. El archivo [`sinpe_movil_validator.js`](file:///c:/Users/marco/OneDrive/Desktop/Proyectos/2- Activos\3- Otros\personal-university-c22026-arqdeinfo\una-arqinf-proy-camaracomercioalajuela\implementaciones_reales\10_ecommerce_pagos\sinpe_movil_validator.js) contiene las reglas de negocio bancarias:
-   - Destino: Teléfono oficial de la Cámara (`8492-3925`).
+   - Destino: Teléfono oficial de la Cámara (`8703-0792`).
    - Montos válidos: Plan Pyme (`₡15.000`) y Plan Corporativo (`₡35.000`).
    - Validación de formato telefónico emisor (8 dígitos, inicio en 6, 7 u 8).
    - Comprobante bancario numérico único (prevención de ataques de reutilización mediante set en memoria o base de datos).
@@ -28,7 +28,7 @@ Resolver el bloqueo transaccional más grave del sitio histórico de la Cámara 
    - Cédula Jurídica: `3-101-889900`
    - Cantón: `Alajuela`
 5. En el paso 2, selecciona el método de pago:
-   - **Opción A (SINPE Móvil):** Transfiere al número `8492-3925` e ingresa el número de comprobante bancario (ej. `98234120`).
+   - **Opción A (SINPE Móvil):** Transfiere al número `8703-0792` e ingresa el número de comprobante bancario (ej. `98234120`).
    - **Opción B (Tarjeta BAC):** Digita los datos de la tarjeta bancaria.
 6. Pulsa **"Completar Afiliación y Generar Membresía"**.
 7. El sistema validará la transacción, creará el registro en el Directorio y desplegará la pantalla de confirmación con el código de afiliado activo y enlace directo a WhatsApp.

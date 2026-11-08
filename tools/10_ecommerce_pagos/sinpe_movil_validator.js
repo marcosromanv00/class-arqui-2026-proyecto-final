@@ -7,7 +7,7 @@
 
 export class SinpeMovilValidator {
   constructor() {
-    this.officialPhone = '50684923925'; // Teléfono oficial CCA para SINPE
+    this.officialPhone = '50687030792'; // Teléfono oficial CCA para SINPE
     this.validPlanAmounts = new Set([15000, 35000]); // Plan Pyme ₡15.000, Plan Corporativo ₡35.000
     this.processedReceipts = new Set(); // Caché anti-replay de comprobantes bancarios
   }
@@ -66,7 +66,7 @@ export class SinpeMovilValidator {
       sourcePhone: `+506 ${localPhone.slice(0, 4)}-${localPhone.slice(4)}`,
       amountCRC: numAmount,
       currency: 'CRC',
-      destinationAccount: 'Cámara de Comercio de Alajuela (8492-3925)',
+      destinationAccount: 'Cámara de Comercio de Alajuela (8703-0792)',
       status: 'VERIFICADO_EXITOSO',
       timestamp: new Date().toISOString(),
       haciendaTaxDeductible: true,

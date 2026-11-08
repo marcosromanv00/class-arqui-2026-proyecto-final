@@ -151,7 +151,7 @@ class CCARagEngine:
 
         if not retrieved_chunks:
             return {
-                "answer": "No se encontraron reglamentos o directrices específicas en el corpus de la CCA para su consulta. Por favor contacte directamente al WhatsApp institucional 8492-3925.",
+                "answer": "No se encontraron reglamentos o directrices específicas en el corpus de la CCA para su consulta. Por favor contacte directamente al WhatsApp institucional 8703-0792.",
                 "sources": []
             }
 

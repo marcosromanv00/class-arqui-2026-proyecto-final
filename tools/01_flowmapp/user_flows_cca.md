@@ -16,7 +16,7 @@ graph TD
     D -- Sí --> F[Paso 2: Datos de Contacto y Representante]
     F --> G[Paso 3: Selección de Método de Pago]
     G --> H{¿Método Elegido?}
-    H -- SINPE Móvil --> I[Muestra Número Oficial 8492-3925 + Monto Exacto]
+    H -- SINPE Móvil --> I[Muestra Número Oficial 8703-0792 + Monto Exacto]
     I --> J[Ingresa Comprobante Bancario 8 dígitos]
     H -- Tarjeta BAC / Stripe --> K[Iframe Seguro PCI-DSS]
     K --> L[Procesamiento Bancario]

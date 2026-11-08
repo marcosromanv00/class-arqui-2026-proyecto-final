@@ -493,7 +493,7 @@ def create_presentation():
 
     features = [
         ("Búsqueda Instantánea", "Algolia Search en < 20 ms", "Búsqueda predictiva a medida que se teclea (as-you-type). Tolerancia matemática a errores ortográficos y tildes omitidas."),
-        ("Facetas Geográficas y Sector", "Filtro por Cantón y Distrito", "Segmentación territorial exacta en los cantones alajuelenses cruzada con 8 sectores comerciales formales."),
+        ("Facetas Geográficas y Sector", "Filtro por Cantón y Distrito", "Segmentación territorial exacta en los cantones alajuelenses cruzada con 5 sectores comerciales formales."),
         ("Retorno Tangible de Inversión", "Distintivo CCA + Botón WhatsApp", "Cada ficha exhibe el sello de formalidad, cálculo de descuentos de convenio y llamada o mensaje directo a 1 clic.")
     ]
     for idx, (title, tech, desc) in enumerate(features):
