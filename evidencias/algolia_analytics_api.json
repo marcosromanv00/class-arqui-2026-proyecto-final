@@ -1,0 +1,370 @@
+{
+  "consultado_utc": "2026-11-08T06:44:10.1948162Z",
+  "nota": "Trafico de PRUEBA simulado (tags simulacion-*) mas pruebas tecnicas; no son usuarios reales",
+  "total": {
+    "count": 156,
+    "dates": [
+      {
+        "date": "2026-11-01",
+        "count": 0
+      },
+      {
+        "date": "2026-11-02",
+        "count": 0
+      },
+      {
+        "date": "2026-11-03",
+        "count": 0
+      },
+      {
+        "date": "2026-11-04",
+        "count": 0
+      },
+      {
+        "date": "2026-11-05",
+        "count": 0
+      },
+      {
+        "date": "2026-11-06",
+        "count": 0
+      },
+      {
+        "date": "2026-11-07",
+        "count": 0
+      },
+      {
+        "date": "2026-11-08",
+        "count": 156
+      },
+      {
+        "date": "2026-11-09",
+        "count": 0
+      }
+    ]
+  },
+  "sin_resultados_lista": {
+    "searches": [
+      {
+        "search": "biyares",
+        "count": 4,
+        "withFilterCount": 0
+      },
+      {
+        "search": "soda el parqe",
+        "count": 3,
+        "withFilterCount": 0
+      },
+      {
+        "search": "leche",
+        "count": 3,
+        "withFilterCount": 0
+      },
+      {
+        "search": "veterinaria",
+        "count": 3,
+        "withFilterCount": 0
+      },
+      {
+        "search": "farmasia",
+        "count": 1,
+        "withFilterCount": 0
+      },
+      {
+        "search": "taller mecanico",
+        "count": 1,
+        "withFilterCount": 0
+      },
+      {
+        "search": "alquiler carro",
+        "count": 1,
+        "withFilterCount": 0
+      },
+      {
+        "search": "piscina",
+        "count": 1,
+        "withFilterCount": 0
+      },
+      {
+        "search": "abogado",
+        "count": 1,
+        "withFilterCount": 0
+      }
+    ]
+  },
+  "top": {
+    "searches": [
+      {
+        "search": "fereteria",
+        "count": 8,
+        "nbHits": 10
+      },
+      {
+        "search": "restaurante",
+        "count": 7,
+        "nbHits": 6
+      },
+      {
+        "search": "dos pinoz",
+        "count": 7,
+        "nbHits": 2
+      },
+      {
+        "search": "banco nasional",
+        "count": 7,
+        "nbHits": 1
+      },
+      {
+        "search": "panaderia",
+        "count": 7,
+        "nbHits": 3
+      },
+      {
+        "search": "biyares",
+        "count": 7,
+        "nbHits": 1
+      },
+      {
+        "search": "clinica santa fe",
+        "count": 6,
+        "nbHits": 1
+      },
+      {
+        "search": "farmasia",
+        "count": 6,
+        "nbHits": 2
+      },
+      {
+        "search": "restaurat",
+        "count": 5,
+        "nbHits": 8
+      },
+      {
+        "search": "a",
+        "count": 5,
+        "nbHits": 136
+      },
+      {
+        "search": "hotl aeropuerto",
+        "count": 4,
+        "nbHits": 3
+      },
+      {
+        "search": "funerraria",
+        "count": 4,
+        "nbHits": 5
+      },
+      {
+        "search": "asesoria contable",
+        "count": 3,
+        "nbHits": 2
+      },
+      {
+        "search": "piscina",
+        "count": 3,
+        "nbHits": 1
+      },
+      {
+        "search": "software",
+        "count": 3,
+        "nbHits": 2
+      },
+      {
+        "search": "cooperativa",
+        "count": 3,
+        "nbHits": 3
+      },
+      {
+        "search": "ferreteria alajuela",
+        "count": 3,
+        "nbHits": 10
+      },
+      {
+        "search": "hotl",
+        "count": 3,
+        "nbHits": 10
+      },
+      {
+        "search": "pasteleria",
+        "count": 3,
+        "nbHits": 3
+      },
+      {
+        "search": "tecnologia",
+        "count": 3,
+        "nbHits": 4
+      },
+      {
+        "search": "contador",
+        "count": 3,
+        "nbHits": 10
+      },
+      {
+        "search": "alquiler carro",
+        "count": 3,
+        "nbHits": 1
+      },
+      {
+        "search": "repuestos",
+        "count": 3,
+        "nbHits": 4
+      },
+      {
+        "search": "taller mecanico",
+        "count": 3,
+        "nbHits": 1
+      },
+      {
+        "search": "desarrollo web",
+        "count": 3,
+        "nbHits": 1
+      },
+      {
+        "search": "abogado",
+        "count": 3,
+        "nbHits": 1
+      },
+      {
+        "search": "billares",
+        "count": 3,
+        "nbHits": 2
+      },
+      {
+        "search": "hotel aeropuerto",
+        "count": 3,
+        "nbHits": 3
+      },
+      {
+        "search": "soda",
+        "count": 3,
+        "nbHits": 1
+      },
+      {
+        "search": "derecho",
+        "count": 3,
+        "nbHits": 1
+      }
+    ]
+  },
+  "antes_simulacion_prueba": {
+    "rate": 0.24242424242424243,
+    "count": 33,
+    "noResultCount": 8,
+    "dates": [
+      {
+        "date": "2026-11-01",
+        "rate": 0,
+        "count": 0,
+        "noResultCount": 0
+      },
+      {
+        "date": "2026-11-02",
+        "rate": 0,
+        "count": 0,
+        "noResultCount": 0
+      },
+      {
+        "date": "2026-11-03",
+        "rate": 0,
+        "count": 0,
+        "noResultCount": 0
+      },
+      {
+        "date": "2026-11-04",
+        "rate": 0,
+        "count": 0,
+        "noResultCount": 0
+      },
+      {
+        "date": "2026-11-05",
+        "rate": 0,
+        "count": 0,
+        "noResultCount": 0
+      },
+      {
+        "date": "2026-11-06",
+        "rate": 0,
+        "count": 0,
+        "noResultCount": 0
+      },
+      {
+        "date": "2026-11-07",
+        "rate": 0,
+        "count": 0,
+        "noResultCount": 0
+      },
+      {
+        "date": "2026-11-08",
+        "rate": 0.24242424242424243,
+        "count": 33,
+        "noResultCount": 8
+      },
+      {
+        "date": "2026-11-09",
+        "rate": 0,
+        "count": 0,
+        "noResultCount": 0
+      }
+    ]
+  },
+  "despues_simulacion_post_sinonimos_v2": {
+    "rate": 0.06896551724137931,
+    "count": 29,
+    "noResultCount": 2,
+    "dates": [
+      {
+        "date": "2026-11-01",
+        "rate": 0,
+        "count": 0,
+        "noResultCount": 0
+      },
+      {
+        "date": "2026-11-02",
+        "rate": 0,
+        "count": 0,
+        "noResultCount": 0
+      },
+      {
+        "date": "2026-11-03",
+        "rate": 0,
+        "count": 0,
+        "noResultCount": 0
+      },
+      {
+        "date": "2026-11-04",
+        "rate": 0,
+        "count": 0,
+        "noResultCount": 0
+      },
+      {
+        "date": "2026-11-05",
+        "rate": 0,
+        "count": 0,
+        "noResultCount": 0
+      },
+      {
+        "date": "2026-11-06",
+        "rate": 0,
+        "count": 0,
+        "noResultCount": 0
+      },
+      {
+        "date": "2026-11-07",
+        "rate": 0,
+        "count": 0,
+        "noResultCount": 0
+      },
+      {
+        "date": "2026-11-08",
+        "rate": 0.06896551724137931,
+        "count": 29,
+        "noResultCount": 2
+      },
+      {
+        "date": "2026-11-09",
+        "rate": 0,
+        "count": 0,
+        "noResultCount": 0
+      }
+    ]
+  }
+}

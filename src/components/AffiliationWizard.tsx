@@ -5,6 +5,7 @@ import { AffiliationValueProps } from "@/components/AffiliationValueProps";
 import { AffiliationFormStep1 } from "@/components/AffiliationFormStep1";
 import { AffiliationFormStep2 } from "@/components/AffiliationFormStep2";
 import { AffiliationFormStep3 } from "@/components/AffiliationFormStep3";
+import type { ResultadoPago } from "@/lib/pagos";
 
 export function AffiliationWizard() {
   const [step, setStep] = useState(1);
@@ -13,8 +14,7 @@ export function AffiliationWizard() {
   const [merchantName, setMerchantName] = useState("");
   const [cedula, setCedula] = useState("");
   const [canton, setCanton] = useState("Alajuela");
-  const [comprobante, setComprobante] = useState("");
-  const [isSuccess, setIsSuccess] = useState(false);
+  const [pago, setPago] = useState<ResultadoPago | null>(null);
 
   const price = plan === "regular" ? 15000 : 35000;
 
@@ -24,20 +24,18 @@ export function AffiliationWizard() {
     setStep(2);
   };
 
-  const handleStep2Submit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!comprobante) return;
-    setIsSuccess(true);
+  // Pasarela simulada (src/lib/pagos.ts): solo avanza si el pago fue aceptado
+  const handlePago = (r: ResultadoPago) => {
+    setPago(r);
     setStep(3);
   };
 
   const handleReset = () => {
     setStep(1);
-    setIsSuccess(false);
+    setPago(null);
     setMerchantName("");
     setCedula("");
     setPhone("");
-    setComprobante("");
   };
 
   return (
@@ -75,7 +73,7 @@ export function AffiliationWizard() {
                   2
                 </span>
                 <span className={`font-medium ${step >= 2 ? "text-ink" : "text-text-muted"}`}>
-                  Comprobante
+                  Pago
                 </span>
               </div>
               <div className="w-8 sm:w-16 h-px bg-border" />
@@ -115,16 +113,15 @@ export function AffiliationWizard() {
                 cedula={cedula}
                 plan={plan}
                 price={price}
-                comprobante={comprobante}
-                setComprobante={setComprobante}
+                phone={phone}
                 onBack={() => setStep(1)}
-                onSubmit={handleStep2Submit}
+                onResult={handlePago}
               />
             )}
 
-            {step === 3 && isSuccess && (
+            {step === 3 && pago && (
               <AffiliationFormStep3
-                comprobante={comprobante}
+                pago={pago}
                 merchantName={merchantName}
                 cedula={cedula}
                 canton={canton}

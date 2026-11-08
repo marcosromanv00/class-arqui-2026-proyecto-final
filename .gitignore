@@ -43,3 +43,9 @@ next-env.d.ts
 # python
 __pycache__/
 *.pyc
+
+# vercel
+.vercel
+
+# plantilla de variables (sin valores) sí se versiona
+!.env.example

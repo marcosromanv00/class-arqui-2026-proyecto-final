@@ -1,6 +1,6 @@
 # Cuestionario Oficial de Usabilidad (System Usability Scale - SUS)
 **Proyecto:** Cámara de Comercio de Alajuela (CCA)  
-**Metodología:** Escala Estandarizada SUS (Brooke, 1996) aplicada en bloque final de Maze tras completar las misiones.
+**Metodología:** Escala estandarizada SUS (Brooke, 1996), adaptada al contexto del portal y aplicada en Google Forms después de las 3 tareas (ver `PRUEBA_USABILIDAD_REAL.md`).
 
 ---
 
@@ -46,5 +46,5 @@ Puntaje_SUS_Final = (Suma de los 10 Puntajes_Item) * 2.5
 - **50 - 67:** Marginal / Requiere mejoras urgentes.
 - **68:** Promedio estándar de la industria (Calificación "C").
 - **70 - 79:** Buena usabilidad (Calificación "B").
-- **80 - 89:** Excelente usabilidad (Calificación "A"). *[Resultado obtenido en el revamp de la CCA: 84.5]*
+- **80 - 89:** Excelente usabilidad (Calificación "A").
 - **90 - 100:** Grado superior de excelencia ("Best imaginable").
