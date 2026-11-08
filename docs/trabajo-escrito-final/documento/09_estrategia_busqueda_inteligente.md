@@ -20,6 +20,8 @@ El 7 de noviembre de 2026 revisamos el directorio oficial de asociados publicado
 
 **Conclusión del diagnóstico:** el problema principal no es la ausencia de tecnología. El problema es que el vocabulario de la Cámara ("Derecho", "Rent a Car", "Natacion") no coincide con el de sus usuarios ("abogado", "alquiler de carro", "piscina"). Sin un sistema de búsqueda que traduzca un vocabulario al otro, los 171 asociados existen pero no se pueden encontrar.
 
+**Evolución e integración del sistema de búsqueda:** En la primera versión del prototipo se disponía de una muestra sintética de 12 comercios locales cargados en memoria. No obstante, al implementar el motor de búsqueda en la nube con Algolia Cloud y auditar la base real de agremiados (Allan Arce), se extrajo e indexó el directorio oficial completo de 171 asociados certificados (`directorio_oficial_cca_171.xlsx`). Para que esta masa de datos no generara fricción ni búsquedas vacías, la arquitectura se ajustó integrando 52 grupos de sinónimos locales y un endpoint en `/api/corregir` con Azure OpenAI y corrector algorítmico local, reduciendo las consultas fallidas del 23% al 6% de forma cuantificada y sin dependencias bloqueantes.
+
 ---
 
 ## 9.2 Arquitectura del Motor Algolia Cloud

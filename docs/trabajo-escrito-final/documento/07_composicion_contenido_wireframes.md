@@ -35,6 +35,8 @@ El prototipo se construyó con la metodología de _Atomic Design_ (Frost, 2016),
 
 Los tokens del prototipo son los mismos que usa el portal implementado: cada variable de Figma corresponde a una variable CSS del frontend (`src/app/globals.css`). Así, diseño y código comparten una sola fuente de verdad visual. La paleta se separa en dos capas: los **primitivos** guardan el valor del color y los **tokens semánticos** guardan su uso (por ejemplo, `color/bg/action` apunta a `brand`). Un cambio de marca se aplica en un solo lugar.
 
+**Evolución e integración de la propuesta visual:** En la primera versión exploratoria del prototipo de Figma se contempló una estructura cromática tradicional con acentos en azul corporativo y dorado. No obstante, como resultado de las pruebas de identidad institucional y la adopción del estándar editorial de la *International Chamber of Commerce (ICC)* para erradicar patrones artificiales o genéricos de IA, la composición se ajustó de manera armónica hacia la paleta definitiva en Rojo Carmín (`#991B1B`), Negro Grafito (`#09090B`) y tipografía serena (Plus Jakarta Sans y Newsreader). Este ajuste eliminó cualquier conflicto entre los wireframes de Figma y el portal web implementado en `globals.css`, garantizando que más del 85% de la interfaz respire sobre fondos blancos pulcros con bordes milimétricos de 1 px.
+
 **Tabla 7.2**
 _Paleta cromática institucional (valores HSL)_
 

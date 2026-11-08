@@ -28,6 +28,8 @@ _Comparación entre el gestor actual y la arquitectura headless propuesta_
 
 Para un administrador de la Cámara, publicar un nuevo afiliado se reduce a abrir **Content Manager → Comercio Afiliado CCA → Create new entry**, llenar el formulario y pulsar **Publish**. Su tiempo de publicación se estima en unos 30 segundos, frente a las 72 horas actuales de espera a soporte técnico.
 
+*Evolución y resolución arquitectónica:* En las primeras versiones del prototipo y en el sitio WordPress original, los contenidos residían como bloques desestructurados dentro del código de las plantillas, lo que generaba severas discrepancias tipográficas en nombres de cantones (e.g., "Alajuel" o "San Ramon") y desactualizaciones de comercios. Para solucionar este conflicto estructural, se adoptó Strapi v5.61 como CMS headless con validación estricta de esquemas JSON y vocabularios controlados cerrados (16 cantones y 5 macro-sectores). Adicionalmente, se programó el script de inicialización automatizada (`seed_strapi.js`) para garantizar que la carga de comercios fuera reproducible, auditable e integrable de manera nativa con el índice de búsqueda en la nube sin duplicidad manual.
+
 ### Figura 10.1. Panel de administración de Strapi con los comercios afiliados
 
 ![Figura 10.1. Content Manager de Strapi con los 12 comercios afiliados](./figuras/captura_strapi_content_manager_comercios.png)

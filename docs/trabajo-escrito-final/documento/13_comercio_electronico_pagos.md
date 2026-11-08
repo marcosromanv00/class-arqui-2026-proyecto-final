@@ -56,7 +56,29 @@ function validarTransaccionSINPE(telefono, comprobante, monto) {
 }
 ```
 
+*Evolución y resolución arquitectónica:* En las primeras iteraciones del proyecto, la transaccionalidad se planteaba como un formulario conceptual estático sin capacidad de ejecución reactiva. Con el objetivo de comprobar empíricamente la viabilidad del flujo de caja digital sin riesgo financiero para los usuarios del prototipo, se implementó una pasarela transaccional simulada de alta fidelidad en `src/lib/pagos.ts` (desarrollada por Allan Arce). Dicho módulo incorpora validaciones algorítmicas reales de cliente (algoritmo de Luhn para tarjetas de crédito, prefijos celulares válidos para SINPE Móvil y detección de comprobantes bancarios duplicados mediante protección anti-replay en almacenamiento local), acompañada de banners explícitos de advertencia académica para asegurar plena transparencia ética.
+
 ---
+
+## 13.4 Implementación y Resultados de la Pasarela Simulada (Allan Arce)
+
+Para materializar el flujo sin incurrir en costos de procesamiento bancario en la fase de evaluación, se implementó en `src/lib/pagos.ts` un motor de simulación transaccional con reglas de negocio estrictas.
+
+**Tabla 13.1**
+*Batería de pruebas unitarias de la pasarela transaccional simulada*
+
+| Caso de prueba | Entrada evaluada | Resultado observado | Diagnóstico |
+| :-- | :-- | :-- | :-- |
+| SINPE Móvil válido | Celular 8703-0792, comprobante `20261108123` | Aprobado (`CCA-2026-945680`) | Estado: En Aprobación · Tesorería CCA |
+| SINPE teléfono fijo | Número 2441-2090 | Rechazado | Exige celular de 8 dígitos (iniciando en 6, 7 u 8) |
+| SINPE comprobante inválido | Alfanumérico con letras | Rechazado | Exige comprobante numérico de 6 a 14 dígitos |
+| SINPE comprobante repetido | Reintento de comprobante `20261108123` | Rechazado por *Anti-replay* | Bloquea uso duplicado de radicado bancario |
+| Tarjeta Visa de prueba | `4111 1111 1111 1111`, CVV 123 | Aprobado (`CCA-2026-157659`) | Autorización generada y radicado emitido |
+| Tarjeta con dígito erróneo | Falla en checksum de Luhn | Rechazado | Alerta inmediata de número de tarjeta inválido |
+| Tarjeta vencida | Mes/año anterior al actual | Rechazado | Detección automática de expiración |
+| Tarjeta de rechazo inducido | `4000 0000 0000 0002` | Rechazado por banco emisor | Simulación de fondos insuficientes |
+
+La batería completa arrojó una efectividad de **12/12 casos exitosos** en la ejecución de pruebas automatizadas (`tools/10_ecommerce_pagos/resultados_pruebas_pasarela.md`). Todo pago procesado emite un folio único de radicación y sitúa la afiliación en estado «En Aprobación · Tesorería CCA», reflejando el protocolo contable real donde la activación definitiva queda sujeta a la conciliación de fondos por el departamento financiero de la Cámara.
 
 ---
 

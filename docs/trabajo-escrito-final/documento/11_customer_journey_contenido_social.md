@@ -78,6 +78,8 @@ _Nota._ Valoración cualitativa del equipo consultor a partir del diagnóstico d
 
 **Contraste entre los dos viajes.** En el viaje actual, la curva nunca sale del terreno negativo y toca fondo dos veces. La primera caída ocurre en la **afiliación**: es el punto de mayor deserción, porque el comerciante abandona antes de convertirse en socio. La segunda ocurre en la **fidelización**: quien sí se afilió deja de renovar porque no percibe valor. En el viaje rediseñado, la afiliación pasa del punto más bajo (−2) al más alto (+2). Ese es el mayor cambio de todo el mapa, y muestra que la arquitectura web convierte la principal fricción de la Cámara en su principal oportunidad de captar nuevos afiliados.
 
+*Evolución y resolución arquitectónica:* En la formulación inicial de requerimientos, la afiliación y validación gremial se concebía como un trámite administrativo presencial y documental que causaba una fricción severa (-2 en la etapa de compromiso). Como resultado de modelar el viaje en Miro (`tools/08_miro_cjm/`) y articularlo con la arquitectura de información en Next.js, se integró un asistente digital de 3 pasos y un canal directo de soporte vía WhatsApp. Esta transición permitió que perfiles tradicionales resuelvan sus dudas en tiempo real sin abandonar el flujo, convirtiendo el trámite en una experiencia guiada con constancia digital inmediata (+2).
+
 ---
 
 ## 11.4 Gráfico del Customer Journey Map en Miro
