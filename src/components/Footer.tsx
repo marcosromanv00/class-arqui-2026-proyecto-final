@@ -7,20 +7,24 @@ export function Footer() {
         {/* Cabecera del pie: Emblema y Propósito Gremial */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between pb-12 border-b border-stone-800 gap-6">
           <div className="flex items-center gap-3.5">
-            <div className="w-10 h-10 rounded-md bg-stone-800 flex items-center justify-center text-amber-400 shrink-0">
+            <div className="w-10 h-10 rounded-full border border-stone-700 bg-stone-900 flex items-center justify-center text-amber-400 shrink-0">
               <svg
                 className="w-5 h-5"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                strokeWidth="1.75"
+                strokeWidth="1.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 aria-hidden="true"
               >
-                <path d="M12 2L3 7v6c0 5.25 3.75 10.15 9 11.25 5.25-1.1 9-6 9-11.25V7l-9-5z" />
-                <path d="M9 12h6" />
-                <path d="M12 9v6" />
+                <path d="M3 21h18" />
+                <path d="M4 18h16" />
+                <path d="M6 18V9" />
+                <path d="M10 18V9" />
+                <path d="M14 18V9" />
+                <path d="M18 18V9" />
+                <path d="M3 9h18L12 3 3 9z" />
               </svg>
             </div>
             <div className="border-l border-stone-700 pl-3.5">
