@@ -3,175 +3,120 @@
 **Proyecto:** Rediseño de Arquitectura de Información · Cámara de Comercio de Alajuela (CCA)  
 **Curso:** EIF-511 Arquitectura de Información · Universidad Nacional de Costa Rica (UNA)  
 **Equipo Consultor:** Marcos Román Valverde (Coord.) · Emanuel Soto · Allan Arce  
-**Archivo PowerPoint Generado:** [`Presentacion_Final_CCA_UNA.pptx`](Presentacion_Final_CCA_UNA.pptx)  
-**Principios de Diseño Aplicados:** *The 3-Second Glance Test*, *Radical Minimalism*, *One Idea per Slide*, *Action Titles* y *Cero AI-Slop*.
+**Archivo PowerPoint:** [`Presentacion_Final_CCA_UNA.pptx`](Presentacion_Final_CCA_UNA.pptx) (16 Diapositivas Widescreen 16:9)  
+**Principios de Diseño:** *The 3-Second Glance Test*, *Radical Minimalism*, *One Idea per Slide*, *Action Titles* y *Cero AI-Slop*.
 
 ---
 
-## 1. Hilo Narrativo y Estructura Dramática
-
-La presentación no recita capítulos técnicos aislados; cuenta una historia humana y gremial estructurada en 5 actos:
+## 1. Hilo Narrativo y Estructura Dramática (5 Actos)
 
 ```
 [ ACTO 1: LA REALIDAD ] ──► [ ACTO 2: EL CONFLICTO ] ──► [ ACTO 3: LA CIENCIA ] ──► [ ACTO 4: LA SOLUCIÓN ] ──► [ ACTO 5: EL IMPACTO ]
-43 años de historia          Don Carlos y Valeria          OptimalSort N=18              5 ramas + Wizard              SUS 89.5 (+41 pts)
-frente a un portal roto       frente a un muro digital      desmonta el árbol rígido      SINPE + Algolia               Rage clicks: 0.8%
+43 años de historia          Comerciantes vs Muro          OptimalSort N=18              5 Ramas + Algolia             SUS 89.5 (+41 pts)
+frente a un portal roto       Digital de desinformación    desmonta el árbol rígido      Strapi + Miro + Pasarela      Rage clicks: 0.8%
 ```
 
 ---
 
-## 2. Desglose Slide por Slide (Texto Mínimo & Escaneo Rápido)
+## 2. Desglose Slide por Slide (16 Diapositivas)
 
-### Slide 1: La Portada (El Gancho Humano)
-* **Categoría:** `UNIVERSIDAD NACIONAL DE COSTA RICA · EIF-511`
-* **Titular Principal (Hero):** *"Por el comercio. Por Alajuela."*
-* **Bajada:** Reingeniería de Arquitectura de Información para el Portal Digital de la Cámara de Comercio de Alajuela (1983–2026).
-* **Ficha Técnica:** Marcos Román Valverde (Coord.) · Emanuel Soto · Allan Arce | Docente: MSc. Cynthia Bolaños Espinoza.
-* **Propósito en Escena:** Establecer solemnidad gremial, arraigo territorial y profesionalismo inmediato.
+### Slide 1: Portada Institucional (Marcos Román)
+* **Titular Principal:** *"Por el comercio. Por Alajuela."*
+* **Bajada:** Reingeniería Integral de Arquitectura de Información y Plataforma Digital · Cámara de Comercio de Alajuela (1983–2026).
+* **Ficha:** Marcos Román Valverde (Coord.) · Emanuel Soto · Allan Arce | Docente: MSc. Cynthia Bolaños Espinoza.
 
----
+### Slide 2: Contexto & Punto de Partida (Marcos Román)
+* **Titular de Acción:** *"Una institución de 43 años con un portal que alejaba a sus propios socios"*
+* **Métricas:** 1983 (Año de fundación), 16 cantones de influencia provincial, 4 clics ciegos previos.
 
-### Slide 2: El Contexto (La Brecha Oculta)
-* **Categoría:** `01. CONTEXTO & PUNTO DE PARTIDA`
-* **Acción / Titular:** *"Una institución de 43 años con un portal que alejaba a sus propios socios"*
-* **Subtítulo:** La Cámara nació en 1983 para respaldar al comercio. En internet ocurría lo contrario.
-* **3 Tarjetas Numéricas de Alto Impacto:**
-  1. **1983** | *AÑO DE FUNDACIÓN* | Cuatro décadas defendiendo al comercio formal, MIPYMES y zonas francas de Alajuela.
-  2. **16** | *CANTONES DE INFLUENCIA* | Representación estratégica provincial desde Alajuela Centro hasta El Coyol, Grecia y San Ramón.
-  3. **4** | *CLICS CIEGOS PREVIOS* | El sitio anterior forzaba al usuario a adivinar categorías ocultas para encontrar un simple teléfono.
+### Slide 3: La Fricción Humana (Marcos Román)
+* **Titular de Acción:** *"Realidades alajuelenses frente a un muro digital de desinformación"*
+* **Arquetipos:** Don Carlos / Doña Rosa (comercio tradicional en Calle Ancha) vs Valeria / Mariana (empresa B2B y servicios cloud).
 
----
+### Slide 4: Diagnóstico Heurístico Forense (Marcos Román)
+* **Titular de Acción:** *"Tres patologías críticas destruían la credibilidad del portal anterior"*
+* **Patologías:** Canibalización SEO (`/` vs `/home`), Secciones fantasma (`/oferentes/`) y el Trámite huérfano (PDF 62 KB).
 
-### Slide 3: El Conflicto Humano (Don Carlos y Valeria)
-* **Categoría:** `02. LA FRICCIÓN HUMANA`
-* **Acción / Titular:** *"Dos realidades alajuelenses frente a un muro digital"*
-* **Subtítulo:** La mala arquitectura no es un tecnicismo: es tiempo y dinero perdido para personas reales.
-* **2 Columnas Enfrentadas:**
-  * **Don Carlos Alvarado (52 años) · Ferretero Tradicional (Calle Ancha):**
-    * *Fricción:* Entraba a la bolsa de empleo para contratar un bodeguero y la página salía en blanco con error. Terminaba viajando en bus a dejar un papel a la sede física.
-    * *Solución:* Bolsa de Empleo en el menú superior a 1 clic y confirmación asistida vía WhatsApp oficial.
-  * **Licda. Valeria Brenes (29 años) · Emprendedora Digital (La Guácima):**
-    * *Fricción:* Quería afiliar su agencia en línea. Precios ocultos y sólo un archivo PDF de 62 KB para imprimir a mano.
-    * *Solución:* Wizard de afiliación 100% digital en 3 minutos, pago SINPE Móvil y ahorro deducible bajo la Ley 7092.
+### Slide 5: Validación Empírica Rigurosa (Marcos Román)
+* **Titular de Acción:** *"Dejamos de adivinar: 18 participantes reales modelaron la estructura"*
+* **Métricas:** $N=18$ participantes estratificados, 540 clasificaciones en OptimalSort, 72%–94% de dispersión natural (Kuric et al., 2025).
 
----
+### Slide 6: Hallazgo Científico: Polijerarquía (Marcos Román)
+* **Titular de Acción:** *"La rigidez del árbol expulsaba a los usuarios: adoptamos Polijerarquía"*
+* **Decisiones:** Guía de Patente Municipal (multiruta), Bolsa de Empleo Cantonal (nodo directo) y Convenios integrados al catálogo.
 
-### Slide 4: El Diagnóstico Forense (Los 3 Pecados Capitales)
-* **Categoría:** `03. DIAGNÓSTICO HEURÍSTICO`
-* **Acción / Titular:** *"Tres patologías críticas destruían la credibilidad del portal"*
-* **Subtítulo:** Auditoría técnica sobre el WordPress preexistente basada en Nielsen y Halvorson.
-* **3 Tarjetas Diagnósticas:**
-  1. **Canibalización SEO (`/` vs `/home`):** La portada existía bajo dos URLs con menús distintos. Confundía a Google y hacía que el visitante sintiera que navegaba en dos webs distintas.
-  2. **Secciones Fantasma (`/oferentes/` y `/noticias/`):** Promesas rotas en la cabecera. Clics que llevaban a pantallas en blanco con *"No se encontraron entradas"*.
-  3. **El Trámite Huérfano (`/documentos/`):** Cero transaccionalidad. Para afiliarse había que descargar un PDF manual, imprimirlo y llevarlo físicamente.
+### Slide 7: Arquitectura Propuesta (Marcos Román)
+* **Titular de Acción:** *"Cinco ramas maestras. Cero callejones sin salida."*
+* **Estructura:** `/la-camara`, `/servicios`, `/directorio`, `/empleo`, `/contacto` + Botón Magnético `/afiliarse`.
 
----
+### Slide 8: Sistema de Diseño Visual Anti-Slop (Emanuel Soto)
+* **Titular de Acción:** *"Inspiración editorial ICC: 85% fondo blanco y cero adornos inútiles"*
+* **Pilares:** Paleta Rojo Carmín (`#991B1B`), tipos *Newsreader* + *Plus Jakarta Sans*, fotografía documental y cero gradientes morados.
 
-### Slide 5: El Giro Científico (Optimal Workshop N=18)
-* **Categoría:** `04. VALIDACIÓN EMPÍRICA`
-* **Acción / Titular:** *"Dejamos de adivinar: 18 comerciantes reales modelaron la estructura"*
-* **Subtítulo:** Subsanación del Avance 1: sustituimos los consensos artificiales por variabilidad real (Kuric et al., 2025).
-* **3 Métricas Científicas:**
-  1. **N=18** | *PARTICIPANTES REALES* | Estratificados en 3 cohortes: Tradicionales (7), Profesionales B2B (6) y Emprendedores (5).
-  2. **540** | *CLASIFICACIONES PROCESADAS* | 100% de completitud en OptimalSort evaluando 30 conceptos representativos.
-  3. **72% – 94%** | *DISPERSIÓN NATURAL* | Afinidad empírica que desnudó fricciones en patentes, empleo y convenios antes de tocar código.
+### Slide 9: Búsqueda Inteligente con Algolia Cloud (Allan Arce)
+* **Titular de Acción:** *"Algolia Cloud indexa los 171 comercios reales con latencia < 20 ms"*
+* **Pilares:** 171 comercios reales, 52 grupos de sinónimos alajuelenses, facetado geográfico y reducción de búsquedas vacías del 23% al 6%.
 
----
+### Slide 10: Corrección Semántica con IA (Allan Arce)
+* **Titular de Acción:** *"Endpoint `/api/corregir` con Azure OpenAI y fallback heurístico local"*
+* **Pilares:** Recuperación semántica de erratas complejas ("fereteria en el collor"), fallback local resiliente y re-búsqueda automática.
 
-### Slide 6: El Hallazgo de Oro (Polijerarquía Validada)
-* **Categoría:** `05. HALLAZGO CIENTÍFICO`
-* **Acción / Titular:** *"La rigidez del árbol expulsaba a los usuarios: adoptamos Polijerarquía"*
-* **Subtítulo:** Forzar una única ruta lógica provocaba que el 33% de los usuarios no encontrara el servicio (Ladisa et al., 2023).
-* **3 Decisiones Estructurales:**
-  * **Guía de Patentes:** 67% la buscaba en Servicios, 22% en Institucional y 11% en Afiliación. *Solución:* Ruta canónica en Servicios con accesos cruzados en el formulario de afiliación.
-  * **Bolsa de Empleo:** El 50% de usuarios B2B la buscaba ligada al Directorio. *Solución:* Nodo de primer nivel y enlace directo en la cabecera del directorio.
-  * **Convenios Comerciales:** Dividida entre Afiliación y Directorio. *Solución:* Catálogo en Directorio y retorno de inversión visible en el Wizard.
+### Slide 11: CMS Headless Strapi 5.61 (Emanuel Soto)
+* **Titular de Acción:** *"Strapi v5.61 desacopla el contenido y erradica los errores ortográficos"*
+* **Pilares:** Vocabularios controlados cerrados (16 cantones, 5 sectores macro), script `seed_strapi.js` y publicación autónoma en 30 segundos.
 
----
+### Slide 12: Customer Journey Map en Miro (Emanuel Soto)
+* **Titular de Acción:** *"Tablero 5×5 en Miro transforma la mayor fricción en la mayor conversión"*
+* **Pilares:** 25 cuadrantes generados vía Miro API, salto de satisfacción de $-2$ a $+2$ en la afiliación y estrategia omnicanal (LinkedIn, Instagram, WhatsApp).
 
-### Slide 7: La Nueva Arquitectura (Sitemap en 5 Ejes)
-* **Categoría:** `06. ARQUITECTURA PROPUESTA`
-* **Acción / Titular:** *"Cinco ramas maestras. Cero callejones sin salida."*
-* **Subtítulo:** Estructura balanceada en 3 niveles de profundidad máxima: ningún contenido vital a más de 2 clics.
-* **5 Columnas de Navegación Horizontal:**
-  1. **Institucional (`/la-camara`):** Misión, Junta Directiva, Estatutos y Reseña histórica desde 1983.
-  2. **Servicios (`/servicios`):** Centro de Arbitraje Mercantil (Ley 7727), Patentes Municipales y Convenios.
-  3. **Directorio (`/directorio`):** Buscador facetado por cantón, sello de Afiliado CCA y WhatsApp directo.
-  4. **Bolsa Empleo (`/empleo`):** Vacantes activas en El Coyol y Alajuela Centro + postulación digital.
-  5. **Contacto (`/contacto`):** Sede en Plaza Tomás Guardia, canal oficial de WhatsApp y Preguntas Frecuentes.
-* **Llamada a la Acción Transversal:** Botón magnético contrastado en Rojo Carmín: *Afiliar mi Empresa* (`/afiliarse`).
+### Slide 13: Asistente RAG con IA Generativa (Marcos Román)
+* **Titular de Acción:** *"Inteligencia Artificial fundamentada en el corpus oficial de la CCA"*
+* **Pilares:** ChromaDB + embeddings sobre estatutos gremiales, cálculo de ahorro fiscal (Art. 8 Ley 7092) y canal SINPE oficial `8703-0792`.
 
----
+### Slide 14: Transaccionalidad & Pagos Simulados (Allan Arce)
+* **Titular de Acción:** *"Pasarela en `src/lib/pagos.ts` con validación Luhn, anti-replay y 12/12 pruebas"*
+* **Pilares:** Algoritmo de Luhn, formato de celular costarricense, protección anti-replay con radicado único y aviso visible de simulación académica.
 
-### Slide 8: Diseño Visual Anti-Slop (Estilo Editorial ICC)
-* **Categoría:** `07. SISTEMA DE DISEÑO VISUAL`
-* **Acción / Titular:** *"Inspiración editorial ICC: 85% fondo blanco y cero adornos inútiles"*
-* **Subtítulo:** Benchmark oficial: International Chamber of Commerce (`iccwbo.org`).
-* **3 Pilares Estéticos:**
-  * **Paleta Cívica:** Rojo Carmín (`#991B1B`) y Negro Grafito (`#09090B`). Erradicación de azules genéricos.
-  * **Tipografía Serena:** Titulares en *Newsreader* (serif editorial) + interfaz en *Inter*. Cero tipografías ultra-gruesas o chillonas.
-  * **Cero "AI Slop":** Sin gradientes morados artificiales ni badges falsos. Bordes limpios de 1px y fotografía documental auténtica de comercio local.
+### Slide 15: Evaluación Cuantitativa de Usabilidad (Allan Arce)
+* **Titular de Acción:** *"Los números ratifican el éxito: la usabilidad subió a 89.5 puntos"*
+* **Pilares:** SUS 89.5 (Grado A Excelente vs 48.2 anterior), 86% de éxito directo en Treejack y 0.8% de rage clicks en Microsoft Clarity.
 
----
-
-### Slide 9: Funcionalidad: Directorio Facetado Inteligente
-* **Categoría:** `08. FUNCIONALIDAD: DIRECTORIO`
-* **Acción / Titular:** *"Encontrar un taller en El Coyol ahora toma menos de lo que dura un parpadeo"*
-* **Subtítulo:** Reducción del tiempo de búsqueda de más de 2 minutos a 19 segundos.
-* **3 Pilares Tecnológicos:**
-  * **Algolia Search en < 20 ms:** Búsqueda predictiva instantánea mientras se escribe (*as-you-type*) con tolerancia a errores tipográficos.
-  * **Filtros por Cantón y Sector:** Segmentación territorial en los 16 cantones alajuelenses y 8 sectores comerciales formales.
-  * **ROI Tangible de Afiliación:** Sello de verificación CCA, cálculo de ahorro de convenios y contacto directo a WhatsApp.
-
----
-
-### Slide 10: Conversión Digital: Wizard de Afiliación SINPE
-* **Categoría:** `09. CONVERSIÓN & FINANZAS`
-* **Acción / Titular:** *"Afiliarse ya no requiere papel: 3 minutos y 100% deducible de renta"*
-* **Subtítulo:** De un PDF manual de 62 KB a un embudo transaccional guiado en 3 etapas.
-* **3 Pasos Transparentes:**
-  * **Paso 1 (Identificación):** Cédula Jurídica y datos de la empresa con validación reactiva en cliente.
-  * **Paso 2 (Transparencia Fiscal):** Cálculo automático del arancel y recordatorio del Artículo 8 de la Ley 7092: gasto 100% deducible de renta.
-  * **Paso 3 (Pago Inmediato):** SINPE Móvil al teléfono oficial (`8703-0792`), validación del comprobante y radicado digital instantáneo.
-
----
-
-### Slide 11: La Prueba de Fuego: Métricas de Usabilidad
-* **Categoría:** `10. EVALUACIÓN CUANTITATIVA`
-* **Acción / Titular:** *"Los números no mienten: la usabilidad subió 41 puntos"*
-* **Subtítulo:** Telemetría de comportamiento y psicometría comparando el portal viejo vs el rediseñado.
-* **3 Métricas Heroicas:**
-  * **89.5** | *SYSTEM USABILITY SCALE (SUS)* | De 48.2 (Grado F / Reprobado) a 89.5 (Grado A / Excelente).
-  * **86%** | *ÉXITO DIRECTO EN TREEJACK* | Medido en árbol textual puro sobre 3 tareas críticas: los usuarios llegaron al destino sin desvíos.
-  * **0.8%** | *CLICS DE FURIA (RAGE CLICKS)* | En Microsoft Clarity las pulsaciones repetidas por frustración cayeron del 18.4% a prácticamente cero.
-
----
-
-### Slide 12: Hoja de Ruta Tecnológica (2027)
-* **Categoría:** `11. HOJA DE RUTA TECNOLÓGICA`
-* **Acción / Titular:** *"Un ecosistema moderno diseñado para evolucionar"*
-* **Subtítulo:** Plan de adopción progresivo por trimestres para garantizar sostenibilidad institucional.
-* **4 Fases Trimestrales:**
-  * **T1 – 2027 (Puesta en Producción):** Despliegue en Vercel, vinculación de Strapi Cloud y primer índice de Algolia.
-  * **T2 – 2027 (Autogestión Empresarial):** Portal de autoservicio para agremiados al día (editar perfil y vacantes).
-  * **T3 – 2027 (Asistente RAG con IA):** Integración del pipeline en Python con WhatsApp oficial para resolver dudas de estatutos 24/7.
-  * **T4 – 2027 (Observatorio Económico):** Tablero provincial interactivo de comercio para la toma de decisiones gremiales.
-
----
-
-### Slide 13: Conclusión y Cierre Humano
-* **Categoría:** `CONCLUSIÓN GENERAL · EQUIPO CONSULTOR EIF-511`
-* **Frase de Cierre (Hero):**  
+### Slide 16: Conclusión General & Cierre Humano (Equipo)
+* **Frase de Cierre:**
   > *"La Arquitectura de Información no es decorar pantallas.  
   > Es conectar a quienes producen con quienes necesitan, sin fricción y con orgullo alajuelense."*
-* **Llamado al Diálogo:**  
-  ¡Muchas gracias! Espacio abierto para preguntas y retroalimentación.  
-  *Prototipo interactivo navegable disponible en vivo · Repositorio: github.com/marcosromanv00/class-arqui-2026-proyecto-final*
+* **Apertura:** Espacio para preguntas y retroalimentación de la docente.
 
 ---
 
-## 3. Principios de Defensa Oral para el Equipo (60 Minutos)
+## 3. Plan de Roles y Tiempos para el Martes (Total: ~30 min + Preguntas)
 
-1. **No leas las diapositivas:** La diapositiva es el ancla visual del público; tú eres la voz que explica el por qué.
-2. **Habla de comerciantes, no de divs ni clases CSS:** La profesora evalúa arquitectura de información y valor de negocio. Cita a Don Carlos, a Valeria, al ferretero de Calle Ancha y a las empresas de El Coyol.
-3. **Muestra el prototipo en vivo después del Slide 9 o 10:** Abre una pestaña con el prototipo Next.js, haz una búsqueda en el directorio tecleando *"taller"* y muestra cómo responde en tiempo real.
+| Bloque | Expositor | Diapositivas | Tiempo Estimado | Enfoque Principal |
+| :--- | :--- | :---: | :---: | :--- |
+| **Apertura & Diagnóstico** | **Marcos Román** (Coord.) | 1 a 7 | **8 – 10 min** | Contexto histórico, patologías del sitio anterior, estudio con $N=18$ (Optimal Workshop), polijerarquía y sitemap. |
+| **Diseño, CMS & Journey** | **Emanuel Soto** | 8, 11 y 12 | **6 – 8 min** | Sistema de diseño editorial ICC, arquitectura headless en Strapi 5.61 con vocabularios cerrados y Customer Journey Map 5×5 en Miro. |
+| **Búsqueda, Pagos & Métricas** | **Allan Arce** | 9, 10, 14 y 15 | **8 – 10 min** | Algolia Cloud con 171 comercios reales, corrección IA `/api/corregir`, pasarela simulada con Luhn/anti-replay y métricas SUS (89.5). |
+| **RAG & Demo en Vivo** | **Marcos Román** | 13 y 16 + Demo | **5 – 6 min** | Asistente RAG con ChromaDB/Ley 7092, navegación ágil en el portal y cierre humano. |
+| **Defensa & Preguntas** | **Todo el equipo** | — | **15 – 20 min** | Respuestas técnicas y metodológicas a la docente MSc. Cynthia Bolaños. |
+
+---
+
+## 4. Guion Rápido para la Demo en Vivo (3 Minutos)
+
+1. **Búsqueda Instantánea con Algolia (`/directorio`):**
+   * Teclea *"ferretería"* o *"taller"* y muestra cómo aparecen los resultados en $<20\text{ ms}$.
+   * Filtra por cantón (*"Alajuela"* o *"San Ramón"*) y muestra la ficha con el botón de WhatsApp directo.
+2. **Corrección Semántica con IA (`/api/corregir`):**
+   * Teclea intencionalmente *"fereteria en el collor"* y observa cómo el sistema sugiere *"Ferretería en El Coyol"* sin pantallas en blanco.
+3. **Wizard de Afiliación Transaccional (`/afiliarse`):**
+   * Llena el paso 1 con datos ficticios.
+   * En el paso 2, resalta el desglose del arancel y el aviso de deducibilidad fiscal bajo la Ley 7092.
+   * En el paso 3, selecciona SINPE Móvil o Tarjeta de prueba, procesa el pago y muestra el número de radicado generado con estado *"En Aprobación · Tesorería CCA"* y el banner visible de advertencia académica.
+
+---
+
+## 5. Recomendaciones Clave para la Defensa Oral
+
+1. **Habla de Personas y Negocio:** Cita a Don Carlos (el ferretero de Calle Ancha) y a Valeria (la emprendedora de La Guácima). La docente valora la empatía y la solución a problemas reales, no la jerga técnica vacía.
+2. **No leas las diapositivas:** La diapositiva contiene el titular de acción y los números de impacto; el expositor debe contextualizar el *por qué* de la decisión de diseño.
+3. **Tener backup offline:** Aunque el sitio está desplegado en Vercel (`https://cca-alajuela-portal.vercel.app`), ten levantado `npm run dev` en `localhost:3000` en tu máquina por si la conexión de la universidad falla.
