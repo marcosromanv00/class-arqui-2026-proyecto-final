@@ -1,9 +1,10 @@
+import Link from "next/link";
 import { ArrowRight, ArrowDown } from "lucide-react";
 
 const PILLAR_INDEX = [
-  { code: "01", label: "Defensa e Incidencia Municipal", href: "#manifiesto" },
-  { code: "02", label: "Arbitraje y Seguridad Jurídica", href: "#tramites" },
-  { code: "03", label: "Red Cantonal (16 Cantones)", href: "#directorio" },
+  { code: "01", label: "Defensa e Incidencia Municipal", href: "/la-camara" },
+  { code: "02", label: "Arbitraje y Seguridad Jurídica", href: "/servicios/arbitraje" },
+  { code: "03", label: "Red Cantonal (16 Cantones)", href: "/directorio" },
 ];
 
 const SECTORS = [
@@ -29,7 +30,7 @@ export function Hero() {
             {/* Índice Tabular con Divisores Hairline */}
             <div className="border-t border-border pt-1">
               <div className="grid grid-cols-1 sm:grid-cols-2 border-b border-border">
-                <a
+                <Link
                   href={PILLAR_INDEX[0].href}
                   className="py-3 pr-4 sm:border-r border-b sm:border-b-0 border-border group flex items-baseline justify-between hover:text-brand transition-colors"
                 >
@@ -39,8 +40,8 @@ export function Hero() {
                   <span className="text-[11px] font-mono text-text-muted">
                     {PILLAR_INDEX[0].code}
                   </span>
-                </a>
-                <a
+                </Link>
+                <Link
                   href={PILLAR_INDEX[1].href}
                   className="py-3 sm:pl-4 group flex items-baseline justify-between hover:text-brand transition-colors"
                 >
@@ -50,9 +51,9 @@ export function Hero() {
                   <span className="text-[11px] font-mono text-text-muted">
                     {PILLAR_INDEX[1].code}
                   </span>
-                </a>
+                </Link>
               </div>
-              <a
+              <Link
                 href={PILLAR_INDEX[2].href}
                 className="py-3 border-b border-border group flex items-baseline justify-between hover:text-brand transition-colors block"
               >
@@ -62,7 +63,7 @@ export function Hero() {
                 <span className="text-[11px] font-mono text-text-muted">
                   {PILLAR_INDEX[2].code}
                 </span>
-              </a>
+              </Link>
             </div>
 
             <p className="text-sm sm:text-base text-ink-muted leading-relaxed max-w-xl">
@@ -72,21 +73,21 @@ export function Hero() {
 
             {/* CTAs de Alto Impacto */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1">
-              <a
-                href="#afiliacion"
+              <Link
+                href="/afiliarse"
                 className="group relative inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-full bg-brand text-white font-medium text-xs sm:text-sm hover:bg-brand-hover transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-0.5"
               >
                 <span>Asociar mi empresa (Deducción 100%)</span>
                 <div className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center text-white group-hover:bg-white group-hover:text-brand transition-colors">
                   <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                 </div>
-              </a>
-              <a
-                href="#directorio"
+              </Link>
+              <Link
+                href="/directorio"
                 className="btn-cca-secondary px-5 py-3 rounded-full text-xs sm:text-sm inline-flex items-center justify-center"
               >
                 Consultar directorio oficial
-              </a>
+              </Link>
             </div>
           </div>
 
