@@ -1,73 +1,71 @@
-import { ShieldCheck, Sparkles, CheckCircle2 } from "lucide-react";
+import { ShieldCheck, CheckCircle2, FileText, Award } from "lucide-react";
 
 export function AffiliationValueProps() {
   return (
     <div className="space-y-6">
       <div>
-        <p className="text-xs uppercase font-bold tracking-widest text-[#991b1b] mb-2">
-          Afiliación Digital Instantánea · SINPE Móvil
-        </p>
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-[#09090b] tracking-tight leading-tight">
-          Únase a la red de comercio más influyente de Alajuela
+        <span className="text-xs font-mono uppercase tracking-wider text-brand font-semibold">
+          Membresía Empresarial
+        </span>
+        <h2 className="font-serif text-2xl sm:text-4xl font-semibold text-ink tracking-tight mt-1 leading-snug">
+          Respaldo, representación y beneficios tangibles para su empresa
         </h2>
-        <p className="mt-4 text-sm text-neutral-600 leading-relaxed">
-          Modernizamos la afiliación gremial: formalice su membresía en 3 sencillos pasos digitales con radicado inmediato y verificación directa.
+        <p className="mt-3 text-sm sm:text-base text-ink-muted leading-relaxed">
+          La afiliación a la Cámara está abierta para personas físicas con actividad lucrativa y personas jurídicas de los 16 cantones de la provincia de Alajuela.
         </p>
       </div>
 
       {/* Deducibilidad Fiscal Ley 7092 */}
-      <div className="p-4 bg-neutral-50 border border-neutral-200 text-xs text-neutral-800 space-y-1.5">
-        <span className="font-bold uppercase tracking-wide text-[#991b1b] flex items-center gap-1.5 text-[11px]">
-          <ShieldCheck className="w-4 h-4 text-[#991b1b]" /> Beneficio Fiscal Ley 7092
-        </span>
-        <p className="leading-relaxed text-neutral-600">
-          El 100% de la cuota asociativa es deducible como gasto operativo del Impuesto sobre la Renta (Artículo 8 de la Ley de Impuesto sobre la Renta de Costa Rica, Formulario D-101).
+      <div className="p-5 bg-surface border border-border rounded-xl shadow-xs space-y-2">
+        <div className="flex items-center gap-2 text-ink font-semibold text-sm">
+          <Award className="w-4 h-4 text-brand shrink-0" />
+          <span>Gasto 100% deducible de Renta (Art. 8 Ley N.° 7092)</span>
+        </div>
+        <p className="text-xs sm:text-sm text-ink-muted leading-relaxed">
+          Las cuotas de afiliación gremial son deducibles en la declaración anual D-101 ante la Dirección General de Tributación, reduciendo el costo real de su membresía.
         </p>
       </div>
 
-      {/* Retorno de Inversión (ROI) Estimado */}
-      <div className="bg-white border border-neutral-200 p-5 space-y-3">
-        <div className="flex items-center gap-2 text-xs font-bold text-[#09090b] uppercase tracking-wider">
-          <Sparkles className="w-4 h-4 text-[#991b1b]" />
-          <span>Retorno Estimado de la Membresía:</span>
+      {/* Requisitos Básicos */}
+      <div className="p-5 bg-surface border border-border rounded-xl shadow-xs space-y-3">
+        <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-ink font-semibold">
+          <FileText className="w-4 h-4 text-brand shrink-0" />
+          <span>Requisitos sencillos de ingreso</span>
         </div>
-        
-        <div className="space-y-2 text-xs text-neutral-600">
-          <div className="flex justify-between items-center py-1 border-b border-neutral-100">
-            <span>Ahorro en convenios comerciales y salud:</span>
-            <span className="font-mono font-bold text-neutral-900">~₡35.000/mes</span>
-          </div>
-          <div className="flex justify-between items-center py-1 border-b border-neutral-100">
-            <span>Descuentos en suministros de oficina:</span>
-            <span className="font-mono font-bold text-neutral-900">~₡20.000/mes</span>
-          </div>
-          <div className="flex justify-between items-center py-1 border-b border-neutral-100">
-            <span>Asesoría legal y arbitraje gremial:</span>
-            <span className="font-mono font-bold text-[#991b1b]">Incluido (₡0)</span>
-          </div>
-          <div className="flex justify-between items-center pt-2 font-bold text-[#09090b] border-t border-neutral-200">
-            <span>Retorno Neto Estimado vs Cuota:</span>
-            <span className="font-mono text-[#991b1b] text-sm">+360% ROI</span>
-          </div>
-        </div>
+        <ul className="space-y-2 text-xs sm:text-sm text-ink-muted">
+          <li className="flex items-start gap-2.5">
+            <span className="font-mono text-brand font-bold">01.</span>
+            <span>Cédula jurídica vigente o documento de identidad de comerciante.</span>
+          </li>
+          <li className="flex items-start gap-2.5">
+            <span className="font-mono text-brand font-bold">02.</span>
+            <span>Actividad económica demostrable en la provincia de Alajuela.</span>
+          </li>
+          <li className="flex items-start gap-2.5">
+            <span className="font-mono text-brand font-bold">03.</span>
+            <span>Patente comercial al día o en proceso de formalización asistida.</span>
+          </li>
+        </ul>
       </div>
 
-      {/* Beneficios directos */}
-      <div className="space-y-2.5 pt-1 text-xs text-neutral-700">
+      {/* Beneficios directos inmediatos */}
+      <div className="space-y-2 pt-1 text-xs sm:text-sm text-ink-muted">
+        <p className="font-semibold text-ink text-sm">
+          Beneficios activos desde el primer día:
+        </p>
         <div className="flex items-start gap-2.5">
-          <CheckCircle2 className="w-4 h-4 text-[#991b1b] shrink-0 mt-0.5" />
-          <span>Inclusión en el Directorio Comercial Verificado y mapa cantonal</span>
+          <CheckCircle2 className="w-4 h-4 text-brand shrink-0 mt-0.5" />
+          <span>Perfil oficial verificado en el Directorio Empresarial provincial.</span>
         </div>
         <div className="flex items-start gap-2.5">
-          <CheckCircle2 className="w-4 h-4 text-[#991b1b] shrink-0 mt-0.5" />
-          <span>Publicación gratuita de vacantes en la Bolsa de Empleo</span>
+          <CheckCircle2 className="w-4 h-4 text-brand shrink-0 mt-0.5" />
+          <span>Publicaciones libres en la Bolsa de Empleo provincial.</span>
         </div>
         <div className="flex items-start gap-2.5">
-          <CheckCircle2 className="w-4 h-4 text-[#991b1b] shrink-0 mt-0.5" />
-          <span>Acceso al Centro de Arbitraje y Mediación Mercantil CCA</span>
+          <ShieldCheck className="w-4 h-4 text-brand shrink-0 mt-0.5" />
+          <span>Arancel preferencial en el Centro de Mediación y Arbitraje Mercantil.</span>
         </div>
       </div>
     </div>
   );
 }
-

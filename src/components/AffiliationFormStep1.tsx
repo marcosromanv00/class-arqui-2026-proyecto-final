@@ -29,52 +29,58 @@ export function AffiliationFormStep1({
 }: AffiliationFormStep1Props) {
   return (
     <form onSubmit={onNext} className="space-y-4">
-      {/* Selección de Plan Minimalista */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-2">
-        <div
-          id="wizard-plan-regular"
-          onClick={() => setPlan("regular")}
-          className={`p-4 border cursor-pointer transition-all ${
-            plan === "regular"
-              ? "border-[#991b1b] bg-white ring-1 ring-[#991b1b]"
-              : "border-neutral-200 bg-neutral-50 hover:bg-white"
-          }`}
-        >
-          <span className="text-[10px] font-bold uppercase tracking-wider text-[#991b1b] block">
-            Plan Pyme / Comercial
-          </span>
-          <span className="text-xl font-extrabold text-[#09090b] font-mono">
-            ₡15.000 <span className="text-xs font-normal text-neutral-500">/mes</span>
-          </span>
-          <p className="text-[11px] text-neutral-500 mt-1">
-            Comercios locales, servicios profesionales y microempresas cantonales.
-          </p>
-        </div>
+      <fieldset className="space-y-2">
+        <legend className="text-xs font-semibold text-ink mb-1">
+          Modalidad de membresía:
+        </legend>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <button
+            id="wizard-plan-regular"
+            type="button"
+            onClick={() => setPlan("regular")}
+            className={`p-4 border text-left transition-all rounded-lg ${
+              plan === "regular"
+                ? "border-brand bg-surface ring-2 ring-brand/20 shadow-xs"
+                : "border-border bg-surface hover:border-border-strong"
+            }`}
+          >
+            <span className="text-xs font-mono font-semibold text-brand block">
+              Comercio y Pyme
+            </span>
+            <span className="text-xl font-semibold text-ink font-serif mt-1 block">
+              ₡15.000 <span className="text-xs font-normal text-text-muted">/mes</span>
+            </span>
+            <p className="text-xs text-ink-muted mt-1 leading-relaxed">
+              Comercios detallistas, restaurantes, consultorios y pymes.
+            </p>
+          </button>
 
-        <div
-          id="wizard-plan-corporate"
-          onClick={() => setPlan("corporativo")}
-          className={`p-4 border cursor-pointer transition-all ${
-            plan === "corporativo"
-              ? "border-[#991b1b] bg-white ring-1 ring-[#991b1b]"
-              : "border-neutral-200 bg-neutral-50 hover:bg-white"
-          }`}
-        >
-          <span className="text-[10px] font-bold uppercase tracking-wider text-[#991b1b] block">
-            Plan Corporativo
-          </span>
-          <span className="text-xl font-extrabold text-[#09090b] font-mono">
-            ₡35.000 <span className="text-xs font-normal text-neutral-500">/mes</span>
-          </span>
-          <p className="text-[11px] text-neutral-500 mt-1">
-            Grandes distribuidoras, zonas francas de El Coyol y cadenas provinciales.
-          </p>
+          <button
+            id="wizard-plan-corporate"
+            type="button"
+            onClick={() => setPlan("corporativo")}
+            className={`p-4 border text-left transition-all rounded-lg ${
+              plan === "corporativo"
+                ? "border-brand bg-surface ring-2 ring-brand/20 shadow-xs"
+                : "border-border bg-surface hover:border-border-strong"
+            }`}
+          >
+            <span className="text-xs font-mono font-semibold text-brand block">
+              Empresa e Industria
+            </span>
+            <span className="text-xl font-semibold text-ink font-serif mt-1 block">
+              ₡35.000 <span className="text-xs font-normal text-text-muted">/mes</span>
+            </span>
+            <p className="text-xs text-ink-muted mt-1 leading-relaxed">
+              Industrias de manufactura, zonas francas y distribuidores mayoristas.
+            </p>
+          </button>
         </div>
-      </div>
+      </fieldset>
 
       <div>
-        <label className="block text-xs font-bold text-neutral-800 uppercase tracking-wider mb-1">
-          Nombre Comercial o Razón Social *
+        <label htmlFor="wizard-input-name" className="block text-xs font-medium text-ink mb-1">
+          Razón social o nombre comercial *
         </label>
         <input
           id="wizard-input-name"
@@ -82,15 +88,15 @@ export function AffiliationFormStep1({
           required
           value={merchantName}
           onChange={(e) => setMerchantName(e.target.value)}
-          placeholder="Ej: Ferretería El Candado Alajuela S.A."
-          className="w-full px-3.5 py-2.5 text-sm bg-white border border-neutral-300 focus:border-[#991b1b] focus:outline-hidden"
+          placeholder="Ej. Distribuidora Central de Alajuela S.A."
+          className="w-full px-3.5 py-2.5 text-sm bg-surface border border-border rounded-lg text-ink focus:border-brand focus:outline-hidden"
         />
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label className="block text-xs font-bold text-neutral-800 uppercase tracking-wider mb-1">
-            Cédula Jurídica / Física *
+          <label htmlFor="wizard-input-cedula" className="block text-xs font-medium text-ink mb-1">
+            Cédula jurídica o física *
           </label>
           <input
             id="wizard-input-cedula"
@@ -98,20 +104,20 @@ export function AffiliationFormStep1({
             required
             value={cedula}
             onChange={(e) => setCedula(e.target.value)}
-            placeholder="Ej: 3-101-987654"
-            className="w-full px-3.5 py-2.5 text-sm bg-white border border-neutral-300 focus:border-[#991b1b] focus:outline-hidden font-mono"
+            placeholder="3-101-000000"
+            className="w-full px-3.5 py-2.5 text-sm bg-surface border border-border rounded-lg text-ink focus:border-brand focus:outline-hidden font-mono"
           />
         </div>
 
         <div>
-          <label className="block text-xs font-bold text-neutral-800 uppercase tracking-wider mb-1">
-            Cantón de Operación *
+          <label htmlFor="wizard-input-canton" className="block text-xs font-medium text-ink mb-1">
+            Cantón de operación *
           </label>
           <select
             id="wizard-input-canton"
             value={canton}
             onChange={(e) => setCanton(e.target.value)}
-            className="w-full px-3.5 py-2.5 text-sm bg-white border border-neutral-300 focus:border-[#991b1b] focus:outline-hidden"
+            className="w-full px-3.5 py-2.5 text-sm bg-surface border border-border rounded-lg text-ink focus:border-brand focus:outline-hidden"
           >
             <option value="Alajuela">Alajuela</option>
             <option value="San Ramón">San Ramón</option>
@@ -125,8 +131,8 @@ export function AffiliationFormStep1({
       </div>
 
       <div>
-        <label className="block text-xs font-bold text-neutral-800 uppercase tracking-wider mb-1">
-          Teléfono Móvil (Validación Costa Rica +506) *
+        <label htmlFor="wizard-input-phone" className="block text-xs font-medium text-ink mb-1">
+          Teléfono de contacto (+506) *
         </label>
         <input
           id="wizard-input-phone"
@@ -134,29 +140,26 @@ export function AffiliationFormStep1({
           required
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
-          placeholder="8492-3925"
-          className="w-full px-3.5 py-2.5 text-sm bg-white border border-neutral-300 focus:border-[#991b1b] focus:outline-hidden font-mono"
+          placeholder="2441-8118 / 8888-0000"
+          className="w-full px-3.5 py-2.5 text-sm bg-surface border border-border rounded-lg text-ink focus:border-brand focus:outline-hidden font-mono"
         />
-        <span className="text-[11px] text-neutral-500">Número registrado para notificaciones y SINPE Móvil.</span>
       </div>
 
-      {/* Requisito de Patente Municipal */}
-      <div className="p-3 bg-neutral-50 border border-neutral-200 text-xs text-neutral-700 flex items-start gap-2">
-        <FileText className="w-4 h-4 text-[#991b1b] shrink-0 mt-0.5" />
+      <div className="p-3.5 bg-surface border border-border rounded-lg text-xs text-ink-muted flex items-start gap-2.5">
+        <FileText className="w-4 h-4 text-brand shrink-0 mt-0.5" />
         <p className="leading-relaxed">
-          <strong>Requisito normativo:</strong> El comercio debe contar con patente al día. ¿Desea gestionarla? <a href="#tramites" className="text-[#991b1b] font-bold hover:underline">Consulte aquí la Guía de Patentes</a>.
+          <strong className="text-ink">Acompañamiento en patentes:</strong> Si su empresa aún está tramitando la patente comercial, le brindamos la guía de ventanilla única.
         </p>
       </div>
 
       <button
         id="wizard-step1-submit"
         type="submit"
-        className="w-full mt-2 py-3 text-xs uppercase tracking-wider font-bold bg-[#991b1b] hover:bg-[#7f1d1d] text-white flex items-center justify-center gap-2 transition-colors"
+        className="btn-cca-primary w-full py-3 text-sm flex items-center justify-center gap-2"
       >
-        <span>Continuar a Pasarela SINPE</span>
+        <span>Continuar al comprobante de pago</span>
         <ArrowRight className="w-4 h-4" />
       </button>
     </form>
   );
 }
-

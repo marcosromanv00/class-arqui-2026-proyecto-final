@@ -41,55 +41,58 @@ export function AffiliationWizard() {
   };
 
   return (
-    <section id="afiliacion" className="border-b border-neutral-200 bg-white py-16 lg:py-24">
+    <section id="afiliacion" className="bg-surface py-16 lg:py-24 border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          
-          {/* Columna Izquierda: Información de Valor Gremial & ROI */}
+          {/* Columna Izquierda: Beneficios */}
           <div className="lg:col-span-5">
             <AffiliationValueProps />
           </div>
 
-          {/* Columna Derecha: Wizard Interactivo Estilo ICC */}
-          <div className="lg:col-span-7 bg-[#f9fafb] border border-neutral-200 p-6 sm:p-8">
-            
-            {/* Indicador de 3 Pasos */}
-            <div className="flex items-center justify-between border-b border-neutral-200 pb-5 mb-6 text-xs">
+          {/* Columna Derecha: Formulario en Pasos */}
+          <div className="lg:col-span-7 bg-surface-muted border border-border p-6 sm:p-8 rounded-xl shadow-xs">
+            {/* Indicador de progreso */}
+            <div className="flex items-center justify-between border-b border-border pb-5 mb-6 text-xs">
               <div className="flex items-center gap-2">
-                <span className={`w-6 h-6 flex items-center justify-center font-bold text-xs ${
-                  step >= 1 ? "bg-[#991b1b] text-white" : "bg-neutral-200 text-neutral-600"
-                }`}>
+                <span
+                  className={`w-6 h-6 flex items-center justify-center font-mono font-semibold text-xs rounded-full ${
+                    step >= 1 ? "bg-brand text-surface" : "bg-surface border border-border text-text-muted"
+                  }`}
+                >
                   1
                 </span>
-                <span className={`font-semibold ${step >= 1 ? "text-[#09090b]" : "text-neutral-400"}`}>
-                  Datos del Comercio
+                <span className={`font-medium ${step >= 1 ? "text-ink" : "text-text-muted"}`}>
+                  Datos de la empresa
                 </span>
               </div>
-              <div className="w-8 sm:w-12 h-px bg-neutral-200" />
+              <div className="w-8 sm:w-16 h-px bg-border" />
               <div className="flex items-center gap-2">
-                <span className={`w-6 h-6 flex items-center justify-center font-bold text-xs ${
-                  step >= 2 ? "bg-[#991b1b] text-white" : "bg-neutral-200 text-neutral-600"
-                }`}>
+                <span
+                  className={`w-6 h-6 flex items-center justify-center font-mono font-semibold text-xs rounded-full ${
+                    step >= 2 ? "bg-brand text-surface" : "bg-surface border border-border text-text-muted"
+                  }`}
+                >
                   2
                 </span>
-                <span className={`font-semibold ${step >= 2 ? "text-[#09090b]" : "text-neutral-400"}`}>
-                  Pasarela SINPE
+                <span className={`font-medium ${step >= 2 ? "text-ink" : "text-text-muted"}`}>
+                  Comprobante
                 </span>
               </div>
-              <div className="w-8 sm:w-12 h-px bg-neutral-200" />
+              <div className="w-8 sm:w-16 h-px bg-border" />
               <div className="flex items-center gap-2">
-                <span className={`w-6 h-6 flex items-center justify-center font-bold text-xs ${
-                  step === 3 ? "bg-[#991b1b] text-white" : "bg-neutral-200 text-neutral-600"
-                }`}>
+                <span
+                  className={`w-6 h-6 flex items-center justify-center font-mono font-semibold text-xs rounded-full ${
+                    step === 3 ? "bg-brand text-surface" : "bg-surface border border-border text-text-muted"
+                  }`}
+                >
                   3
                 </span>
-                <span className={`font-semibold ${step === 3 ? "text-[#09090b]" : "text-neutral-400"}`}>
-                  Radicado Oficial
+                <span className={`font-medium ${step === 3 ? "text-ink" : "text-text-muted"}`}>
+                  Constancia
                 </span>
               </div>
             </div>
 
-            {/* Pasos */}
             {step === 1 && (
               <AffiliationFormStep1
                 plan={plan}
@@ -129,9 +132,7 @@ export function AffiliationWizard() {
                 onReset={handleReset}
               />
             )}
-
           </div>
-
         </div>
       </div>
     </section>

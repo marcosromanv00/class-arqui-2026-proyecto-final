@@ -1,89 +1,92 @@
 import { Merchant } from "@/lib/data";
-import { MapPin, Phone, MessageSquare, CheckCircle, Tag, Sparkles } from "lucide-react";
+import { MapPin, Phone, MessageSquare, ShieldCheck, Tag } from "lucide-react";
 
 interface MerchantCardProps {
   merchant: Merchant;
 }
 
 export function MerchantCard({ merchant }: MerchantCardProps) {
+  const whatsappUrl = `https://wa.me/${merchant.whatsapp}?text=${encodeURIComponent(
+    `Hola ${merchant.name}, los contacto a través del Directorio Oficial de la Cámara de Comercio de Alajuela.`
+  )}`;
+
   return (
-    <div
+    <article
       data-merchant-id={merchant.id}
-      className="bg-white border border-neutral-200 hover:border-neutral-400 p-6 flex flex-col justify-between transition-colors group"
+      className="cca-card p-6 flex flex-col justify-between hover:border-brand/40 transition-all duration-200"
     >
       <div>
-        {/* Categoría y Cantón */}
-        <div className="flex items-center justify-between text-xs mb-3">
-          <span className="font-bold text-[#991b1b] uppercase tracking-wider text-[10px]">
+        {/* Cabecera con Categoría y Cantón */}
+        <div className="flex items-center justify-between text-xs mb-3 gap-2">
+          <span className="px-2.5 py-0.5 rounded-full bg-brand/10 text-brand font-medium">
             {merchant.category}
           </span>
-          <span className="inline-flex items-center gap-1 text-neutral-500 font-medium text-[11px]">
-            <MapPin className="w-3 h-3 text-neutral-400" />
-            {merchant.district}, {merchant.canton}
+          <span className="flex items-center gap-1 text-text-muted">
+            <MapPin className="w-3.5 h-3.5 shrink-0" />
+            <span>{merchant.canton}</span>
           </span>
         </div>
 
-        {/* Nombre y Verificación */}
-        <div className="flex items-start gap-1.5">
-          <h3 className="text-base font-bold text-[#09090b] leading-snug group-hover:text-[#991b1b] transition-colors">
+        {/* Nombre y Sello de Verificación */}
+        <div className="flex items-start justify-between gap-2">
+          <h3 className="text-base sm:text-lg font-semibold text-ink leading-snug">
             {merchant.name}
           </h3>
           {merchant.verified && (
-            <span title="Afiliado Verificado CCA" className="inline-flex shrink-0 mt-0.5">
-              <CheckCircle className="w-4 h-4 text-[#991b1b]" />
+            <span
+              title="Asociado oficial verificado por la Cámara"
+              className="inline-flex items-center gap-1 text-xs text-brand shrink-0 mt-0.5"
+            >
+              <ShieldCheck className="w-4 h-4 text-brand" />
             </span>
           )}
         </div>
 
-        {/* Descripción */}
-        <p className="mt-2 text-xs text-neutral-600 leading-relaxed line-clamp-2">
+        <p className="mt-2 text-xs sm:text-sm text-ink-muted leading-relaxed">
           {merchant.description}
         </p>
 
-        {/* Convenio de Descuento (Anti-slop: fondo neutral limpio, sin amarillo) */}
+        {/* Convenio Exclusivo para Socios de la Cámara */}
         {merchant.convenioDescuento && (
-          <div className="mt-4 p-3 bg-neutral-50 border border-neutral-200 text-xs space-y-1">
-            <div className="flex items-center gap-1.5 text-neutral-800 font-semibold text-[11px]">
-              <Tag className="w-3.5 h-3.5 text-[#991b1b]" />
-              <span>Convenio CCA:</span>
+          <div className="mt-4 p-3 bg-amber-500/10 border border-amber-500/20 rounded-md text-xs space-y-1 text-amber-950">
+            <div className="flex items-center gap-1.5 font-semibold text-amber-900">
+              <Tag className="w-3.5 h-3.5 text-amber-700" />
+              <span>Convenio para asociados:</span>
             </div>
-            <p className="text-[11px] text-neutral-600 leading-snug">
+            <p className="leading-relaxed">
               {merchant.convenioDescuento}
             </p>
-            <div className="pt-1 flex items-center gap-1 text-[10px] font-bold text-[#09090b]">
-              <Sparkles className="w-3 h-3 text-[#991b1b]" />
-              <span>ROI estimado: {merchant.ahorroEstimado}</span>
-            </div>
           </div>
         )}
 
-        {/* Dirección y teléfono */}
-        <div className="mt-4 text-[11px] text-neutral-500 space-y-1">
+        {/* Dirección física y teléfono */}
+        <div className="mt-4 pt-3 border-t border-border text-xs text-text-muted space-y-1">
           <p className="line-clamp-1">{merchant.address}</p>
-          <p className="flex items-center gap-1 font-mono text-neutral-700">
-            <Phone className="w-3 h-3 text-neutral-400" />
-            {merchant.phone}
+          <p className="flex items-center gap-1.5 font-mono text-ink">
+            <Phone className="w-3.5 h-3.5 text-brand shrink-0" />
+            <a href={`tel:${merchant.phone}`} className="hover:text-brand">
+              {merchant.phone}
+            </a>
           </p>
         </div>
       </div>
 
-      {/* Botón WhatsApp Directo */}
-      <div className="mt-6 pt-4 border-t border-neutral-100 flex items-center justify-between">
-        <span className="text-[10px] font-semibold text-neutral-400 uppercase tracking-widest">
+      {/* Pie de tarjeta con Antigüedad y Botón de Contacto */}
+      <div className="mt-5 pt-3 border-t border-border flex items-center justify-between gap-2">
+        <span className="text-[11px] font-mono text-text-muted">
           Socio desde {merchant.memberSince}
         </span>
-        
+
         <a
-          href={`https://wa.me/${merchant.whatsapp}?text=Hola%20${encodeURIComponent(merchant.name)},%20los%20contacto%20a%20través%20del%20Directorio%20Oficial%20de%20la%20Cámara%20de%20Comercio%20de%20Alajuela.`}
+          href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-[#09090b] hover:text-[#991b1b] border border-neutral-300 hover:border-[#991b1b] transition-colors"
+          className="btn-cca-secondary px-3 py-1.5 text-xs inline-flex items-center gap-1.5 hover:border-brand hover:text-brand"
         >
-          <MessageSquare className="w-3.5 h-3.5 text-[#991b1b]" />
-          <span>WhatsApp</span>
+          <MessageSquare className="w-3.5 h-3.5 text-emerald-600" />
+          <span>Contactar</span>
         </a>
       </div>
-    </div>
+    </article>
   );
 }
-

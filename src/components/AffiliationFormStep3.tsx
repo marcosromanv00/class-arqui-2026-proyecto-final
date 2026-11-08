@@ -1,4 +1,4 @@
-import { Receipt } from "lucide-react";
+import { Receipt, CheckCircle2 } from "lucide-react";
 
 interface AffiliationFormStep3Props {
   comprobante: string;
@@ -15,51 +15,54 @@ export function AffiliationFormStep3({
   cedula,
   canton,
   price,
-  onReset
+  onReset,
 }: AffiliationFormStep3Props) {
   return (
     <div id="wizard-success-card" className="space-y-5 text-center py-4">
-      <div className="w-14 h-14 bg-neutral-100 text-[#991b1b] flex items-center justify-center mx-auto border border-neutral-300">
-        <Receipt className="w-7 h-7" />
+      <div className="w-14 h-14 bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto rounded-full border border-emerald-200">
+        <CheckCircle2 className="w-8 h-8" />
       </div>
 
       <div>
-        <h3 className="text-2xl font-bold text-[#09090b]">
-          ¡Afiliación Confirmada Exitosamente!
+        <h3 className="font-serif text-2xl font-semibold text-ink">
+          Solicitud de afiliación registrada
         </h3>
-        <p className="text-xs text-neutral-600 mt-1 max-w-md mx-auto">
-          Su comercio ha sido incorporado al Directorio Oficial y al Registro Gremial de la Cámara de Comercio de Alajuela.
+        <p className="text-xs sm:text-sm text-ink-muted mt-1.5 max-w-md mx-auto leading-relaxed">
+          Su solicitud ha ingresado para verificación de tesorería e incorporación al padrón oficial de la Cámara de Comercio de Alajuela.
         </p>
       </div>
 
-      {/* Comprobante Digital con Estilo Ticket Minimalista */}
-      <div className="bg-[#f9fafb] border border-neutral-300 p-5 text-left text-xs space-y-2.5 font-mono">
-        <div className="text-center font-bold text-[#09090b] border-b border-dashed border-neutral-300 pb-2">
-          CÁMARA DE COMERCIO DE ALAJUELA<br />
-          <span className="text-[10px] text-neutral-500 font-normal">COMPROBANTE DE AFILIACIÓN GREMIAL · LEY 7092</span>
+      <div className="bg-surface border border-border p-6 rounded-xl text-left text-xs space-y-3 font-mono shadow-xs">
+        <div className="text-center font-semibold text-ink border-b border-dashed border-border pb-3">
+          <p className="font-serif text-sm tracking-wide">CÁMARA DE COMERCIO DE ALAJUELA</p>
+          <span className="text-[11px] text-text-muted font-normal font-sans">
+            CONSTANCIA OFICIAL DE AFILIACIÓN · ART. 8 LEY N.° 7092
+          </span>
         </div>
         <div className="flex justify-between pt-1">
-          <span className="text-neutral-500">Radicado:</span>
-          <span className="font-bold text-[#991b1b]">{comprobante}</span>
+          <span className="text-text-muted">Comprobante bancario:</span>
+          <span className="font-semibold text-brand">{comprobante}</span>
         </div>
         <div className="flex justify-between">
-          <span className="text-neutral-500">Comercio:</span>
-          <span className="font-bold text-[#09090b]">{merchantName}</span>
+          <span className="text-text-muted">Empresa:</span>
+          <span className="font-semibold text-ink">{merchantName}</span>
         </div>
         <div className="flex justify-between">
-          <span className="text-neutral-500">Cédula:</span>
-          <span className="text-neutral-900">{cedula}</span>
+          <span className="text-text-muted">Cédula:</span>
+          <span className="text-ink">{cedula}</span>
         </div>
         <div className="flex justify-between">
-          <span className="text-neutral-500">Cantón:</span>
-          <span className="text-neutral-900">{canton}</span>
+          <span className="text-text-muted">Cantón:</span>
+          <span className="text-ink">{canton}</span>
         </div>
         <div className="flex justify-between">
-          <span className="text-neutral-500">Cuota:</span>
-          <span className="font-bold text-[#09090b]">₡{price.toLocaleString("es-CR")}</span>
+          <span className="text-text-muted">Cuota mensual:</span>
+          <span className="font-bold text-ink">
+            ₡{price.toLocaleString("es-CR")}
+          </span>
         </div>
-        <div className="pt-2 border-t border-dashed border-neutral-300 text-[10px] text-neutral-500 text-center leading-relaxed">
-          Gasto deducible del impuesto sobre la renta según Artículo 8 de la Ley 7092. Conserve este radicado para su formulario D-101.
+        <div className="pt-2 border-t border-dashed border-border text-[11px] text-text-muted text-center font-sans">
+          Gasto 100% deducible del Impuesto sobre la Renta conforme al marco tributario costarricense.
         </div>
       </div>
 
@@ -67,18 +70,17 @@ export function AffiliationFormStep3({
         <button
           type="button"
           onClick={onReset}
-          className="border border-neutral-300 hover:bg-neutral-100 px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-colors"
+          className="btn-cca-secondary px-5 py-2.5 text-xs sm:text-sm"
         >
-          Afiliar otro comercio
+          Registrar otra empresa
         </button>
         <a
           href="#directorio"
-          className="bg-[#09090b] hover:bg-neutral-800 text-white px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-colors"
+          className="btn-cca-primary px-5 py-2.5 text-xs sm:text-sm"
         >
-          Ver en el Directorio
+          Ver Directorio Empresarial
         </a>
       </div>
     </div>
   );
 }
-
