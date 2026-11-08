@@ -40,7 +40,13 @@ export function AffiliationValueProps() {
           </li>
           <li className="flex items-start gap-2">
             <span className="font-mono text-brand font-bold">3.</span>
-            <span>Patente comercial al día o en proceso de acompañamiento.</span>
+            <span>
+              Patente comercial al día o en proceso.{" "}
+              <a href="#tramites" className="text-brand underline hover:text-brand-hover">
+                Consulte aquí la guía de patente municipal
+              </a>
+              .
+            </span>
           </li>
         </ul>
       </div>

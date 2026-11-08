@@ -53,9 +53,14 @@ export function AffiliationFormStep2({
           <span className="text-base font-mono font-bold text-ink">
             +506 8703-0792
           </span>
-          <span className="text-xs font-semibold text-brand bg-brand/5 px-2.5 py-1 rounded-sm border border-brand/20">
-            Cámara de Comercio de Alajuela
-          </span>
+          <button
+            type="button"
+            onClick={() => navigator.clipboard?.writeText("87030792")}
+            title="Copiar número SINPE Móvil"
+            className="text-xs text-brand hover:underline font-medium bg-brand/5 px-2.5 py-1 rounded border border-brand/20 transition-colors"
+          >
+            Copiar número
+          </button>
         </div>
       </div>
 

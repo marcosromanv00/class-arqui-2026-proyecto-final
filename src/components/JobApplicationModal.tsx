@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { JobVacancy } from "@/lib/data";
 import { CheckCircle2, Send, X, ShieldCheck } from "lucide-react";
 
@@ -28,6 +29,14 @@ export function JobApplicationModal({
   setApplicantPhone,
   submitted
 }: JobApplicationModalProps) {
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [onClose]);
+
   return (
     <div
       role="dialog"
@@ -46,10 +55,7 @@ export function JobApplicationModal({
         </button>
 
         <div className="mb-6">
-          <span className="text-xs font-mono uppercase tracking-wider text-brand font-semibold">
-            Postulación Laboral Directa
-          </span>
-          <h3 id="modal-job-title" className="font-serif text-xl font-semibold text-ink mt-1">
+          <h3 id="modal-job-title" className="text-xl font-semibold text-ink">
             {vacancy.title}
           </h3>
           <p className="text-xs text-text-muted mt-1">
@@ -64,7 +70,7 @@ export function JobApplicationModal({
               Postulación enviada con éxito
             </h4>
             <p className="text-xs text-emerald-800 leading-relaxed">
-              Sus datos fueron remitidos de forma confidencial a la gerencia de contratación de {vacancy.company}.
+              Sus datos fueron remitidos confidencialmente al departamento de contratación de {vacancy.company}.
             </p>
           </div>
         ) : (
@@ -122,7 +128,7 @@ export function JobApplicationModal({
             </div>
             <div className="flex items-center gap-1.5 text-[11px] text-text-muted justify-center pt-1">
               <ShieldCheck className="w-3.5 h-3.5 text-brand" />
-              <span>Canal oficial verificado por la Cámara de Comercio</span>
+              <span>Canal verificado de la Cámara de Comercio</span>
             </div>
           </form>
         )}

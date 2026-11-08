@@ -49,9 +49,17 @@ export function DirectorySection() {
               Consulte comercios y empresas afiliadas en los 16 cantones de Alajuela.
             </p>
           </div>
-          <div className="text-xs text-text-muted bg-surface-muted border border-border px-3 py-1.5 rounded self-start md:self-auto">
-            <span className="font-semibold text-ink">{visibleMerchants.length}</span> de{" "}
-            <span className="font-semibold text-ink">{filteredMerchants.length}</span> asociados encontrados
+          <div className="flex items-center gap-2 self-start md:self-auto">
+            <a
+              href="#empleo"
+              className="text-xs text-brand hover:underline font-medium border border-brand/20 bg-brand/5 px-2.5 py-1.5 rounded"
+            >
+              Ver vacantes laborales de asociados →
+            </a>
+            <div className="text-xs text-text-muted bg-surface-muted border border-border px-3 py-1.5 rounded">
+              <span className="font-semibold text-ink">{visibleMerchants.length}</span> de{" "}
+              <span className="font-semibold text-ink">{filteredMerchants.length}</span> asociados
+            </div>
           </div>
         </div>
 
