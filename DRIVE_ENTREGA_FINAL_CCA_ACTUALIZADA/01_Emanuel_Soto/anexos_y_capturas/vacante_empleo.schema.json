@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vacantes_empleo",
+  "info": {
+    "singularName": "vacante-empleo",
+    "pluralName": "vacantes-empleo",
+    "displayName": "Vacante de Empleo CCA",
+    "description": "Bolsa de empleo cantonal de la Cámara de Comercio de Alajuela"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "titulo_puesto": {
+      "type": "string",
+      "required": true
+    },
+    "empresa_empleadora": {
+      "type": "string",
+      "required": true
+    },
+    "comercio": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::comercio.comercio",
+      "inversedBy": "vacantes"
+    },
+    "jornada": {
+      "type": "enumeration",
+      "enum": ["Tiempo Completo", "Medio Tiempo", "Híbrido", "Remoto", "Pasantía"],
+      "required": true
+    },
+    "canton": {
+      "type": "enumeration",
+      "enum": [
+        "Alajuela", "San Ramón", "Grecia", "San Mateo", "Atenas",
+        "Naranjo", "Palmares", "Poás", "Orotina", "San Carlos",
+        "Zarcero", "Sarchí", "Upala", "Los Chiles", "Guatuso", "Río Cuarto"
+      ],
+      "required": true
+    },
+    "salario_indicativo": {
+      "type": "string"
+    },
+    "descripcion_funciones": {
+      "type": "richtext",
+      "required": true
+    },
+    "requisitos_minimos": {
+      "type": "richtext",
+      "required": true
+    },
+    "correo_recepcion_cv": {
+      "type": "email",
+      "required": true
+    },
+    "fecha_cierre_postulacion": {
+      "type": "date",
+      "required": true
+    }
+  }
+}

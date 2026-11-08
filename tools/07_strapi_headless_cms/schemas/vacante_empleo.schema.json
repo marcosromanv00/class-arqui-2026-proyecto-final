@@ -19,13 +19,24 @@
       "type": "string",
       "required": true
     },
+    "comercio": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::comercio.comercio",
+      "inversedBy": "vacantes"
+    },
     "jornada": {
       "type": "enumeration",
-      "enum": ["Tiempo Completo", "Medio Tiempo", "Remoto", "Pasantía"],
+      "enum": ["Tiempo Completo", "Medio Tiempo", "Híbrido", "Remoto", "Pasantía"],
       "required": true
     },
     "canton": {
-      "type": "string",
+      "type": "enumeration",
+      "enum": [
+        "Alajuela", "San Ramón", "Grecia", "San Mateo", "Atenas",
+        "Naranjo", "Palmares", "Poás", "Orotina", "San Carlos",
+        "Zarcero", "Sarchí", "Upala", "Los Chiles", "Guatuso", "Río Cuarto"
+      ],
       "required": true
     },
     "salario_indicativo": {

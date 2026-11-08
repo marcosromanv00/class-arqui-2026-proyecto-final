@@ -1,0 +1,84 @@
+{
+  "board_name": "Customer Journey Map · Afiliación CCA 2026",
+  "title": "Customer Journey Map · Afiliación a la Cámara de Comercio de Alajuela",
+  "goal": "Meta del comerciante: conocer los beneficios, afiliarse sin ir a la oficina y obtener valor continuo de su membresía.",
+  "personas": [
+    { "name": "Doña Rosa", "profile": "Comerciante tradicional, dueña de una soda. Necesita botones grandes, texto legible y WhatsApp a un clic; se frustra si la interfaz no responde." },
+    { "name": "Esteban", "profile": "Joven emprendedor de comercio electrónico. Escanea en F, busca convenios rápido y está acostumbrado a pagar por SINPE Móvil en 3 clics." },
+    { "name": "Lic. Mariana", "profile": "Responsable administrativa de una empresa mediana. Juzga la seriedad de la Cámara por su portal y exige comprobante fiscal deducible." }
+  ],
+  "stages": [
+    "1. Descubrimiento",
+    "2. Evaluación",
+    "3. Afiliación digital",
+    "4. Uso del Directorio",
+    "5. Fidelización y convenios"
+  ],
+  "lanes": [
+    {
+      "key": "acciones",
+      "label": "Acciones del comerciante",
+      "color": "light_yellow",
+      "cells": [
+        "Escucha de otro comerciante que la Cámara tiene convenios y busca «Cámara de Comercio de Alajuela» en Google desde el celular.",
+        "Compara las modalidades (Comercio y Pyme ₡15.000/mes, Empresa e Industria ₡35.000/mes) y revisa qué comercios ya están afiliados.",
+        "Completa el wizard de 3 pasos, paga por SINPE Móvil al +506 8703-0792 e ingresa el número de comprobante.",
+        "Busca proveedores por sector y cantón, revisa su propia ficha y contacta a otros comercios por WhatsApp.",
+        "Usa convenios con otros afiliados, publica una vacante en la bolsa de empleo y renueva su cuota."
+      ]
+    },
+    {
+      "key": "touchpoints",
+      "label": "Puntos de contacto (touchpoints)",
+      "color": "light_blue",
+      "cells": [
+        "Resultado de Google · Facebook de la CCA · Portada del portal con buscador central y botón «Afiliarme».",
+        "Sección de afiliación con beneficios · Directorio comercial · Catálogo de convenios.",
+        "Wizard de afiliación · SINPE Móvil · WhatsApp de la Cámara · Constancia digital (Ley N.° 7092).",
+        "Directorio con filtros facetados · Ficha del comercio · Botones de WhatsApp y Waze.",
+        "Bolsa de empleo · LinkedIn · Instagram · Canal de WhatsApp institucional."
+      ]
+    },
+    {
+      "key": "pensamientos",
+      "label": "Pensamientos y emociones",
+      "color": "gray",
+      "cells": [
+        "Doña Rosa: «¿Todavía existe la Cámara? Ojalá no me toque hacer fila en la oficina.»",
+        "Lic. Mariana: «¿La cuota es deducible? Necesito el comprobante para contabilidad.»",
+        "Esteban: «Lo pagué en 3 clics desde el celular, igual que cualquier compra.»",
+        "Doña Rosa: «Ahora mis clientes me encuentran y ven que soy un negocio formal.»",
+        "Lic. Mariana: «Si la Cámara se comunica y los convenios rinden, la cuota se justifica.»"
+      ]
+    },
+    {
+      "key": "dolor",
+      "label": "Puntos de dolor (fricciones del sitio actual)",
+      "color": "light_pink",
+      "cells": [
+        "Portada con 24 bloques sin jerarquía y dos homepages: no se entiende qué ofrece la Cámara.",
+        "CUELLO DE BOTELLA 1 · Beneficios y tarifas no publicados: no se sabe cuánto cuesta ni qué se obtiene.",
+        "CUELLO DE BOTELLA 2 · Requisitos en papel entregados en persona y en horario de oficina: el punto de mayor deserción.",
+        "Directorio con comercios cerrados hace años y el teléfono a 4 clics.",
+        "CUELLO DE BOTELLA 3 · La Cámara se percibe como un «ente fantasma» que solo cobra cuotas."
+      ]
+    },
+    {
+      "key": "oportunidades",
+      "label": "Oportunidades de mejora de AI",
+      "color": "light_green",
+      "cells": [
+        "Homepage canónica con 3 puntos focales, buscador central y botón «Afiliarme» fijo en el encabezado.",
+        "Precio visible antes de comprometerse y mensaje «100% deducible del Impuesto sobre la Renta».",
+        "Checkout de 3 pasos con constancia inmediata y canal alterno por WhatsApp para quien necesita ayuda.",
+        "Fichas administradas en Strapi con sello «Afiliado verificado», listas cerradas de cantón y sector y contacto a 1 clic.",
+        "Contenido social: convenios B2B en LinkedIn, «Comercio del Mes» en Instagram y alertas por WhatsApp."
+      ]
+    }
+  ],
+  "emotion_curve": {
+    "scale": "Likert de -2 (frustración) a +2 (satisfacción)",
+    "current": { "label": "Viaje actual (presencial)", "values": [-1, -1, -2, -1, -2] },
+    "redesigned": { "label": "Viaje rediseñado (digital)", "values": [0, 1, 2, 1, 2] }
+  }
+}
