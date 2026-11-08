@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import { Breadcrumb } from "@/components/Breadcrumb";
-import { DirectoryClientView } from "@/components/directory/DirectoryClientView";
+import { DirectorySection } from "@/components/DirectorySection";
 import { Building2 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -28,9 +27,8 @@ export default function DirectoryPage() {
           </p>
         </div>
 
-        <Suspense fallback={<div className="p-12 text-center text-xs text-text-muted">Cargando directorio de comercios asociados...</div>}>
-          <DirectoryClientView />
-        </Suspense>
+        {/* Directorio real (171 asociados) con búsqueda Algolia, sinónimos y corrección ortográfica (Cap. 9) */}
+        <DirectorySection variant="page" />
       </div>
     </main>
   );

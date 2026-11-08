@@ -1,0 +1,4456 @@
+[
+  {
+    "objectID": "academia-lider-de-intercambio-ils-institute",
+    "name": "Academia Líder de Intercambio (ILS Institute)",
+    "sector": "Educación",
+    "categories": [
+      "Educación"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "125 m este heladería POPS Parque Central, frente a expendio Pan Bimbo",
+    "phones": [
+      "2442-2931",
+      "2430-3060"
+    ],
+    "web": "http://www.academialidercr.com/",
+    "facebook": "https://www.facebook.com/Academia-Lder-ALAJUELA-1180571468754987/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/academia-lider-de-intercambio-ils-institute/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/academia-lider-de-intercambio-ils-institute/",
+    "description": "Asociado certificado de la CCA · Educación.",
+    "convenio": "15% en matrícula para afiliados y sus colaboradores",
+    "ahorroEstimado": "₡40.000 por curso",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "acorde",
+    "name": "ACORDE",
+    "sector": "Banca y Finanzas",
+    "categories": [
+      "Finanzas"
+    ],
+    "canton": "Fuera de la provincia",
+    "district": "Carmen",
+    "province": "San José",
+    "address": "San José, calle 3, avenidas 5 y 7; oficinas centrales",
+    "phones": [
+      "2256-4901 Fax: 2223-6296"
+    ],
+    "web": "http://www.acorde.or.cr/",
+    "facebook": "https://www.facebook.com/ACORDE.or/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/acorde/",
+    "geoStatus": "Revisar caso especial",
+    "geoSource": "https://d1qqtien6gys07.cloudfront.net/wp-content/uploads/2023/10/CIRCULAR-TSC-A-CI-2023-001.pdf",
+    "description": "Asociado certificado de la CCA · Finanzas.",
+    "convenio": "Tasa preferencial en crédito pyme para afiliados CCA",
+    "ahorroEstimado": "Hasta 1 punto menos en tasa de interés",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "aeris-holding-cr",
+    "name": "Aeris Holding CR",
+    "sector": "Automotriz y Transporte",
+    "categories": [
+      "Aeropuerto"
+    ],
+    "canton": "Alajuela",
+    "district": "Río Segundo",
+    "province": "Alajuela",
+    "address": "300 m noroeste de la entrada al Aeropuerto Juan Santamaría",
+    "phones": [
+      "2437-2400"
+    ],
+    "web": "http://www.fly2sanjose.com/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/aeris-holding-cr/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Aeropuerto.",
+    "convenio": "10% en servicios y repuestos para flotillas de afiliados",
+    "ahorroEstimado": "₡35.000 al año por vehículo",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "agencia-de-viajes-faytur",
+    "name": "Agencia de Viajes Faytur",
+    "sector": "Turismo y Recreación",
+    "categories": [
+      "Recreación"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "50 m oeste Museo Juan Santamaría, Alajuela Centro",
+    "phones": [
+      "2443-4171 Fax: 2430-2230"
+    ],
+    "web": "http://www.faytur.com/",
+    "facebook": "https://www.facebook.com/Faytur/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/agencia-de-viajes-faytur/",
+    "geoStatus": "Revisar caso especial",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/agencia-de-viajes-faytur/",
+    "description": "Asociado certificado de la CCA · Recreación.",
+    "convenio": "2x1 en entradas para colaboradores de afiliados",
+    "ahorroEstimado": "₡10.000 por visita",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "alimento-para-animales-el-rey",
+    "name": "Alimento para animales El Rey",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Alimentos"
+    ],
+    "canton": "Alajuela",
+    "district": "San Rafael",
+    "province": "Alajuela",
+    "address": "700 m este Cementerio San Rafael de Alajuela",
+    "phones": [
+      "4052-6030"
+    ],
+    "web": "http://www.gruporz.com/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/alimento-para-animales-el-rey/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/alimento-para-animales-el-rey/",
+    "description": "Asociado certificado de la CCA · Alimentos.",
+    "convenio": "10% en consumo para afiliados CCA y sus colaboradores",
+    "ahorroEstimado": "₡12.000 / mes en alimentación",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "almacen-avila",
+    "name": "Almacén Avila",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Abarrotes",
+      "Comercio"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "50 m oeste de esquina suroeste del Mercado de Alajuela",
+    "phones": [
+      "2440-3939"
+    ],
+    "ficha": "https://camaraalajuela.com/directorio-asociados/almacen-avila/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Abarrotes, Comercio.",
+    "convenio": "Precio preferencial en pedidos corporativos y eventos",
+    "ahorroEstimado": "₡20.000 por evento empresarial",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 2
+  },
+  {
+    "objectID": "almacen-el-agricultor-de-siempre",
+    "name": "Almacén El Agricultor de Siempre",
+    "sector": "Sin clasificar",
+    "categories": [],
+    "canton": "Alajuela",
+    "province": "Alajuela",
+    "address": "Frente a oficinas Correos de Costa Rica",
+    "phones": [
+      "2441-0569",
+      "2440-7878"
+    ],
+    "ficha": "https://camaraalajuela.com/directorio-asociados/almacen-el-agricultor-de-siempre/",
+    "geoStatus": "Distrito pendiente",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/almacen-el-agricultor-de-siempre/",
+    "description": "Asociado certificado de la Cámara de Comercio de Alajuela.",
+    "convenio": "Beneficio por definir con la Cámara",
+    "ahorroEstimado": "—",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 2
+  },
+  {
+    "objectID": "almacen-francisco-llobet-e-hijos",
+    "name": "Almacén Francisco Llobet e Hijos",
+    "sector": "Comercio y Tiendas",
+    "categories": [
+      "Comercio",
+      "Tienda"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Mercado Municipal Alajuela Centro; otra sede en Plaza Grecia",
+    "phones": [
+      "2435-5500",
+      "2442-2200 Fax: 2441-1153"
+    ],
+    "web": "http://www.llobet.co.cr/",
+    "facebook": "https://www.facebook.com/TiendaLlobet/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/almacen-francisco-llobet-e-hijos/",
+    "geoStatus": "Revisar caso especial",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Comercio, Tienda.",
+    "convenio": "Descuento por volumen para compras empresariales",
+    "ahorroEstimado": "7% en compras corporativas",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "alotico-costarricense",
+    "name": "Alotico Costarricense",
+    "sector": "Comercio y Tiendas",
+    "categories": [
+      "Tienda"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Alajuela, 50 m oeste de Best Brands",
+    "phones": [
+      "2431 0445"
+    ],
+    "facebook": "https://www.facebook.com/alotico.costarricense?locale=es_LA",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/alotico-costarricense/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Tienda.",
+    "convenio": "Descuento por volumen para compras empresariales",
+    "ahorroEstimado": "7% en compras corporativas",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "analisis-clinico-de-calidad-cartin",
+    "name": "Análisis clínico de Calidad Cartin",
+    "sector": "Salud y Bienestar",
+    "categories": [
+      "Medicina",
+      "Salud"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "200 m sur de la Cruz Roja de Alajuela",
+    "phones": [
+      "24390095",
+      "2439-0112"
+    ],
+    "web": "http://www.cartinlab.com/",
+    "facebook": "https://www.facebook.com/LaboratoriosCartin/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/analisis-clinico-de-calidad-cartin/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Medicina, Salud.",
+    "convenio": "Tarifa preferencial en paquetes de salud ocupacional",
+    "ahorroEstimado": "₡40.000 en salud ocupacional",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "aprende-y-emprende",
+    "name": "Aprende y Emprende",
+    "sector": "Educación",
+    "categories": [
+      "Educación"
+    ],
+    "canton": "Alajuela",
+    "district": "San José",
+    "province": "Alajuela",
+    "address": "50 m este BCR, San José de Alajuela",
+    "phones": [
+      "2433-0001"
+    ],
+    "web": "http://www.aprendeyemprendecr.com/",
+    "facebook": "https://www.facebook.com/AprendeyemprendeCR/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/aprende-y-emprende/",
+    "geoStatus": "Revisar caso especial",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/aprende-y-emprende/",
+    "description": "Asociado certificado de la CCA · Educación.",
+    "convenio": "15% en matrícula para afiliados y sus colaboradores",
+    "ahorroEstimado": "₡40.000 por curso",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "arguedas-sanchez-centro-odontologico",
+    "name": "Arguedas Sánchez Centro Odontológico",
+    "sector": "Salud y Bienestar",
+    "categories": [
+      "Estética",
+      "Odontologia",
+      "Salud"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "125 m norte del BAC, La Tropicana, Alajuela",
+    "phones": [
+      "2442-0052"
+    ],
+    "web": "http://www.arguedassanchezdental.com/",
+    "facebook": "https://www.facebook.com/arguedassanchezdental/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/arguedas-sanchez-centro-odontologico/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Estética, Odontologia, Salud.",
+    "convenio": "15% en consultas y servicios para afiliados CCA",
+    "ahorroEstimado": "₡25.000 por colaborador al año",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "arh-de-alajuela",
+    "name": "ARH de alajuela",
+    "sector": "Automotriz y Transporte",
+    "categories": [
+      "Automotriz",
+      "Comercio",
+      "Repuestos"
+    ],
+    "canton": "Alajuela",
+    "district": "San José",
+    "province": "Alajuela",
+    "address": "Barrio San José de Alajuela, junto a Servicentro Chamú",
+    "phones": [
+      "2433-6596",
+      "8382-2561"
+    ],
+    "facebook": "https://www.facebook.com/Grupo-ARH-318790898260379/?fref=nf",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/arh-de-alajuela/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/arh-de-alajuela/",
+    "description": "Asociado certificado de la CCA · Automotriz, Comercio, Repuestos.",
+    "convenio": "Tarifa preferencial en fletes y envíos",
+    "ahorroEstimado": "12% en envíos",
+    "convenioIlustrativo": true,
+    "whatsapp": "50683822561",
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "armaduras-gerguz",
+    "name": "Armaduras Gerguz",
+    "sector": "Construcción y Ferretería",
+    "categories": [
+      "Armaduras",
+      "Industria"
+    ],
+    "canton": "Poás",
+    "district": "San Rafael",
+    "province": "Alajuela",
+    "address": "800 m oeste de Calle El Sitio, San Rafael, Poás, Alajuela",
+    "phones": [
+      "2448-3747",
+      "2448-4737 Fax: 2448-3747"
+    ],
+    "facebook": "https://www.facebook.com/armaduras.gerguz/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/armaduras-gerguz/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Armaduras, Industria.",
+    "convenio": "10% en herramientas y acabados",
+    "ahorroEstimado": "₡30.000 por compra mayor",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "aserradero-san-fernando-s-a",
+    "name": "Aserradero San Fernando S.A",
+    "sector": "Construcción y Ferretería",
+    "categories": [
+      "Comercio",
+      "Ferreteria"
+    ],
+    "canton": "Alajuela",
+    "district": "San José",
+    "province": "Alajuela",
+    "address": "500 m norte Cementerio Alajuela, Barrio Pueblo Nuevo",
+    "phones": [
+      "2441-0876",
+      "2441-0707",
+      "2443-8510"
+    ],
+    "ficha": "https://camaraalajuela.com/directorio-asociados/aserradero-san-fernando-s-a/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/aserradero-san-fernando-s-a/",
+    "description": "Asociado certificado de la CCA · Comercio, Ferreteria.",
+    "convenio": "10% en herramientas y acabados",
+    "ahorroEstimado": "₡30.000 por compra mayor",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 2
+  },
+  {
+    "objectID": "auto-rectificacion-guido",
+    "name": "Auto Rectificación Guido",
+    "sector": "Automotriz y Transporte",
+    "categories": [
+      "Automotriz"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "400 m oeste del Cementerio General de Alajuela",
+    "phones": [
+      "2441-3740",
+      "2443-7474 Fax: 2443-2492"
+    ],
+    "facebook": "https://www.facebook.com/AUTO-Rectificacin-GUIDO-1103846326316116/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/auto-rectificacion-guido/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Automotriz.",
+    "convenio": "10% en servicios y repuestos para flotillas de afiliados",
+    "ahorroEstimado": "₡35.000 al año por vehículo",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "autorepuestos-tibu",
+    "name": "Autorepuestos Tibu",
+    "sector": "Automotriz y Transporte",
+    "categories": [
+      "Repuestos"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Alajuela centro; otra ficha señala Avenida 9 Antonio Arroyo, barrio Corazón de Jesús",
+    "phones": [
+      "86089259"
+    ],
+    "facebook": "https://www.facebook.com/pages/category/Product-Service/Repuestos-Tibu-Cr-163146167631035/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/autorepuestos-tibu/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://guiaautomotrizcr.com/listado/autorepuestos-tibu-alajuela/",
+    "description": "Asociado certificado de la CCA · Repuestos.",
+    "convenio": "10% en servicios y repuestos para flotillas de afiliados",
+    "ahorroEstimado": "₡35.000 al año por vehículo",
+    "convenioIlustrativo": true,
+    "whatsapp": "50686089259",
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "b-y-c-entrega-inmediata",
+    "name": "B Y C entrega inmediata",
+    "sector": "Automotriz y Transporte",
+    "categories": [
+      "Mensajeria"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Alajuela, Canoas, Residencial Llanos del Norte casa 3",
+    "phones": [
+      "8840-3458"
+    ],
+    "ficha": "https://camaraalajuela.com/directorio-asociados/b-y-c-entrega-inmediata/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/b-y-c-entrega-inmediata/",
+    "description": "Asociado certificado de la CCA · Mensajeria.",
+    "convenio": "10% en servicios y repuestos para flotillas de afiliados",
+    "ahorroEstimado": "₡35.000 al año por vehículo",
+    "convenioIlustrativo": true,
+    "whatsapp": "50688403458",
+    "verified": true,
+    "profileScore": 2
+  },
+  {
+    "objectID": "banco-bct",
+    "name": "Banco BCT",
+    "sector": "Banca y Finanzas",
+    "categories": [
+      "Bancos"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Plaza Real, bomba La Tropicana 250 m este",
+    "phones": [
+      "2443-6060 Fax: 2443-7555"
+    ],
+    "web": "http://www.bancobct.com/",
+    "facebook": "https://www.facebook.com/bancobct/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/banco-bct/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Bancos.",
+    "convenio": "Asesoría financiera sin costo para afiliados",
+    "ahorroEstimado": "₡50.000 en asesoría",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "banco-de-costa-rica",
+    "name": "Banco de Costa Rica",
+    "sector": "Banca y Finanzas",
+    "categories": [
+      "Bancos",
+      "Finanzas"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "50 m oeste esquina suroeste Parque Central Alajuela",
+    "phones": [
+      "2440-9039",
+      "Whatsapp: 8806-5555"
+    ],
+    "web": "http://www.bancobcr.com/",
+    "facebook": "https://www.facebook.com/BancoBCR/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/banco-de-costa-rica/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/banco-de-costa-rica/",
+    "description": "Asociado certificado de la CCA · Bancos, Finanzas.",
+    "convenio": "Tasa preferencial en crédito pyme para afiliados CCA",
+    "ahorroEstimado": "Hasta 1 punto menos en tasa de interés",
+    "convenioIlustrativo": true,
+    "whatsapp": "50688065555",
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "banco-nacional-de-costa-rica",
+    "name": "Banco Nacional de Costa Rica",
+    "sector": "Banca y Finanzas",
+    "categories": [
+      "Bancos",
+      "Finanzas"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Costado norte de McDonald's La Tropicana",
+    "phones": [
+      "2212-2000 Fax: 2442-7312"
+    ],
+    "web": "http://www.bncr.fi.cr/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/banco-nacional-de-costa-rica/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Bancos, Finanzas.",
+    "convenio": "Tasa preferencial en crédito pyme para afiliados CCA",
+    "ahorroEstimado": "Hasta 1 punto menos en tasa de interés",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "billares-aguilar-hnos",
+    "name": "Billares Aguilar Hnos.",
+    "sector": "Turismo y Recreación",
+    "categories": [
+      "Billares"
+    ],
+    "canton": "Alajuela",
+    "district": "Desamparados",
+    "province": "Alajuela",
+    "address": "Invu Las Cañas, junto Residencial La Giralda, carretera al Pasito",
+    "phones": [
+      "2441-0013"
+    ],
+    "web": "http://www.billaresaguilar.com/",
+    "facebook": "https://www.facebook.com/Aguilar1940/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/billares-aguilar-hnos/",
+    "geoStatus": "Revisar caso especial",
+    "geoSource": "https://www.billaresaguilar.com/contacto/",
+    "description": "Asociado certificado de la CCA · Billares.",
+    "convenio": "2x1 en entradas para colaboradores de afiliados",
+    "ahorroEstimado": "₡10.000 por visita",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "billares-punis",
+    "name": "Billares Punis",
+    "sector": "Turismo y Recreación",
+    "categories": [
+      "Billares",
+      "Comercio",
+      "Ventas"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "100 m este y 50 m sur Cementerio General Alajuela",
+    "phones": [
+      "2440-0000 Fax: 2441-0068"
+    ],
+    "web": "http://www.billarespunis.com/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/billares-punis/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/billares-punis/",
+    "description": "Asociado certificado de la CCA · Billares, Comercio, Ventas.",
+    "convenio": "Tarifa corporativa para afiliados CCA",
+    "ahorroEstimado": "15% en hospedaje y eventos",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "bordados-altura-costa-rica",
+    "name": "Bordados Altura Costa Rica",
+    "sector": "Industria",
+    "categories": [
+      "Industria"
+    ],
+    "canton": "Alajuela",
+    "district": "Río Segundo",
+    "province": "Alajuela",
+    "address": "Alajuela 202109, Río Segundo",
+    "phones": [
+      "2440 1111"
+    ],
+    "web": "http://instagram.com/Bordados_AlturaCR",
+    "facebook": "https://www.facebook.com/GrupoARN/about/?ref=page_internal",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/bordados-altura-costa-rica/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Industria.",
+    "convenio": "Precio preferencial en compras por volumen",
+    "ahorroEstimado": "6% en suministros",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "botellas-corchos-tienda-gourmet",
+    "name": "Botellas & Corchos – Tienda Gourmet",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "vinos"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Plaza Tropicana, Alajuela",
+    "phones": [
+      "2102 0915"
+    ],
+    "facebook": "https://www.facebook.com/botellasycorchos",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/botellas-corchos-tienda-gourmet/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · vinos.",
+    "convenio": "10% en consumo para afiliados CCA y sus colaboradores",
+    "ahorroEstimado": "₡12.000 / mes en alimentación",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "cafe-casa-atelier",
+    "name": "CAFÉ CASA ATELIER",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Cafeteria"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Mutual Alajuela 50 m sur, cerca de PriceSmart",
+    "phones": [
+      "8930 3366"
+    ],
+    "facebook": "https://www.facebook.com/CasaAtelier100?locale=es_LA",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/cafe-casa-atelier/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Cafeteria.",
+    "convenio": "Precio preferencial en pedidos corporativos y eventos",
+    "ahorroEstimado": "₡20.000 por evento empresarial",
+    "convenioIlustrativo": true,
+    "whatsapp": "50689303366",
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "carnes-castillo",
+    "name": "Carnes Castillo",
+    "sector": "Comercio y Tiendas",
+    "categories": [
+      "Comercio"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Costado sur de la Plaza del Carmen, Alajuela",
+    "phones": [
+      "2435-7979 / 8898 0660"
+    ],
+    "web": "http://www.carnescastillo.net/",
+    "facebook": "https://www.facebook.com/pg/carnescastillocc/about/?ref=page_internal",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/carnes-castillo/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Comercio.",
+    "convenio": "10% en compras para afiliados CCA",
+    "ahorroEstimado": "₡15.000 / mes en compras",
+    "convenioIlustrativo": true,
+    "whatsapp": "50688980660",
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "carniceria-la-confianza",
+    "name": "Carnicería La Confianza",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Carniceria"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "50 m sur esquina sureste Iglesia La Agonía",
+    "phones": [
+      "2441-7373"
+    ],
+    "facebook": "https://www.facebook.com/pg/Carnicera-La-Confianza-107879150732218/about/?ref=page_internal",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/carniceria-la-confianza/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/carniceria-la-confianza/",
+    "description": "Asociado certificado de la CCA · Carniceria.",
+    "convenio": "Precio preferencial en pedidos corporativos y eventos",
+    "ahorroEstimado": "₡20.000 por evento empresarial",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "cemaco",
+    "name": "Cemaco",
+    "sector": "Comercio y Tiendas",
+    "categories": [
+      "Tienda"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "City Mall frente a Plaza de Actividades, Alajuela",
+    "phones": [
+      "4031-8130",
+      "4031-8139"
+    ],
+    "web": "http://www.cemaco.co.cr/",
+    "facebook": "https://www.facebook.com/pg/Cemacocr/about/?ref=page_internal",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/cemaco/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/cemaco/",
+    "description": "Asociado certificado de la CCA · Tienda.",
+    "convenio": "10% en compras para afiliados CCA",
+    "ahorroEstimado": "₡15.000 / mes en compras",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "plaza-real-alajuela",
+    "name": "Centro Comercial Plaza Real Alajuela",
+    "sector": "Comercio y Tiendas",
+    "categories": [
+      "Centro Comercial"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Calle 11, Avenida 10, Alajuela",
+    "phones": [
+      "2441 6068"
+    ],
+    "web": "http://www.plazareal.co.cr",
+    "facebook": "https://www.facebook.com/plazarealalajuela",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/plaza-real-alajuela/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/5/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Centro Comercial.",
+    "convenio": "Descuento por volumen para compras empresariales",
+    "ahorroEstimado": "7% en compras corporativas",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "centro-de-acondicionamiento-fisico-y-salud-vida-sana",
+    "name": "Centro de acondicionamiento físico y salud VIDA SANA",
+    "sector": "Salud y Bienestar",
+    "categories": [
+      "gimnasio"
+    ],
+    "canton": "Alajuela",
+    "district": "San Isidro",
+    "province": "Alajuela",
+    "address": "600 m norte del Colegio Adventista, frente a calle Carbonal, Alajuela",
+    "phones": [
+      "2431 1010"
+    ],
+    "facebook": "https://www.facebook.com/casfsvidasana",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/centro-de-acondicionamiento-fisico-y-salud-vida-sana/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · gimnasio.",
+    "convenio": "Tarifa preferencial en paquetes de salud ocupacional",
+    "ahorroEstimado": "₡40.000 en salud ocupacional",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "chaves-y-asociados-contadores-y-consultores",
+    "name": "Chaves y Asociados | Contadores y Consultores",
+    "sector": "Servicios Profesionales",
+    "categories": [
+      "Asesoría",
+      "Consultores"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "25 m norte Funeraria del Magisterio, Alajuela Centro",
+    "phones": [
+      "2441-5375",
+      "2440-4085 Fax: 2442-1166"
+    ],
+    "facebook": "https://www.facebook.com/Chaves-Asociados-Chasosa-293333314480310/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/chaves-y-asociados-contadores-y-consultores/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/chaves-y-asociados-contadores-y-consultores/",
+    "description": "Asociado certificado de la CCA · Asesoría, Consultores.",
+    "convenio": "Primera consulta sin costo para afiliados CCA",
+    "ahorroEstimado": "₡45.000 en honorarios",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "ciudad-de-los-mangos",
+    "name": "Ciudad de los Mangos",
+    "sector": "Otros Servicios",
+    "categories": [
+      "Informacion"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "50 m este de Correos, Alajuela Centro",
+    "phones": [
+      "7235-3559"
+    ],
+    "web": "http://www.ciudaddelosmangos.com/",
+    "facebook": "https://www.facebook.com/CiudadDeLosMangos/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/ciudad-de-los-mangos/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/ciudad-de-los-mangos/",
+    "description": "Asociado certificado de la CCA · Informacion.",
+    "convenio": "Tarifa preferencial para afiliados CCA",
+    "ahorroEstimado": "10% en servicios contratados",
+    "convenioIlustrativo": true,
+    "whatsapp": "50672353559",
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "clinica-fisio-sport-alajuela",
+    "name": "Clinica Fisio Sport Alajuela",
+    "sector": "Salud y Bienestar",
+    "categories": [
+      "fisioterapia",
+      "Salud"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Urbanización Meza, 150 m norte de Repuestos Gigante",
+    "phones": [
+      "2440-2476"
+    ],
+    "web": "http://www.fisiosport.com/",
+    "facebook": "https://www.facebook.com/fisiosportcr/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/clinica-fisio-sport-alajuela/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · fisioterapia, Salud.",
+    "convenio": "Tarifa preferencial en paquetes de salud ocupacional",
+    "ahorroEstimado": "₡40.000 en salud ocupacional",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "clinica-santa-fe-alajuela",
+    "name": "Clínica Santa Fe – Alajuela",
+    "sector": "Salud y Bienestar",
+    "categories": [
+      "Salud"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "125 m sur de Almacén Llobet, Alajuela",
+    "phones": [
+      "2441-4888 Fax: 2441-4779"
+    ],
+    "web": "http://www.clinicasantafe.co.cr/",
+    "facebook": "https://www.facebook.com/ClinicaSantaFeCostaRica/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/clinica-santa-fe-alajuela/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/clinica-santa-fe-alajuela/",
+    "description": "Asociado certificado de la CCA · Salud.",
+    "convenio": "Tarifa preferencial en paquetes de salud ocupacional",
+    "ahorroEstimado": "₡40.000 en salud ocupacional",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "colinas-del-poas",
+    "name": "Colinas del Poás",
+    "sector": "Turismo y Recreación",
+    "categories": [
+      "Recreación"
+    ],
+    "canton": "Alajuela",
+    "district": "Sabanilla",
+    "province": "Alajuela",
+    "address": "1 km norte Escuela Fraijanes, Poás de Alajuela",
+    "phones": [
+      "2482-1212",
+      "2482-1414 Fax: 2482-2605"
+    ],
+    "web": "http://www.colinasdelpoas.com/",
+    "facebook": "https://www.facebook.com/Colinasdelpoas/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/colinas-del-poas/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/colinas-del-poas/",
+    "description": "Asociado certificado de la CCA · Recreación.",
+    "convenio": "2x1 en entradas para colaboradores de afiliados",
+    "ahorroEstimado": "₡10.000 por visita",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "comercial-la-guaria-alajuela",
+    "name": "Comercial La Guaria Alajuela",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Abarrotes",
+      "Alimentos"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Canoas, Alajuela",
+    "phones": [
+      "2430 3303"
+    ],
+    "facebook": "https://www.facebook.com/Comercial-La-Guaria-113644630288796",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/comercial-la-guaria-alajuela/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/2/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Abarrotes, Alimentos.",
+    "convenio": "Precio preferencial en pedidos corporativos y eventos",
+    "ahorroEstimado": "₡20.000 por evento empresarial",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "complejo-ecologico-recreativo-vass",
+    "name": "Complejo Ecológico Recreativo Vass",
+    "sector": "Turismo y Recreación",
+    "categories": [
+      "Recreación"
+    ],
+    "canton": "Alajuela",
+    "district": "Desamparados",
+    "province": "Alajuela",
+    "address": "800 m este y 300 m norte de la Iglesia Católica de Desamparados de Alajuela",
+    "phones": [
+      "8973-8802"
+    ],
+    "facebook": "https://www.facebook.com/complejovass/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/complejo-ecologico-recreativo-vass/",
+    "geoStatus": "Revisar caso especial",
+    "geoSource": "https://www.todosbiz.com/CR/complejo-ecologico-recreativo-vass-8393-2457",
+    "description": "Asociado certificado de la CCA · Recreación.",
+    "convenio": "2x1 en entradas para colaboradores de afiliados",
+    "ahorroEstimado": "₡10.000 por visita",
+    "convenioIlustrativo": true,
+    "whatsapp": "50689738802",
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "constru-express",
+    "name": "Constru- Express",
+    "sector": "Construcción y Ferretería",
+    "categories": [
+      "Comercio",
+      "Ferreteria"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "250 m sur de la Iglesia La Agonía, Alajuela",
+    "phones": [
+      "2442-2021",
+      "2430-0864 Fax: 2440-1208"
+    ],
+    "web": "http://www.constru-express.com/",
+    "facebook": "https://www.facebook.com/FerreteriaConstruExpress/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/constru-express/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/2/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Comercio, Ferreteria.",
+    "convenio": "10% en herramientas y acabados",
+    "ahorroEstimado": "₡30.000 por compra mayor",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "consultor-patrimonial-dimas-caravaca-chavarria",
+    "name": "Consultor Patrimonial Dimas Caravaca Chavarría",
+    "sector": "Servicios Profesionales",
+    "categories": [
+      "Asesoría",
+      "Consultores"
+    ],
+    "canton": "Fuera de la provincia",
+    "district": "Porvenir",
+    "province": "San José",
+    "address": "Desamparados, Porvenir, Urb. Marianela, San José",
+    "phones": [
+      "7012-0715"
+    ],
+    "ficha": "https://camaraalajuela.com/directorio-asociados/consultor-patrimonial-dimas-caravaca-chavarria/",
+    "geoStatus": "Revisar caso especial",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/2/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Asesoría, Consultores.",
+    "convenio": "Primera consulta sin costo para afiliados CCA",
+    "ahorroEstimado": "₡45.000 en honorarios",
+    "convenioIlustrativo": true,
+    "whatsapp": "50670120715",
+    "verified": true,
+    "profileScore": 2
+  },
+  {
+    "objectID": "consultores-lusan",
+    "name": "Consultores Lusan",
+    "sector": "Servicios Profesionales",
+    "categories": [
+      "Consultores"
+    ],
+    "canton": "Alajuela",
+    "province": "Alajuela",
+    "address": "Alajuela (sin distrito en ficha)",
+    "phones": [
+      "7292-0166"
+    ],
+    "web": "http://www.ehslusan.com/",
+    "facebook": "https://www.facebook.com/consultoresLUSAN/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/consultores-lusan/",
+    "geoStatus": "Distrito pendiente",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/consultores-lusan/",
+    "description": "Asociado certificado de la CCA · Consultores.",
+    "convenio": "10% en honorarios de asesoría anual",
+    "ahorroEstimado": "₡60.000 al año",
+    "convenioIlustrativo": true,
+    "whatsapp": "50672920166",
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "consultoria-ecos-s-a",
+    "name": "Consultoria Ecos S.A",
+    "sector": "Servicios Profesionales",
+    "categories": [
+      "Consultores"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "300 m sur y 200 m este Plaza Real Alajuela",
+    "phones": [
+      "4700-0795"
+    ],
+    "web": "http://www.consultoriaecos.com/",
+    "facebook": "https://www.facebook.com/consultoriaecos/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/consultoria-ecos-s-a/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/consultoria-ecos-s-a/",
+    "description": "Asociado certificado de la CCA · Consultores.",
+    "convenio": "Primera consulta sin costo para afiliados CCA",
+    "ahorroEstimado": "₡45.000 en honorarios",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "consultoria-educativa-de-lesco-s-a",
+    "name": "Consultoria Educativa de LESCO S.A",
+    "sector": "Educación",
+    "categories": [
+      "Educación"
+    ],
+    "canton": "Fuera de la provincia",
+    "district": "San Josecito",
+    "province": "Heredia",
+    "address": "300 m norte y 10 m oeste iglesia de San Josecito, San Rafael de Heredia",
+    "phones": [
+      "8873-4341"
+    ],
+    "facebook": "https://www.facebook.com/celescocr/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/consultoria-educativa-de-lesco-s-a/",
+    "geoStatus": "Revisar caso especial",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/consultoria-educativa-de-lesco-s-a/",
+    "description": "Asociado certificado de la CCA · Educación.",
+    "convenio": "15% en matrícula para afiliados y sus colaboradores",
+    "ahorroEstimado": "₡40.000 por curso",
+    "convenioIlustrativo": true,
+    "whatsapp": "50688734341",
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "coopecaja",
+    "name": "COOPECAJA",
+    "sector": "Banca y Finanzas",
+    "categories": [
+      "Cooperativas"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Plaza Real, Alajuela",
+    "phones": [
+      "Whatsapp 8501 1211"
+    ],
+    "web": "https://www.coopecaja.fi.cr/",
+    "facebook": "https://www.facebook.com/COOPECAJA",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/coopecaja/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/2/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Cooperativas.",
+    "convenio": "Asesoría financiera sin costo para afiliados",
+    "ahorroEstimado": "₡50.000 en asesoría",
+    "convenioIlustrativo": true,
+    "whatsapp": "50685011211",
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "coopemep",
+    "name": "Coopemep",
+    "sector": "Banca y Finanzas",
+    "categories": [
+      "Cooperativa"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Sucursal Alajuela: de la Cruz Roja 100 m sur y 25 m este",
+    "phones": [
+      "8895-0003"
+    ],
+    "web": "http://www.coopemep.com/",
+    "facebook": "https://www.facebook.com/coopemep.cooperativa/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/coopemep/",
+    "geoStatus": "Revisar caso especial",
+    "geoSource": "https://www.ins-cr.com/media/7706/coopemep-rl-oa-a01-0085-_diana-maria-calvo-al.pdf",
+    "description": "Asociado certificado de la CCA · Cooperativa.",
+    "convenio": "Tasa preferencial en crédito pyme para afiliados CCA",
+    "ahorroEstimado": "Hasta 1 punto menos en tasa de interés",
+    "convenioIlustrativo": true,
+    "whatsapp": "50688950003",
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "coopemontecillos",
+    "name": "Coopemontecillos",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Alimentos",
+      "Industria"
+    ],
+    "canton": "Alajuela",
+    "province": "Alajuela",
+    "address": "Contiguo al MOPT en Montecillos de Alajuela",
+    "phones": [
+      "2437-1400",
+      "2437-1300"
+    ],
+    "web": "http://www.montecillos.com/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/coopemontecillos/",
+    "geoStatus": "Distrito pendiente",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/2/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Alimentos, Industria.",
+    "convenio": "Precio preferencial en pedidos corporativos y eventos",
+    "ahorroEstimado": "₡20.000 por evento empresarial",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "coopenae-r-l",
+    "name": "Coopenae, R.L.",
+    "sector": "Banca y Finanzas",
+    "categories": [
+      "Cooperativa"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Plaza Real, Alajuela",
+    "phones": [
+      "2257-9060"
+    ],
+    "web": "http://www.coopenae.fi.cr/",
+    "facebook": "https://www.facebook.com/Coopenae/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/coopenae-r-l/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/2/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Cooperativa.",
+    "convenio": "Tasa preferencial en crédito pyme para afiliados CCA",
+    "ahorroEstimado": "Hasta 1 punto menos en tasa de interés",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "cootaxa-r-l",
+    "name": "Cootaxa R.L",
+    "sector": "Automotriz y Transporte",
+    "categories": [
+      "Transporte"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "1 km este de Iglesia La Agonía, Alajuela",
+    "phones": [
+      "2442-3030",
+      "2442-1014 Fax: 2442-7489"
+    ],
+    "facebook": "https://www.facebook.com/Cootaxa-1406263582793469/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/cootaxa-r-l/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/2/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Transporte.",
+    "convenio": "Tarifa preferencial en fletes y envíos",
+    "ahorroEstimado": "12% en envíos",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "corporacion-arrocera-costa-rica",
+    "name": "Corporación Arrocera Costa Rica",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Alimentos",
+      "Industria"
+    ],
+    "canton": "Alajuela",
+    "district": "San José",
+    "province": "Alajuela",
+    "address": "2 km oeste Cementerio Alajuela, carretera Barrio San José",
+    "phones": [
+      "2505-6600",
+      "2505-6615"
+    ],
+    "web": "http://www.cacsa.net/",
+    "facebook": "https://www.facebook.com/ArrozImperioCR/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/corporacion-arrocera-costa-rica/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/corporacion-arrocera-costa-rica/",
+    "description": "Asociado certificado de la CCA · Alimentos, Industria.",
+    "convenio": "10% en consumo para afiliados CCA y sus colaboradores",
+    "ahorroEstimado": "₡12.000 / mes en alimentación",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "corporacion-de-seguridad-araya-y-salgado",
+    "name": "Corporación de Seguridad Araya y Salgado",
+    "sector": "Otros Servicios",
+    "categories": [
+      "Seguridad Privada"
+    ],
+    "canton": "Alajuela",
+    "district": "San Isidro",
+    "province": "Alajuela",
+    "address": "1 km al norte del AutoMercado, La Ceiba, San Isidro de Alajuela",
+    "phones": [
+      "40312280"
+    ],
+    "ficha": "https://camaraalajuela.com/directorio-asociados/corporacion-de-seguridad-araya-y-salgado/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/2/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Seguridad Privada.",
+    "convenio": "Tarifa preferencial para afiliados CCA",
+    "ahorroEstimado": "10% en servicios contratados",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 2
+  },
+  {
+    "objectID": "costa-rasta-alajuela",
+    "name": "Costa Rasta Alajuela",
+    "sector": "Comercio y Tiendas",
+    "categories": [
+      "Tienda"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "La Agonía, Alajuela",
+    "phones": [
+      "4030 3996"
+    ],
+    "web": "http://costarastaalajuela.kyte.site/",
+    "facebook": "https://www.facebook.com/CostaRastaAlajuela",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/costa-rasta-alajuela/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/2/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Tienda.",
+    "convenio": "10% en compras para afiliados CCA",
+    "ahorroEstimado": "₡15.000 / mes en compras",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "daria-shagin",
+    "name": "Dariá & Shagin",
+    "sector": "Comercio y Tiendas",
+    "categories": [
+      "Tienda"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Costado sur de Catedral de Alajuela, frente Scotiabank",
+    "phones": [
+      "6033 3349"
+    ],
+    "web": "https://www.instagram.com/dariayshagin",
+    "facebook": "https://www.facebook.com/DariaShagin",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/daria-shagin/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/2/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Tienda.",
+    "convenio": "10% en compras para afiliados CCA",
+    "ahorroEstimado": "₡15.000 / mes en compras",
+    "convenioIlustrativo": true,
+    "whatsapp": "50660333349",
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "diresa-repuestos",
+    "name": "Diresa Repuestos",
+    "sector": "Automotriz y Transporte",
+    "categories": [
+      "Automotriz"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Av. 4, calle 9; 200 m sur Iglesia La Agonía",
+    "phones": [
+      "2440-3300 Fax: 2440-3300"
+    ],
+    "facebook": "https://www.facebook.com/Diresa-Repuestos-131509113555228/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/diresa-repuestos/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/2/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Automotriz.",
+    "convenio": "Tarifa preferencial en fletes y envíos",
+    "ahorroEstimado": "12% en envíos",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "distribuidora-de-cafe-montana-s-a",
+    "name": "Distribuidora de Café Montaña S.A.",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Agroindustria"
+    ],
+    "canton": "Alajuela",
+    "district": "San José",
+    "province": "Alajuela",
+    "address": "800 m noroeste de Punto Rojo, carretera a Tuetal Sur; 1,2 km norte de Tribunales Alajuela",
+    "phones": [
+      "2442-0000"
+    ],
+    "web": "http://www.montanacoffeeshop.com/",
+    "facebook": "https://www.facebook.com/pg/cafemontanacr/about/?ref=page_internal",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/distribuidora-de-cafe-montana-s-a/",
+    "geoStatus": "Revisar caso especial",
+    "geoSource": "https://repositorio.ues.edu.sv/server/api/core/bitstreams/840c2da5-59b7-44fa-beb8-ef5656837a1e/content",
+    "description": "Asociado certificado de la CCA · Agroindustria.",
+    "convenio": "10% en consumo para afiliados CCA y sus colaboradores",
+    "ahorroEstimado": "₡12.000 / mes en alimentación",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "distribuidora-de-carne-gallo-solo",
+    "name": "DISTRIBUIDORA DE CARNE GALLO SOLO",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Carniceria"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Alajuela Centro; 75 m norte del costado oeste Mercado Central",
+    "phones": [
+      "7080 4765"
+    ],
+    "facebook": "https://www.facebook.com/CarnesGalloSolo/about?locale=es_LA",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/distribuidora-de-carne-gallo-solo/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/2/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Carniceria.",
+    "convenio": "Precio preferencial en pedidos corporativos y eventos",
+    "ahorroEstimado": "₡20.000 por evento empresarial",
+    "convenioIlustrativo": true,
+    "whatsapp": "50670804765",
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "distribuidora-de-carnes-arias",
+    "name": "Distribuidora de Carnes Arias",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Carniceria",
+      "Comercio"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "500 m este de la Iglesia La Agonía, Alajuela",
+    "phones": [
+      "2440-0707"
+    ],
+    "web": "http://www.carnesarias.com/index2.html",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/distribuidora-de-carnes-arias/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/2/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Carniceria, Comercio.",
+    "convenio": "Precio preferencial en pedidos corporativos y eventos",
+    "ahorroEstimado": "₡20.000 por evento empresarial",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "distribuidora-fama-de-alajuela",
+    "name": "Distribuidora Fama de Alajuela",
+    "sector": "Construcción y Ferretería",
+    "categories": [
+      "Ferreteria"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "200 m oeste de busetas Station Wagon, Alajuela",
+    "phones": [
+      "2443-1920 Whatsapp: 6118-8585"
+    ],
+    "web": "http://www.distribuidorafama.co.cr/",
+    "facebook": "https://www.facebook.com/DistribuidoraFamadeAlajuela/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/distribuidora-fama-de-alajuela/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/2/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Ferreteria.",
+    "convenio": "10% en herramientas y acabados",
+    "ahorroEstimado": "₡30.000 por compra mayor",
+    "convenioIlustrativo": true,
+    "whatsapp": "50624431920",
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "dos-pinos",
+    "name": "Dos Pinos",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Alimentos",
+      "Industria"
+    ],
+    "canton": "Alajuela",
+    "district": "San José",
+    "province": "Alajuela",
+    "address": "Contiguo Zona Franca BES, El Coyol de Alajuela",
+    "phones": [
+      "2437-3000"
+    ],
+    "web": "http://www.dospinos.com/",
+    "facebook": "https://www.facebook.com/dospinos/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/dos-pinos/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/2/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Alimentos, Industria.",
+    "convenio": "10% en consumo para afiliados CCA y sus colaboradores",
+    "ahorroEstimado": "₡12.000 / mes en alimentación",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "dsb-consultores-mercadeo-y-negocios",
+    "name": "DSB Consultores Mercadeo y Negocios",
+    "sector": "Servicios Profesionales",
+    "categories": [
+      "Consultores"
+    ],
+    "canton": "Alajuela",
+    "province": "Alajuela",
+    "address": "Alajuela, cantón Central (sin distrito en ficha)",
+    "phones": [
+      "2434-1598",
+      "8839-9785"
+    ],
+    "web": "http://www.dsbconsultores.net/",
+    "facebook": "https://www.facebook.com/DSB-consultores-Mercadeo-Negocios-1609660445978145/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/dsb-consultores-mercadeo-y-negocios/",
+    "geoStatus": "Distrito pendiente",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/dsb-consultores-mercadeo-y-negocios/",
+    "description": "Asociado certificado de la CCA · Consultores.",
+    "convenio": "Primera consulta sin costo para afiliados CCA",
+    "ahorroEstimado": "₡45.000 en honorarios",
+    "convenioIlustrativo": true,
+    "whatsapp": "50688399785",
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "durman-by-aliaxis-centroamerica",
+    "name": "Durman by aliaxis Centroamérica",
+    "sector": "Construcción y Ferretería",
+    "categories": [
+      "Materiales de Construccion"
+    ],
+    "canton": "Alajuela",
+    "district": "San José",
+    "province": "Alajuela",
+    "address": "Zona Franca Pro Park, costado oeste de Dos Pinos, El Coyol, Alajuela",
+    "phones": [
+      "2527 0500"
+    ],
+    "web": "https://www.durman.com",
+    "facebook": "https://www.facebook.com/DurmanbyaliaxisCentroamerica",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/durman-by-aliaxis-centroamerica/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://durman.com/contacto/",
+    "description": "Asociado certificado de la CCA · Materiales de Construccion.",
+    "convenio": "10% en herramientas y acabados",
+    "ahorroEstimado": "₡30.000 por compra mayor",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "edify-software-consulting",
+    "name": "Edify Software Consulting",
+    "sector": "Servicios Profesionales",
+    "categories": [
+      "Asesoría"
+    ],
+    "canton": "Alajuela",
+    "district": "Río Segundo",
+    "province": "Alajuela",
+    "address": "Centro Corporativo Aerocentro, segundo piso, Alajuela",
+    "phones": [
+      "2441 8201"
+    ],
+    "web": "https://www.edifysoftwareconsulting.com",
+    "facebook": "https://www.facebook.com/edify.cr?locale=es_LA",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/edify-software-consulting/",
+    "geoStatus": "Revisar caso especial",
+    "geoSource": "https://edify.cr/es/contactanos/",
+    "description": "Asociado certificado de la CCA · Asesoría.",
+    "convenio": "Primera consulta sin costo para afiliados CCA",
+    "ahorroEstimado": "₡45.000 en honorarios",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "el-hogar-del-mueble",
+    "name": "El Hogar del Mueble",
+    "sector": "Comercio y Tiendas",
+    "categories": [
+      "Comercio",
+      "Muebles"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "25 m norte de Gasolinera AlaGas Santa Anita, Alajuela",
+    "phones": [
+      "2431 1057"
+    ],
+    "web": "http://www.elhogardelmueble.net",
+    "facebook": "https://www.facebook.com/elhogardelmueble/about",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/el-hogar-del-mueble/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/3/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Comercio, Muebles.",
+    "convenio": "10% en compras para afiliados CCA",
+    "ahorroEstimado": "₡15.000 / mes en compras",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "embutidos-la-familia",
+    "name": "Embutidos La Familia",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Alimentos",
+      "Industria"
+    ],
+    "canton": "Alajuela",
+    "district": "San Antonio",
+    "province": "Alajuela",
+    "address": "Lotes Murillo, Villa Bonita, cerca de Megarecauches",
+    "phones": [
+      "2441-4877",
+      "2442-7580 Whatsapp: 8417-9292"
+    ],
+    "web": "http://www.embutidoslafamilia.com/",
+    "facebook": "https://www.facebook.com/EMFASA/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/embutidos-la-familia/",
+    "geoStatus": "Revisar caso especial",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/3/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Alimentos, Industria.",
+    "convenio": "10% en consumo para afiliados CCA y sus colaboradores",
+    "ahorroEstimado": "₡12.000 / mes en alimentación",
+    "convenioIlustrativo": true,
+    "whatsapp": "50624427580",
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "embutidos-torino",
+    "name": "Embutidos Torino",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Alimentos",
+      "Industria"
+    ],
+    "canton": "Alajuela",
+    "district": "Río Segundo",
+    "province": "Alajuela",
+    "address": "Costado este de la plaza de Río Segundo",
+    "phones": [
+      "2443-2639",
+      "2442-6674"
+    ],
+    "ficha": "https://camaraalajuela.com/directorio-asociados/embutidos-torino/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/3/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Alimentos, Industria.",
+    "convenio": "10% en consumo para afiliados CCA y sus colaboradores",
+    "ahorroEstimado": "₡12.000 / mes en alimentación",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 2
+  },
+  {
+    "objectID": "epsilon-software-sociedad-de-responsabilidad-limitada",
+    "name": "EPSILON SOFTWARE SOCIEDAD DE RESPONSABILIDAD LIMITADA",
+    "sector": "Servicios Profesionales",
+    "categories": [
+      "Asesoría",
+      "Tecnologia"
+    ],
+    "canton": "Alajuela",
+    "district": "Desamparados",
+    "province": "Alajuela",
+    "address": "Calle Las Américas, 50 m norte y 100 m este de Plaza Estrella, Desamparados, Alajuela",
+    "phones": [
+      "6132 8569"
+    ],
+    "web": "https://epsilonsoftcr.com/",
+    "facebook": "https://www.facebook.com/epsilonsoftcr",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/epsilon-software-sociedad-de-responsabilidad-limitada/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/3/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Asesoría, Tecnologia.",
+    "convenio": "Primera consulta sin costo para afiliados CCA",
+    "ahorroEstimado": "₡45.000 en honorarios",
+    "convenioIlustrativo": true,
+    "whatsapp": "50661328569",
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "equipos-jcb",
+    "name": "Equipos JCB",
+    "sector": "Industria",
+    "categories": [
+      "Industria"
+    ],
+    "canton": "Alajuela",
+    "district": "Desamparados",
+    "province": "Alajuela",
+    "address": "1 km este y 25 m sur iglesia católica Desamparados Alajuela",
+    "phones": [
+      "2430-7335",
+      "2431-2064 Whatsapp: 6120-5642 Fax: 2431-2048"
+    ],
+    "web": "http://www.equiposjcb.com/",
+    "facebook": "https://www.facebook.com/jcbsolucionesinteligentes/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/equipos-jcb/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/equipos-jcb/",
+    "description": "Asociado certificado de la CCA · Industria.",
+    "convenio": "Precio preferencial en compras por volumen",
+    "ahorroEstimado": "6% en suministros",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "estacion-de-servicio-cristo-rey-conoco-s-a",
+    "name": "Estación de Servicio Cristo Rey – Conoco S.A",
+    "sector": "Automotriz y Transporte",
+    "categories": [
+      "Gasolinera"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "300 m oeste del Cementerio General de Alajuela",
+    "phones": [
+      "2441-0676 Fax: 2442-4272"
+    ],
+    "ficha": "https://camaraalajuela.com/directorio-asociados/estacion-de-servicio-cristo-rey-conoco-s-a/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/3/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Gasolinera.",
+    "convenio": "Tarifa preferencial en fletes y envíos",
+    "ahorroEstimado": "12% en envíos",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 2
+  },
+  {
+    "objectID": "estacion-de-servicio-la-garita",
+    "name": "Estación de Servicio La Garita",
+    "sector": "Automotriz y Transporte",
+    "categories": [
+      "Gasolinera"
+    ],
+    "canton": "Alajuela",
+    "district": "Garita",
+    "province": "Alajuela",
+    "address": "400 m oeste de RECOPE La Garita, Alajuela",
+    "phones": [
+      "47057112 EXT. 101"
+    ],
+    "facebook": "https://www.facebook.com/ESTACION-DE-SERVICIO-LA-GARITA-125103724181546/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/estacion-de-servicio-la-garita/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/3/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Gasolinera.",
+    "convenio": "10% en servicios y repuestos para flotillas de afiliados",
+    "ahorroEstimado": "₡35.000 al año por vehículo",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "eventos-la-complacencia",
+    "name": "Eventos La Complacencia",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Catering Service"
+    ],
+    "canton": "Alajuela",
+    "district": "San Antonio",
+    "province": "Alajuela",
+    "address": "300 m sur de la Plaza de Deportes de El Roble, Alajuela",
+    "phones": [
+      "2439-6916",
+      "8861-1995"
+    ],
+    "facebook": "https://www.facebook.com/lacomplacencia",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/eventos-la-complacencia/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/3/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Catering Service.",
+    "convenio": "10% en consumo para afiliados CCA y sus colaboradores",
+    "ahorroEstimado": "₡12.000 / mes en alimentación",
+    "convenioIlustrativo": true,
+    "whatsapp": "50688611995",
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "explobus-s-a",
+    "name": "Explobus S.A",
+    "sector": "Automotriz y Transporte",
+    "categories": [
+      "Automotriz"
+    ],
+    "canton": "Alajuela",
+    "province": "Alajuela",
+    "address": "150 m este del Hotel Aeropuerto Alajuela",
+    "phones": [
+      "2443-3435",
+      "2442-3757"
+    ],
+    "facebook": "https://www.facebook.com/Explobus-SA-190948890942184/?ref=br_rs",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/explobus-s-a/",
+    "geoStatus": "Distrito pendiente",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/explobus-s-a/",
+    "description": "Asociado certificado de la CCA · Automotriz.",
+    "convenio": "10% en servicios y repuestos para flotillas de afiliados",
+    "ahorroEstimado": "₡35.000 al año por vehículo",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "fabrica-de-muebles-metal-jones-s-a",
+    "name": "Fábrica de Muebles Metal Jones, S.A.",
+    "sector": "Comercio y Tiendas",
+    "categories": [
+      "Comercio"
+    ],
+    "canton": "Alajuela",
+    "district": "San Antonio",
+    "province": "Alajuela",
+    "address": "San Antonio del Tejar, contiguo a antiguo Night Club Polanco",
+    "phones": [
+      "2441-2145"
+    ],
+    "web": "http://www.mueblesjones.com/",
+    "facebook": "https://www.facebook.com/Muebles-Jones-990543980972645/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/fabrica-de-muebles-metal-jones-s-a/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/fabrica-de-muebles-metal-jones-s-a/",
+    "description": "Asociado certificado de la CCA · Comercio.",
+    "convenio": "10% en compras para afiliados CCA",
+    "ahorroEstimado": "₡15.000 / mes en compras",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "fabrica-de-tubos-campeon",
+    "name": "Fábrica de Tubos Campeón",
+    "sector": "Construcción y Ferretería",
+    "categories": [
+      "Materiales de Construccion"
+    ],
+    "canton": "Alajuela",
+    "district": "San José",
+    "province": "Alajuela",
+    "address": "1 km norte de la iglesia Barrio San José, Alajuela",
+    "phones": [
+      "2433-2020 Fax: 2433-8604"
+    ],
+    "web": "http://www.tuboscampeon.com/",
+    "facebook": "https://www.facebook.com/campeon.tubos/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/fabrica-de-tubos-campeon/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/3/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Materiales de Construccion.",
+    "convenio": "Precios de mayoreo para proyectos de afiliados CCA",
+    "ahorroEstimado": "8% de ahorro en materiales",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "farmacias-chavarria",
+    "name": "Farmacias Chavarría",
+    "sector": "Salud y Bienestar",
+    "categories": [
+      "Salud"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Costado suroeste Parque Central de Alajuela",
+    "phones": [
+      "800-024-2424"
+    ],
+    "web": "http://www.farmaciachavarria.com/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/farmacias-chavarria/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/farmacias-chavarria/",
+    "description": "Asociado certificado de la CCA · Salud.",
+    "convenio": "Tarifa preferencial en paquetes de salud ocupacional",
+    "ahorroEstimado": "₡40.000 en salud ocupacional",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "farmacias-santa-lucia",
+    "name": "Farmacias Santa Lucía",
+    "sector": "Salud y Bienestar",
+    "categories": [
+      "Salud"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "75 m sur Cúpula Catedral de Alajuela",
+    "phones": [
+      "2440-0404",
+      "2436-0480 Fax: 2440-0404"
+    ],
+    "web": "http://www.farmaciasantalucia.co.cr/",
+    "facebook": "https://www.facebook.com/santaluciafarmacias/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/farmacias-santa-lucia/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/farmacias-santa-lucia/",
+    "description": "Asociado certificado de la CCA · Salud.",
+    "convenio": "15% en consultas y servicios para afiliados CCA",
+    "ahorroEstimado": "₡25.000 por colaborador al año",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "fiesta-casino-alajuela",
+    "name": "Fiesta Casino Alajuela",
+    "sector": "Turismo y Recreación",
+    "categories": [
+      "Recreación"
+    ],
+    "canton": "Alajuela",
+    "district": "Río Segundo",
+    "province": "Alajuela",
+    "address": "1 km este Aeropuerto Juan Santamaría, Airport Boulevard",
+    "phones": [
+      "2431-1455",
+      "2430-9980"
+    ],
+    "web": "http://www.tbrcr.com/",
+    "facebook": "https://www.facebook.com/CasinoFiestaAlajuela/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/fiesta-casino-alajuela/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/fiesta-casino-alajuela/",
+    "description": "Asociado certificado de la CCA · Recreación.",
+    "convenio": "Tarifa corporativa para afiliados CCA",
+    "ahorroEstimado": "15% en hospedaje y eventos",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "floristeria-ikebana",
+    "name": "Floristería Ikebana",
+    "sector": "Sin clasificar",
+    "categories": [],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "25 m sur Cementerio Central, frente Pizza Hut Express",
+    "phones": [
+      "2441-1733",
+      "2441-0566"
+    ],
+    "facebook": "https://www.facebook.com/FloristeriaIkebanaAlajuela/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/floristeria-ikebana/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/floristeria-ikebana/",
+    "description": "Asociado certificado de la Cámara de Comercio de Alajuela.",
+    "convenio": "Beneficio por definir con la Cámara",
+    "ahorroEstimado": "—",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "funda-tec",
+    "name": "Funda TEC",
+    "sector": "Educación",
+    "categories": [
+      "Educación"
+    ],
+    "canton": "Fuera de la provincia",
+    "district": "Cartago",
+    "province": "Cartago",
+    "address": "Sede central FUNDATEC: Campus Tecnológico de Costa Rica, Cartago",
+    "phones": [
+      "25502628"
+    ],
+    "web": "http://www.fundatec.ac.cr/",
+    "facebook": "https://www.facebook.com/FUNDATEC.TEC/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/funda-tec/",
+    "geoStatus": "Revisar caso especial",
+    "geoSource": "https://www.tec.ac.cr/sites/default/files/media/doc/fundacion_tecnologica_de_costa_rica_fundatec-_plaza_real.pdf",
+    "description": "Asociado certificado de la CCA · Educación.",
+    "convenio": "15% en matrícula para afiliados y sus colaboradores",
+    "ahorroEstimado": "₡40.000 por curso",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "funeraria-camposanto-la-piedad",
+    "name": "Funeraria camposanto La Piedad",
+    "sector": "Otros Servicios",
+    "categories": [
+      "Funeraria"
+    ],
+    "canton": "Alajuela",
+    "district": "Desamparados",
+    "province": "Alajuela",
+    "address": "Desamparados, calle Rosales, 1 km norte Asociación Niño con Cariño",
+    "phones": [
+      "4700-1130 / 6354-5587"
+    ],
+    "web": "http://www.lapiedad.co.cr/",
+    "facebook": "https://www.facebook.com/camposantolapiedad/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/funeraria-camposanto-la-piedad/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/3/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Funeraria.",
+    "convenio": "Tarifa preferencial para afiliados CCA",
+    "ahorroEstimado": "10% en servicios contratados",
+    "convenioIlustrativo": true,
+    "whatsapp": "50663545587",
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "funeraria-divina-miscericordia",
+    "name": "Funeraria Divina Miscericordia",
+    "sector": "Otros Servicios",
+    "categories": [
+      "Funeraria"
+    ],
+    "canton": "Alajuela",
+    "district": "Río Segundo",
+    "province": "Alajuela",
+    "address": "50 m sur 50 m este EBAIS INVU Cañas 1",
+    "phones": [
+      "2440-7134",
+      "6039-8782"
+    ],
+    "facebook": "https://www.facebook.com/arsenio64/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/funeraria-divina-miscericordia/",
+    "geoStatus": "Revisar caso especial",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/funeraria-divina-miscericordia/",
+    "description": "Asociado certificado de la CCA · Funeraria.",
+    "convenio": "Tarifa preferencial para afiliados CCA",
+    "ahorroEstimado": "10% en servicios contratados",
+    "convenioIlustrativo": true,
+    "whatsapp": "50660398782",
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "funeraria-jardines-del-recuerdo",
+    "name": "Funeraria Jardines del Recuerdo",
+    "sector": "Otros Servicios",
+    "categories": [
+      "Funeraria"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "100 m oeste de bomba La Tropicana, Alajuela Centro",
+    "phones": [
+      "2442-2829",
+      "2222-9022 Fax: 2443-6333"
+    ],
+    "web": "http://www.jardinesdelrecuerdo.co.cr/",
+    "facebook": "https://www.facebook.com/JardinesdelRecuerdoCR/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/funeraria-jardines-del-recuerdo/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/3/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Funeraria.",
+    "convenio": "Tarifa preferencial para afiliados CCA",
+    "ahorroEstimado": "10% en servicios contratados",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "gaby-salon-spa",
+    "name": "Gaby Salón & Spa",
+    "sector": "Salud y Bienestar",
+    "categories": [
+      "Estética"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "25 m oeste Iglesia La Agonía",
+    "phones": [
+      "2430-5513 Whatsapp: 8615-6310"
+    ],
+    "facebook": "https://www.facebook.com/gabysalonspa/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/gaby-salon-spa/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/gaby-salon-spa/",
+    "description": "Asociado certificado de la CCA · Estética.",
+    "convenio": "15% en consultas y servicios para afiliados CCA",
+    "ahorroEstimado": "₡25.000 por colaborador al año",
+    "convenioIlustrativo": true,
+    "whatsapp": "50624305513",
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "granja-avicola-la-pradera",
+    "name": "Granja Avícola La Pradera",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Alimentos",
+      "Industria"
+    ],
+    "canton": "Alajuela",
+    "district": "Garita",
+    "province": "Alajuela",
+    "address": "800 m sur de la Escuela de La Garita, Alajuela",
+    "phones": [
+      "2487-7420",
+      "2487-5015"
+    ],
+    "ficha": "https://camaraalajuela.com/directorio-asociados/granja-avicola-la-pradera/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/3/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Alimentos, Industria.",
+    "convenio": "Precio preferencial en pedidos corporativos y eventos",
+    "ahorroEstimado": "₡20.000 por evento empresarial",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 2
+  },
+  {
+    "objectID": "gruas-rago-s-a",
+    "name": "Grúas Rago, S.A.",
+    "sector": "Automotriz y Transporte",
+    "categories": [
+      "Grúas"
+    ],
+    "canton": "Alajuela",
+    "district": "San Antonio",
+    "province": "Alajuela",
+    "address": "Frente a Iglesia Católica, San Antonio del Tejar",
+    "phones": [
+      "2442-9047"
+    ],
+    "web": "http://www.gruasrago.com/",
+    "facebook": "https://www.facebook.com/GruasRago/?ref=br_rs",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/gruas-rago-s-a/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/3/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Grúas.",
+    "convenio": "10% en servicios y repuestos para flotillas de afiliados",
+    "ahorroEstimado": "₡35.000 al año por vehículo",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "grupo-algisa-s-a",
+    "name": "Grupo ALGISA S.A.",
+    "sector": "Automotriz y Transporte",
+    "categories": [
+      "Aduana"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Agencia de Aduanas Grupo Algisa, El Llano, Alajuela; 2QCV+P32",
+    "phones": [
+      "2431-3444"
+    ],
+    "web": "http://www.grupoalgisa.com/",
+    "facebook": "http://grupo/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/grupo-algisa-s-a/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://www.waze.com/es/live-map/directions/cr/provincia-de-alajuela/alajuela/agencia-de-aduanas-grupo-algisa?to=place.ChIJywbKed35oI8RuqwOnAB5dyM",
+    "description": "Asociado certificado de la CCA · Aduana.",
+    "convenio": "Tarifa preferencial en fletes y envíos",
+    "ahorroEstimado": "12% en envíos",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "grupo-alteda",
+    "name": "Grupo ALTEDA",
+    "sector": "Industria",
+    "categories": [
+      "Industria"
+    ],
+    "canton": "Alajuela",
+    "district": "Guácima",
+    "province": "Alajuela",
+    "address": "300 m norte y 350 m este Otto's Bar, La Guácima",
+    "phones": [
+      "2458-2351",
+      "8372-1684"
+    ],
+    "web": "http://www.talleralteda.com/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/grupo-alteda/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/grupo-alteda/",
+    "description": "Asociado certificado de la CCA · Industria.",
+    "convenio": "Precio preferencial en compras por volumen",
+    "ahorroEstimado": "6% en suministros",
+    "convenioIlustrativo": true,
+    "whatsapp": "50683721684",
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "grupo-diasa",
+    "name": "Grupo Diasa",
+    "sector": "Construcción y Ferretería",
+    "categories": [
+      "Ferreteria"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "800 m oeste del Parque del Cementerio, Alajuela Centro",
+    "phones": [
+      "4031-7800"
+    ],
+    "web": "http://www.grupodiasa.co.cr/",
+    "facebook": "https://www.facebook.com/GrupoDIASA/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/grupo-diasa/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/3/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Ferreteria.",
+    "convenio": "Precios de mayoreo para proyectos de afiliados CCA",
+    "ahorroEstimado": "8% de ahorro en materiales",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "grupo-mutual",
+    "name": "Grupo Mutual",
+    "sector": "Banca y Finanzas",
+    "categories": [
+      "Bancos",
+      "Finanzas"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "125 m oeste de Plaza Ferias, Alajuela",
+    "phones": [
+      "2437-1000 Fax:"
+    ],
+    "web": "http://www.grupomutual.fi.cr/",
+    "facebook": "https://www.facebook.com/GrupoMutual/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/grupo-mutual/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/3/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Bancos, Finanzas.",
+    "convenio": "Tasa preferencial en crédito pyme para afiliados CCA",
+    "ahorroEstimado": "Hasta 1 punto menos en tasa de interés",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "hamburguesas-los-talleres-3",
+    "name": "Hamburguesas Los Talleres #3",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Alimentos",
+      "Restaurante"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "200 m sur de la Iglesia La Agonía, Alajuela",
+    "phones": [
+      "8378-1820"
+    ],
+    "facebook": "https://www.facebook.com/Hamburguesas-Los-Talleres-899553416739683/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/hamburguesas-los-talleres-3/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/3/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Alimentos, Restaurante.",
+    "convenio": "Precio preferencial en pedidos corporativos y eventos",
+    "ahorroEstimado": "₡20.000 por evento empresarial",
+    "convenioIlustrativo": true,
+    "whatsapp": "50683781820",
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "hogar-de-ancianos-santiago-crespo-calvo",
+    "name": "Hogar de Ancianos Santiago Crespo Calvo",
+    "sector": "Otros Servicios",
+    "categories": [
+      "General"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "De la iglesia La Agonía, 200 m norte y 700 m este; barrio Brasil, Higuerones, Alajuela",
+    "phones": [
+      "2442-2165",
+      "2440-2940 Fax: 2441-0347"
+    ],
+    "facebook": "https://www.facebook.com/hogarsantiagocrespo/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/hogar-de-ancianos-santiago-crespo-calvo/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://hsantiagocrespo-cr.com/",
+    "description": "Asociado certificado de la CCA · General.",
+    "convenio": "Tarifa preferencial para afiliados CCA",
+    "ahorroEstimado": "10% en servicios contratados",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "hooters-alajuela",
+    "name": "Hooters Alajuela",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Restaurante"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "City Mall, Alajuela",
+    "phones": [
+      "2519-9099",
+      "2224-3985"
+    ],
+    "facebook": "https://www.facebook.com/hooterscr/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/hooters-alajuela/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/hooters-alajuela/",
+    "description": "Asociado certificado de la CCA · Restaurante.",
+    "convenio": "10% en consumo para afiliados CCA y sus colaboradores",
+    "ahorroEstimado": "₡12.000 / mes en alimentación",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "hotel-aeropuerto",
+    "name": "Hotel Aeropuerto",
+    "sector": "Turismo y Recreación",
+    "categories": [
+      "Hotel"
+    ],
+    "canton": "Alajuela",
+    "province": "Alajuela",
+    "address": "4 km oeste del Aeropuerto Juan Santamaría",
+    "phones": [
+      "2433-7333",
+      "8884-5277"
+    ],
+    "web": "http://www.airporthotelcostarica.co.cr/",
+    "facebook": "https://www.facebook.com/hotelaeropuerto/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/hotel-aeropuerto/",
+    "geoStatus": "Distrito pendiente",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/hotel-aeropuerto/",
+    "description": "Asociado certificado de la CCA · Hotel.",
+    "convenio": "2x1 en entradas para colaboradores de afiliados",
+    "ahorroEstimado": "₡10.000 por visita",
+    "convenioIlustrativo": true,
+    "whatsapp": "50688845277",
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "hotel-berna-tica",
+    "name": "Hotel Berna Tica",
+    "sector": "Turismo y Recreación",
+    "categories": [
+      "Hotel"
+    ],
+    "canton": "Alajuela",
+    "district": "Guácima",
+    "province": "Alajuela",
+    "address": "Rincón del Cacao – Calle Ciega, Alajuela",
+    "phones": [
+      "2434-2060",
+      "8827-0339 Fax: 2434-2201"
+    ],
+    "web": "http://www.bernatica.com/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/hotel-berna-tica/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/hotel-berna-tica/",
+    "description": "Asociado certificado de la CCA · Hotel.",
+    "convenio": "2x1 en entradas para colaboradores de afiliados",
+    "ahorroEstimado": "₡10.000 por visita",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "hotel-buena-vista",
+    "name": "Hotel Buena Vista",
+    "sector": "Turismo y Recreación",
+    "categories": [
+      "Hotel"
+    ],
+    "canton": "Alajuela",
+    "district": "San Isidro",
+    "province": "Alajuela",
+    "address": "25 m sur del Templo Católico, Pilas de San Isidro, Alajuela",
+    "phones": [
+      "2442-8595 Fax: 2442-8701"
+    ],
+    "web": "http://www.hotelbuenavistacr.com/",
+    "facebook": "https://www.facebook.com/hotelbuenavistacr/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/hotel-buena-vista/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/3/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Hotel.",
+    "convenio": "Tarifa corporativa para afiliados CCA",
+    "ahorroEstimado": "15% en hospedaje y eventos",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "hotel-holiday-inn-express",
+    "name": "Hotel Holiday Inn Express",
+    "sector": "Turismo y Recreación",
+    "categories": [
+      "Hotel"
+    ],
+    "canton": "Alajuela",
+    "district": "Río Segundo",
+    "province": "Alajuela",
+    "address": "1 km este Aeropuerto Juan Santamaría, Alajuela",
+    "phones": [
+      "2443-0043 Fax: 2442-9532"
+    ],
+    "web": "http://www.hiexcostarica.com/",
+    "facebook": "https://www.facebook.com/HolidayInnExpressCostaRica/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/hotel-holiday-inn-express/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/4/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Hotel.",
+    "convenio": "Tarifa corporativa para afiliados CCA",
+    "ahorroEstimado": "15% en hospedaje y eventos",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "hotel-marriott-courtyard-san-jose-airport-alajuela",
+    "name": "Hotel Marriott Courtyard San Jose Airport Alajuela",
+    "sector": "Turismo y Recreación",
+    "categories": [
+      "Hotel"
+    ],
+    "canton": "Alajuela",
+    "district": "Río Segundo",
+    "province": "Alajuela",
+    "address": "Radial Francisco Orlich, Plaza Los Mangos, 20109, Alajuela",
+    "phones": [
+      "2429-2709(eventos) 2429-2700(recepcion) 2429-2720(Fax)"
+    ],
+    "web": "http://www.marriott.com/",
+    "facebook": "https://www.facebook.com/courtyardsjoairport/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/hotel-marriott-courtyard-san-jose-airport-alajuela/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/4/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Hotel.",
+    "convenio": "Tarifa corporativa para afiliados CCA",
+    "ahorroEstimado": "15% en hospedaje y eventos",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "hotel-villa-san-ignacio",
+    "name": "Hotel Villa San Ignacio",
+    "sector": "Turismo y Recreación",
+    "categories": [
+      "Hotel",
+      "Restaurante"
+    ],
+    "canton": "Alajuela",
+    "district": "Tambor",
+    "province": "Alajuela",
+    "address": "50 m este cruce Grecia/Poás, Tambor, Alajuela",
+    "phones": [
+      "2433-6316"
+    ],
+    "web": "http://www.villasanignacio.com/",
+    "facebook": "https://www.facebook.com/VillaSanIgnacioPandora/?ref=br_rs",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/hotel-villa-san-ignacio/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/hotel-villa-san-ignacio/",
+    "description": "Asociado certificado de la CCA · Hotel, Restaurante.",
+    "convenio": "2x1 en entradas para colaboradores de afiliados",
+    "ahorroEstimado": "₡10.000 por visita",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "hulera-alajuela-cr",
+    "name": "Hulera Alajuela CR",
+    "sector": "Industria",
+    "categories": [
+      "Industria"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Tribunales de Alajuela, 200 m este y 125 m sur",
+    "phones": [
+      "7016 4299"
+    ],
+    "facebook": "https://www.facebook.com/crhuleraalajuela",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/hulera-alajuela-cr/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/4/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Industria.",
+    "convenio": "Precio preferencial en compras por volumen",
+    "ahorroEstimado": "6% en suministros",
+    "convenioIlustrativo": true,
+    "whatsapp": "50670164299",
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "importadora-monge-grupo-m",
+    "name": "Importadora Monge (Grupo M)",
+    "sector": "Comercio y Tiendas",
+    "categories": [
+      "Comercio"
+    ],
+    "canton": "Fuera de la provincia",
+    "district": "San Rafael",
+    "province": "San José",
+    "address": "Guachipelín, Escazú, San José; Multipark, edificio Turrúcares",
+    "phones": [
+      "2437-4100 /4032-4500 / 800-222-2000"
+    ],
+    "web": "https://www.tiendamonge.com/",
+    "facebook": "https://www.facebook.com/TiendaMonge/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/importadora-monge-grupo-m/",
+    "geoStatus": "Revisar caso especial",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/importadora-monge-grupo-m/",
+    "description": "Asociado certificado de la CCA · Comercio.",
+    "convenio": "Descuento por volumen para compras empresariales",
+    "ahorroEstimado": "7% en compras corporativas",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "inalca-corimex",
+    "name": "Inalca Corimex",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Alimentos",
+      "Industria"
+    ],
+    "canton": "Alajuela",
+    "district": "San Antonio",
+    "province": "Alajuela",
+    "address": "San Antonio del Tejar, 100 m este de Bimbo",
+    "phones": [
+      "2430-0322 Fax: 2443-9262"
+    ],
+    "web": "http://www.grupo-dimex.com/",
+    "facebook": "https://www.facebook.com/GrupoDIMEX/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/inalca-corimex/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/4/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Alimentos, Industria.",
+    "convenio": "10% en consumo para afiliados CCA y sus colaboradores",
+    "ahorroEstimado": "₡12.000 / mes en alimentación",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "industrias-quicke",
+    "name": "Industrias Quicke",
+    "sector": "Automotriz y Transporte",
+    "categories": [
+      "Lavacar"
+    ],
+    "canton": "Alajuela",
+    "province": "Alajuela",
+    "address": "Detrás de Construplaza, carretera Villa Bonita",
+    "phones": [
+      "2441-1854",
+      "2441-0854"
+    ],
+    "ficha": "https://camaraalajuela.com/directorio-asociados/industrias-quicke/",
+    "geoStatus": "Distrito pendiente",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/4/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Lavacar.",
+    "convenio": "Tarifa preferencial en fletes y envíos",
+    "ahorroEstimado": "12% en envíos",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 2
+  },
+  {
+    "objectID": "inelec",
+    "name": "Inelec",
+    "sector": "Industria",
+    "categories": [
+      "Industria"
+    ],
+    "canton": "Alajuela",
+    "district": "Desamparados",
+    "province": "Alajuela",
+    "address": "Desamparados Alajuela, Residencial La Giralda, casa 33 LL",
+    "phones": [
+      "2440-0402"
+    ],
+    "web": "http://www.ineleccr.com/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/inelec/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/inelec/",
+    "description": "Asociado certificado de la CCA · Industria.",
+    "convenio": "Precio preferencial en compras por volumen",
+    "ahorroEstimado": "6% en suministros",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "informatica-especializada-nasaj-s-a",
+    "name": "Informatica Especializada NASAJ S.A",
+    "sector": "Tecnología",
+    "categories": [
+      "Tecnologia"
+    ],
+    "canton": "Alajuela",
+    "district": "Desamparados",
+    "province": "Alajuela",
+    "address": "Desamparados, Residencial Villas Alicante, casa 138",
+    "phones": [
+      "2440-9696"
+    ],
+    "web": "http://www.ienasaj.co.cr/",
+    "facebook": "https://www.facebook.com/ienasaj",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/informatica-especializada-nasaj-s-a/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/informatica-especializada-nasaj-s-a/",
+    "description": "Asociado certificado de la CCA · Tecnologia.",
+    "convenio": "Diagnóstico tecnológico gratuito + 10% en servicios",
+    "ahorroEstimado": "₡70.000 en consultoría",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "instituto-de-gastronomia-escoffier",
+    "name": "Instituto de Gastronomía Escoffier",
+    "sector": "Educación",
+    "categories": [
+      "Educación"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "50 metros al este del Correo de Alajuela",
+    "phones": [
+      "2430-9046"
+    ],
+    "facebook": "https://www.facebook.com/institutoescoffier/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/instituto-de-gastronomia-escoffier/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://www.todosbiz.com/CR/instituto-de-gastronomia-escoffier-2430-9046",
+    "description": "Asociado certificado de la CCA · Educación.",
+    "convenio": "15% en matrícula para afiliados y sus colaboradores",
+    "ahorroEstimado": "₡40.000 por curso",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "intensa",
+    "name": "Intensa",
+    "sector": "Educación",
+    "categories": [
+      "Educación"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "100 m sur del Parque Juan Santamaría, Alajuela",
+    "phones": [
+      "2442-3843",
+      "800-INTENSA"
+    ],
+    "web": "http://www.intensa.com/",
+    "facebook": "https://www.facebook.com/intensacr/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/intensa/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/4/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Educación.",
+    "convenio": "15% en matrícula para afiliados y sus colaboradores",
+    "ahorroEstimado": "₡40.000 por curso",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "jinca-foods",
+    "name": "Jinca Foods",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Agroindustria",
+      "Comercio",
+      "Industria"
+    ],
+    "canton": "Alajuela",
+    "district": "San Isidro",
+    "province": "Alajuela",
+    "address": "Tacacorí, Escuela Luis Sibaja 200 m oeste, Alajuela",
+    "phones": [
+      "2440-1255"
+    ],
+    "web": "https://www.jincafoods.com/",
+    "facebook": "https://es-la.facebook.com/jincafoods/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/jinca-foods/",
+    "geoStatus": "Revisar caso especial",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/jinca-foods/",
+    "description": "Asociado certificado de la CCA · Agroindustria, Comercio, Industria.",
+    "convenio": "Precio preferencial en pedidos corporativos y eventos",
+    "ahorroEstimado": "₡20.000 por evento empresarial",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "jinca-foods-s-a",
+    "name": "Jinca Foods S.A",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Alimentos",
+      "Industria"
+    ],
+    "canton": "Alajuela",
+    "district": "San Isidro",
+    "province": "Alajuela",
+    "address": "125 m oeste Escuela Luis Sibaja, Tacacorí",
+    "phones": [
+      "2440-1255"
+    ],
+    "web": "http://www.jincafoods.com/",
+    "facebook": "https://www.facebook.com/jincafoods/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/jinca-foods-s-a/",
+    "geoStatus": "Revisar caso especial",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/jinca-foods-s-a/",
+    "description": "Asociado certificado de la CCA · Alimentos, Industria.",
+    "convenio": "Precio preferencial en pedidos corporativos y eventos",
+    "ahorroEstimado": "₡20.000 por evento empresarial",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "jorge-arturo-sedo-flores",
+    "name": "Jorge Arturo Sedó Flores",
+    "sector": "Servicios Profesionales",
+    "categories": [
+      "Consultores"
+    ],
+    "canton": "Alajuela",
+    "district": "San José",
+    "province": "Alajuela",
+    "address": "Barrio San José, El Coyol, Residencial Bertilia",
+    "phones": [
+      "2433-5524",
+      "8695-5082"
+    ],
+    "ficha": "https://camaraalajuela.com/directorio-asociados/jorge-arturo-sedo-flores/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/jorge-arturo-sedo-flores/",
+    "description": "Asociado certificado de la CCA · Consultores.",
+    "convenio": "10% en honorarios de asesoría anual",
+    "ahorroEstimado": "₡60.000 al año",
+    "convenioIlustrativo": true,
+    "whatsapp": "50686955082",
+    "verified": true,
+    "profileScore": 2
+  },
+  {
+    "objectID": "joyeria-y-relojeria-maria-gabriela",
+    "name": "Joyeria y Relojería María Gabriela",
+    "sector": "Comercio y Tiendas",
+    "categories": [
+      "Comercio"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "50 m este de Palí La Parada",
+    "phones": [
+      "2441-1766",
+      "2431-0431"
+    ],
+    "facebook": "https://www.facebook.com/joyeriamariagabriela/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/joyeria-y-relojeria-maria-gabriela/",
+    "geoStatus": "Revisar caso especial",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/joyeria-y-relojeria-maria-gabriela/",
+    "description": "Asociado certificado de la CCA · Comercio.",
+    "convenio": "10% en compras para afiliados CCA",
+    "ahorroEstimado": "₡15.000 / mes en compras",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "keeway",
+    "name": "Keeway",
+    "sector": "Comercio y Tiendas",
+    "categories": [
+      "Ventas"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "225 m norte de Plaza Real Alajuela, calle ancha",
+    "phones": [
+      "2430-1919"
+    ],
+    "web": "http://www.keewaycostarica.com/",
+    "facebook": "https://www.facebook.com/Keewaycr/?brand_redir=687657877954205",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/keeway/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/keeway/",
+    "description": "Asociado certificado de la CCA · Ventas.",
+    "convenio": "10% en compras para afiliados CCA",
+    "ahorroEstimado": "₡15.000 / mes en compras",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "la-casa-del-pollo-papi",
+    "name": "La Casa del Pollo Papi",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Restaurante"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "100 m oeste de la Corte, Alajuela",
+    "phones": [
+      "2442-7274 Fax: 2442-2728"
+    ],
+    "facebook": "https://www.facebook.com/PollosPapiAlajuela/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/la-casa-del-pollo-papi/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/4/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Restaurante.",
+    "convenio": "10% en consumo para afiliados CCA y sus colaboradores",
+    "ahorroEstimado": "₡12.000 / mes en alimentación",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "la-casa-del-zinc",
+    "name": "La Casa del Zinc",
+    "sector": "Construcción y Ferretería",
+    "categories": [
+      "Ferreteria"
+    ],
+    "canton": "Alajuela",
+    "province": "Alajuela",
+    "address": "75 m norte Puente Villa Bonita, Alajuela",
+    "phones": [
+      "4034-1017",
+      "4030-7758",
+      "2441-5051"
+    ],
+    "facebook": "https://www.facebook.com/LaCasaDeZinc/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/la-casa-del-zinc/",
+    "geoStatus": "Distrito pendiente",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/la-casa-del-zinc/",
+    "description": "Asociado certificado de la CCA · Ferreteria.",
+    "convenio": "10% en herramientas y acabados",
+    "ahorroEstimado": "₡30.000 por compra mayor",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "la-fabrica-de-regalos",
+    "name": "La Fabrica de Regalos",
+    "sector": "Comercio y Tiendas",
+    "categories": [
+      "Tienda"
+    ],
+    "canton": "Alajuela",
+    "province": "Alajuela",
+    "address": "150 m norte de Repuestos La Guacamaya",
+    "phones": [
+      "7176 1766"
+    ],
+    "facebook": "https://www.facebook.com/profile.php?id=100088575505499",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/la-fabrica-de-regalos/",
+    "geoStatus": "Distrito pendiente",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/4/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Tienda.",
+    "convenio": "10% en compras para afiliados CCA",
+    "ahorroEstimado": "₡15.000 / mes en compras",
+    "convenioIlustrativo": true,
+    "whatsapp": "50671761766",
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "la-parrilla-del-gordo",
+    "name": "La Parrilla del Gordo",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Restaurante"
+    ],
+    "canton": "Alajuela",
+    "district": "San Isidro",
+    "province": "Alajuela",
+    "address": "San Isidro de Alajuela, 600 m sur del EBAIS",
+    "phones": [
+      "6208 9089"
+    ],
+    "facebook": "https://www.facebook.com/ParrillaDelGordo?locale=es_LA",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/la-parrilla-del-gordo/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/4/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Restaurante.",
+    "convenio": "Precio preferencial en pedidos corporativos y eventos",
+    "ahorroEstimado": "₡20.000 por evento empresarial",
+    "convenioIlustrativo": true,
+    "whatsapp": "50662089089",
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "labitec",
+    "name": "LABITEC",
+    "sector": "Salud y Bienestar",
+    "categories": [
+      "Medicina",
+      "Salud"
+    ],
+    "canton": "Alajuela",
+    "district": "San José",
+    "province": "Alajuela",
+    "address": "Barrio San José, 500 m norte de la Princesa Marina",
+    "phones": [
+      "2434-1981 Whatsapp: 6007 2003"
+    ],
+    "web": "http://laboratorioslabitec.com",
+    "facebook": "https://www.facebook.com/SomosLABITEC",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/labitec/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/4/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Medicina, Salud.",
+    "convenio": "15% en consultas y servicios para afiliados CCA",
+    "ahorroEstimado": "₡25.000 por colaborador al año",
+    "convenioIlustrativo": true,
+    "whatsapp": "50624341981",
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "le-mont-kier-s-a",
+    "name": "Le Mont Kier S.A",
+    "sector": "Comercio y Tiendas",
+    "categories": [
+      "Alquiler",
+      "Comercio"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "250 m oeste Mercado Central Alajuela, frente Hotel Chico",
+    "phones": [
+      "8335-6128"
+    ],
+    "ficha": "https://camaraalajuela.com/directorio-asociados/le-mont-kier-s-a/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/4/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Alquiler, Comercio.",
+    "convenio": "10% en compras para afiliados CCA",
+    "ahorroEstimado": "₡15.000 / mes en compras",
+    "convenioIlustrativo": true,
+    "whatsapp": "50683356128",
+    "verified": true,
+    "profileScore": 2
+  },
+  {
+    "objectID": "lic-jose-adrian-vargas-solis",
+    "name": "Lic. José Adrián Vargas Solís",
+    "sector": "Servicios Profesionales",
+    "categories": [
+      "Consultores",
+      "Derecho"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "50 m sur de los semáforos de Tribunales de Justicia, Alajuela",
+    "phones": [
+      "2442-2176",
+      "8383-0931 Fax: 2430-0355"
+    ],
+    "facebook": "https://www.facebook.com/Bufete-Jurdico-Vargas-Sols-463667363732891/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/lic-jose-adrian-vargas-solis/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/4/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Consultores, Derecho.",
+    "convenio": "Primera consulta sin costo para afiliados CCA",
+    "ahorroEstimado": "₡45.000 en honorarios",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "licorera-el-carmen",
+    "name": "Licorera El Carmen",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Comercio",
+      "Licores"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "175 m norte Iglesia El Carmen, Alajuela",
+    "phones": [
+      "2441-6540 Fax: 2441-3328"
+    ],
+    "ficha": "https://camaraalajuela.com/directorio-asociados/licorera-el-carmen/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/licorera-el-carmen/",
+    "description": "Asociado certificado de la CCA · Comercio, Licores.",
+    "convenio": "10% en consumo para afiliados CCA y sus colaboradores",
+    "ahorroEstimado": "₡12.000 / mes en alimentación",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 2
+  },
+  {
+    "objectID": "liga-bar",
+    "name": "LIGA BAR",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Bar"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Esquina noroeste Iglesia La Agonía, Alajuela",
+    "phones": [
+      "2441 5321"
+    ],
+    "facebook": "https://www.facebook.com/LIGA-BAR-1058285380921845",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/liga-bar/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/4/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Bar.",
+    "convenio": "Precio preferencial en pedidos corporativos y eventos",
+    "ahorroEstimado": "₡20.000 por evento empresarial",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "los-manantiales",
+    "name": "Los Manantiales",
+    "sector": "Turismo y Recreación",
+    "categories": [
+      "Recreación"
+    ],
+    "canton": "Poás",
+    "district": "Carrillos",
+    "province": "Alajuela",
+    "address": "800 m noreste de Iglesia Católica Carrillos Alto, Poás",
+    "phones": [
+      "2458-4535"
+    ],
+    "web": "http://www.losmanantialescr.com/",
+    "facebook": "https://www.facebook.com/losmanatialescr/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/los-manantiales/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/los-manantiales/",
+    "description": "Asociado certificado de la CCA · Recreación.",
+    "convenio": "Tarifa corporativa para afiliados CCA",
+    "ahorroEstimado": "15% en hospedaje y eventos",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "los-reyes-country-club",
+    "name": "Los Reyes Country Club",
+    "sector": "Turismo y Recreación",
+    "categories": [
+      "Recreación"
+    ],
+    "canton": "Alajuela",
+    "district": "Guácima",
+    "province": "Alajuela",
+    "address": "Ciudad-Hacienda Los Reyes, Guácima",
+    "phones": [
+      "2438 0004"
+    ],
+    "web": "http://www.losreyescountryclub.com",
+    "facebook": "https://www.facebook.com/losreyescountryclub?locale=es_LA",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/los-reyes-country-club/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/4/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Recreación.",
+    "convenio": "2x1 en entradas para colaboradores de afiliados",
+    "ahorroEstimado": "₡10.000 por visita",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "lubricentro-el-arroyo",
+    "name": "Lubricentro El Arroyo",
+    "sector": "Automotriz y Transporte",
+    "categories": [
+      "Automotriz"
+    ],
+    "canton": "Alajuela",
+    "province": "Alajuela",
+    "address": "Monserrat, Alajuela, frente antiguo edificio Estilos por Mayor",
+    "phones": [
+      "2443-0087 Fax: 2442-9700"
+    ],
+    "facebook": "https://www.facebook.com/elarroyocr/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/lubricentro-el-arroyo/",
+    "geoStatus": "Distrito pendiente",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/lubricentro-el-arroyo/",
+    "description": "Asociado certificado de la CCA · Automotriz.",
+    "convenio": "10% en servicios y repuestos para flotillas de afiliados",
+    "ahorroEstimado": "₡35.000 al año por vehículo",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "macos-academia-de-natacion",
+    "name": "MACOS Academia de Natación",
+    "sector": "Turismo y Recreación",
+    "categories": [
+      "Natacion",
+      "Recreación"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "100 m este y 350 m norte del antiguo Hospital de Alajuela",
+    "phones": [
+      "2441-8430"
+    ],
+    "facebook": "https://www.facebook.com/macosnatacion/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/macos-academia-de-natacion/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/4/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Natacion, Recreación.",
+    "convenio": "2x1 en entradas para colaboradores de afiliados",
+    "ahorroEstimado": "₡10.000 por visita",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "mariposario-la-casa-de-la-morpho-azul",
+    "name": "Mariposario la casa de la Morpho Azul",
+    "sector": "Turismo y Recreación",
+    "categories": [
+      "Recreación"
+    ],
+    "canton": "Alajuela",
+    "district": "Guácima",
+    "province": "Alajuela",
+    "address": "Las Vueltas de La Guácima, 4 km oeste del AutoMercado, Alajuela",
+    "phones": [
+      "2439 1022"
+    ],
+    "web": "https://morphoazulcr.com",
+    "facebook": "https://www.facebook.com/CasadelaMorphoAzul?locale=es_LA",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/mariposario-la-casa-de-la-morpho-azul/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://confluencias.go.cr/wp-content/uploads/2020/08/Informacion-General.pdf",
+    "description": "Asociado certificado de la CCA · Recreación.",
+    "convenio": "Tarifa corporativa para afiliados CCA",
+    "ahorroEstimado": "15% en hospedaje y eventos",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "marisqueria-y-pizzeria-italiana",
+    "name": "Marisqueria y Pizzeria Italiana",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Restaurante"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "125 m norte de Iglesia La Agonía",
+    "phones": [
+      "2442-0973"
+    ],
+    "facebook": "https://www.facebook.com/La-Italiana-Pizzeria-y-Marisqueria-124215650990583/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/marisqueria-y-pizzeria-italiana/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/4/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Restaurante.",
+    "convenio": "10% en consumo para afiliados CCA y sus colaboradores",
+    "ahorroEstimado": "₡12.000 / mes en alimentación",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "matadero-del-valle",
+    "name": "Matadero del Valle",
+    "sector": "Industria",
+    "categories": [
+      "Industria"
+    ],
+    "canton": "Alajuela",
+    "district": "San Antonio",
+    "province": "Alajuela",
+    "address": "600 m oeste del balneario Ojo de Agua, Alajuela",
+    "phones": [
+      "2443-1111 Fax: 2263-5555"
+    ],
+    "ficha": "https://camaraalajuela.com/directorio-asociados/matadero-del-valle/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/4/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Industria.",
+    "convenio": "Precio preferencial en compras por volumen",
+    "ahorroEstimado": "6% en suministros",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 2
+  },
+  {
+    "objectID": "materiales-meza",
+    "name": "Materiales Meza",
+    "sector": "Construcción y Ferretería",
+    "categories": [
+      "Comercio",
+      "Ferreteria"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Costado norte Cementerio Central Alajuela, calle ancha",
+    "phones": [
+      "2442-3050 Fax: 2430-3611"
+    ],
+    "web": "http://www.materialesmeza.com/",
+    "facebook": "https://www.facebook.com/mat.construccion.meza/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/materiales-meza/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/4/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Comercio, Ferreteria.",
+    "convenio": "10% en herramientas y acabados",
+    "ahorroEstimado": "₡30.000 por compra mayor",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "molinos-de-costa-rica-nacarina",
+    "name": "Molinos de Costa Rica (Nacarina)",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Alimentos",
+      "Industria"
+    ],
+    "canton": "Alajuela",
+    "province": "Alajuela",
+    "address": "400 m norte del Outlet Internacional Alajuela",
+    "phones": [
+      "2440-1414",
+      "2429-2929 Fax: 2441-5080"
+    ],
+    "web": "http://www.nacarina.com/",
+    "facebook": "https://www.facebook.com/NacarinaCR/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/molinos-de-costa-rica-nacarina/",
+    "geoStatus": "Distrito pendiente",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/4/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Alimentos, Industria.",
+    "convenio": "10% en consumo para afiliados CCA y sus colaboradores",
+    "ahorroEstimado": "₡12.000 / mes en alimentación",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "mucap",
+    "name": "Mucap",
+    "sector": "Banca y Finanzas",
+    "categories": [
+      "Bancos",
+      "Finanzas"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Frente a bomba La Tropicana, Alajuela Centro",
+    "phones": [
+      "2550-7834",
+      "2550-7833",
+      "800-MUCAPCR"
+    ],
+    "web": "http://www.mucap.fi.cr/",
+    "facebook": "https://www.facebook.com/MucapCR/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/mucap/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/5/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Bancos, Finanzas.",
+    "convenio": "Tasa preferencial en crédito pyme para afiliados CCA",
+    "ahorroEstimado": "Hasta 1 punto menos en tasa de interés",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "mutual-valores",
+    "name": "Mutual Valores",
+    "sector": "Banca y Finanzas",
+    "categories": [
+      "Bancos",
+      "Finanzas"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Alajuela, 150 m oeste de Plaza Ferias",
+    "phones": [
+      "2437-1010"
+    ],
+    "web": "http://www.mutualvalores.fi.cr/",
+    "facebook": "https://www.facebook.com/MutualValores/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/mutual-valores/",
+    "geoStatus": "Revisar caso especial",
+    "geoSource": "https://www.mutualvalores.fi.cr/mutual-valores-contacto/",
+    "description": "Asociado certificado de la CCA · Bancos, Finanzas.",
+    "convenio": "Asesoría financiera sin costo para afiliados",
+    "ahorroEstimado": "₡50.000 en asesoría",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "natural-car-rental",
+    "name": "Natural Car rental",
+    "sector": "Automotriz y Transporte",
+    "categories": [
+      "Rent a Car"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "100 m sur y 200 m oeste Iglesia La Agonía",
+    "phones": [
+      "4001 7828"
+    ],
+    "web": "http://www.natural.cr",
+    "facebook": "https://www.facebook.com/NaturalCarRental?locale=es_LA",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/natural-car-rental/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/5/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Rent a Car.",
+    "convenio": "Tarifa preferencial en fletes y envíos",
+    "ahorroEstimado": "12% en envíos",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "newrest",
+    "name": "Newrest",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Alimentos"
+    ],
+    "canton": "Alajuela",
+    "province": "Alajuela",
+    "address": "Planta central Newrest Costa Rica: 600 m sur del Mall Internacional, Alajuela",
+    "phones": [
+      "24371750"
+    ],
+    "ficha": "https://camaraalajuela.com/directorio-asociados/newrest/",
+    "geoStatus": "Distrito pendiente",
+    "geoSource": "https://es.scribd.com/document/1068142275/TD-HACCP-01-2-CR-Plan-HACCP-2025-v16",
+    "description": "Asociado certificado de la CCA · Alimentos.",
+    "convenio": "10% en consumo para afiliados CCA y sus colaboradores",
+    "ahorroEstimado": "₡12.000 / mes en alimentación",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 2
+  },
+  {
+    "objectID": "panaderia-alberto-leandro-e-hijos-s-a",
+    "name": "Panadería Alberto Leandro e Hijos S.A.",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Panadería"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Costado oeste Mercado Alajuela. Sucursales Turrúcares, Roble, Coyol, UTN, Marista",
+    "phones": [
+      "2441-0279 / 2441-0129"
+    ],
+    "facebook": "https://www.facebook.com/pg/Panadera-y-Repostera-Alberto-Leandro-e-Hijos-682088661852761/about/?ref=page_internal",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/panaderia-alberto-leandro-e-hijos-s-a/",
+    "geoStatus": "Revisar caso especial",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/5/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Panadería.",
+    "convenio": "Precio preferencial en pedidos corporativos y eventos",
+    "ahorroEstimado": "₡20.000 por evento empresarial",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "panaderia-y-pasteleria-trigo-miel",
+    "name": "Panadería y Pastelería Trigo Miel",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Alimentos",
+      "Comercio"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Costado norte del Parque Juan Santamaría",
+    "phones": [
+      "2442-2263 Fax: 2440-0541"
+    ],
+    "web": "http://www.trigomiel.com/",
+    "facebook": "https://www.facebook.com/trigomielcr/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/panaderia-y-pasteleria-trigo-miel/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/panaderia-y-pasteleria-trigo-miel/",
+    "description": "Asociado certificado de la CCA · Alimentos, Comercio.",
+    "convenio": "10% en consumo para afiliados CCA y sus colaboradores",
+    "ahorroEstimado": "₡12.000 / mes en alimentación",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "panasa",
+    "name": "PANASA",
+    "sector": "Servicios Profesionales",
+    "categories": [
+      "Servicios de Consultoría (Bienes Raíces)"
+    ],
+    "canton": "Alajuela",
+    "district": "Río Segundo",
+    "province": "Alajuela",
+    "address": "INVU Las Cañas de Alajuela, 1 km norte del Hotel Hampton Inn",
+    "phones": [
+      "2440-2728 Fax: 2442-1622"
+    ],
+    "ficha": "https://camaraalajuela.com/directorio-asociados/panasa/",
+    "geoStatus": "Revisar caso especial",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/panasa/",
+    "description": "Asociado certificado de la CCA · Servicios de Consultoría (Bienes Raíces).",
+    "convenio": "Primera consulta sin costo para afiliados CCA",
+    "ahorroEstimado": "₡45.000 en honorarios",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 2
+  },
+  {
+    "objectID": "parqueo-el-museo",
+    "name": "Parqueo El Museo",
+    "sector": "Automotriz y Transporte",
+    "categories": [
+      "Parqueo"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Calle 2, avenidas 3 y 5, Alajuela",
+    "phones": [
+      "2430-5227",
+      "2430-1304 Fax: 2430-3943"
+    ],
+    "ficha": "https://camaraalajuela.com/directorio-asociados/parqueo-el-museo/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/5/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Parqueo.",
+    "convenio": "Tarifa preferencial en fletes y envíos",
+    "ahorroEstimado": "12% en envíos",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 2
+  },
+  {
+    "objectID": "parqueo-la-ceiba",
+    "name": "Parqueo La Ceiba",
+    "sector": "Automotriz y Transporte",
+    "categories": [
+      "Parqueo"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "25 m sur de Almacén Llobet, avenidas 0 y 2, calle 4, Alajuela",
+    "phones": [
+      "2440-0848"
+    ],
+    "ficha": "https://camaraalajuela.com/directorio-asociados/parqueo-la-ceiba/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://www.ticoparqueos.com/parqueo/la-ceiba/",
+    "description": "Asociado certificado de la CCA · Parqueo.",
+    "convenio": "10% en servicios y repuestos para flotillas de afiliados",
+    "ahorroEstimado": "₡35.000 al año por vehículo",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 2
+  },
+  {
+    "objectID": "pastas-roma",
+    "name": "Pastas Roma",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Alimentos",
+      "Industria"
+    ],
+    "canton": "Alajuela",
+    "province": "Alajuela",
+    "address": "Del KFC entrando a Alajuela, 400 m oeste 150 m sur, carretera Villa Bonita",
+    "phones": [
+      "2436-3500 Fax: 2443-4400"
+    ],
+    "web": "http://www.pastasroma.com/",
+    "facebook": "https://www.facebook.com/PastasRoma/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/pastas-roma/",
+    "geoStatus": "Distrito pendiente",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/5/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Alimentos, Industria.",
+    "convenio": "10% en consumo para afiliados CCA y sus colaboradores",
+    "ahorroEstimado": "₡12.000 / mes en alimentación",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "pasteleria-inglesa",
+    "name": "Pastelería Inglesa",
+    "sector": "Comercio y Tiendas",
+    "categories": [
+      "Comercio"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "100 metros sur del Parque Juan Santamaría, frente al Banco Citi",
+    "phones": [
+      "2430-0522 / 2441-6714 / 8412-66-64 /800-QUEQUE"
+    ],
+    "web": "https://www.pasteleriainglesa.com/site/",
+    "facebook": "https://www.facebook.com/pasteleriainglesa/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/pasteleria-inglesa/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/pasteleria-inglesa/",
+    "description": "Asociado certificado de la CCA · Comercio.",
+    "convenio": "10% en compras para afiliados CCA",
+    "ahorroEstimado": "₡15.000 / mes en compras",
+    "convenioIlustrativo": true,
+    "whatsapp": "50684126664",
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "pasteleria-le-cafe",
+    "name": "Pastelería le Café",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Cafeteria"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Costado norte Parque Juan Santamaría, Alajuela Centro",
+    "phones": [
+      "4034 9031 / whatsapp: 6324 3360"
+    ],
+    "facebook": "https://www.facebook.com/lecafecr/about",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/pasteleria-le-cafe/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/5/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Cafeteria.",
+    "convenio": "10% en consumo para afiliados CCA y sus colaboradores",
+    "ahorroEstimado": "₡12.000 / mes en alimentación",
+    "convenioIlustrativo": true,
+    "whatsapp": "50640349031",
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "periodico-la-segunda",
+    "name": "Periódico La Segunda",
+    "sector": "Industria",
+    "categories": [
+      "Industria"
+    ],
+    "canton": "Alajuela",
+    "province": "Alajuela",
+    "address": "125 metros este del Club de Leones, carretera a Barrio San José, Alajuela",
+    "phones": [
+      "2433-8256",
+      "8981-0661"
+    ],
+    "web": "http://www.periodicolasegundacr.com/",
+    "facebook": "https://www.facebook.com/Peridico-La-Segunda-186597838111006/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/periodico-la-segunda/",
+    "geoStatus": "Distrito pendiente",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/periodico-la-segunda/",
+    "description": "Asociado certificado de la CCA · Industria.",
+    "convenio": "Precio preferencial en compras por volumen",
+    "ahorroEstimado": "6% en suministros",
+    "convenioIlustrativo": true,
+    "whatsapp": "50689810661",
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "pescaderia-el-rey-del-mar",
+    "name": "Pescadería el Rey del Mar",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Alimentos"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Mercado de Alajuela",
+    "phones": [
+      "8849 1910"
+    ],
+    "facebook": "https://www.facebook.com/profile.php?id=100063673895156&locale=es_LA",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/pescaderia-el-rey-del-mar/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/5/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Alimentos.",
+    "convenio": "Precio preferencial en pedidos corporativos y eventos",
+    "ahorroEstimado": "₡20.000 por evento empresarial",
+    "convenioIlustrativo": true,
+    "whatsapp": "50688491910",
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "pizza-a-la-lena-cacao",
+    "name": "Pizza a la leña Cacao",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Restaurante"
+    ],
+    "canton": "Alajuela",
+    "district": "Guácima",
+    "province": "Alajuela",
+    "address": "Cacao, frente a iglesia católica, Alajuela",
+    "phones": [
+      "2433 6642/ 8955 6642"
+    ],
+    "facebook": "https://www.facebook.com/pizzaalalenacacao",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/pizza-a-la-lena-cacao/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/5/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Restaurante.",
+    "convenio": "Precio preferencial en pedidos corporativos y eventos",
+    "ahorroEstimado": "₡20.000 por evento empresarial",
+    "convenioIlustrativo": true,
+    "whatsapp": "50689556642",
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "plaza-ferias-alajuela",
+    "name": "Plaza Ferias Alajuela",
+    "sector": "Sin clasificar",
+    "categories": [],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "300 m oeste bomba AlaGas Santa Anita, Cristo Rey, Alajuela",
+    "phones": [
+      "2440-007/ 2443-2579 / 2443-2010"
+    ],
+    "web": "http://plazaferias.com/site/",
+    "facebook": "https://www.facebook.com/Plaza-Ferias-Alajuela-454083954747203/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/plaza-ferias-alajuela/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/5/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la Cámara de Comercio de Alajuela.",
+    "convenio": "Beneficio por definir con la Cámara",
+    "ahorroEstimado": "—",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "policarbonato-cr",
+    "name": "Policarbonato CR",
+    "sector": "Construcción y Ferretería",
+    "categories": [
+      "Constuctora"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Frente a Pequeño Mundo, barrio Cristo Rey, Alajuela",
+    "phones": [
+      "2430 2121"
+    ],
+    "web": "http://www.policarbonatocr.com",
+    "facebook": "https://www.facebook.com/policarbonatocostarica",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/policarbonato-cr/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://www.aiyellow.com/policarbonatocr/index.html?lang=es",
+    "description": "Asociado certificado de la CCA · Constuctora.",
+    "convenio": "10% en herramientas y acabados",
+    "ahorroEstimado": "₡30.000 por compra mayor",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "pollos-del-este",
+    "name": "Pollos del Este",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Restaurante"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Costado norte Iglesia La Agonía",
+    "phones": [
+      "2441-2896",
+      "2442-2306 (Bodega)"
+    ],
+    "web": "http://www.pollosdeleste.com/",
+    "facebook": "https://www.facebook.com/Pollosdeleste/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/pollos-del-este/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/5/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Restaurante.",
+    "convenio": "Precio preferencial en pedidos corporativos y eventos",
+    "ahorroEstimado": "₡20.000 por evento empresarial",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "pollos-rey",
+    "name": "Pollos Rey",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Alimentos",
+      "Industria"
+    ],
+    "canton": "Alajuela",
+    "district": "Río Segundo",
+    "province": "Alajuela",
+    "address": "400 m norte entrada Casino Fiesta, Río Segundo",
+    "phones": [
+      "4106-1000 Fax: 2429-0494"
+    ],
+    "ficha": "https://camaraalajuela.com/directorio-asociados/pollos-rey/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/5/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Alimentos, Industria.",
+    "convenio": "10% en consumo para afiliados CCA y sus colaboradores",
+    "ahorroEstimado": "₡12.000 / mes en alimentación",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 2
+  },
+  {
+    "objectID": "popeyes-alajuela",
+    "name": "Popeyes Alajuela",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Restaurante"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "De la bomba La Tropicana, 80 metros oeste, frente a Funeraria Jardines del Recuerdo",
+    "phones": [
+      "2440-1681"
+    ],
+    "facebook": "https://www.facebook.com/PopeyesCostaRica/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/popeyes-alajuela/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/popeyes-alajuela/",
+    "description": "Asociado certificado de la CCA · Restaurante.",
+    "convenio": "Precio preferencial en pedidos corporativos y eventos",
+    "ahorroEstimado": "₡20.000 por evento empresarial",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "praxair",
+    "name": "PRAXAIR",
+    "sector": "Industria",
+    "categories": [
+      "Industria"
+    ],
+    "canton": "Alajuela",
+    "district": "San José",
+    "province": "Alajuela",
+    "address": "Parque Industrial Propark, contiguo a Dos Pinos, El Coyol",
+    "phones": [
+      "2482-8600"
+    ],
+    "web": "http://www.praxair.com/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/praxair/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/5/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Industria.",
+    "convenio": "Precio preferencial en compras por volumen",
+    "ahorroEstimado": "6% en suministros",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "pretecma",
+    "name": "Pretecma",
+    "sector": "Automotriz y Transporte",
+    "categories": [
+      "Automotriz"
+    ],
+    "canton": "Alajuela",
+    "province": "Alajuela",
+    "address": "250 m noroeste de semáforos Villa Bonita",
+    "phones": [
+      "2443-5412"
+    ],
+    "facebook": "https://en-gb.facebook.com/PrecisionM3/?ref=page_internal",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/pretecma/",
+    "geoStatus": "Distrito pendiente",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/5/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Automotriz.",
+    "convenio": "Tarifa preferencial en fletes y envíos",
+    "ahorroEstimado": "12% en envíos",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "productos-derivados-de-carne-monge-y-garcia-s-a",
+    "name": "Productos Derivados de Carne Monge y García S.A",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Carniceria"
+    ],
+    "canton": "Alajuela",
+    "district": "Guácima",
+    "province": "Alajuela",
+    "address": "Guácima de Alajuela, 700 m oeste Iglesia Rincón Chiquito",
+    "phones": [
+      "2438-1815"
+    ],
+    "ficha": "https://camaraalajuela.com/directorio-asociados/productos-derivados-de-carne-monge-y-garcia-s-a/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/5/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Carniceria.",
+    "convenio": "10% en consumo para afiliados CCA y sus colaboradores",
+    "ahorroEstimado": "₡12.000 / mes en alimentación",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 2
+  },
+  {
+    "objectID": "puerta-a-puerta",
+    "name": "Puerta a Puerta",
+    "sector": "Automotriz y Transporte",
+    "categories": [
+      "Mensajeria"
+    ],
+    "canton": "Alajuela",
+    "district": "Río Segundo",
+    "province": "Alajuela",
+    "address": "200 m este Hotel Hampton Inn, aeropuerto SJO",
+    "phones": [
+      "2430-9000"
+    ],
+    "web": "http://www.puertaapuerta.com/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/puerta-a-puerta/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/5/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Mensajeria.",
+    "convenio": "Tarifa preferencial en fletes y envíos",
+    "ahorroEstimado": "12% en envíos",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "quebrador-san-miguel",
+    "name": "Quebrador San Miguel",
+    "sector": "Construcción y Ferretería",
+    "categories": [
+      "Materiales de Construccion"
+    ],
+    "canton": "Alajuela",
+    "district": "Turrúcares",
+    "province": "Alajuela",
+    "address": "Santa Rita, Turrúcares, 1 km este de Pizza La Estación",
+    "phones": [
+      "2487-4430",
+      "2487-4431"
+    ],
+    "web": "http://www.quebradorsanmiguel.com/",
+    "facebook": "https://www.facebook.com/quebrador.san.miguel/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/quebrador-san-miguel/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/6/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Materiales de Construccion.",
+    "convenio": "Precios de mayoreo para proyectos de afiliados CCA",
+    "ahorroEstimado": "8% de ahorro en materiales",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "rafael-angel-quesada-lara",
+    "name": "Rafael Ángel Quesada Lara",
+    "sector": "Servicios Profesionales",
+    "categories": [
+      "Asesoría Contable"
+    ],
+    "canton": "Alajuela",
+    "district": "San Antonio",
+    "province": "Alajuela",
+    "address": "San Antonio del Tejar, Alajuela",
+    "phones": [
+      "8845-2259"
+    ],
+    "ficha": "https://camaraalajuela.com/directorio-asociados/rafael-angel-quesada-lara/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/6/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Asesoría Contable.",
+    "convenio": "10% en honorarios de asesoría anual",
+    "ahorroEstimado": "₡60.000 al año",
+    "convenioIlustrativo": true,
+    "whatsapp": "50688452259",
+    "verified": true,
+    "profileScore": 2
+  },
+  {
+    "objectID": "recicladora-y-maquila-hyo-s-a",
+    "name": "Recicladora y Maquila HYO S.A.",
+    "sector": "Industria",
+    "categories": [
+      "Recicladora"
+    ],
+    "canton": "Alajuela",
+    "district": "San Rafael",
+    "province": "Alajuela",
+    "address": "San Rafael de Alajuela, 50 m sur de matadero PIPASA",
+    "phones": [
+      "24389313"
+    ],
+    "ficha": "https://camaraalajuela.com/directorio-asociados/recicladora-y-maquila-hyo-s-a/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/6/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Recicladora.",
+    "convenio": "Precio preferencial en compras por volumen",
+    "ahorroEstimado": "6% en suministros",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 2
+  },
+  {
+    "objectID": "reconocimiento-placas-y-mas",
+    "name": "Reconocimiento, Placas y mas",
+    "sector": "Comercio y Tiendas",
+    "categories": [
+      "Comercio",
+      "Industria"
+    ],
+    "canton": "Fuera de la provincia",
+    "district": "San Lorenzo",
+    "province": "San José",
+    "address": "Desamparados, San Lorenzo, San José",
+    "phones": [
+      "6187 8331"
+    ],
+    "facebook": "https://www.facebook.com/profile.php?id=100063969224496",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/reconocimiento-placas-y-mas/",
+    "geoStatus": "Revisar caso especial",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/6/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Comercio, Industria.",
+    "convenio": "Descuento por volumen para compras empresariales",
+    "ahorroEstimado": "7% en compras corporativas",
+    "convenioIlustrativo": true,
+    "whatsapp": "50661878331",
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "refrescos-y-siropes-la-mundial",
+    "name": "Refrescos y Siropes La Mundial",
+    "sector": "Comercio y Tiendas",
+    "categories": [
+      "Comercio",
+      "Industria"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "275 m este del Estadio Alejandro Morera Soto",
+    "phones": [
+      "2441-1840 Fax: 2443-2005"
+    ],
+    "web": "http://www.lamundial.cr/",
+    "facebook": "https://www.facebook.com/LaMundialCR/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/refrescos-y-siropes-la-mundial/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/6/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Comercio, Industria.",
+    "convenio": "Descuento por volumen para compras empresariales",
+    "ahorroEstimado": "7% en compras corporativas",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "restaurante-el-sabor-de-la-montana",
+    "name": "Restaurante el Sabor de la Montaña",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Alimentos",
+      "Restaurante"
+    ],
+    "canton": "Alajuela",
+    "district": "Sabanilla",
+    "province": "Alajuela",
+    "address": "50 m norte delegación de Poasito, ruta al Volcán Poás",
+    "phones": [
+      "6361 7395"
+    ],
+    "web": "https://linktr.ee/infosabor",
+    "facebook": "https://www.facebook.com/elsabordelamontanacr?locale=es_LA",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/restaurante-el-sabor-de-la-montana/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/6/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Alimentos, Restaurante.",
+    "convenio": "Precio preferencial en pedidos corporativos y eventos",
+    "ahorroEstimado": "₡20.000 por evento empresarial",
+    "convenioIlustrativo": true,
+    "whatsapp": "50663617395",
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "sabor-pan",
+    "name": "Sabor & Pan",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Panadería"
+    ],
+    "canton": "Alajuela",
+    "district": "Guácima",
+    "province": "Alajuela",
+    "address": "Panadería Sabor y Pan, 400 metros este de Súper Canástica, La Guácima, Alajuela",
+    "phones": [
+      "2439-4104"
+    ],
+    "facebook": "https://www.facebook.com/SaboryPan/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/sabor-pan/",
+    "geoStatus": "Revisar caso especial",
+    "geoSource": "https://www.kolbi.cr/wps/wcm/connect/www.kolbi.cr/c77a2918-0e58-4d19-8711-f6e80aa5e757/alajuela_punto_venta_prepago.pdf?CVID=ldCaBdL&MOD=AJPERES",
+    "description": "Asociado certificado de la CCA · Panadería.",
+    "convenio": "Precio preferencial en pedidos corporativos y eventos",
+    "ahorroEstimado": "₡20.000 por evento empresarial",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "salud-y-vida",
+    "name": "Salud y Vida",
+    "sector": "Comercio y Tiendas",
+    "categories": [
+      "Comercio"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "100 m sur Tribunales de Justicia, Alajuela Centro",
+    "phones": [
+      "2430 0363"
+    ],
+    "web": "https://www.somossaludyvida.com",
+    "facebook": "https://www.facebook.com/saludyvidacostarica?locale=es_LA",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/salud-y-vida/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/6/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Comercio.",
+    "convenio": "10% en compras para afiliados CCA",
+    "ahorroEstimado": "₡15.000 / mes en compras",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "san-diego-bilingual-high-school",
+    "name": "SAN DIEGO BILINGUAL HIGH SCHOOL",
+    "sector": "Educación",
+    "categories": [
+      "Educación"
+    ],
+    "canton": "Alajuela",
+    "district": "Desamparados",
+    "province": "Alajuela",
+    "address": "Desamparados de Alajuela",
+    "phones": [
+      "tel: 2443 5050 whatsapp: 84905050"
+    ],
+    "web": "http://www.sandiegobilingualhighschool.com",
+    "facebook": "https://www.facebook.com/SDBHS/about",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/san-diego-bilingual-high-school/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/6/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Educación.",
+    "convenio": "15% en matrícula para afiliados y sus colaboradores",
+    "ahorroEstimado": "₡40.000 por curso",
+    "convenioIlustrativo": true,
+    "whatsapp": "50624435050",
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "ser-digital",
+    "name": "SER DIGITAL",
+    "sector": "Tecnología",
+    "categories": [
+      "Desarrollo Web",
+      "Marketing",
+      "Marketing Digital"
+    ],
+    "canton": "Alajuela",
+    "district": "San José",
+    "province": "Alajuela",
+    "address": "Pueblo Nuevo de Alajuela",
+    "phones": [
+      "72353559"
+    ],
+    "web": "https://www.facebook.com/SerDigitalAlajuela/?locale=es_LA",
+    "facebook": "https://www.facebook.com/SerDigitalAlajuela/?locale=es_LA",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/ser-digital/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/6/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Desarrollo Web, Marketing, Marketing Digital.",
+    "convenio": "Diagnóstico tecnológico gratuito + 10% en servicios",
+    "ahorroEstimado": "₡70.000 en consultoría",
+    "convenioIlustrativo": true,
+    "whatsapp": "50672353559",
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "sistamedica",
+    "name": "Sistamedica",
+    "sector": "Salud y Bienestar",
+    "categories": [
+      "Medicina",
+      "Salud"
+    ],
+    "canton": "Alajuela",
+    "district": "San José",
+    "province": "Alajuela",
+    "address": "Barrio San José, 300 m oeste de la Iglesia Católica, camino a La Garita, Alajuela",
+    "phones": [
+      "2434 2528"
+    ],
+    "web": "http://www.sistamedica.com/",
+    "facebook": "https://www.facebook.com/sistamedicacr/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/sistamedica/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://www.hulihealth.com/es/clinic/sistamedica-empresarial-s-a",
+    "description": "Asociado certificado de la CCA · Medicina, Salud.",
+    "convenio": "Tarifa preferencial en paquetes de salud ocupacional",
+    "ahorroEstimado": "₡40.000 en salud ocupacional",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "soda-los-arcos-cayuga",
+    "name": "Soda los Arcos Cayuga",
+    "sector": "Alimentos y Gastronomía",
+    "categories": [
+      "Alimentos"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Mercado Central de Alajuela",
+    "phones": [],
+    "ficha": "https://camaraalajuela.com/directorio-asociados/soda-los-arcos-cayuga/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/6/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Alimentos.",
+    "convenio": "10% en consumo para afiliados CCA y sus colaboradores",
+    "ahorroEstimado": "₡12.000 / mes en alimentación",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 1
+  },
+  {
+    "objectID": "souvenir-la-guaria-morada-n",
+    "name": "Souvenir la Guaria Morada n",
+    "sector": "Comercio y Tiendas",
+    "categories": [
+      "Comercio"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Entrada este del Mercado Municipal de Alajuela, local #35",
+    "phones": [
+      "7040 3643"
+    ],
+    "facebook": "https://www.facebook.com/souvenirsguariamorada?locale=es_LA",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/souvenir-la-guaria-morada-n/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Comercio.",
+    "convenio": "Descuento por volumen para compras empresariales",
+    "ahorroEstimado": "7% en compras corporativas",
+    "convenioIlustrativo": true,
+    "whatsapp": "50670403643",
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "taller-hermanos-arguedas",
+    "name": "Taller Hermanos Arguedas",
+    "sector": "Automotriz y Transporte",
+    "categories": [
+      "Automotriz",
+      "taller"
+    ],
+    "canton": "Alajuela",
+    "district": "San Antonio",
+    "province": "Alajuela",
+    "address": "1 km sur de Hogares Crea del Roble, calle El Urbano",
+    "phones": [
+      "8813 1225"
+    ],
+    "facebook": "https://www.facebook.com/Taller-Hermanos-Arguedas-113233893882395/about",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/taller-hermanos-arguedas/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/6/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Automotriz, taller.",
+    "convenio": "Tarifa preferencial en fletes y envíos",
+    "ahorroEstimado": "12% en envíos",
+    "convenioIlustrativo": true,
+    "whatsapp": "50688131225",
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "ticoplant-tsa-s-a",
+    "name": "Ticoplant TSA S.A.",
+    "sector": "Sin clasificar",
+    "categories": [],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Guadalupe de Alajuela, 3 km noroeste del Estadio Alejandro Morera Soto",
+    "phones": [],
+    "ficha": "https://camaraalajuela.com/directorio-asociados/ticoplant-tsa-s-a/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/ticoplant-tsa-s-a/",
+    "description": "Asociado certificado de la Cámara de Comercio de Alajuela.",
+    "convenio": "Beneficio por definir con la Cámara",
+    "ahorroEstimado": "—",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 1
+  },
+  {
+    "objectID": "tiquicia-motor-home",
+    "name": "Tiquicia Motor Home",
+    "sector": "Industria",
+    "categories": [
+      "Industria"
+    ],
+    "canton": "Alajuela",
+    "district": "Sabanilla",
+    "province": "Alajuela",
+    "address": "San Luis de Sabanilla, Alajuela",
+    "phones": [
+      "8720 8769"
+    ],
+    "web": "https://tiquiciamotorhome.wixsite.com/misitiotiquicia",
+    "facebook": "https://www.facebook.com/profile.php?id=100035390156399&locale=es_LA",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/tiquicia-motor-home/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/6/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Industria.",
+    "convenio": "Precio preferencial en compras por volumen",
+    "ahorroEstimado": "6% en suministros",
+    "convenioIlustrativo": true,
+    "whatsapp": "50687208769",
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "union-comercial-de-costa-rica-grupo-gollo",
+    "name": "Unión Comercial de Costa Rica (Grupo Gollo)",
+    "sector": "Comercio y Tiendas",
+    "categories": [
+      "Comercio"
+    ],
+    "canton": "Alajuela",
+    "district": "San José",
+    "province": "Alajuela",
+    "address": "El Coyol, 800 metros oeste de Riteve, Alajuela",
+    "phones": [
+      "2437-4848 / 800-00-GOLLO"
+    ],
+    "web": "https://www.gollotienda.com/",
+    "facebook": "https://www.facebook.com/GolloCR/",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/union-comercial-de-costa-rica-grupo-gollo/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/union-comercial-de-costa-rica-grupo-gollo/",
+    "description": "Asociado certificado de la CCA · Comercio.",
+    "convenio": "10% en compras para afiliados CCA",
+    "ahorroEstimado": "₡15.000 / mes en compras",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 4
+  },
+  {
+    "objectID": "vipar-ltda",
+    "name": "Vipar Ltda.",
+    "sector": "Comercio y Tiendas",
+    "categories": [
+      "Alquiler"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Alajuela centro",
+    "phones": [
+      "8993-0005/2235-7905"
+    ],
+    "ficha": "https://camaraalajuela.com/directorio-asociados/vipar-ltda/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados/vipar-ltda/",
+    "description": "Asociado certificado de la CCA · Alquiler.",
+    "convenio": "10% en compras para afiliados CCA",
+    "ahorroEstimado": "₡15.000 / mes en compras",
+    "convenioIlustrativo": true,
+    "whatsapp": "50689930005",
+    "verified": true,
+    "profileScore": 2
+  },
+  {
+    "objectID": "zapateria-santa-cecilia",
+    "name": "Zapatería Santa Cecilia",
+    "sector": "Comercio y Tiendas",
+    "categories": [
+      "Zapaterías"
+    ],
+    "canton": "Alajuela",
+    "district": "Alajuela",
+    "province": "Alajuela",
+    "address": "Mercado Central de Alajuela",
+    "phones": [
+      "7290 2927"
+    ],
+    "facebook": "https://www.facebook.com/profile.php?id=61556289477823&locale=es_LA",
+    "ficha": "https://camaraalajuela.com/directorio-asociados/zapateria-santa-cecilia/",
+    "geoStatus": "Ubicación documentada",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/6/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Zapaterías.",
+    "convenio": "10% en compras para afiliados CCA",
+    "ahorroEstimado": "₡15.000 / mes en compras",
+    "convenioIlustrativo": true,
+    "whatsapp": "50672902927",
+    "verified": true,
+    "profileScore": 3
+  },
+  {
+    "objectID": "zavillana-de-alajuela-s-a",
+    "name": "Zavillana de Alajuela S.A",
+    "sector": "Automotriz y Transporte",
+    "categories": [
+      "Gasolinera"
+    ],
+    "canton": "Alajuela",
+    "province": "Alajuela",
+    "address": "Alajuela (sin distrito especificado)",
+    "phones": [
+      "4032-5000"
+    ],
+    "ficha": "https://camaraalajuela.com/directorio-asociados/zavillana-de-alajuela-s-a/",
+    "geoStatus": "Distrito pendiente",
+    "geoSource": "https://camaraalajuela.com/directorio-asociados-old/page/6/?wpbdp_view=all_listings",
+    "description": "Asociado certificado de la CCA · Gasolinera.",
+    "convenio": "10% en servicios y repuestos para flotillas de afiliados",
+    "ahorroEstimado": "₡35.000 al año por vehículo",
+    "convenioIlustrativo": true,
+    "verified": true,
+    "profileScore": 2
+  }
+]

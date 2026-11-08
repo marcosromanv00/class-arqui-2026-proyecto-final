@@ -1,0 +1,9 @@
+# No subir secretos ni archivos que el portal no necesita.
+# Las llaves de Azure se configuran como variables de entorno en Vercel.
+.env*
+node_modules
+.next
+docs
+# tools/ sí se sube: src/lib/corrector.ts importa tools/06_algolia_search/sinonimos_cca.json
+tools/**/*.xlsx
+tools/**/*.py

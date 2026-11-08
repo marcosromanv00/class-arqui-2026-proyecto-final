@@ -1,0 +1,21 @@
+Índice: cca_directorio_comercial · 3 repeticiones por consulta · 2026-11-08T06:28:53.985Z
+
+| Consulta | Tipo de error / prueba | Resultados | Top 3 | Algolia 1ª ejecución (ms) | Algolia mediana (ms) [mín–máx] | Ida y vuelta mediana (ms) |
+|---|---|---|---|---|---|---|
+| fereteria | falta una 'r' y la tilde | 11 | Grupo Diasa; Distribuidora Fama de Alajuela; La Casa del Zinc | 5 | 5 [5–5] | 89 |
+| farmasia | 's' por 'c' (ejemplo del enunciado) | 2 | Farmacias Santa Lucía; Farmacias Chavarría | 3 | 3 [3–3] | 85 |
+| restaurat | letra faltante (ejemplo del enunciado) | 10 | Restaurante el Sabor de la Montaña; Pollos del Este; Popeyes Alajuela | 3 | 3 [3–3] | 80 |
+| dos pinoz | 'z' por 's' | 1 | Dos Pinos | 5 | 5 [5–5] | 83 |
+| clinica santa fe | sin tilde | 1 | Clínica Santa Fe – Alajuela | 4 | 4 [4–4] | 82 |
+| banco nasional | 's' por 'c' | 1 | Banco Nacional de Costa Rica | 3 | 3 [3–3] | 76 |
+| funerraria | letra duplicada | 3 | Funeraria Jardines del Recuerdo; Funeraria camposanto La Piedad; Funeraria Divina Miscericordia | 24 | 24 [24–24] | 79 |
+| panaderia | sin tilde | 3 | Panadería Alberto Leandro e Hijos S.A.; Panadería y Pastelería Trigo Miel; Sabor & Pan | 7 | 7 [7–7] | 81 |
+| biyares | 'y' por 'll' (2 errores) | 2 | Billares Aguilar Hnos.; Billares Punis | 4 | 4 [4–4] | 84 |
+| hotl aeropuerto | letra faltante | 1 | Hotel Aeropuerto | 8 | 8 [8–8] | 87 |
+| soda | término correcto | 1 | Soda los Arcos Cayuga | 3 | 3 [3–3] | 81 |
+| soda el parqe | ejemplo del enunciado (no existe en el directorio real) | 0 | — | 3 | 3 [3–3] | 89 |
+| (vacía) | faceta: distrito = Río Segundo | 11 | Hotel Marriott Courtyard San Jose Airport Alajuela; Hotel Holiday Inn Express; Fiesta Casino Alajuela | 5 | 5 [5–5] | 87 |
+| restaurante | faceta: sector Alimentos y Gastronomía + distrito Alajuela | 6 | Pollos del Este; Popeyes Alajuela; Marisqueria y Pizzeria Italiana | 6 | 6 [6–6] | 88 |
+
+processingTimeMS (1ª ejecución, sin caché): mediana 4.5 ms · máx 24 ms · 13/14 consultas < 15 ms
+Nota: las repeticiones devuelven el mismo processingTimeMS porque Algolia cachea resultados; la 1ª ejecución es la medición representativa.

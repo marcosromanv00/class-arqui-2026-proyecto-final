@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, ArrowDown } from "lucide-react";
+import { HeroSearch } from "@/components/HeroSearch";
 
 const PILLAR_INDEX = [
   { code: "01", label: "Defensa e Incidencia Municipal", href: "/la-camara" },
@@ -70,6 +71,9 @@ export function Hero() {
               Respaldamos a más de 800 empresas ante gobiernos locales y el Estado.
               Acceda a mediación mercantil ágil, orientación técnica en patentes y una bolsa de empleo activa con beneficio tributario (Art. 8 Ley 7092).
             </p>
+
+            {/* Buscador del directorio (Algolia): envía la consulta a /directorio */}
+            <HeroSearch />
 
             {/* CTAs de Alto Impacto */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1">
