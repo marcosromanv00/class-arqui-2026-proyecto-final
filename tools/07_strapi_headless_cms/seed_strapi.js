@@ -18,6 +18,15 @@ const datasetPath = path.join(__dirname, '../06_algolia_search/cca_merchants_dat
 const rawData = fs.readFileSync(datasetPath, 'utf-8');
 const merchants = JSON.parse(rawData);
 
+// Controlled vocabulary of the Strapi schema (5 sectors) mapped from the Algolia dataset
+const SECTOR_BY_ID = {
+  'cca-001': 'Comercio', 'cca-002': 'Servicios', 'cca-003': 'Servicios', 'cca-004': 'Salud',
+  'cca-005': 'Comercio', 'cca-006': 'Tecnología', 'cca-007': 'Gastronomía', 'cca-008': 'Comercio',
+  'cca-009': 'Salud', 'cca-010': 'Comercio', 'cca-011': 'Comercio', 'cca-012': 'Servicios'
+};
+// Fictitious, unique 10-digit legal IDs (3-101-000NNN) for the demo data
+const cedulaFor = (m) => `3101000${m.objectID.slice(-3)}`;
+
 console.log('='.repeat(70));
 console.log('🌱 CARGADOR AUTOMÁTICO (SEED) - STRAPI HEADLESS CMS (CCA)');
 console.log('='.repeat(70));
@@ -33,8 +42,8 @@ async function runSeed() {
     const samplePayload = {
       data: {
         nombre_comercial: merchants[0].name,
-        cedula_juridica: "3101889900",
-        sector_comercial: merchants[0].sector,
+        cedula_juridica: cedulaFor(merchants[0]),
+        sector_comercial: SECTOR_BY_ID[merchants[0].objectID],
         canton: merchants[0].canton,
         distrito: merchants[0].district,
         direccion_exacta: merchants[0].address,
@@ -57,8 +66,8 @@ async function runSeed() {
     const payload = {
       data: {
         nombre_comercial: m.name,
-        cedula_juridica: "3101000000",
-        sector_comercial: m.sector,
+        cedula_juridica: cedulaFor(m),
+        sector_comercial: SECTOR_BY_ID[m.objectID],
         canton: m.canton,
         distrito: m.district,
         direccion_exacta: m.address,

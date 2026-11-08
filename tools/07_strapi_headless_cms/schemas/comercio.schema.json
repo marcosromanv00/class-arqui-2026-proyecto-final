@@ -26,13 +26,11 @@
     "sector_comercial": {
       "type": "enumeration",
       "enum": [
-        "Construcción y Ferretería",
-        "Automotriz y Transporte",
-        "Servicios Profesionales",
-        "Salud y Bienestar",
-        "Comercio al Detalle y Alimentos",
-        "Tecnología y Comunicaciones",
-        "Industria y Agropecuaria"
+        "Gastronomía",
+        "Comercio",
+        "Salud",
+        "Servicios",
+        "Tecnología"
       ],
       "required": true
     },
@@ -80,6 +78,12 @@
     },
     "palabras_clave_busqueda": {
       "type": "json"
+    },
+    "vacantes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::vacante-empleo.vacante-empleo",
+      "mappedBy": "comercio"
     }
   }
 }
