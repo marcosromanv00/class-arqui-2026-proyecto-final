@@ -4,6 +4,7 @@
  * 5 etapas × 5 carriles + curva de satisfacción, a partir de cjm_tablero_miro.json
  *
  * Uso: MIRO_TOKEN=tu_token node crear_tablero_miro.js
+ *      MIRO_TOKEN=tu_token MIRO_BOARD_ID=id node crear_tablero_miro.js   (actualiza los post-its de un tablero existente)
  */
 
 import fs from 'node:fs';
@@ -136,8 +137,37 @@ console.log('🗺️  CUSTOMER JOURNEY MAP CCA → MIRO');
 console.log('='.repeat(70));
 console.log(`Etapas: ${cjm.stages.length} · Carriles: ${cjm.lanes.length} · Post-its: ${cjm.lanes.reduce((n, l) => n + l.cells.length, 0)}`);
 
+// Sync mode: rewrite the sticky notes of an existing board with the current JSON content.
+// Lanes are identified by sticky color and stages by left-to-right order, so it still works
+// when the user has wrapped the board in a frame (positions become frame-relative).
+async function sync(boardId) {
+  const headers = { Authorization: `Bearer ${TOKEN}`, Accept: 'application/json' };
+  const res = await fetch(`${API}/boards/${boardId}/items?type=sticky_note&limit=50`, { headers });
+  if (!res.ok) throw new Error(`items → ${res.status}: ${await res.text()}`);
+  const notes = (await res.json()).data;
+  const plain = (html) => html.replace(/<[^>]+>/g, '').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&').trim();
+  let updated = 0;
+  for (const lane of cjm.lanes) {
+    const row = notes.filter((n) => n.style.fillColor === lane.color).sort((a, b) => a.position.x - b.position.x);
+    if (row.length !== lane.cells.length) throw new Error(`Carril "${lane.label}": ${row.length} post-its en el tablero, ${lane.cells.length} en el JSON`);
+    for (const [i, note] of row.entries()) {
+      if (plain(note.data.content) === lane.cells[i]) continue;
+      const r = await fetch(`${API}/boards/${boardId}/sticky_notes/${note.id}`, {
+        method: 'PATCH', headers: { ...headers, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ data: { content: `<p>${esc(lane.cells[i])}</p>` } }),
+      });
+      if (!r.ok) throw new Error(`sticky ${note.id} → ${r.status}: ${await r.text()}`);
+      console.log(`✏️  ${lane.label} · ${cjm.stages[i]}`);
+      updated++;
+    }
+  }
+  console.log(`\n✅ ${updated} post-its actualizados en https://miro.com/app/board/${boardId}`);
+}
+
+const BOARD_ID = process.env.MIRO_BOARD_ID;
 if (!TOKEN) {
   console.log('\nℹ️ Falta MIRO_TOKEN. Ejecute: MIRO_TOKEN=tu_token node crear_tablero_miro.js');
+  console.log('   Para actualizar un tablero existente: MIRO_TOKEN=tu_token MIRO_BOARD_ID=id node crear_tablero_miro.js');
 } else {
-  build().catch((e) => { console.error(`\n❌ ${e.message}`); process.exit(1); });
+  (BOARD_ID ? sync(BOARD_ID) : build()).catch((e) => { console.error(`\n❌ ${e.message}`); process.exit(1); });
 }

@@ -23,7 +23,7 @@
         "Escucha de otro comerciante que la Cámara tiene convenios y busca «Cámara de Comercio de Alajuela» en Google desde el celular.",
         "Compara las modalidades (Comercio y Pyme ₡15.000/mes, Empresa e Industria ₡35.000/mes) y revisa qué comercios ya están afiliados.",
         "Completa el wizard de 3 pasos, paga por SINPE Móvil al +506 8703-0792 e ingresa el número de comprobante.",
-        "Busca proveedores por sector y cantón, revisa su propia ficha y contacta a otros comercios por WhatsApp.",
+        "Busca proveedores por cantón y sector, revisa su tarjeta en el directorio y contacta a otros comercios por WhatsApp.",
         "Usa convenios con otros afiliados, publica una vacante en la bolsa de empleo y renueva su cuota."
       ]
     },
@@ -32,10 +32,10 @@
       "label": "Puntos de contacto (touchpoints)",
       "color": "light_blue",
       "cells": [
-        "Resultado de Google · Facebook de la CCA · Portada del portal con buscador central y botón «Afiliarme».",
+        "Resultado de Google · Facebook de la CCA · Portada con titular, índice de 3 pilares y botón «Afiliar mi Empresa».",
         "Sección de afiliación con beneficios · Directorio comercial · Catálogo de convenios.",
         "Wizard de afiliación · SINPE Móvil · WhatsApp de la Cámara · Constancia digital (Ley N.° 7092).",
-        "Directorio con filtros facetados · Ficha del comercio · Botones de WhatsApp y Waze.",
+        "Directorio con filtros por cantón y sector · Tarjeta del comercio con convenio · Botón «Contactar» por WhatsApp.",
         "Bolsa de empleo · LinkedIn · Instagram · Canal de WhatsApp institucional."
       ]
     },
@@ -68,10 +68,10 @@
       "label": "Oportunidades de mejora de AI",
       "color": "light_green",
       "cells": [
-        "Homepage canónica con 3 puntos focales, buscador central y botón «Afiliarme» fijo en el encabezado.",
+        "Homepage canónica con 3 puntos focales (titular, pilares y llamadas a la acción) y botón «Afiliar mi Empresa» fijo en el encabezado.",
         "Precio visible antes de comprometerse y mensaje «100% deducible del Impuesto sobre la Renta».",
         "Checkout de 3 pasos con constancia inmediata y canal alterno por WhatsApp para quien necesita ayuda.",
-        "Fichas administradas en Strapi con sello «Afiliado verificado», listas cerradas de cantón y sector y contacto a 1 clic.",
+        "Tarjetas administradas en Strapi con sello de asociado verificado, listas cerradas de cantón y sector y contacto a 1 clic.",
         "Contenido social: convenios B2B en LinkedIn, «Comercio del Mes» en Instagram y alertas por WhatsApp."
       ]
     }
