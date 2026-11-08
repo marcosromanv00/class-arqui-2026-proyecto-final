@@ -1,0 +1,89 @@
+{
+  "kind": "collectionType",
+  "collectionName": "comercios",
+  "info": {
+    "singularName": "comercio",
+    "pluralName": "comercios",
+    "displayName": "Comercio Afiliado CCA",
+    "description": "Directorio oficial de comercios formales afiliados a la Cámara de Comercio de Alajuela"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre_comercial": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 150
+    },
+    "cedula_juridica": {
+      "type": "string",
+      "required": true,
+      "regex": "^[0-9]{10,12}$"
+    },
+    "sector_comercial": {
+      "type": "enumeration",
+      "enum": [
+        "Gastronomía",
+        "Comercio",
+        "Salud",
+        "Servicios",
+        "Tecnología"
+      ],
+      "required": true
+    },
+    "canton": {
+      "type": "enumeration",
+      "enum": [
+        "Alajuela", "San Ramón", "Grecia", "San Mateo", "Atenas",
+        "Naranjo", "Palmares", "Poás", "Orotina", "San Carlos",
+        "Zarcero", "Sarchí", "Upala", "Los Chiles", "Guatuso", "Río Cuarto"
+      ],
+      "required": true
+    },
+    "distrito": {
+      "type": "string",
+      "required": true
+    },
+    "direccion_exacta": {
+      "type": "text",
+      "required": true
+    },
+    "telefono_fijo": {
+      "type": "string"
+    },
+    "telefono_whatsapp": {
+      "type": "string",
+      "required": true
+    },
+    "correo_contacto": {
+      "type": "email",
+      "required": true
+    },
+    "afiliado_verificado": {
+      "type": "boolean",
+      "default": true
+    },
+    "anos_afiliacion": {
+      "type": "integer",
+      "default": 1
+    },
+    "beneficio_convenio_cca": {
+      "type": "text"
+    },
+    "descripcion_detallada": {
+      "type": "richtext"
+    },
+    "palabras_clave_busqueda": {
+      "type": "json"
+    },
+    "vacantes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::vacante-empleo.vacante-empleo",
+      "mappedBy": "comercio"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+    "data": [
+        {
+            "id": 2,
+            "documentId": "uq6ct3l6x2gn0aykc56qqxbc",
+            "nombre_comercial": "Ferretería El Candado Alajuelense",
+            "cedula_juridica": "3101000001",
+            "sector_comercial": "Comercio",
+            "canton": "Alajuela",
+            "distrito": "Alajuela Centro",
+            "direccion_exacta": "Calle Ancha, 150m norte del Mercado Central",
+            "telefono_fijo": "2441-2090",
+            "telefono_whatsapp": "50688412090",
+            "correo_contacto": "info@cca-001.cr",
+            "afiliado_verificado": true,
+            "anos_afiliacion": 12,
+            "beneficio_convenio_cca": "10% de descuento en pinturas y herramientas manuales para socios CCA",
+            "descripcion_detallada": "Materiales pesados, cerrajería, pintura automotriz y asesoría técnica para proyectos residenciales y comerciales.",
+            "palabras_clave_busqueda": null,
+            "createdAt": "2026-11-08T17:33:43.061Z",
+            "updatedAt": "2026-11-08T17:33:43.061Z",
+            "publishedAt": "2026-11-08T17:33:43.065Z"
+        }
+    ],
+    "meta": {
+        "pagination": {
+            "page": 1,
+            "pageSize": 25,
+            "pageCount": 1,
+            "total": 1
+        }
+    }
+}

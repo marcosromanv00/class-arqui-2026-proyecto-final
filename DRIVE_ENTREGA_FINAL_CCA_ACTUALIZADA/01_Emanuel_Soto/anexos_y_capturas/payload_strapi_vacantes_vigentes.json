@@ -1,0 +1,23 @@
+{
+    "data": [
+        {
+            "id": 2,
+            "documentId": "ym7wogmtjsw6s57gm10zagop",
+            "titulo_puesto": "Asesor de Ventas de Mostrador",
+            "fecha_cierre_postulacion": "2026-12-15",
+            "comercio": {
+                "id": 2,
+                "documentId": "uq6ct3l6x2gn0aykc56qqxbc",
+                "nombre_comercial": "Ferretería El Candado Alajuelense"
+            }
+        }
+    ],
+    "meta": {
+        "pagination": {
+            "page": 1,
+            "pageSize": 25,
+            "pageCount": 1,
+            "total": 1
+        }
+    }
+}

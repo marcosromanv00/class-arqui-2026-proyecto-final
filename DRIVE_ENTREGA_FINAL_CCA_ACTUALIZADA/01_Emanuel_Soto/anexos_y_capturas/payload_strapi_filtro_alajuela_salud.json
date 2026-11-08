@@ -1,0 +1,26 @@
+{
+    "data": [
+        {
+            "id": 8,
+            "documentId": "uox81d1031wosomen1lf50ab",
+            "nombre_comercial": "Clínica Dental OdontoSalud La Guácima",
+            "distrito": "La Guácima",
+            "telefono_whatsapp": "50684381200"
+        },
+        {
+            "id": 18,
+            "documentId": "zpvxa09z24oou9d5lxtrmht8",
+            "nombre_comercial": "Laboratorios Clínicos San Rafael",
+            "distrito": "San Rafael",
+            "telefono_whatsapp": "50687390022"
+        }
+    ],
+    "meta": {
+        "pagination": {
+            "page": 1,
+            "pageSize": 25,
+            "pageCount": 1,
+            "total": 2
+        }
+    }
+}
