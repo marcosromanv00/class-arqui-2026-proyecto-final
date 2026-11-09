@@ -58,7 +58,7 @@ export function AffiliationFormStep2({ merchantName, cedula, plan, price, phone,
     if (Object.keys(errs).length) return;
 
     setProcesando(true);
-    const r = await procesarPago(metodo, { comprobante, numero });
+    const r = await procesarPago(metodo, { comprobante, numero, plan, monto: price });
     setProcesando(false);
     if (r.aprobado) onResult(r);
     else setRechazo(r.motivo ?? "Pago rechazado.");

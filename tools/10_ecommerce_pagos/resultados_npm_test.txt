@@ -1,0 +1,43 @@
+# Salida de npm test · 2026-11-08 16:23 · Node v24.17.0
+
+> arqui-2026-proyecto-final@0.1.0 test
+> node --test --test-reporter=spec "tests/**/*.test.ts"
+
+▶ Regla 1 · Teléfono SINPE Móvil de Costa Rica
+  ✔ acepta un celular de 8 dígitos que inicia en 8 (0.6998ms)
+  ✔ acepta el prefijo internacional +506 (0.1544ms)
+  ✔ rechaza un teléfono fijo (inicia en 2) (0.1533ms)
+  ✔ rechaza un número de 7 dígitos (0.1094ms)
+✔ Regla 1 · Teléfono SINPE Móvil de Costa Rica (2.008ms)
+▶ Formato del comprobante bancario
+  ✔ rechaza un comprobante con letras (0.1428ms)
+  ✔ rechaza un comprobante de menos de 6 dígitos (0.0948ms)
+✔ Formato del comprobante bancario (0.3723ms)
+▶ Regla 2 · Tarifas gremiales
+  ✔ acepta ₡15.000 para el plan Pyme / Comercial (0.204ms)
+  ✔ acepta ₡35.000 para el plan Corporativo (0.1048ms)
+  ✔ rechaza un monto manipulado que no coincide con la tarifa (17.1138ms)
+  ✔ la pasarela rechaza el cobro si el monto no coincide con el plan (5.7178ms)
+✔ Regla 2 · Tarifas gremiales (23.4678ms)
+▶ Regla 3 · Anti-replay de comprobantes SINPE
+  ✔ acepta un comprobante nuevo (4.5043ms)
+  ✔ rechaza el mismo comprobante usado por segunda vez (26.7006ms)
+  ✔ registra la huella SHA-256 del comprobante, no el número en claro (0.886ms)
+✔ Regla 3 · Anti-replay de comprobantes SINPE (32.3343ms)
+▶ Pasarela de tarjeta · BAC Compra Click (simulada)
+  ✔ una tarjeta de prueba válida (4111…) pasa la validación (0.8114ms)
+  ✔ un dígito alterado falla el algoritmo de Luhn (0.1152ms)
+  ✔ rechaza una tarjeta vencida (0.0775ms)
+  ✔ la tarjeta de prueba de rechazo es declinada por el banco (1.2808ms)
+✔ Pasarela de tarjeta · BAC Compra Click (simulada) (2.4909ms)
+▶ Regla 4 · Comprobante con respaldo fiscal
+  ✔ un pago aceptado emite radicado, estado en aprobación, monto y nota de la Ley 7092 (0.6063ms)
+✔ Regla 4 · Comprobante con respaldo fiscal (0.6924ms)
+ℹ tests 18
+ℹ suites 6
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 186.4535

@@ -1,69 +1,126 @@
-# 8. Evaluación de Usabilidad, Fricción y Analítica Comportamental (Maze + Microsoft Clarity)
+# 8. Evaluación de Usabilidad, Fricción y Analítica Comportamental (Microsoft Clarity + SUS)
 
-## 8.1 Marco Teórico y Conceptual de las Herramientas de Evaluación
+## 8.1 Marco conceptual y herramientas
 
-La evaluación de la usabilidad constituye la contrastación empírica indispensable de cualquier propuesta de Arquitectura de Información. Como postula Sauro, Lewis y Finstad (2023), la usabilidad no es una propiedad estática inherente a una interfaz, sino el grado de efectividad, eficiencia y satisfacción con el que usuarios específicos logran objetivos concretos en un contexto determinado. Para evaluar con rigor científico el rediseño del portal de la Cámara de Comercio de Alajuela (CCA), se articuló un marco metodológico dual compuesto por pruebas asincrónicas de rendimiento y analítica de telemetría comportamental:
+La usabilidad es el grado en que usuarios específicos logran objetivos concretos con efectividad, eficiencia y satisfacción en un contexto de uso determinado (ISO 9241-11:2018). Para contrastar empíricamente la propuesta de Arquitectura de Información del portal de la Cámara de Comercio de Alajuela (CCA) se combinaron tres instrumentos, cada uno para una dimensión distinta:
 
-### ¿Qué es Maze y cómo opera en la evaluación de interfaces?
-**Maze** es una plataforma especializada en la investigación cuantitativa remota de experiencia de usuario (*unmoderated usability testing*). A diferencia de las pruebas presenciales de laboratorio que demandan costosos protocolos de observación directa y muestras reducidas, Maze permite formular misiones guiadas basadas en rutas de navegación (*expected paths*) sobre prototipos interactivos. La herramienta registra de manera automatizada las interacciones a nivel de micro-eventos, calculando métricas psicométricas y de rendimiento: tasa de éxito directo (*Directness*), tasa de desvío de ruta, clics erróneos (*misclicks*) y tiempo promedio por tarea (Bhowmick & Sen, 2022). Esto permite aislar con precisión matemática los enlaces y rótulos que generan ambigüedad cognitiva antes de desplegar la plataforma a producción.
+| Dimensión ISO 9241-11 | Instrumento | Qué mide |
+|---|---|---|
+| Efectividad | Misiones guiadas (Google Forms) | Éxito por misión, verificado contra la respuesta escrita (comercio encontrado, número de radicado) |
+| Eficiencia y fricción | **Microsoft Clarity** sobre el sitio publicado | Tiempo activo, páginas por sesión, mapas de calor de clics, *rage clicks*, *dead clicks* y *quick backs* |
+| Satisfacción | **SUS** (Brooke, 1996) + **SEQ** por misión (Sauro & Dumas, 2009) | Percepción global (0–100) y facilidad percibida de cada misión (1–7) |
 
-### ¿Qué es Microsoft Clarity y qué aporta la telemetría comportamental?
-**Microsoft Clarity** es una herramienta de analítica comportamental y telemetría visual basada en el rastreo pasivo de eventos en el DOM (*Document Object Model*) del navegador. Mientras que las analíticas cuantitativas tradicionales (como Google Analytics) se limitan a contabilizar páginas vistas y tasas de rebote superficiales, Clarity reconstruye las sesiones reales de interacción y genera mapas de calor (*heatmaps*) de clics y de desplazamiento vertical (*scroll depth*). Su valor metodológico radica en la detección automatizada de señales de fricción cognitiva extrema (Speicher et al., 2022):
-* **Clics de Furia (*Rage Clicks*):** Múltiples pulsaciones consecutivas en una misma región en menos de un segundo, indicando que el usuario espera una acción que el sistema no responde o confunde un elemento estático con un botón interactivo.
-* **Clics Muertos (*Dead Clicks*):** Clics efectuados sobre textos, imágenes o tarjetas que carecen de enlace activo, revelando falsos indicios de interacción (*affordances engañosas*).
-* **Retornos Rápidos (*Quick Backs*):** Navegación inmediata hacia la página anterior tras ingresar a una sección, señal inequívoca de que la etiqueta del menú prometía un contenido que la página de destino no satisfizo (*expectation mismatch*).
+**Microsoft Clarity** registra de forma pasiva y anónima las interacciones con el DOM del navegador: reconstruye grabaciones de sesión, genera mapas de calor y detecta automáticamente señales de fricción (Microsoft, 2025):
 
-### El Estándar Psicométrico del System Usability Scale (SUS)
-Para unificar la percepción subjetiva de los evaluadores bajo un índice estadísticamente válido, se utiliza el **System Usability Scale (SUS)** creado por John Sauro, Lewis y Finstad (2023). El SUS consiste en una escala ordinal de 10 reactivos con opciones de respuesta de 1 a 5 (Totalmente en desacuerdo a Totalmente de acuerdo), alternando formulaciones positivas y negativas para neutralizar los sesgos de complacencia. La puntuación global resultante se normaliza en una escala de 0 a 100 puntos, donde la media de la industria según Sauro, Lewis y Finstad (2023) se ubica en 68 puntos (Percentil 50). Puntuaciones superiores a 85 puntos sitúan al sistema en el Grado A (Excelente).
+* **Clics de furia (*rage clicks*):** varias pulsaciones rápidas sobre la misma zona; el usuario espera una respuesta que no llega.
+* **Clics muertos (*dead clicks*):** clics sobre elementos que no producen ninguna acción, señal de una *affordance* engañosa.
+* **Retrocesos rápidos (*quick backs*):** el usuario entra a una página y regresa de inmediato; la etiqueta prometía algo que la página no entregó.
 
----
+**System Usability Scale (SUS).** Escala de 10 reactivos (1–5) que alterna afirmaciones positivas y negativas. El puntaje se normaliza a 0–100; 68 es el promedio de la industria (Sauro, 2011) y en la escala curva de Sauro y Lewis (2016) un puntaje ≥ 84.1 corresponde al grado A+.
 
-## 8.2 Resultados Cuantitativos en Maze (Pruebas Basadas en Misiones)
+### 8.1.1 Por qué no se usó Maze
 
-Se diseñó una batería de tres misiones en Maze sobre el prototipo interactivo refinado, evaluando el desempeño de los usuarios frente a las tareas más complejas del sistema:
+El enunciado propone Maze. Se creó la cuenta y se verificó que el plan gratuito solo ofrece *Screener*, *Prototype test* (prototipos de Figma) y *Variant comparison*; la prueba sobre un **sitio web publicado** (*Website test*) exige el plan Enterprise (Figura 8.0). Como el portal ya está implementado y desplegado (https://cca-alajuela-portal.vercel.app), evaluar un prototipo de Figma habría medido un artefacto distinto al que se entrega. Se mantuvieron **las dos misiones del enunciado** y se sustituyó Maze por la combinación Google Forms (misiones + SUS) + Microsoft Clarity (comportamiento), ambas gratuitas.
 
-#### Tabla 8.1. *Métricas cuantitativas de usabilidad obtenidas mediante pruebas en Maze*
-
-| Misión Evaluada | Tasa de Éxito Directo | Tasa de Clics Erróneos (*Misclick Rate*) | Duración Promedio | Puntuación de Usabilidad (*Usability Score*) |
-| :--- | :--- | :--- | :--- | :--- |
-| **Misión 1: Registro de Afiliación**<br>*(Ingresar datos de empresa, elegir plan Pyme y llegar a pantalla de pago)* | **94.2%** | **4.8%** | 38 segundos | **92 / 100** |
-| **Misión 2: Filtrado en Directorio**<br>*(Localizar comercio en El Coyol y abrir canal de WhatsApp)* | **96.8%** | **3.1%** | 16 segundos | **96 / 100** |
-| **Misión 3: Consulta en Bolsa de Empleo**<br>*(Encontrar vacante de chofer o mecánico y ver requisitos)* | **91.5%** | **6.2%** | 24 segundos | **89 / 100** |
-
-La reducida tasa de clics erróneos (*misclicks* inferiores al 6%) confirma que la rotulación de los botones y la disposición de las tarjetas guían al usuario de manera inequívoca hacia el objetivo deseado.
+*Figura 8.0.* Maze: la prueba sobre sitio web requiere plan Enterprise.
+![Figura 8.0](figuras/figura_8_0_maze_website_test_requiere_enterprise.png)
 
 ---
 
-## 8.3 Diagnóstico de Fricción con Microsoft Clarity: Sitio Previo vs. Rediseño
+## 8.2 Diseño de la prueba
 
-El análisis de mapas de calor y eventos de frustración en Microsoft Clarity permitió contrastar empíricamente la experiencia deficiente del sitio WordPress preexistente frente al nuevo portal estructurado:
+| Elemento | Detalle |
+|---|---|
+| Tipo | Prueba remota **no moderada** sobre el sitio real, 8 de noviembre de 2026 |
+| Participantes | N = 5 (P1–P5). Nielsen y Landauer (1993) muestran que 5 usuarios detectan cerca del 85 % de los problemas de usabilidad de un diseño |
+| Perfil | Edades de 18–25 (2), 26–35, 36–50 y 51 o más; 4 en computadora y 1 en celular; frecuencia de trámites en línea: nunca (1), a veces (3), frecuentemente (1) |
+| Instrumentos | Formulario de Google sin inicio de sesión (`tools/05_maze_y_clarity/crear_formulario.gs`) + Clarity (proyecto `zaksg7xnz7`) |
+| Guía del facilitador | `tools/05_maze_y_clarity/PRUEBA_USABILIDAD_REAL.md` |
 
-#### Tabla 8.2. *Comparativa de señales de fricción comportamental (Microsoft Clarity)*
+**Misiones (iguales para todos, en este orden):**
 
-| Métrica de Fricción Observada | Sitio Previo (WordPress Monolítico) | Portal Rediseñado (Propuesta CCA) | Diagnóstico de Arquitectura de Información |
-| :--- | :--- | :--- | :--- |
-| **Clics de Furia (*Rage Clicks*)** | **18.4%** de las sesiones | **0.8%** de las sesiones | En el sitio viejo los usuarios hacían clics repetidos sobre textos no enlazados en el directorio. En el rediseño los botones son evidentes e interactivos. |
-| **Clics Muertos (*Dead Clicks*)** | **22.1%** de las sesiones | **0.2%** de las sesiones | Erradicación total de elementos estáticos que aparentaban ser botones de descarga en la página de documentos. |
-| **Retornos Rápidos (*Quick Backs*)** | **34.7%** de los ingresos | **3.5%** de los ingresos | El visitante del sitio previo entraba a `/noticias/` u `/oferentes/` y se devolvía de inmediato al ver páginas vacías. En el nuevo portal cada enlace entrega contenido sustancial. |
-| **Profundidad de Desplazamiento (*Scroll Depth*)** | 28% de la página | **74%** de la página | La disposición de contenidos en franjas escaneables y el espaciado generoso estimulan la lectura continua sin fatiga visual. |
+1. **Misión 1 · Comercio gastronómico.** "Quiere almorzar en Alajuela en un lugar afiliado a la Cámara. Use el portal para encontrar un restaurante o soda afiliado y anote su nombre y teléfono." Evalúa el buscador y el directorio (Cap. 9).
+2. **Misión 2 · Afiliación digital.** "Afilie su negocio ficticio *Soda La Prueba* al plan Comercio y Pyme y pague con tarjeta. Use primero la tarjeta 4000 0000 0000 0002; si no funciona, termine como pueda. Anote el radicado." La primera tarjeta está **programada para ser rechazada**: la misión mide si el usuario se recupera del error sin ayuda (Cap. 13).
 
----
-
-## 8.4 Evaluación Comparativa del System Usability Scale (SUS)
-
-Para sintetizar la percepción global de los evaluadores, se aplicó el cuestionario estandarizado **System Usability Scale (SUS)** (Brooke, 1996), compuesto por 10 reactivos psicométricos en escala Likert:
-
-* **Puntuación SUS del Sitio Previo de la Cámara:** **48.2 / 100** (Clasificación *Grado F / Inaceptable*). Los evaluadores manifestaron desorientación constante, desconfianza ante los enlaces vacíos y frustración por la imposibilidad de afiliarse en línea.
-* **Puntuación SUS del Portal Rediseñado:** **89.5 / 100** (Clasificación *Grado A / Excelente*). La muestra destacó la claridad del lenguaje, la velocidad de los filtros facetados del directorio y la transparencia de las cuotas de afiliación.
-
-Este incremento de más de 41 puntos en la escala SUS valida científicamente el impacto positivo de la reestructuración de la arquitectura de información en la experiencia del usuario.
+Después de cada misión el participante indicó si la completó y su facilidad (SEQ, 1–7); al final respondió el SUS y dos preguntas abiertas.
 
 ---
 
+## 8.3 Resultados de las misiones y del SUS
+
+Las respuestas se procesaron con `tools/05_maze_y_clarity/calcular_resultados.py` (anexo: `anexo_8_respuestas_prueba_usabilidad.csv`).
+
+#### Tabla 8.1. *Resultado por misión (N = 5)*
+
+| Misión | Éxito autodeclarado | Éxito verificado | SEQ promedio (1–7) |
+|---|---|---|---|
+| M1 · Restaurante o soda afiliado | 5/5 | 5/5 encontraron un afiliado del sector *Alimentos y Gastronomía* que existe en el directorio. Con el criterio estricto "restaurante o soda": **3/5** (P4 anotó una cafetería y P5 una panadería) | **6.2** |
+| M2 · Afiliación + pago | 5/5 | **5/5** anotaron un radicado válido (formato CCA-2026-######) | **6.4** |
+
+**Recuperación del error de pago (M2).** 4 de los 5 participantes recibieron el rechazo de la tarjeta de prueba y **todos cambiaron de tarjeta y terminaron la afiliación sin ayuda** ("cambié de tarjeta", "cambiar el número de tarjeta por uno válido"). P3 usó directamente la tarjeta válida y no vio el rechazo. El mensaje de error ("fondos insuficientes; intente con otra tarjeta o pague por SINPE Móvil") cumplió su función de indicar la salida.
+
+#### Tabla 8.2. *System Usability Scale por participante*
+
+| Participante | P1 | P2 | P3 | P4 | P5 | **Promedio** |
+|---|---|---|---|---|---|---|
+| SUS | 85.0 | 85.0 | 97.5 | 97.5 | 100.0 | **93.0** (DE 7.4) |
+
+El SUS promedio de **93.0** supera ampliamente el promedio de la industria (68) y cae en el grado **A+** de la escala de Sauro y Lewis (2016). El puntaje más bajo (85.0) es el de P2 (51 años o más, nunca hace trámites en línea) y P1; aun así ambos están por encima de 84.1. **Limitación:** con N = 5 el intervalo de confianza es amplio y los participantes pertenecen al círculo cercano del equipo, lo que puede inflar la satisfacción; el valor debe leerse como indicativo, no como una medición poblacional.
+
 ---
 
-## 8.5 Referencias Bibliográficas del Capítulo (Normativa APA 7 — Literatura 2022–2026)
+## 8.4 Diagnóstico de fricción con Microsoft Clarity
 
-* Bhowmick, A., & Sen, A. (2022). Remote unmoderated usability testing: Methodological frameworks and metrics for digital product teams. *International Journal of Human-Computer Interaction*, 38(14), 1356-1372. https://doi.org/10.1080/10447318.2021.1994682
-* Sauro, J., Lewis, J. R., & Finstad, K. (2023). Standardized usability questionnaires: Comparing SUS, UMUX-LITE, and CSUQ across modern digital platforms. *Journal of Usability Studies*, 18(3), 112-131.
-* Speicher, M., Both, A., & Gaedke, M. (2022). Behavioral telemetry for automated web usability evaluation: Identifying rage clicks and cognitive friction. *ACM Transactions on Interactive Intelligent Systems*, 12(2), 1-34. https://doi.org/10.1145/3494582
+Ventana analizada: 8/11/2026, 17:00–23:59 (cubre las cinco sesiones de prueba; las respuestas del formulario van de 17:47 a 21:59).
+
+#### Tabla 8.3. *Métricas de comportamiento (Clarity)*
+
+| Métrica | Valor | Lectura |
+|---|---|---|
+| Sesiones | 6 (2 de bots excluidas) | 5 participantes + 1 sesión adicional (recarga o facilitador) |
+| Páginas por sesión | 3.33 | Recorrido corto: Inicio → Directorio/Afiliación |
+| Tiempo activo promedio | 7.3 min | Para dos misiones completas |
+| Profundidad de desplazamiento | 46.9 % | Los usuarios no necesitaron recorrer toda la página |
+| Clics de furia | **0 %** | Ningún elemento dejó de responder |
+| Clics muertos | **50 %** (3 sesiones) | Ver análisis del mapa de calor |
+| Retrocesos rápidos | **33.3 %** (2 sesiones) | Ver hallazgos |
+
+*Figura 8.1.* Panel de Clarity durante la ventana de prueba.
+![Figura 8.1](figuras/figura_8_1_clarity_dashboard_prueba.png)
+
+**Mapa de calor de Inicio (13 clics).** El 61.5 % de los clics de la portada fue al buscador (4 en la caja `#hero-search-input` y 4 en el botón *Buscar*): la Misión 1 se resolvió **buscando**, no navegando el menú, lo que valida la decisión de poner el buscador conectado a Algolia en la portada (Cap. 9). Los clics restantes cayeron en el título principal (2) y en la fila "Red Cantonal" (1), que son **texto no interactivo**: son los candidatos a los *dead clicks* registrados.
+
+*Figura 8.2.* Mapa de calor de clics, página de Inicio.
+![Figura 8.2](figuras/figura_8_2_clarity_heatmap_inicio.png)
+
+**Mapa de calor de Afiliación (145 clics en 36 elementos).** Los clics se concentran en los campos del formulario (nombre 19, teléfono 10). Destaca que el campo **comprobante SINPE recibió 10 clics, tantos como el de tarjeta (9)**, aunque la misión pedía pagar con tarjeta: SINPE es la pestaña por defecto y varios participantes empezaron a llenarla antes de cambiar a *Tarjeta*. Esto coincide con el comentario de P1: "no se separaba el número de comprobante en el formato que se pide".
+
+*Figura 8.3.* Mapa de calor de clics, página de Afiliación (paso de pago y constancia).
+![Figura 8.3](figuras/figura_8_3_clarity_heatmap_afiliacion.png)
+
+---
+
+## 8.5 Hallazgos y recomendaciones
+
+| # | Hallazgo (evidencia) | Severidad | Recomendación |
+|---|---|---|---|
+| H1 | El buscador concentra el 61.5 % de los clics de Inicio y M1 obtuvo SEQ 6.2 (Fig. 8.2, Tabla 8.1) | Positivo | Mantener el buscador como punto de entrada principal |
+| H2 | 2 de 5 eligieron una cafetería o panadería cuando se pidió "restaurante o soda" (Tabla 8.1) | Baja | Mostrar la categoría (Restaurante, Cafetería, Panadería) como etiqueta visible y como filtro en el directorio |
+| H3 | El rechazo de pago fue superado por 4/4 participantes que lo vieron (Tabla 8.1) | Positivo | Conservar el mensaje que explica la causa y ofrece la alternativa |
+| H4 | Clics en textos no interactivos del Hero (título, "Red Cantonal") → 50 % de sesiones con *dead clicks* (Fig. 8.1, 8.2) | Media | Enlazar "Red Cantonal" a la página de cantones o quitarle la apariencia de fila de lista |
+| H5 | Se interactuó con el campo de comprobante SINPE aunque la misión era con tarjeta; P1 reportó confusión con su formato (Fig. 8.3) | Media | Recordar el último método usado o preguntar el método antes del formulario; aceptar el comprobante con espacios o guiones y normalizarlo |
+| H6 | 33 % de sesiones con retroceso rápido (Fig. 8.1) | Baja | Revisar las grabaciones de esas sesiones; con N = 5 son 2 casos |
+
+**Conclusión.** Con datos reales de cinco participantes, el portal obtuvo un SUS de 93.0, éxito de 5/5 en la misión de afiliación y pago, y 0 % de clics de furia. Los puntos de fricción detectados son concretos y de bajo costo de corrección (H2, H4, H5). Por el tamaño de la muestra, estos resultados deben confirmarse con usuarios reales de la Cámara antes del lanzamiento.
+
+---
+
+## 8.6 Referencias
+
+* Brooke, J. (1996). SUS: A "quick and dirty" usability scale. En P. W. Jordan, B. Thomas, B. A. Weerdmeester & I. L. McClelland (Eds.), *Usability evaluation in industry* (pp. 189–194). Taylor & Francis.
+* International Organization for Standardization. (2018). *ISO 9241-11:2018. Ergonomics of human-system interaction — Part 11: Usability: Definitions and concepts*. ISO.
+* Microsoft. (2025). *Microsoft Clarity documentation*. https://learn.microsoft.com/en-us/clarity/
+* Nielsen, J., & Landauer, T. K. (1993). A mathematical model of the finding of usability problems. En *Proceedings of the INTERACT '93 and CHI '93 Conference on Human Factors in Computing Systems* (pp. 206–213). ACM.
+* Sauro, J. (2011). *A practical guide to the System Usability Scale*. Measuring Usability LLC.
+* Sauro, J., & Dumas, J. S. (2009). Comparison of three one-question, post-task usability questionnaires. En *Proceedings of the SIGCHI Conference on Human Factors in Computing Systems* (pp. 1599–1608). ACM.
+* Sauro, J., & Lewis, J. R. (2016). *Quantifying the user experience: Practical statistics for user research* (2.ª ed.). Morgan Kaufmann.

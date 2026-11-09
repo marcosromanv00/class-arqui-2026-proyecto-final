@@ -61,7 +61,7 @@ El buscador de la portada (Hero) y el del directorio comparten la misma búsqued
 | `customRanking` | `desc(profileScore)` | El sitio oficial no publica convenios ni distingue niveles de verificación: los 171 figuran como "certificadas". Por eso, en caso de empate, se prioriza la ficha más completa (teléfono, sitio web, Facebook y dirección; puntaje de 0 a 4), que es la que permite contactar al comercio. |
 | Tolerancia a errores de escritura | 1 error desde 4 letras; 2 errores desde 8 letras | Son los umbrales de Algolia: tolerar errores en palabras más cortas generaría demasiadas coincidencias falsas. |
 | Idioma | `ignorePlurals: es`, `removeStopWords: es`, `queryLanguages: es` | "Ferreterías" encuentra "Ferreteria"; palabras como "de" o "la" no afectan el resultado. |
-| Sinónimos | 52 grupos (29 bidireccionales y 23 unidireccionales) | Vocabulario controlado; se detalla en la sección 9.4.2. |
+| Sinónimos | 54 grupos (29 bidireccionales y 25 unidireccionales) | Vocabulario controlado; se detalla en la sección 9.4.2. |
 | `removeWordsIfNoResults` | `allOptional` | Búsqueda en texto libre: si ningún comercio contiene todas las palabras de una frase, el motor reintenta con las palabras como opcionales (sección 9.4.3). |
 
 **Dos ajustes basados en evidencia:**
@@ -91,7 +91,7 @@ La tolerancia a errores resuelve las faltas de escritura, pero no las **diferenc
 | soda el parqe | (no existe) | 0 | 0 | 3 sodas (coincidencia parcial) |
 | **Búsquedas sin resultados (35 en total)** | | **8 (23%)** | **3 (9%)** | **2 (6%)** |
 
-El vocabulario se amplió en dos rondas. La primera (28 grupos) cubrió los casos detectados en la simulación. La segunda (52 grupos) agregó **necesidades** que el usuario expresa con palabras que no aparecen en ninguna ficha, como "carro", "vehículo", "llanta", "aceite", "medicamentos", "cemento" o "fiesta". Cada grupo apunta solo a categorías o nombres que existen en los 171 registros, y su justificación queda registrada en el campo `_motivo` de `sinonimos_cca.json`. Incluye **costarriquenismos**, como "bomba" (gasolinera), "pulpería" (abarrotes) y "lavacar", y traduce **anglicismos** de las categorías oficiales, como "Rent a Car", "Marketing" y "Catering Service". Los sinónimos unidireccionales se usan cuando la relación no es simétrica: "carro" debe encontrar talleres, lavacar y repuestos, pero buscar "taller" no debe tratarse como "carro".
+El vocabulario se amplió en dos rondas. La primera (28 grupos) cubrió los casos detectados en la simulación. La segunda (52 grupos) agregó **necesidades** que el usuario expresa con palabras que no aparecen en ninguna ficha, como "carro", "vehículo", "llanta", "aceite", "medicamentos", "cemento" o "fiesta". Al preparar la prueba de usabilidad (Capítulo 8) se detectó que "almorzar" devolvía 0 resultados; se agregaron "almorzar" y "almuerzo" (54 grupos en total), y la consulta pasó a devolver 11 comercios con restaurantes y sodas primero. Las mediciones de esta sección corresponden a la versión de 52 grupos. Cada grupo apunta solo a categorías o nombres que existen en los 171 registros, y su justificación queda registrada en el campo `_motivo` de `sinonimos_cca.json`. Incluye **costarriquenismos**, como "bomba" (gasolinera), "pulpería" (abarrotes) y "lavacar", y traduce **anglicismos** de las categorías oficiales, como "Rent a Car", "Marketing" y "Catering Service". Los sinónimos unidireccionales se usan cuando la relación no es simétrica: "carro" debe encontrar talleres, lavacar y repuestos, pero buscar "taller" no debe tratarse como "carro".
 
 Prueba de la segunda ronda (12 consultas, antes y después):
 
@@ -200,7 +200,7 @@ Las pruebas se ejecutaron con `probar_typos.mjs` el 2026-11-08 a las 06:28 UTC, 
 
 | Variable | Directorio oficial actual | Propuesta implementada |
 |---|---|---|
-| Búsqueda por texto | Sin tolerancia a errores ni sinónimos | Búsqueda mientras se escribe, con tolerancia a errores, 52 grupos de sinónimos y frases en texto libre |
+| Búsqueda por texto | Sin tolerancia a errores ni sinónimos | Búsqueda mientras se escribe, con tolerancia a errores, 54 grupos de sinónimos y frases en texto libre |
 | Errores de escritura | Una letra distinta no encuentra nada | 10/10 consultas con errores recuperan el comercio correcto; los errores sobre sinónimos ("carrro") los corrige la capa de IA o el corrector local |
 | Diferencias de vocabulario | Hay que adivinar cuál de las 64 categorías usó la Cámara | Búsquedas sin resultados en la simulación: de 8 (23%) a 2 (6%) |
 | Filtrado geográfico | No existe (no hay cantón ni distrito) | Facetas cantón → distrito (155/171 registros con distrito) |

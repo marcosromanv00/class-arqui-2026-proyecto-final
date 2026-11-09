@@ -20,6 +20,8 @@ export interface ResultadoPago {
   referencia: string;
   estado: string;
   motivo?: string;
+  monto?: number;
+  notaFiscal?: string;
 }
 
 const soloDigitos = (s = "") => s.replace(/\D/g, "");
@@ -62,50 +64,91 @@ export function validarTarjeta(numero: string, nombre: string, vencimiento: stri
   return errores;
 }
 
-// --- Anti-replay de comprobantes SINPE (en el prototipo vive en el navegador; en producción, en la base de datos de Tesorería)
-const CLAVE = "cca-sinpe-comprobantes";
+// --- Regla 2: tarifas gremiales oficiales del prototipo
+export type Plan = "regular" | "corporativo";
+export const TARIFAS: Record<Plan, number> = { regular: 15000, corporativo: 35000 };
+
+/** El monto cobrado debe coincidir EXACTAMENTE con la tarifa del plan (evita montos manipulados en el navegador) */
+export function validarMonto(plan: Plan, monto: number): string | null {
+  const esperado = TARIFAS[plan];
+  if (esperado === undefined) return "Plan de afiliación desconocido.";
+  if (monto !== esperado) return `El monto (₡${monto.toLocaleString("es-CR")}) no coincide con la tarifa del plan (₡${esperado.toLocaleString("es-CR")}).`;
+  return null;
+}
+
+// --- Regla 3: anti-replay de comprobantes SINPE.
+// Se guarda la HUELLA SHA-256 del comprobante, no el número en claro. En el prototipo el registro
+// vive en el navegador (localStorage, con respaldo en memoria); en producción estaría en la base de datos de Tesorería.
+const CLAVE = "cca-sinpe-huellas";
+const memoria = new Set<string>();
+
+export async function huellaComprobante(comprobante: string): Promise<string> {
+  const datos = new TextEncoder().encode(`SINPE:${comprobante.trim()}`);
+  const hash = await globalThis.crypto.subtle.digest("SHA-256", datos);
+  return Array.from(new Uint8Array(hash), (b) => b.toString(16).padStart(2, "0")).join("");
+}
+
 function usados(): Set<string> {
+  const s = new Set(memoria);
   try {
-    return new Set(JSON.parse(localStorage.getItem(CLAVE) || "[]"));
+    (JSON.parse(globalThis.localStorage?.getItem(CLAVE) || "[]") as string[]).forEach((h) => s.add(h));
   } catch {
-    return new Set();
+    /* sin almacenamiento persistente */
+  }
+  return s;
+}
+function registrar(huella: string) {
+  memoria.add(huella);
+  try {
+    globalThis.localStorage?.setItem(CLAVE, JSON.stringify([...usados()]));
+  } catch {
+    /* sin almacenamiento: queda solo en memoria */
   }
 }
-function registrar(c: string) {
-  try {
-    const s = usados();
-    s.add(c);
-    localStorage.setItem(CLAVE, JSON.stringify([...s]));
-  } catch {
-    /* sin almacenamiento: el anti-replay no persiste */
-  }
-}
+
+// --- Regla 4: comprobante con respaldo fiscal
+// Ley 7092, art. 8: ningún inciso menciona cuotas a cámaras (el inciso i) se refiere a cuotas PATRONALES).
+// La deducibilidad depende del criterio general de gasto necesario para producir renta gravable.
+export const NOTA_FISCAL =
+  "Respaldo para su contabilidad. La cuota puede deducirse si constituye un gasto necesario para producir renta gravable (Ley N.º 7092, art. 8); confírmelo con su contador.";
 
 const nuevoRadicado = () => `CCA-${new Date().getFullYear()}-${Math.floor(100000 + Math.random() * 900000)}`;
 const espera = (ms: number) => new Promise((ok) => setTimeout(ok, ms));
+const rechazo = (metodo: Metodo, referencia: string, motivo: string): ResultadoPago => ({
+  aprobado: false, metodo, radicado: nuevoRadicado(), referencia, estado: "RECHAZADO", motivo,
+});
 
-/** Simula la respuesta del banco (≈1,2 s) */
+/** Simula la respuesta del banco (≈1,2 s por defecto; las pruebas usan demoraMs: 0) */
 export async function procesarPago(
   metodo: Metodo,
-  datos: { comprobante?: string; numero?: string }
+  datos: { comprobante?: string; numero?: string; plan: Plan; monto: number },
+  opciones: { demoraMs?: number } = {}
 ): Promise<ResultadoPago> {
-  await espera(1200);
-  const radicado = nuevoRadicado();
+  await espera(opciones.demoraMs ?? 1200);
+
+  const errorMonto = validarMonto(datos.plan, datos.monto);
+  if (errorMonto) return rechazo(metodo, "—", errorMonto);
+
+  const exito = (referencia: string): ResultadoPago => ({
+    aprobado: true, metodo, radicado: nuevoRadicado(), referencia, estado: "EN APROBACIÓN · TESORERÍA CCA",
+    monto: datos.monto, notaFiscal: NOTA_FISCAL,
+  });
 
   if (metodo === "sinpe") {
-    const c = datos.comprobante!.trim();
-    if (usados().has(c)) {
-      return { aprobado: false, metodo, radicado, referencia: c, estado: "RECHAZADO", motivo: `El comprobante ${c} ya fue registrado para otra afiliación. No se permiten comprobantes duplicados.` };
+    const c = (datos.comprobante ?? "").trim();
+    const huella = await huellaComprobante(c);
+    if (usados().has(huella)) {
+      return rechazo(metodo, c, `El comprobante ${c} ya fue registrado para otra afiliación. No se permiten comprobantes duplicados.`);
     }
-    registrar(c);
-    return { aprobado: true, metodo, radicado, referencia: c, estado: "EN APROBACIÓN · TESORERÍA CCA" };
+    registrar(huella);
+    return exito(c);
   }
 
   const n = soloDigitos(datos.numero);
   const ultimos = `**** ${n.slice(-4)}`;
   if (n === TARJETA_RECHAZO) {
-    return { aprobado: false, metodo, radicado, referencia: ultimos, estado: "RECHAZADO", motivo: "El banco emisor rechazó la transacción (fondos insuficientes). Intente con otra tarjeta o pague por SINPE Móvil." };
+    return rechazo(metodo, ultimos, "El banco emisor rechazó la transacción (fondos insuficientes). Intente con otra tarjeta o pague por SINPE Móvil.");
   }
   const autorizacion = String(Math.floor(100000 + Math.random() * 900000));
-  return { aprobado: true, metodo, radicado, referencia: `${ultimos} · Aut. ${autorizacion}`, estado: "EN APROBACIÓN · TESORERÍA CCA" };
+  return exito(`${ultimos} · Aut. ${autorizacion}`);
 }

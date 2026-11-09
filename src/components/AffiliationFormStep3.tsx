@@ -51,7 +51,7 @@ export function AffiliationFormStep3({ pago, merchantName, cedula, canton, price
           {fila("Fecha", new Date().toLocaleString("es-CR"))}
         </div>
         <div className="pt-2 border-t border-dashed border-border text-[11px] text-text-muted text-center font-sans">
-          Gasto 100% deducible del Impuesto sobre la Renta conforme al marco tributario costarricense.
+          {pago.notaFiscal ?? "Gasto deducible del Impuesto sobre la Renta conforme al marco tributario costarricense."}
         </div>
       </div>
 

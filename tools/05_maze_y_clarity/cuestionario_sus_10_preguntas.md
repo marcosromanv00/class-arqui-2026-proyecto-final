@@ -1,6 +1,6 @@
 # Cuestionario Oficial de Usabilidad (System Usability Scale - SUS)
 **Proyecto:** Cámara de Comercio de Alajuela (CCA)  
-**Metodología:** Escala estandarizada SUS (Brooke, 1996), adaptada al contexto del portal y aplicada en Google Forms después de las 3 tareas (ver `PRUEBA_USABILIDAD_REAL.md`).
+**Metodología:** Escala estandarizada SUS (Brooke, 1996), adaptada al contexto del portal y aplicada en Google Forms después de las 2 misiones (ver `PRUEBA_USABILIDAD_REAL.md`).
 
 ---
 
