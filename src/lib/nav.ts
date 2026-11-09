@@ -69,7 +69,7 @@ export const OPTIMAL_NAV: NavItem[] = [
   },
   {
     label: "Directorio Comercial de Alajuela",
-    shortLabel: "Directorio Comercial",
+    shortLabel: "Directorio",
     href: "/directorio",
     subitems: [
       {
@@ -108,7 +108,7 @@ export const OPTIMAL_NAV: NavItem[] = [
   },
   {
     label: "Contacto y Soporte",
-    shortLabel: "Contacto y Soporte",
+    shortLabel: "Contacto",
     href: "/contacto",
     subitems: [
       {

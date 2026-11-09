@@ -1,9 +1,9 @@
-import { ShieldCheck, Award, Users } from "lucide-react";
+import { Award } from "lucide-react";
 
 export function CamaraHero() {
   return (
     <div className="space-y-6 pb-12 border-b border-border">
-      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/5 border border-brand/20 text-xs font-semibold text-brand tracking-wide uppercase">
+      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/5 border border-brand/20 text-xs font-semibold text-brand tracking-wide uppercase font-mono">
         <Award className="w-3.5 h-3.5" />
         <span>Organización Gremial Oficial · Fundada en 1983</span>
       </div>
@@ -19,36 +19,57 @@ export function CamaraHero() {
         industrial y de servicios frente a las municipalidades y el gobierno central.
       </p>
 
-      {/* 3 Pilares Filosóficos */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
-        <div className="cca-card p-6 border-l-4 border-l-brand">
-          <div className="w-9 h-9 rounded-lg bg-brand/10 text-brand flex items-center justify-center mb-3">
-            <ShieldCheck className="w-5 h-5" />
+      {/* Triptych Editorial: Misión, Visión y Valores */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+        <div className="bg-surface border border-border rounded-xl p-6 sm:p-7 shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:border-brand/40 transition-all flex flex-col justify-between group">
+          <div>
+            <span className="text-[11px] font-mono font-semibold text-brand tracking-wider uppercase">
+              I · Propósito Institucional
+            </span>
+            <h3 className="font-serif font-semibold text-ink text-xl mt-1.5 mb-2.5">
+              Misión
+            </h3>
+            <p className="text-xs sm:text-sm text-ink-muted leading-relaxed">
+              <strong className="text-ink font-semibold">Certeza jurídica y defensa gremial:</strong> Representar con firmeza y rigor técnico al comercio formal, impulsando la simplificación de trámites, la libre empresa y la resolución pacífica de controversias mercantiles.
+            </p>
           </div>
-          <h3 className="font-semibold text-ink text-base">Misión Institucional</h3>
-          <p className="text-xs sm:text-sm text-text-muted mt-2 leading-relaxed">
-            Representar con firmeza y certeza técnica al comercio formal, impulsando la simplificación de trámites, la libre empresa y la resolución pacífica de controversias mercantiles.
-          </p>
+          <div className="mt-5 pt-3 border-t border-border/80 text-[11px] font-mono text-text-muted">
+            Defensa y representatividad
+          </div>
         </div>
 
-        <div className="cca-card p-6 border-l-4 border-l-amber-600">
-          <div className="w-9 h-9 rounded-lg bg-amber-500/10 text-amber-700 flex items-center justify-center mb-3">
-            <Award className="w-5 h-5" />
+        <div className="bg-surface border border-border rounded-xl p-6 sm:p-7 shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:border-brand/40 transition-all flex flex-col justify-between group">
+          <div>
+            <span className="text-[11px] font-mono font-semibold text-brand tracking-wider uppercase">
+              II · Horizonte Estratégico
+            </span>
+            <h3 className="font-serif font-semibold text-ink text-xl mt-1.5 mb-2.5">
+              Visión
+            </h3>
+            <p className="text-xs sm:text-sm text-ink-muted leading-relaxed">
+              <strong className="text-ink font-semibold">Liderazgo regional y encadenamiento:</strong> Consolidarnos como la cámara regional modelo en Centroamérica por su vanguardia digital, su red de integración entre multinacionales y pymes, y su impacto directo en el empleo formal.
+            </p>
           </div>
-          <h3 className="font-semibold text-ink text-base">Visión de Futuro</h3>
-          <p className="text-xs sm:text-sm text-text-muted mt-2 leading-relaxed">
-            Ser la cámara regional modelo en Centroamérica por su liderazgo digital, su red de encadenamiento entre multinacionales y pymes, y su impacto en el empleo digno.
-          </p>
+          <div className="mt-5 pt-3 border-t border-border/80 text-[11px] font-mono text-text-muted">
+            Competitividad 2026 – 2030
+          </div>
         </div>
 
-        <div className="cca-card p-6 border-l-4 border-l-stone-700">
-          <div className="w-9 h-9 rounded-lg bg-stone-200 text-stone-800 flex items-center justify-center mb-3">
-            <Users className="w-5 h-5" />
+        <div className="bg-surface border border-border rounded-xl p-6 sm:p-7 shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:border-brand/40 transition-all flex flex-col justify-between group">
+          <div>
+            <span className="text-[11px] font-mono font-semibold text-brand tracking-wider uppercase">
+              III · Principios Rectores
+            </span>
+            <h3 className="font-serif font-semibold text-ink text-xl mt-1.5 mb-2.5">
+              Valores
+            </h3>
+            <p className="text-xs sm:text-sm text-ink-muted leading-relaxed">
+              <strong className="text-ink font-semibold">Independencia y transparencia:</strong> Rigor ético comercial, gobernanza auditada, solidaridad intercantonal y compromiso incondicional con el bienestar y progreso económico de Alajuela.
+            </p>
           </div>
-          <h3 className="font-semibold text-ink text-base">Valores Rectores</h3>
-          <p className="text-xs sm:text-sm text-text-muted mt-2 leading-relaxed">
-            Independencia gremial, transparencia en la gobernanza, solidaridad intercantonal, rigor ético comercial y compromiso con el bienestar de Alajuela.
-          </p>
+          <div className="mt-5 pt-3 border-t border-border/80 text-[11px] font-mono text-text-muted">
+            Ética y legitimidad gremial
+          </div>
         </div>
       </div>
     </div>

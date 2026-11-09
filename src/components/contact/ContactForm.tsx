@@ -30,11 +30,11 @@ export function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="cca-card p-8 text-center space-y-4">
-        <div className="w-12 h-12 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center mx-auto">
+      <div className="bg-surface border border-border rounded-xl p-8 text-center space-y-4 shadow-[0_1px_3px_rgba(0,0,0,0.02)]">
+        <div className="w-12 h-12 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 flex items-center justify-center mx-auto">
           <CheckCircle2 className="w-6 h-6" />
         </div>
-        <h3 className="text-xl font-semibold text-ink">
+        <h3 className="font-serif text-xl font-semibold text-ink">
           Mensaje Recibido por la Administración
         </h3>
         <p className="text-xs sm:text-sm text-ink-muted max-w-md mx-auto">
@@ -65,9 +65,9 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="cca-card p-6 sm:p-8 space-y-5">
+    <form onSubmit={handleSubmit} className="bg-surface border border-border rounded-xl p-6 sm:p-8 space-y-5 shadow-[0_1px_3px_rgba(0,0,0,0.02)]">
       <div className="border-b border-border pb-4">
-        <h3 className="text-lg font-semibold text-ink">
+        <h3 className="font-serif text-xl font-semibold text-ink">
           Enviar Mensaje a la Administración CCA
         </h3>
         <p className="text-xs text-text-muted mt-0.5">

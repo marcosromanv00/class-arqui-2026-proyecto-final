@@ -32,8 +32,8 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Columna Izquierda: Información de Sede */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="cca-card p-6 space-y-5">
-              <h3 className="text-base font-semibold text-ink pb-3 border-b border-border">
+            <div className="bg-surface border border-border rounded-xl p-6 sm:p-7 space-y-5 shadow-[0_1px_3px_rgba(0,0,0,0.02)]">
+              <h3 className="font-serif text-lg font-semibold text-ink pb-3 border-b border-border">
                 Sede Central Histórica
               </h3>
 

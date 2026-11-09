@@ -7,7 +7,7 @@ export function ServicesHub() {
       id: "arbitraje",
       title: "Centro de Conciliación y Arbitraje Mercantil",
       badge: "Ley N.º 7727 (RAC)",
-      description: "Mecanismo extrajudicial para dirimir controversias comerciales entre socios, clientes o proveedores en un promedio de 15 a 30 días, con validez de sentencia judicial firme.",
+      description: "Resolución alterna de controversias comerciales en 15 a 30 días hábiles, con plena validez de sentencia judicial firme y cosa juzgada material.",
       icon: Scale,
       href: "/servicios/arbitraje",
       actionText: "Ver procedimiento y tarifas",
@@ -16,7 +16,7 @@ export function ServicesHub() {
       id: "patentes",
       title: "Guía de Patente Municipal y Uso de Suelo",
       badge: "Ventanilla Técnica Cantonal",
-      description: "Acompañamiento integral para apertura formal de comercios en Alajuela. Revisión de uso de suelo, permisos del Ministerio de Salud y enlace directo municipal.",
+      description: "Acompañamiento integral para apertura formal de comercios: revisión técnica de uso de suelo, permisos del Ministerio de Salud y licencias municipales.",
       icon: FileCheck,
       href: "/servicios/tramites",
       actionText: "Consultar requisitos paso a paso",
@@ -25,7 +25,7 @@ export function ServicesHub() {
       id: "convenios",
       title: "Catálogo de Convenios y Descuentos Comerciales",
       badge: "+40 Alianzas Activas",
-      description: "Beneficios exclusivos en salud privada, datáfonos BAC Compra-Click con tarifas preferenciales, combustible empresarial y pólizas colectivas del INS.",
+      description: "Tarifas preferenciales en salud privada, datáfonos BAC Compra-Click, combustible empresarial y pólizas colectivas de responsabilidad civil con el INS.",
       icon: Award,
       href: "/servicios/convenios",
       actionText: "Explorar catálogo de convenios",
@@ -34,7 +34,7 @@ export function ServicesHub() {
       id: "tributario",
       title: "Asesoría Legal y Escudo Tributario (Ley 7092)",
       badge: "Defensa Gremial",
-      description: "Orientación en cumplimiento de renta e IVA (D-101 y D-104), facturación electrónica ante Hacienda y aprovechamiento de la deducción fiscal del 100% de la cuota.",
+      description: "Deducción al 100% de la cuota en el Impuesto sobre la Renta (Art. 8 Ley 7092), asesoría en declaraciones D-101/D-104 y facturación electrónica.",
       icon: ShieldCheck,
       href: "/contacto?asunto=asesoria-tributaria",
       actionText: "Solicitar asesoría fiscal",
@@ -43,7 +43,7 @@ export function ServicesHub() {
       id: "capacitacion",
       title: "Capacitaciones y Formación Empresarial",
       badge: "Talleres Mensuales",
-      description: "Seminarios prácticos en reformas laborales, ciberseguridad para pymes, inteligencia artificial aplicada al comercio y marketing digital de conversión.",
+      description: "Seminarios prácticos de vanguardia: reformas al Código de Trabajo, ciberseguridad para pymes y herramientas de inteligencia artificial para ventas.",
       icon: GraduationCap,
       href: "/contacto?asunto=capacitaciones",
       actionText: "Consultar calendario de talleres",
@@ -66,34 +66,36 @@ export function ServicesHub() {
 
       {/* Grid de Servicios */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {pillars.map((p) => {
-          const Icon = p.icon;
+        {pillars.map((p, idx) => {
           return (
-            <div key={p.id} className="cca-card p-6 flex flex-col justify-between hover:border-brand/40 transition-colors">
+            <div
+              key={p.id}
+              className="bg-surface border border-border rounded-xl p-6 sm:p-7 flex flex-col justify-between hover:border-brand/40 hover:shadow-xs transition-all duration-200 group"
+            >
               <div>
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-brand/5 border border-brand/20 text-brand flex items-center justify-center">
-                    <Icon className="w-5 h-5" />
-                  </div>
-                  <span className="text-[11px] font-mono text-text-muted bg-surface-muted px-2 py-0.5 rounded border border-border">
+                <div className="flex items-center justify-between mb-3.5">
+                  <span className="font-mono text-xs font-bold text-brand tracking-wider">
+                    0{idx + 1} / SERVICIO
+                  </span>
+                  <span className="text-[10px] font-mono font-medium text-text-muted bg-surface-muted px-2 py-0.5 rounded border border-border">
                     {p.badge}
                   </span>
                 </div>
-                <h3 className="text-lg font-semibold text-ink mb-2">
+                <h3 className="font-serif text-lg font-semibold text-ink mb-2 leading-snug group-hover:text-brand transition-colors">
                   {p.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-text-muted leading-relaxed">
+                <p className="text-xs sm:text-sm text-ink-muted leading-relaxed">
                   {p.description}
                 </p>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-border">
+              <div className="mt-6 pt-4 border-t border-border/80">
                 <Link
                   href={p.href}
                   className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand hover:text-brand-hover hover:underline"
                 >
                   <span>{p.actionText}</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                 </Link>
               </div>
             </div>

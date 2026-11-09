@@ -48,7 +48,7 @@ export function NewsPublications() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Publicación Principal Destacada */}
-          <article className="lg:col-span-5 bg-surface-muted border border-border rounded-lg overflow-hidden flex flex-col justify-between">
+          <article className="lg:col-span-5 bg-surface border border-border rounded-xl overflow-hidden flex flex-col justify-between shadow-[0_1px_3px_rgba(0,0,0,0.02)]">
             <div className="relative aspect-16/10 w-full overflow-hidden bg-slate-900">
               <img
                 src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1000&q=80"
@@ -56,7 +56,7 @@ export function NewsPublications() {
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
-              <div className="absolute top-3 left-3 bg-brand text-surface text-[11px] font-semibold px-2 py-0.5 rounded-sm uppercase tracking-wide">
+              <div className="absolute top-3 left-3 bg-brand text-surface text-[10px] font-mono font-semibold px-2 py-0.5 rounded uppercase tracking-wider">
                 Informe 2026
               </div>
             </div>
@@ -64,13 +64,13 @@ export function NewsPublications() {
             <div className="p-5 sm:p-6 space-y-3">
               <div className="flex items-center gap-2 text-xs text-text-muted font-mono">
                 <span className="flex items-center gap-1">
-                  <Calendar className="w-3 h-3" /> Noviembre 2026
+                  <Calendar className="w-3 h-3 text-brand" /> Noviembre 2026
                 </span>
                 <span>·</span>
                 <span>PDF (2.4 MB)</span>
               </div>
 
-              <h3 className="text-lg font-semibold text-ink leading-snug">
+              <h3 className="font-serif text-lg sm:text-xl font-semibold text-ink leading-snug">
                 Balance Económico de Alajuela: Comercio tradicional, inversión y zonas francas
               </h3>
 
@@ -81,7 +81,7 @@ export function NewsPublications() {
               <div className="pt-2 border-t border-border flex items-center justify-between">
                 <a
                   href="#contacto"
-                  className="btn-cca-primary px-3.5 py-1.5 text-xs inline-flex items-center gap-1.5"
+                  className="btn-cca-primary px-3.5 py-1.5 text-xs inline-flex items-center gap-1.5 shadow-xs"
                 >
                   <Download className="w-3 h-3" />
                   <span>Descargar informe</span>

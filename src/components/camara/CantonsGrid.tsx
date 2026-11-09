@@ -26,25 +26,25 @@ export function CantonsGrid() {
         {CANTONS_ALAJUELA.map((canton) => (
           <div
             key={canton.name}
-            className="p-4 rounded-lg bg-surface border border-border hover:border-brand/40 transition-colors shadow-2xs flex flex-col justify-between"
+            className="p-4 rounded-xl bg-surface border border-border hover:border-brand/40 transition-all shadow-[0_1px_2px_rgba(0,0,0,0.02)] flex flex-col justify-between"
           >
             <div>
-              <div className="flex items-baseline justify-between">
+              <div className="flex items-baseline justify-between gap-2">
                 <h3 className="font-semibold text-ink text-sm">
                   {canton.name}
                 </h3>
-                <span className="text-xs font-mono font-semibold text-brand">
+                <span className="text-[10px] font-mono font-semibold text-brand bg-brand/5 border border-brand/20 px-1.5 py-0.5 rounded shrink-0">
                   {canton.afiliados} socios
                 </span>
               </div>
               <p className="text-[11px] text-text-muted mt-1">
-                Cabecera: <span className="text-ink-muted">{canton.cabecera}</span>
+                Cabecera: <span className="text-ink font-medium">{canton.cabecera}</span>
               </p>
               <p className="text-xs text-ink-muted mt-2 leading-relaxed">
                 {canton.actividadPrincipal}
               </p>
             </div>
-            <div className="mt-3 pt-2 border-t border-border/60 text-[10px] text-text-muted uppercase tracking-wider">
+            <div className="mt-3 pt-2 border-t border-border/70 text-[10px] font-mono text-text-muted uppercase tracking-wider">
               Jurisdicción Gremial Activa
             </div>
           </div>

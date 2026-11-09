@@ -84,32 +84,32 @@ export default function ArbitrajePage() {
             Etapas del Procedimiento Arbitral
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="cca-card p-5">
-              <span className="text-xs font-mono font-bold text-brand">01 / Radicación</span>
-              <h3 className="font-semibold text-ink text-sm mt-1 mb-1.5">Solicitud Formal</h3>
-              <p className="text-xs text-text-muted leading-relaxed">
-                Presentación de la controversia mediante formulario físico o digital con copia del contrato mercantil.
+            <div className="bg-surface border border-border rounded-xl p-5 hover:border-brand/40 transition-all shadow-[0_1px_2px_rgba(0,0,0,0.02)]">
+              <span className="text-[11px] font-mono font-bold text-brand uppercase tracking-wider">01 / Radicación</span>
+              <h3 className="font-semibold text-ink text-sm mt-1.5 mb-1.5">Solicitud Formal</h3>
+              <p className="text-xs text-ink-muted leading-relaxed">
+                Presentación de la controversia mediante <strong className="text-ink">formulario digital o físico</strong> adjuntando el contrato mercantil respectivo.
               </p>
             </div>
-            <div className="cca-card p-5">
-              <span className="text-xs font-mono font-bold text-brand">02 / Notificación</span>
-              <h3 className="font-semibold text-ink text-sm mt-1 mb-1.5">Convocatoria a Partes</h3>
-              <p className="text-xs text-text-muted leading-relaxed">
-                Notificación formal a la contraparte en un plazo de 3 días hábiles fijando fecha de audiencia privada.
+            <div className="bg-surface border border-border rounded-xl p-5 hover:border-brand/40 transition-all shadow-[0_1px_2px_rgba(0,0,0,0.02)]">
+              <span className="text-[11px] font-mono font-bold text-brand uppercase tracking-wider">02 / Notificación</span>
+              <h3 className="font-semibold text-ink text-sm mt-1.5 mb-1.5">Convocatoria a Partes</h3>
+              <p className="text-xs text-ink-muted leading-relaxed">
+                Emplazamiento a la contraparte en un plazo de <strong className="text-ink">3 días hábiles</strong>, fijando fecha para la audiencia de conciliación.
               </p>
             </div>
-            <div className="cca-card p-5">
-              <span className="text-xs font-mono font-bold text-brand">03 / Audiencia</span>
-              <h3 className="font-semibold text-ink text-sm mt-1 mb-1.5">Sesión de Mediación</h3>
-              <p className="text-xs text-text-muted leading-relaxed">
-                Diálogo asistido por un abogado mediador neutral en la sala de audiencias de la sede gremial de la CCA.
+            <div className="bg-surface border border-border rounded-xl p-5 hover:border-brand/40 transition-all shadow-[0_1px_2px_rgba(0,0,0,0.02)]">
+              <span className="text-[11px] font-mono font-bold text-brand uppercase tracking-wider">03 / Audiencia</span>
+              <h3 className="font-semibold text-ink text-sm mt-1.5 mb-1.5">Sesión de Mediación</h3>
+              <p className="text-xs text-ink-muted leading-relaxed">
+                Diálogo técnico confidencial conducido por un <strong className="text-ink">árbitro neutral acreditado</strong> en la sede de la CCA.
               </p>
             </div>
-            <div className="cca-card p-5">
-              <span className="text-xs font-mono font-bold text-brand">04 / Resolución</span>
-              <h3 className="font-semibold text-ink text-sm mt-1 mb-1.5">Acuerdo o Laudo</h3>
-              <p className="text-xs text-text-muted leading-relaxed">
-                Suscripción del acta de conciliación con carácter vinculante idéntico a una sentencia judicial firme.
+            <div className="bg-surface border border-border rounded-xl p-5 hover:border-brand/40 transition-all shadow-[0_1px_2px_rgba(0,0,0,0.02)]">
+              <span className="text-[11px] font-mono font-bold text-brand uppercase tracking-wider">04 / Resolución</span>
+              <h3 className="font-semibold text-ink text-sm mt-1.5 mb-1.5">Acuerdo o Laudo</h3>
+              <p className="text-xs text-ink-muted leading-relaxed">
+                Firma del acta o laudo con <strong className="text-ink">fuerza de cosa juzgada material</strong>, definitiva e inapelable bajo Ley 7727.
               </p>
             </div>
           </div>

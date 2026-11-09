@@ -121,20 +121,20 @@ export function EmploymentClientView() {
         {filteredVacancies.map((vacancy) => (
           <div
             key={vacancy.id}
-            className="cca-card p-6 flex flex-col justify-between hover:border-brand/40 transition-colors"
+            className="bg-surface border border-border rounded-xl p-6 flex flex-col justify-between hover:border-brand/40 hover:shadow-xs transition-all duration-200"
           >
             <div>
               <div className="flex items-start justify-between gap-3 pb-3 mb-3 border-b border-border">
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="px-2 py-0.5 rounded bg-brand/5 text-brand text-[11px] font-semibold border border-brand/20">
+                    <span className="px-2 py-0.5 rounded bg-brand/5 text-brand text-[10px] font-mono font-semibold border border-brand/20 uppercase tracking-wider">
                       {vacancy.category}
                     </span>
                     <span className="text-[11px] font-mono text-text-muted">
                       {vacancy.type}
                     </span>
                   </div>
-                  <h3 className="font-semibold text-ink text-base sm:text-lg mt-1.5">
+                  <h3 className="font-semibold text-ink text-base sm:text-lg mt-1.5 leading-snug">
                     {vacancy.title}
                   </h3>
                   <p className="text-xs font-medium text-ink-muted flex items-center gap-1.5 mt-0.5">
@@ -147,7 +147,7 @@ export function EmploymentClientView() {
                 </span>
               </div>
 
-              <p className="text-xs sm:text-sm text-text-muted leading-relaxed mb-4">
+              <p className="text-xs sm:text-sm text-ink-muted leading-relaxed mb-4">
                 {vacancy.description}
               </p>
 
@@ -155,7 +155,7 @@ export function EmploymentClientView() {
                 <span className="font-semibold text-ink block text-[11px] uppercase tracking-wider">
                   Requisitos Principales:
                 </span>
-                <ul className="space-y-1 text-text-muted">
+                <ul className="space-y-1 text-ink-muted">
                   {vacancy.requirements.map((req, i) => (
                     <li key={i} className="flex items-start gap-1.5">
                       <span className="text-brand shrink-0">•</span>
@@ -168,7 +168,7 @@ export function EmploymentClientView() {
 
             <div className="mt-6 pt-4 border-t border-border flex items-center justify-between gap-4">
               <div className="text-xs">
-                <span className="text-text-muted block text-[10px] uppercase">Rango Salarial</span>
+                <span className="text-text-muted block text-[10px] uppercase font-mono">Rango Salarial</span>
                 <span className="font-mono font-semibold text-ink text-xs sm:text-sm">
                   {vacancy.salaryRange}
                 </span>

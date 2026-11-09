@@ -43,7 +43,7 @@ export function Header() {
           </Link>
 
           {/* Navegación Validada en Optimal Workshop */}
-          <nav aria-label="Navegación principal" className="hidden lg:flex items-center gap-3 xl:gap-5 2xl:gap-6 text-xs 2xl:text-sm font-medium text-ink-muted">
+          <nav aria-label="Navegación principal" className="hidden lg:flex items-center gap-5 xl:gap-8 text-sm font-medium text-ink-muted">
             {OPTIMAL_NAV.map((item) => (
               <div
                 key={item.label}
@@ -51,27 +51,32 @@ export function Header() {
                 onMouseEnter={() => item.subitems && setActiveMenu(item.label)}
                 onMouseLeave={() => setActiveMenu(null)}
               >
-                <div className="flex items-center gap-1">
-                  <Link href={item.href} className="py-2 hover:text-brand transition-colors whitespace-nowrap">
-                    <span className="hidden 2xl:inline">{item.label}</span>
-                    <span className="2xl:hidden inline">{item.shortLabel ?? item.label}</span>
+                <div className="flex items-center gap-1 group/item">
+                  <Link
+                    href={item.href}
+                    className="py-2 hover:text-brand transition-colors whitespace-nowrap text-[13px] xl:text-sm font-medium tracking-tight"
+                  >
+                    <span>{item.shortLabel ?? item.label}</span>
                   </Link>
                   {item.subitems && (
                     <button
                       type="button"
                       aria-label={`Ver submenú de ${item.label}`}
                       onClick={() => setActiveMenu(activeMenu === item.label ? null : item.label)}
-                      className="text-text-muted hover:text-ink p-0.5"
+                      className="text-text-muted hover:text-ink p-0.5 group-hover/item:text-brand transition-colors"
                     >
                       <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-150 ${activeMenu === item.label ? "rotate-180" : ""}`} />
                     </button>
                   )}
                 </div>
 
-                {/* Submenú Flotante con Descripciones Escaneables */}
+                {/* Submenú Flotante con Taxonomía Oficial y Descripciones Escaneables */}
                 {item.subitems && activeMenu === item.label && (
-                  <div className="absolute left-0 top-full pt-1.5 w-80 z-50 animate-in fade-in slide-in-from-top-1">
+                  <div className="absolute left-0 top-full pt-1.5 w-84 z-50 animate-in fade-in slide-in-from-top-1">
                     <div className="bg-surface border border-border rounded-xl p-2 shadow-xl space-y-1">
+                      <div className="px-2.5 py-1.5 border-b border-border/60 text-[10px] font-mono font-semibold text-brand tracking-wider uppercase">
+                        {item.label}
+                      </div>
                       {item.subitems.map((sub) => (
                         <Link
                           key={sub.label}

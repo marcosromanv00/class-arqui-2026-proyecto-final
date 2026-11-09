@@ -48,34 +48,34 @@ export default function TramitesPage() {
         </div>
 
         {/* Sección de Preguntas Frecuentes sobre Patentes */}
-        <div className="cca-card p-6 sm:p-8 space-y-6">
-          <div className="flex items-center gap-2 text-xs font-semibold text-brand uppercase tracking-wider">
+        <div className="bg-surface border border-border rounded-xl p-6 sm:p-8 space-y-6 shadow-[0_1px_3px_rgba(0,0,0,0.02)]">
+          <div className="flex items-center gap-2 text-xs font-mono font-semibold text-brand uppercase tracking-wider">
             <HelpCircle className="w-4 h-4" />
             <span>Dudas Habituales sobre Licencias Municipales</span>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs sm:text-sm">
-            <div className="space-y-1.5">
+            <div className="space-y-1.5 p-4 rounded-lg bg-surface-muted/60 border border-border/70">
               <h3 className="font-semibold text-ink">¿Cuánto cuesta la patente comercial municipal?</h3>
-              <p className="text-text-muted leading-relaxed">
-                El arancel de la patente comercial no es un monto fijo inicial: se calcula sobre los ingresos brutos anuales declarados ante Tributación (Ley de Patentes de Alajuela N.º 8461). El trámite de solicitud e inspección municipal no tiene costo impositivo anticipado.
+              <p className="text-ink-muted leading-relaxed">
+                <strong className="text-ink font-semibold">Cálculo sobre ingresos brutos anuales:</strong> Conforme a la Ley de Patentes de Alajuela (N.º 8461). El trámite de solicitud e inspección técnica inicial no tiene costo impositivo anticipado.
               </p>
             </div>
-            <div className="space-y-1.5">
+            <div className="space-y-1.5 p-4 rounded-lg bg-surface-muted/60 border border-border/70">
               <h3 className="font-semibold text-ink">¿Qué sucede si inicio operaciones sin patente?</h3>
-              <p className="text-text-muted leading-relaxed">
-                Operar sin patente comercial expone al negocio a la clausura inmediata por parte de la Policía Municipal, colocación de sellos y una multa pecuniaria acumulativa. Por ello, la CCA prioriza el acompañamiento formal preventivo.
+              <p className="text-ink-muted leading-relaxed">
+                <strong className="text-ink font-semibold">Riesgo de clausura inmediata:</strong> La Policía Municipal coloca sellos y aplica multas pecuniarias acumulativas. La CCA brinda acompañamiento preventivo para operar formalmente desde el día uno.
               </p>
             </div>
-            <div className="space-y-1.5">
+            <div className="space-y-1.5 p-4 rounded-lg bg-surface-muted/60 border border-border/70">
               <h3 className="font-semibold text-ink">¿La CCA puede gestionar el trámite en mi nombre?</h3>
-              <p className="text-text-muted leading-relaxed">
-                Sí. Mediante poder especial otorgado por el representante legal, nuestros gestores gremiales autorizados pueden radicar, dar seguimiento y retirar las resoluciones municipales en ventanilla física y digital.
+              <p className="text-ink-muted leading-relaxed">
+                <strong className="text-ink font-semibold">Gestión por representación oficial:</strong> Mediante poder otorgado por el representante legal, nuestros gestores radican, dan seguimiento y retiran resoluciones en ventanilla física y digital.
               </p>
             </div>
-            <div className="space-y-1.5">
+            <div className="space-y-1.5 p-4 rounded-lg bg-surface-muted/60 border border-border/70">
               <h3 className="font-semibold text-ink">¿Puedo cambiar la ubicación de mi patente?</h3>
-              <p className="text-text-muted leading-relaxed">
-                Sí, se tramita un traslado de patente. Requiere solicitar un nuevo Uso de Suelo en el nuevo local comercial y la actualización del Permiso Sanitario de Funcionamiento del Ministerio de Salud.
+              <p className="text-ink-muted leading-relaxed">
+                <strong className="text-ink font-semibold">Traslado de licencia comercial:</strong> Es completamente viable. Requiere tramitar el nuevo Uso de Suelo en el inmueble y actualizar el Permiso Sanitario ante el Ministerio de Salud.
               </p>
             </div>
           </div>

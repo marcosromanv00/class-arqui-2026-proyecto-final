@@ -54,28 +54,33 @@ export function ServicesPillars() {
 
         {/* 4 Servicios en Formato Ledger Escaneable */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
-          {CORE_SERVICES.map((item) => {
-            const Icon = item.icon;
+          {CORE_SERVICES.map((item, idx) => {
             return (
               <div
                 key={item.title}
-                className="p-5 bg-surface border border-border rounded-lg flex flex-col justify-between hover:border-brand/40 transition-colors"
+                className="p-6 bg-surface border border-border rounded-xl flex flex-col justify-between hover:border-brand/40 hover:shadow-xs transition-all duration-200 group"
               >
                 <div>
-                  <div className="w-8 h-8 rounded-md bg-surface-muted border border-border flex items-center justify-center text-brand mb-3">
-                    <Icon className="w-4 h-4" />
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="font-mono text-xs font-bold text-brand tracking-wider">
+                      0{idx + 1} / PILAR
+                    </span>
+                    <span className="text-[10px] font-mono text-text-muted bg-surface-muted px-2 py-0.5 rounded border border-border">
+                      {item.benefit}
+                    </span>
                   </div>
-                  <h3 className="text-base font-semibold text-ink">
+                  <h3 className="font-serif text-lg font-semibold text-ink group-hover:text-brand transition-colors">
                     {item.title}
                   </h3>
-                  <p className="mt-1.5 text-xs sm:text-sm text-ink-muted leading-relaxed">
+                  <p className="mt-2 text-xs sm:text-sm text-ink-muted leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
-                <div className="mt-4 pt-3 border-t border-border flex items-center justify-between text-xs text-text-muted">
-                  <span>{item.benefit}</span>
-                  <a href="#contacto" className="text-brand font-medium hover:underline inline-flex items-center gap-1">
-                    Consultar <ArrowRight className="w-3 h-3" />
+                <div className="mt-5 pt-3 border-t border-border/80 flex items-center justify-between text-xs text-text-muted">
+                  <span className="font-mono text-[11px] text-text-muted">Gestión Oficial CCA</span>
+                  <a href="#contacto" className="text-brand font-semibold hover:underline inline-flex items-center gap-1">
+                    <span>Consultar</span>
+                    <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                   </a>
                 </div>
               </div>
@@ -84,7 +89,7 @@ export function ServicesPillars() {
         </div>
 
         {/* Guía Interactiva de Requisitos (Patentes vs Arbitraje) */}
-        <div id="tramites" className="bg-surface border border-border rounded-lg p-6 sm:p-8">
+        <div id="tramites" className="bg-surface border border-border rounded-xl p-6 sm:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.02)]">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-5 border-b border-border gap-4">
             <div>
               <h3 className="text-lg sm:text-xl font-semibold text-ink">

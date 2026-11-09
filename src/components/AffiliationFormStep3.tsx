@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { CheckCircle2 } from "lucide-react";
 import type { ResultadoPago } from "@/lib/pagos";
@@ -12,6 +15,11 @@ interface AffiliationFormStep3Props {
 }
 
 export function AffiliationFormStep3({ pago, merchantName, cedula, canton, price, onReset }: AffiliationFormStep3Props) {
+  const [fecha, setFecha] = useState("Fecha de confirmación en línea");
+
+  useEffect(() => {
+    setFecha(new Date().toLocaleDateString("es-CR", { year: "numeric", month: "long", day: "numeric" }));
+  }, []);
   const sinpe = pago.metodo === "sinpe";
   const fila = (k: string, v: string, clase = "text-ink") => (
     <div className="flex justify-between gap-4">
@@ -48,7 +56,7 @@ export function AffiliationFormStep3({ pago, merchantName, cedula, canton, price
           {fila("Cédula", cedula)}
           {fila("Cantón", canton)}
           {fila("Cuota mensual", `₡${price.toLocaleString("es-CR")}`, "font-bold text-ink")}
-          {fila("Fecha", new Date().toLocaleString("es-CR"))}
+          {fila("Fecha", fecha)}
         </div>
         <div className="pt-2 border-t border-dashed border-border text-[11px] text-text-muted text-center font-sans">
           Gasto 100% deducible del Impuesto sobre la Renta conforme al marco tributario costarricense.

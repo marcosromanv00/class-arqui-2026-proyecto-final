@@ -51,43 +51,45 @@ export default function ConveniosPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {CONVENIOS_CATALOG.map((conv) => (
-              <div key={conv.id} className="cca-card p-6 flex flex-col justify-between hover:border-brand/40 transition-colors">
+              <div key={conv.id} className="bg-surface border border-border rounded-xl p-6 flex flex-col justify-between hover:border-brand/40 hover:shadow-xs transition-all duration-200">
                 <div>
                   <div className="flex items-center justify-between pb-3 mb-3 border-b border-border">
-                    <span className="text-[11px] font-mono font-medium text-brand uppercase">
+                    <span className="text-[10px] font-mono font-semibold text-brand uppercase tracking-wider bg-brand/5 border border-brand/20 px-2 py-0.5 rounded">
                       {conv.category}
                     </span>
-                    <ShieldCheck className="w-4 h-4 text-text-muted" />
+                    <span className="text-[11px] font-mono text-emerald-800 bg-emerald-50 border border-emerald-200/80 px-2 py-0.5 rounded font-medium">
+                      Activo 2026
+                    </span>
                   </div>
-                  <h3 className="font-semibold text-ink text-base">
+                  <h3 className="font-serif font-semibold text-ink text-lg">
                     {conv.partner}
                   </h3>
-                  <div className="mt-2 p-2.5 rounded bg-brand/5 border border-brand/20 text-xs font-semibold text-brand">
+                  <div className="mt-2.5 p-2.5 rounded-md bg-surface-muted border-l-2 border-brand text-xs font-semibold text-ink">
                     {conv.discount}
                   </div>
-                  <p className="text-xs text-text-muted mt-3 leading-relaxed">
+                  <p className="text-xs text-ink-muted mt-3 leading-relaxed">
                     {conv.description}
                   </p>
                   <p className="text-xs font-medium text-ink mt-2">
-                    💡 ROI: <span className="text-text-muted font-normal">{conv.roiEjemplo}</span>
+                    💡 ROI: <span className="text-ink-muted font-normal">{conv.roiEjemplo}</span>
                   </p>
                 </div>
 
-                <div className="mt-4 pt-3 border-t border-border text-[11px] text-text-muted">
-                  <strong>Términos:</strong> {conv.terms}
+                <div className="mt-4 pt-3 border-t border-border/80 text-[11px] text-text-muted">
+                  <strong className="text-ink">Términos:</strong> {conv.terms}
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Banner de Enlace a Directorio de Descuentos entre Socios */}
-        <div className="rounded-2xl border border-border bg-ink text-surface p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-          <div className="space-y-1 max-w-xl">
-            <h3 className="text-lg sm:text-xl font-semibold text-white">
+        {/* Banner Editorial de Descuentos entre Socios */}
+        <div className="rounded-2xl border border-border-strong bg-[#fafaf8] text-ink p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 shadow-[0_1px_3px_rgba(0,0,0,0.02)]">
+          <div className="space-y-1.5 max-w-xl">
+            <h3 className="font-serif text-lg sm:text-xl font-semibold text-ink">
               ¿Ofrece su comercio un descuento exclusivo a la comunidad gremial?
             </h3>
-            <p className="text-xs sm:text-sm text-stone-300">
+            <p className="text-xs sm:text-sm text-ink-muted leading-relaxed">
               Incorpore su beneficio en el Directorio Comercial Oficial para ganar clientes entre las más de 800 empresas asociadas de Alajuela.
             </p>
           </div>

@@ -34,9 +34,13 @@ export default function RootLayout({
   return (
     <html
       lang="es"
+      suppressHydrationWarning
       className={`scroll-smooth ${plusJakartaSans.variable} ${newsreader.variable}`}
     >
-      <body className="antialiased bg-canvas text-ink selection:bg-brand/10 selection:text-brand min-h-screen flex flex-col font-sans">
+      <body
+        suppressHydrationWarning
+        className="antialiased bg-canvas text-ink selection:bg-brand/10 selection:text-brand min-h-screen flex flex-col font-sans"
+      >
         <Header />
         <div className="flex-1 flex flex-col">{children}</div>
         <Footer />
