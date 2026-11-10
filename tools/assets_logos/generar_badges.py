@@ -48,3 +48,4 @@ with sync_playwright() as p:
         print(f'Generado badge: {out_path} ({os.path.getsize(out_path)} bytes)')
         page.close()
     browser.close()
+
