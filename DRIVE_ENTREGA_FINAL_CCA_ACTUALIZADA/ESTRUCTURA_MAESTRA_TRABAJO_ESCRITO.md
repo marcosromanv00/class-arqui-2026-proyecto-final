@@ -22,8 +22,8 @@
 | **09** | Estrategia de Búsqueda Inteligente y Relevancia              | Búsqueda predictiva con Algolia, facetas por cantón y typo-tolerance.        | Allan Arce   | Algolia Search     |
 | **10** | Metadatos, Taxonomías y Content Modeling Headless            | Modelado desacoplado en Strapi, Schema.org JSON-LD y vocabularios.           | Emanuel Soto | Strapi CMS         |
 | **11** | Customer Journey Map y Contenido Social Gremial              | Mapeo de experiencia de Don Carlos y Valeria Brenes en 5 etapas.             | Emanuel Soto | Miro               |
-| **12** | Inteligencia Artificial Generativa y Personalización RAG     | Asistente RAG en Python consultando el corpus institucional CCA.             | Marcos Román | Python / LangChain |
-| **13** | Comercio Electrónico, Pasarelas y Arquitectura Transaccional | Pasarela SINPE Móvil nativa, seguridad anti-replay y deducción Ley 7092.     | Allan Arce   | JavaScript / SINPE |
+| **12** | Búsqueda Semántica No Estructurada y Asistente RAG           | Recuperación asociativa sobre corpus oficial CCA y consulta fiscal Ley 7092. | Marcos Román | Python / LangChain |
+| **13** | Arquitectura de Información Transaccional y Medios de Pago   | Divulgación progresiva, SINPE Móvil nativo, certeza de estado y Ley 7092.    | Allan Arce   | JavaScript / SINPE |
 | **14** | Conclusiones de Consultoría y Hoja de Ruta Tecnológica       | Justificación JAMstack vs Monolito, roadmap de 3 fases y recomendaciones.    | Marcos Román | Word / Docs        |
 | **15** | Referencias Bibliográficas (Normativa APA 7)                 | Bibliografía académica completa con DOIs verificados.                        | Marcos Román | Zotero / APA 7     |
 

@@ -18,17 +18,17 @@ Esta separación aplica lo que Rosenfeld et al. (2015) plantean sobre los metada
 **Tabla 10.1**
 _Comparación entre el gestor actual y la arquitectura headless propuesta_
 
-| Criterio | Sitio actual (WordPress con contenido en plantillas) | Propuesta (Strapi headless + portal web) |
-| :-- | :-- | :-- |
-| Quién actualiza el contenido | Un programador externo que edita la página. | El personal administrativo, desde formularios del panel. |
-| Riesgo de alterar el diseño | Alto: el contenido y el HTML están en el mismo lugar. | Nulo: el editor solo llena campos; el diseño vive en el portal. |
-| Consistencia de los datos | Texto libre, con errores como "Alajuel" o "San Ramon". | Listas cerradas que rechazan valores fuera del vocabulario. |
-| Reutilización del contenido | Solo en la página donde se escribió. | El mismo registro alimenta el portal, el buscador Algolia y futuros canales. |
-| Costo de licencia | Variable, según temas y plugins. | Strapi Community Edition es de código abierto y se instala en un servidor propio. |
+| Criterio                     | Sitio actual (WordPress con contenido en plantillas)   | Propuesta (Strapi headless + portal web)                                          |
+| :--------------------------- | :----------------------------------------------------- | :-------------------------------------------------------------------------------- |
+| Quién actualiza el contenido | Un programador externo que edita la página.            | El personal administrativo, desde formularios del panel.                          |
+| Riesgo de alterar el diseño  | Alto: el contenido y el HTML están en el mismo lugar.  | Nulo: el editor solo llena campos; el diseño vive en el portal.                   |
+| Consistencia de los datos    | Texto libre, con errores como "Alajuel" o "San Ramon". | Listas cerradas que rechazan valores fuera del vocabulario.                       |
+| Reutilización del contenido  | Solo en la página donde se escribió.                   | El mismo registro alimenta el portal, el buscador Algolia y futuros canales.      |
+| Costo de licencia            | Variable, según temas y plugins.                       | Strapi Community Edition es de código abierto y se instala en un servidor propio. |
 
 Para un administrador de la Cámara, publicar un nuevo afiliado se reduce a abrir **Content Manager → Comercio Afiliado CCA → Create new entry**, llenar el formulario y pulsar **Publish**. Su tiempo de publicación se estima en unos 30 segundos, frente a las 72 horas actuales de espera a soporte técnico.
 
-*Evolución y resolución arquitectónica:* En las primeras versiones del prototipo y en el sitio WordPress original, los contenidos residían como bloques desestructurados dentro del código de las plantillas, lo que generaba severas discrepancias tipográficas en nombres de cantones (e.g., "Alajuel" o "San Ramon") y desactualizaciones de comercios. Para solucionar este conflicto estructural, se adoptó Strapi v5.61 como CMS headless con validación estricta de esquemas JSON y vocabularios controlados cerrados (16 cantones y 5 macro-sectores). Adicionalmente, se programó el script de inicialización automatizada (`seed_strapi.js`) para garantizar que la carga de comercios fuera reproducible, auditable e integrable de manera nativa con el índice de búsqueda en la nube sin duplicidad manual.
+_Evolución y resolución arquitectónica:_ En las primeras versiones del prototipo y en el sitio WordPress original, los contenidos residían como bloques desestructurados dentro del código de las plantillas, lo que generaba severas discrepancias tipográficas en nombres de cantones (e.g., "Alajuel" o "San Ramon") y desactualizaciones de comercios. Para solucionar este conflicto estructural, se adoptó Strapi v5.61 como CMS headless con validación estricta de esquemas JSON y vocabularios controlados cerrados (16 cantones y 5 macro-sectores). Adicionalmente, se programó el script de inicialización automatizada (`seed_strapi.js`) para garantizar que la carga de comercios fuera reproducible, auditable e integrable de manera nativa con el índice de búsqueda en la nube sin duplicidad manual.
 
 ### Figura 10.1. Panel de administración de Strapi con los comercios afiliados
 
@@ -45,23 +45,23 @@ La entidad **Comercio Afiliado CCA** (`api::comercio.comercio`) representa cada 
 **Tabla 10.2**
 _Atributos de la entidad Comercio Afiliado_
 
-| Campo | Tipo de dato | Obligatorio | Reglas de validación |
-| :-- | :-- | :-: | :-- |
-| `nombre_comercial` | string | Sí | Único en toda la colección; máximo 150 caracteres. |
-| `cedula_juridica` | string | Sí | Expresión regular `^[0-9]{10,12}$`: solo dígitos, entre 10 y 12. |
-| `sector_comercial` | enumeration | Sí | Uno de los 5 sectores del vocabulario controlado (sección 10.4). |
-| `canton` | enumeration | Sí | Uno de los 16 cantones de la provincia de Alajuela (sección 10.4). |
-| `distrito` | string | Sí | Texto libre (por ejemplo, "El Coyol", "La Guácima"). |
-| `direccion_exacta` | text | Sí | Dirección con señas, como se usa en Costa Rica. |
-| `telefono_fijo` | string | No | — |
-| `telefono_whatsapp` | string | Sí | Número en formato internacional (506…) para el botón de WhatsApp de la ficha. |
-| `correo_contacto` | email | Sí | Debe tener formato de correo válido. |
-| `afiliado_verificado` | boolean | No | Por defecto `true`; alimenta el sello "Afiliado verificado CCA". |
-| `anos_afiliacion` | integer | No | Por defecto 1. |
-| `beneficio_convenio_cca` | text | No | Descuento o convenio que el comercio ofrece a otros socios. |
-| `descripcion_detallada` | richtext | No | Descripción con formato para la ficha del comercio. |
-| `palabras_clave_busqueda` | json | No | Lista de términos adicionales para el buscador. |
-| `vacantes` | relation (uno a muchos) | No | Vacantes de empleo publicadas por este comercio (sección 10.3). |
+| Campo                     | Tipo de dato            | Obligatorio | Reglas de validación                                                          |
+| :------------------------ | :---------------------- | :---------: | :---------------------------------------------------------------------------- |
+| `nombre_comercial`        | string                  |     Sí      | Único en toda la colección; máximo 150 caracteres.                            |
+| `cedula_juridica`         | string                  |     Sí      | Expresión regular `^[0-9]{10,12}$`: solo dígitos, entre 10 y 12.              |
+| `sector_comercial`        | enumeration             |     Sí      | Uno de los 5 sectores del vocabulario controlado (sección 10.4).              |
+| `canton`                  | enumeration             |     Sí      | Uno de los 16 cantones de la provincia de Alajuela (sección 10.4).            |
+| `distrito`                | string                  |     Sí      | Texto libre (por ejemplo, "El Coyol", "La Guácima").                          |
+| `direccion_exacta`        | text                    |     Sí      | Dirección con señas, como se usa en Costa Rica.                               |
+| `telefono_fijo`           | string                  |     No      | —                                                                             |
+| `telefono_whatsapp`       | string                  |     Sí      | Número en formato internacional (506…) para el botón de WhatsApp de la ficha. |
+| `correo_contacto`         | email                   |     Sí      | Debe tener formato de correo válido.                                          |
+| `afiliado_verificado`     | boolean                 |     No      | Por defecto `true`; alimenta el sello "Afiliado verificado CCA".              |
+| `anos_afiliacion`         | integer                 |     No      | Por defecto 1.                                                                |
+| `beneficio_convenio_cca`  | text                    |     No      | Descuento o convenio que el comercio ofrece a otros socios.                   |
+| `descripcion_detallada`   | richtext                |     No      | Descripción con formato para la ficha del comercio.                           |
+| `palabras_clave_busqueda` | json                    |     No      | Lista de términos adicionales para el buscador.                               |
+| `vacantes`                | relation (uno a muchos) |     No      | Vacantes de empleo publicadas por este comercio (sección 10.3).               |
 
 Además, Strapi agrega automáticamente los metadatos de sistema `documentId`, `createdAt`, `updatedAt` y `publishedAt`. Con ellos se puede auditar cuándo se registró o modificó cada comercio, y detectar fichas que llevan años sin actualizarse.
 
@@ -79,18 +79,18 @@ La entidad **Vacante de Empleo CCA** (`api::vacante-empleo.vacante-empleo`) reem
 **Tabla 10.3**
 _Atributos de la entidad Vacante de Empleo_
 
-| Campo | Tipo de dato | Obligatorio | Reglas de validación / propósito |
-| :-- | :-- | :-: | :-- |
-| `titulo_puesto` | string | Sí | Nombre del puesto. |
-| `empresa_empleadora` | string | Sí | Nombre visible de la empresa. |
-| `comercio` | relation (muchos a uno) | No | Enlace al comercio afiliado que publica la vacante. |
-| `jornada` | enumeration | Sí | Tiempo Completo, Medio Tiempo, Híbrido, Remoto o Pasantía. |
-| `canton` | enumeration | Sí | Mismo vocabulario de 16 cantones que el comercio. |
-| `salario_indicativo` | string | No | Rango salarial de referencia. |
-| `descripcion_funciones` | richtext | Sí | Perfil del puesto: funciones principales. |
-| `requisitos_minimos` | richtext | Sí | Perfil del puesto: formación y experiencia exigidas. |
-| `correo_recepcion_cv` | email | Sí | Correo donde se reciben las postulaciones. |
-| `fecha_cierre_postulacion` | date | Sí | Fecha de vigencia de la vacante. |
+| Campo                      | Tipo de dato            | Obligatorio | Reglas de validación / propósito                           |
+| :------------------------- | :---------------------- | :---------: | :--------------------------------------------------------- |
+| `titulo_puesto`            | string                  |     Sí      | Nombre del puesto.                                         |
+| `empresa_empleadora`       | string                  |     Sí      | Nombre visible de la empresa.                              |
+| `comercio`                 | relation (muchos a uno) |     No      | Enlace al comercio afiliado que publica la vacante.        |
+| `jornada`                  | enumeration             |     Sí      | Tiempo Completo, Medio Tiempo, Híbrido, Remoto o Pasantía. |
+| `canton`                   | enumeration             |     Sí      | Mismo vocabulario de 16 cantones que el comercio.          |
+| `salario_indicativo`       | string                  |     No      | Rango salarial de referencia.                              |
+| `descripcion_funciones`    | richtext                |     Sí      | Perfil del puesto: funciones principales.                  |
+| `requisitos_minimos`       | richtext                |     Sí      | Perfil del puesto: formación y experiencia exigidas.       |
+| `correo_recepcion_cv`      | email                   |     Sí      | Correo donde se reciben las postulaciones.                 |
+| `fecha_cierre_postulacion` | date                    |     Sí      | Fecha de vigencia de la vacante.                           |
 
 **Estados de publicación.** Cada vacante pasa por dos estados:
 
@@ -116,8 +116,8 @@ Un vocabulario controlado es una lista cerrada de términos aceptados para descr
 **Tabla 10.4**
 _Vocabulario controlado de cantones_
 
-| Vocabulario | Valores permitidos |
-| :-- | :-- |
+| Vocabulario                                      | Valores permitidos                                                                                                                                    |
+| :----------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Cantón (16 cantones de la provincia de Alajuela) | Alajuela, San Ramón, Grecia, San Mateo, Atenas, Naranjo, Palmares, Poás, Orotina, San Carlos, Zarcero, Sarchí, Upala, Los Chiles, Guatuso, Río Cuarto |
 
 La lista incluye los nueve cantones de mayor actividad gremial de la Cámara (Alajuela, San Ramón, Grecia, Atenas, Naranjo, Palmares, Poás, Orotina y San Mateo) y completa los 16 de la provincia. Así se puede afiliar un comercio de cualquier cantón alajuelense sin modificar el modelo. El tilde forma parte del valor ("San Ramón", "Poás", "Sarchí"), lo que elimina de raíz variantes como "San Ramon" o "Poas", que hoy fragmentan los filtros del directorio.
@@ -125,13 +125,13 @@ La lista incluye los nueve cantones de mayor actividad gremial de la Cámara (Al
 **Tabla 10.5**
 _Vocabulario controlado de sectores económicos y distribución de los comercios cargados_
 
-| Sector | Comercios cargados | Ejemplos |
-| :-- | :-: | :-- |
-| Comercio | 5 | Ferretería El Candado Alajuelense, Distribuidora de Alimentos Doña Carmen, Mueblería y Ebanistería Sarchí Diseños |
-| Servicios | 3 | Taller Mecánico Hermanos Solís, Bufete Valverde & Asociados, Hotel & Centro de Convenciones Villa Mango |
-| Salud | 2 | Clínica Dental OdontoSalud La Guácima, Laboratorios Clínicos San Rafael |
-| Tecnología | 1 | Innovaciones Tecnológicas del Erizo (ITEC) |
-| Gastronomía | 1 | Restaurante y Cafetería El Trapiche Alajuelense |
+| Sector      | Comercios cargados | Ejemplos                                                                                                          |
+| :---------- | :----------------: | :---------------------------------------------------------------------------------------------------------------- |
+| Comercio    |         5          | Ferretería El Candado Alajuelense, Distribuidora de Alimentos Doña Carmen, Mueblería y Ebanistería Sarchí Diseños |
+| Servicios   |         3          | Taller Mecánico Hermanos Solís, Bufete Valverde & Asociados, Hotel & Centro de Convenciones Villa Mango           |
+| Salud       |         2          | Clínica Dental OdontoSalud La Guácima, Laboratorios Clínicos San Rafael                                           |
+| Tecnología  |         1          | Innovaciones Tecnológicas del Erizo (ITEC)                                                                        |
+| Gastronomía |         1          | Restaurante y Cafetería El Trapiche Alajuelense                                                                   |
 
 Con cinco sectores amplios, cada comercio tiene una sola ubicación clara y los filtros del directorio no se diluyen en categorías con un solo resultado. El campo `distrito` se mantiene como texto libre porque su lista es muy extensa y cambia con el crecimiento urbano. En cambio, cantón y sector, que son los que usa la navegación facetada del directorio, quedan bajo control estricto.
 
@@ -194,6 +194,24 @@ El payload completo devuelto por Strapi es el siguiente (Anexo `payload_strapi_c
 2. **Buscador Algolia:** se propone usar un _webhook_ de Strapi. Cada vez que un comercio se publica, actualiza o despublica, Strapi avisa a un proceso que reenvía ese mismo registro al índice de Algolia. El buscador siempre refleja lo que el administrador publicó, sin una segunda carga manual.
 
 De esta forma, cuando el personal de la Cámara corrige un teléfono o publica un nuevo afiliado, el cambio llega a la ficha, a los filtros y al buscador a partir de un solo registro.
+
+---
+
+## 10.6 Protocolo de Gobernanza de la Información y Ciclo de Vida del Contenido
+
+De acuerdo con Rosenfeld et al. (2015), la arquitectura de información colapsa con el tiempo si no se definen políticas formales de gobernanza que regulen la entrada, mantenimiento y caducidad de los datos. Para la Cámara de Comercio de Alajuela se definió una matriz de ciclo de vida del contenido (_Content Lifecycle_):
+
+1. **Fase de Ingesta y Validación Ontológica:**
+   - Todo nuevo comercio o vacante debe ser ingresado mediante el formulario estructurado de Strapi. Se prohíbe la inserción directa de HTML o texto libre en campos de clasificación.
+   - El uso obligatorio de listas cerradas (16 cantones y 5 macro-sectores) previene la fragmentación taxonómica. Cualquier propuesta de nuevo sector debe ser aprobada por la Dirección Ejecutiva de la Cámara.
+
+2. **Fase de Mantenimiento y Auditoría Periódica (Prevención ROT):**
+   - **Auditoría Semestral:** El equipo administrativo ejecuta una revisión periódica sobre registros clasificados como redundantes, obsoletos o triviales (_Redundant, Outdated, Trivial - ROT_).
+   - Comercios que no renueven su membresía gremial tras 60 días de gracia pasan de estado _Published_ a _Draft_, lo que automáticamente los retira del directorio web y del índice de Algolia sin borrar su trazabilidad histórica.
+   - Las ofertas laborales en la Bolsa de Empleo poseen una caducidad predeterminada de 30 días, tras la cual el sistema las archiva automáticamente para evitar la postulación a vacantes cerradas.
+
+3. **Gobernanza Multicanal y Única Fuente de Verdad:**
+   - Al actuar Strapi como repositorio desacoplado, cualquier actualización de horarios, teléfonos o convenios se refleja sincrónicamente en el portal web, el índice de Algolia y el corpus del asistente RAG, asegurando consistencia total en el ecosistema digital de la Cámara.
 
 ---
 
