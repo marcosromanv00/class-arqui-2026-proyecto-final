@@ -2,7 +2,10 @@
 // Uso: node --experimental-strip-types tools/10_ecommerce_pagos/probar_pagos.ts file:///<ruta>/src/lib/pagos.ts
 export {};
 const mem: Record<string, string> = {};
-(globalThis as any).localStorage = { getItem: (k: string) => mem[k] ?? null, setItem: (k: string, v: string) => (mem[k] = v) };
+(globalThis as unknown as { localStorage: { getItem: (k: string) => string | null; setItem: (k: string, v: string) => void } }).localStorage = {
+  getItem: (k: string) => mem[k] ?? null,
+  setItem: (k: string, v: string) => { mem[k] = v; },
+};
 
 const p = await import(process.argv[2]);
 const casos: [string, unknown][] = [];

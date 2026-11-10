@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { CheckCircle2 } from "lucide-react";
 import type { ResultadoPago } from "@/lib/pagos";
@@ -15,11 +15,9 @@ interface AffiliationFormStep3Props {
 }
 
 export function AffiliationFormStep3({ pago, merchantName, cedula, canton, price, onReset }: AffiliationFormStep3Props) {
-  const [fecha, setFecha] = useState("Fecha de confirmación en línea");
-
-  useEffect(() => {
-    setFecha(new Date().toLocaleDateString("es-CR", { year: "numeric", month: "long", day: "numeric" }));
-  }, []);
+  const [fecha] = useState(() =>
+    new Date().toLocaleDateString("es-CR", { year: "numeric", month: "long", day: "numeric" })
+  );
   const sinpe = pago.metodo === "sinpe";
   const fila = (k: string, v: string, clase = "text-ink") => (
     <div className="flex justify-between gap-4">

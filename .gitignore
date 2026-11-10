@@ -49,3 +49,9 @@ __pycache__/
 
 # plantilla de variables (sin valores) sí se versiona
 !.env.example
+
+# Office temporary lock files
+~$*
+
+# Agent artifacts
+.dev/agents/artifacts/

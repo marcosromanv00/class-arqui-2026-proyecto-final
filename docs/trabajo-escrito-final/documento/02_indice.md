@@ -1,0 +1,35 @@
+# Índice General de Contenidos
+
+- **1. Resumen Ejecutivo**
+- **2. Objetivos del Proyecto**
+  - 2.1 Objetivo General
+  - 2.2 Objetivos Específicos
+- **3. Dominio y Objeto de Estudio**
+  - 3.1 Contexto Institucional de la Cámara de Comercio de Alajuela
+  - 3.2 Modelado de Usuarios y Arquetipos Gremiales
+  - 3.3 Problemática Inicial del Portal Preexistente y Brechas Operativas
+- **4. Enfoque de Arquitectura de Información y Consultoría**
+  - 4.1 Reconfiguración Estructural con Criterio Metodológico
+  - 4.2 Prototipo Funcional como Laboratorio Empírico de Validación
+- **5. Resumen del Avance 1: Auditoría Inicial de Aspectos de Mejora y Diseño Estructural**
+  - 5.1 Auditoría Inicial del Sitio Preexistente e Inventario de Contenidos Ruta por Ruta
+  - 5.2 Diagnóstico de Aspectos de Mejora por Sistema de Arquitectura de Información y Matriz ROT
+  - 5.3 Reestructuración del Sitemap Macro en FlowMapp y Microarquitectura en Octopus.do
+- **6. Subsanaciones del Avance 1 y Retroalimentación Docente**
+  - 6.1 Diagnóstico de Brechas y Calificación Inicial
+  - 6.2 Subsanación 1: Validación Empírica en Optimal Workshop (N=18)
+  - 6.3 Subsanación 2: Composición Visual y Wireframes en Figma
+- **7. Avance 2: Implementación y Validación de Herramientas**
+  - 7.1 Evaluación de Usabilidad, Fricción y Métricas SUS (Maze & Microsoft Clarity)
+  - 7.2 Búsqueda Predictiva Inteligente y Tolerancia Tipográfica (Algolia Search)
+  - 7.3 Modelado de Contenidos y Taxonomías Estructuradas (Strapi Headless CMS)
+  - 7.4 Mapeo de la Experiencia del Usuario Gremial (Miro CJM)
+  - 7.5 Asistente Institucional con Recuperación Contextual (IA Generativa & RAG)
+  - 7.6 Pasarela Transaccional y Cobro Digital Gremial (E-Commerce & SINPE Móvil)
+- **8. Decisiones Finales de Consultoría**
+  - 8.1 Matriz de Decisiones de Arquitectura de Información
+  - 8.2 Matriz de Viabilidad Técnica y Financiera ($0/Mes)
+- **9. Conclusiones y Recomendaciones a Futuro**
+  - 9.1 Conclusiones Estratégicas
+  - 9.2 Hoja de Ruta de Implementación (Roadmap en 3 Fases)
+- **10. Referencias Bibliográficas (Normativa APA 7)**

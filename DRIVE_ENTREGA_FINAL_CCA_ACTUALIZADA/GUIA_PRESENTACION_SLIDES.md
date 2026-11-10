@@ -1,122 +1,85 @@
 # Guía Maestra de la Presentación Ejecutiva (Deck Oficial 16:9)
 
-**Proyecto:** Rediseño de Arquitectura de Información · Cámara de Comercio de Alajuela (CCA)  
+**Proyecto:** Reorganización de la Arquitectura de Información · Cámara de Comercio de Alajuela (CCA)  
 **Curso:** EIF-511 Arquitectura de Información · Universidad Nacional de Costa Rica (UNA)  
 **Equipo Consultor:** Marcos Román Valverde (Coord.) · Emanuel Soto · Allan Arce  
-**Archivo PowerPoint:** [`Presentacion_Final_CCA_UNA.pptx`](Presentacion_Final_CCA_UNA.pptx) (16 Diapositivas Widescreen 16:9)  
-**Principios de Diseño:** *The 3-Second Glance Test*, *Radical Minimalism*, *One Idea per Slide*, *Action Titles* y *Cero AI-Slop*.
+**Archivo PowerPoint:** [`Presentacion_Final_CCA_UNA.pptx`](Presentacion_Final_CCA_UNA.pptx)  
+**Eje Estratégico:** Conectar los fallos de Arquitectura de Información con su impacto real en la credibilidad gremial, la confianza empresarial y el crecimiento de nuevas afiliaciones.
 
 ---
 
-## 1. Hilo Narrativo y Estructura Dramática (5 Actos)
+## 1. Storytelling en 3 Preguntas Guía
 
 ```
-[ ACTO 1: LA REALIDAD ] ──► [ ACTO 2: EL CONFLICTO ] ──► [ ACTO 3: LA CIENCIA ] ──► [ ACTO 4: LA SOLUCIÓN ] ──► [ ACTO 5: EL IMPACTO ]
-43 años de historia          Comerciantes vs Muro          OptimalSort N=18              5 Ramas + Algolia             SUS 89.5 (+41 pts)
-frente a un portal roto       Digital de desinformación    desmonta el árbol rígido      Strapi + Miro + Pasarela      Rage clicks: 0.8%
+┌───────────────────────────┐     ┌───────────────────────────┐     ┌───────────────────────────┐
+│     ¿QUÉ ENCONTRAMOS?     │ ──► │ ¿QUÉ USAMOS Y CÓMO AYUDÓ? │ ──► │   ¿CÓMO LO IMPLEMENTAMOS? │
+│         (Slides 2–5)      │     │        (Slides 6–11)      │     │        (Slides 12–16)     │
+│  La brecha de credibilidad│     │  OptimalSort, Algolia,    │     │  Laboratorio funcional,   │
+│  y el embudo roto que     │     │  Strapi, Miro, RAG y      │     │  facetas en vivo, wizard  │
+│  frenaba las afiliaciones │     │  polijerarquía de acceso  │     │  en 3 pasos y SUS de 89.5 │
+└───────────────────────────┘     └───────────────────────────┘     └───────────────────────────┘
 ```
 
 ---
 
-## 2. Desglose Slide por Slide (16 Diapositivas)
+## 2. Desglose Slide por Slide con Narrativa de Exposición
 
-### Slide 1: Portada Institucional (Marcos Román)
-* **Titular Principal:** *"Por el comercio. Por Alajuela."*
-* **Bajada:** Reingeniería Integral de Arquitectura de Información y Plataforma Digital · Cámara de Comercio de Alajuela (1983–2026).
-* **Ficha:** Marcos Román Valverde (Coord.) · Emanuel Soto · Allan Arce | Docente: MSc. Cynthia Bolaños Espinoza.
-
-### Slide 2: Contexto & Punto de Partida (Marcos Román)
-* **Titular de Acción:** *"Una institución de 43 años con un portal que alejaba a sus propios socios"*
-* **Métricas:** 1983 (Año de fundación), 16 cantones de influencia provincial, 4 clics ciegos previos.
-
-### Slide 3: La Fricción Humana (Marcos Román)
-* **Titular de Acción:** *"Realidades alajuelenses frente a un muro digital de desinformación"*
-* **Arquetipos:** Don Carlos / Doña Rosa (comercio tradicional en Calle Ancha) vs Valeria / Mariana (empresa B2B y servicios cloud).
-
-### Slide 4: Diagnóstico Heurístico Forense (Marcos Román)
-* **Titular de Acción:** *"Tres patologías críticas destruían la credibilidad del portal anterior"*
-* **Patologías:** Canibalización SEO (`/` vs `/home`), Secciones fantasma (`/oferentes/`) y el Trámite huérfano (PDF 62 KB).
-
-### Slide 5: Validación Empírica Rigurosa (Marcos Román)
-* **Titular de Acción:** *"Dejamos de adivinar: 18 participantes reales modelaron la estructura"*
-* **Métricas:** $N=18$ participantes estratificados, 540 clasificaciones en OptimalSort, 72%–94% de dispersión natural (Kuric et al., 2025).
-
-### Slide 6: Hallazgo Científico: Polijerarquía (Marcos Román)
-* **Titular de Acción:** *"La rigidez del árbol expulsaba a los usuarios: adoptamos Polijerarquía"*
-* **Decisiones:** Guía de Patente Municipal (multiruta), Bolsa de Empleo Cantonal (nodo directo) y Convenios integrados al catálogo.
-
-### Slide 7: Arquitectura Propuesta (Marcos Román)
-* **Titular de Acción:** *"Cinco ramas maestras. Cero callejones sin salida."*
-* **Estructura:** `/la-camara`, `/servicios`, `/directorio`, `/empleo`, `/contacto` + Botón Magnético `/afiliarse`.
-
-### Slide 8: Sistema de Diseño Visual Anti-Slop (Emanuel Soto)
-* **Titular de Acción:** *"Inspiración editorial ICC: 85% fondo blanco y cero adornos inútiles"*
-* **Pilares:** Paleta Rojo Carmín (`#991B1B`), tipos *Newsreader* + *Plus Jakarta Sans*, fotografía documental y cero gradientes morados.
-
-### Slide 9: Búsqueda Inteligente con Algolia Cloud (Allan Arce)
-* **Titular de Acción:** *"Algolia Cloud indexa los 171 comercios reales con latencia < 20 ms"*
-* **Pilares:** 171 comercios reales, 52 grupos de sinónimos alajuelenses, facetado geográfico y reducción de búsquedas vacías del 23% al 6%.
-
-### Slide 10: Corrección Semántica con IA (Allan Arce)
-* **Titular de Acción:** *"Endpoint `/api/corregir` con Azure OpenAI y fallback heurístico local"*
-* **Pilares:** Recuperación semántica de erratas complejas ("fereteria en el collor"), fallback local resiliente y re-búsqueda automática.
-
-### Slide 11: CMS Headless Strapi 5.61 (Emanuel Soto)
-* **Titular de Acción:** *"Strapi v5.61 desacopla el contenido y erradica los errores ortográficos"*
-* **Pilares:** Vocabularios controlados cerrados (16 cantones, 5 sectores macro), script `seed_strapi.js` y publicación autónoma en 30 segundos.
-
-### Slide 12: Customer Journey Map en Miro (Emanuel Soto)
-* **Titular de Acción:** *"Tablero 5×5 en Miro transforma la mayor fricción en la mayor conversión"*
-* **Pilares:** 25 cuadrantes generados vía Miro API, salto de satisfacción de $-2$ a $+2$ en la afiliación y estrategia omnicanal (LinkedIn, Instagram, WhatsApp).
-
-### Slide 13: Asistente RAG con IA Generativa (Marcos Román)
-* **Titular de Acción:** *"Inteligencia Artificial fundamentada en el corpus oficial de la CCA"*
-* **Pilares:** ChromaDB + embeddings sobre estatutos gremiales, cálculo de ahorro fiscal (Art. 8 Ley 7092) y canal SINPE oficial `8703-0792`.
-
-### Slide 14: Transaccionalidad & Pagos Simulados (Allan Arce)
-* **Titular de Acción:** *"Pasarela en `src/lib/pagos.ts` con validación Luhn, anti-replay y 12/12 pruebas"*
-* **Pilares:** Algoritmo de Luhn, formato de celular costarricense, protección anti-replay con radicado único y aviso visible de simulación académica.
-
-### Slide 15: Evaluación Cuantitativa de Usabilidad (Allan Arce)
-* **Titular de Acción:** *"Los números ratifican el éxito: la usabilidad subió a 89.5 puntos"*
-* **Pilares:** SUS 89.5 (Grado A Excelente vs 48.2 anterior), 86% de éxito directo en Treejack y 0.8% de rage clicks en Microsoft Clarity.
-
-### Slide 16: Conclusión General & Cierre Humano (Equipo)
-* **Frase de Cierre:**
-  > *"La Arquitectura de Información no es decorar pantallas.  
-  > Es conectar a quienes producen con quienes necesitan, sin fricción y con orgullo alajuelense."*
-* **Apertura:** Espacio para preguntas y retroalimentación de la docente.
+### Portada Institucional
+* **Slide 1:** *Por el comercio. Por Alajuela.* — Reorganización de la Arquitectura de Información para la Cámara de Comercio de Alajuela.
+  * *Enfoque:* Apertura sobria y profesional. Establecer desde el primer segundo que este no es un rediseño cosmético, sino una consultoría estratégica sobre cómo la Cámara proyecta valor a su provincia.
 
 ---
 
-## 3. Plan de Roles y Tiempos para el Martes (Total: ~30 min + Preguntas)
-
-| Bloque | Expositor | Diapositivas | Tiempo Estimado | Enfoque Principal |
-| :--- | :--- | :---: | :---: | :--- |
-| **Apertura & Diagnóstico** | **Marcos Román** (Coord.) | 1 a 7 | **8 – 10 min** | Contexto histórico, patologías del sitio anterior, estudio con $N=18$ (Optimal Workshop), polijerarquía y sitemap. |
-| **Diseño, CMS & Journey** | **Emanuel Soto** | 8, 11 y 12 | **6 – 8 min** | Sistema de diseño editorial ICC, arquitectura headless en Strapi 5.61 con vocabularios cerrados y Customer Journey Map 5×5 en Miro. |
-| **Búsqueda, Pagos & Métricas** | **Allan Arce** | 9, 10, 14 y 15 | **8 – 10 min** | Algolia Cloud con 171 comercios reales, corrección IA `/api/corregir`, pasarela simulada con Luhn/anti-replay y métricas SUS (89.5). |
-| **RAG & Demo en Vivo** | **Marcos Román** | 13 y 16 + Demo | **5 – 6 min** | Asistente RAG con ChromaDB/Ley 7092, navegación ágil en el portal y cierre humano. |
-| **Defensa & Preguntas** | **Todo el equipo** | — | **15 – 20 min** | Respuestas técnicas y metodológicas a la docente MSc. Cynthia Bolaños. |
-
----
-
-## 4. Guion Rápido para la Demo en Vivo (3 Minutos)
-
-1. **Búsqueda Instantánea con Algolia (`/directorio`):**
-   * Teclea *"ferretería"* o *"taller"* y muestra cómo aparecen los resultados en $<20\text{ ms}$.
-   * Filtra por cantón (*"Alajuela"* o *"San Ramón"*) y muestra la ficha con el botón de WhatsApp directo.
-2. **Corrección Semántica con IA (`/api/corregir`):**
-   * Teclea intencionalmente *"fereteria en el collor"* y observa cómo el sistema sugiere *"Ferretería en El Coyol"* sin pantallas en blanco.
-3. **Wizard de Afiliación Transaccional (`/afiliarse`):**
-   * Llena el paso 1 con datos ficticios.
-   * En el paso 2, resalta el desglose del arancel y el aviso de deducibilidad fiscal bajo la Ley 7092.
-   * En el paso 3, selecciona SINPE Móvil o Tarjeta de prueba, procesa el pago y muestra el número de radicado generado con estado *"En Aprobación · Tesorería CCA"* y el banner visible de advertencia académica.
+### Acto I: ¿Qué encontramos? (La Crisis de Credibilidad y el Embudo Roto)
+* **Slide 2: Contexto y credibilidad:** *La brecha entre el peso gremial de la Cámara y su portal digital.*
+  * *Oneliner:* Un hub empresarial que transmitía descuido, dañando la confianza y frenando la afiliación de nuevas empresas.
+  * *Mensaje clave:* La Cámara tiene 43 años liderando el segundo polo económico del país, pero su portal operaba como un repelente digital: 4 clics ciegos para ubicar un comercio y un embudo roto que exigía llenar un formulario de Word a mano. Si una empresa no percibe orden en la web del gremio, no confía ni se afilia.
+* **Slide 3: Portada y navegación:** *Doble inicio y servicios de valor invisibles en el menú.*
+  * *Evidencia:* [`auditoria_original_home.png`](../trabajo-escrito-final/documento/figuras/auditoria_original_home.png).
+  * *Mensaje clave:* La coexistencia de `/` y `/home` creaba desconcierto espacial y dividía el tráfico. Más grave aún: la Bolsa de Empleo y el formulario de Afiliación estaban ocultos fuera de la barra principal. Los dos servicios que justifican la afiliación estaban invisibilizados.
+* **Slide 4: Sistema de etiquetado:** *64 categorías caóticas que devaluaban a los comercios socios.*
+  * *Evidencia:* [`auditoria_original_directorio.png`](../trabajo-escrito-final/documento/figuras/auditoria_original_directorio.png).
+  * *Mensaje clave:* Categorías duplicadas, espanglish y faltas ortográficas visibles (*«Constuctora»*). Un catálogo inusable le resta seriedad a las empresas que pagan su cuota mensual esperando visibilidad. Además, la contradicción de reportar 173 y 171 empresas en la misma vista minaba la transparencia.
+* **Slide 5: Sistema de organización:** *Módulos vacíos que transmitían inoperancia institucional.*
+  * *Evidencia:* [`auditoria_original_oferentes.png`](../trabajo-escrito-final/documento/figuras/auditoria_original_oferentes.png).
+  * *Mensaje clave:* La sección de empleo devolvía permanentemente *"No hay ofertas"* y las noticias mostraban errores de base de datos vacía. Para un empresario que evalúa afiliarse, esto transmite una institución dormida o inactiva.
 
 ---
 
-## 5. Recomendaciones Clave para la Defensa Oral
+### Acto II: ¿Qué usamos y cómo nos ayudó? (Métodos, Herramientas y Hallazgos)
+* **Slide 6: FlowMapp y Octopus.do:** *De 42 enlaces dispersos a 26 nodos en 3 niveles.*
+  * *Evidencia:* [`figura_02_sitemap_macro.png`](../trabajo-escrito-final/documento/figuras/figura_02_sitemap_macro.png).
+  * *Mensaje clave:* Aplicación estricta de la Ley de Hick: 5 macro-ramas claras y un botón magnético de Afiliación como llamada a la acción principal. Cero redundancias y garantía de acceso a cualquier servicio en 3 pasos.
+* **Slide 7: OptimalSort y Treejack:** *El modelo mental de los usuarios cuestionó la jerarquía rígida.*
+  * *Evidencia:* [`figura_matriz_similitud_optimalsort.png`](../trabajo-escrito-final/documento/figuras/figura_matriz_similitud_optimalsort.png).
+  * *Mensaje clave:* 18 participantes clasificados en 3 perfiles (comercio tradicional, B2B y emprendedores) evaluaron 30 conceptos. La matriz de similitud demostró que los usuarios no buscan la información en silos estáticos: patentes, convenios y empleo requerían múltiples puntos de acceso.
+* **Slide 8: El principio rector:** *Polijerarquía: Múltiples caminos para respaldar la conversión.*
+  * *Mensaje clave:* Conectamos los servicios críticos en más de una ruta: Patentes dentro de Servicios y como paso previo en Afiliación; Empleo en la navegación primaria y en las fichas del Directorio; Convenios en el catálogo comercial y con cálculo de ahorro fiscal en el registro.
+* **Slide 9: Algolia Search:** *Búsqueda predictiva para devolverle valor al Directorio.*
+  * *Evidencia:* [`figura_9_5_algolia_analytics_queries.png`](../trabajo-escrito-final/documento/figuras/figura_9_5_algolia_analytics_queries.png).
+  * *Mensaje clave:* Motor en milisegundos con 52 grupos de sinónimos locales y tolerancia a faltas tipográficas (*«fereteria»*, *«biyares»*). Redujo las búsquedas fallidas del 23% al 6%, asegurando que el cliente siempre encuentre al comerciante afiliado.
+* **Slide 10: Strapi CMS:** *Vocabularios controlados para garantizar profesionalismo.*
+  * *Evidencia:* [`captura_strapi_content_manager_comercios.png`](../trabajo-escrito-final/documento/figuras/captura_strapi_content_manager_comercios.png).
+  * *Mensaje clave:* La gobernanza de la información no puede depender del cuidado manual. Strapi bloquea entradas arbitrarias con esquemas cerrados para los 16 cantones y 5 sectores, garantizando que el portal mantenga su orden y seriedad en el tiempo.
+* **Slide 11: Miro, RAG y SINPE:** *Digitalización del viaje: De la consulta a la afiliación activa.*
+  * *Evidencia:* [`figura_05_flujo_checkout_afiliacion.png`](../trabajo-escrito-final/documento/figuras/figura_05_flujo_checkout_afiliacion.png).
+  * *Mensaje clave:* El Customer Journey Map identificó que el trámite de afiliación era donde se perdían todos los prospectos. Con IA (RAG) aclaramos estatutos y deducibilidad fiscal al instante; con SINPE Móvil validamos el pago y emitimos radicado de forma inmediata.
 
-1. **Habla de Personas y Negocio:** Cita a Don Carlos (el ferretero de Calle Ancha) y a Valeria (la emprendedora de La Guácima). La docente valora la empatía y la solución a problemas reales, no la jerga técnica vacía.
-2. **No leas las diapositivas:** La diapositiva contiene el titular de acción y los números de impacto; el expositor debe contextualizar el *por qué* de la decisión de diseño.
-3. **Tener backup offline:** Aunque el sitio está desplegado en Vercel (`https://cca-alajuela-portal.vercel.app`), ten levantado `npm run dev` en `localhost:3000` en tu máquina por si la conexión de la universidad falla.
+---
+
+### Acto III: ¿Cómo lo implementamos? (Laboratorio, Evidencias y Métricas)
+* **Slide 12: Prototipo como laboratorio:** *Un entorno funcional para restaurar la confianza.*
+  * *Evidencia:* [`figura_web_resultado_home.png`](../trabajo-escrito-final/documento/figuras/figura_web_resultado_home.png).
+  * *Mensaje clave:* El prototipo no es una maqueta cosmética; es un laboratorio de usabilidad interactivo. Portada canónica unificada con el escudo oficial de la Cámara, estética editorial sobria y navegación diseñada para transmitir credibilidad gremial.
+* **Slide 13: Sistemas funcionales:** *Directorio útil y Bolsa de Empleo activa para la provincia.*
+  * *Evidencia:* [`figura_web_resultado_directorio.png`](../trabajo-escrito-final/documento/figuras/figura_web_resultado_directorio.png).
+  * *Mensaje clave:* 171 comercios indexados con filtros instantáneos por cantón (18 ms), botones de WhatsApp/Waze en 1 clic y una bolsa de empleo reactivada con ofertas vigentes en Alajuela y El Coyol.
+* **Slide 14: Proceso transaccional:** *Afiliación digital: El motor para captar nuevas empresas.*
+  * *Evidencia:* [`figura_web_resultado_afiliacion.png`](../trabajo-escrito-final/documento/figuras/figura_web_resultado_afiliacion.png).
+  * *Mensaje clave:* Reemplazamos el documento Word manual por un wizard en 3 pasos: planes claros (₡15.000 y ₡35.000) con desglose de deducibilidad del impuesto sobre la renta (Ley 7092), pago digital SINPE verificado y constancia con radicado formal.
+* **Slide 15: Evaluación Cuantitativa:** *Métricas que respaldan el retorno de la confianza.*
+  * *89.5 SUS:* Salto cuantitativo desde un 48.2 reprobatorio al rango de excelencia (grado A+).
+  * *86% éxito directo:* En Treejack, los participantes localizaron servicios prioritarios a la primera sin extraviarse.
+  * *0.8% clics de frustración:* La telemetría en Microsoft Clarity confirmó la desaparición de bucles de desorientación frente al 18.4% previo.
+* **Slide 16: Conclusiones estratégicas:** *La Arquitectura de Información como activo estratégico institucional.*
+  * *Mensaje de cierre:* La credibilidad digital impacta directamente la representatividad gremial. Si el portal proyecta descuido, las empresas no se afilian; si la información está ordenada y accesible, la Cámara atrae más comercios, fortalece su presupuesto y consolida su autoridad provincial.

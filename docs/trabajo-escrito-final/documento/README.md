@@ -4,50 +4,41 @@
 
 ---
 
-## 1. Estructura Modular de Capítulos
+## 1. Estructura Modular del Reporte Ejecutivo (~30 Páginas)
 
-Para garantizar un mantenimiento quirúrgico y permitir incorporar retroalimentación de la docente sin desconfigurar el reporte completo, el documento se encuentra particionado en **16 archivos Markdown independientes**:
+El documento escrito está organizado en **12 bloques estructurales** (con 6 submódulos independientes para las herramientas del Avance 2 en `09_avance_2/`):
 
-* `00_portada_resumen.md`: Portada oficial institucional de la UNA, datos del equipo y Resumen Ejecutivo.
-* `01_introduccion_contexto.md`: Fundamentos de la Arquitectura de Información (Wurman, Rosenfeld) y objetivos.
-* `02_organizacion_y_usuarios.md`: Reseña de la Cámara (fundada 1983) y modelado de las 3 Personas (Don Carlos, Valeria Brenes, José Pablo).
-* `03_inventario_diagnostico_heuristico.md`: Auditoría forense del WordPress previo, conflicto de dominios (404), homepages duplicadas y tabla de inventario.
-* `04_arquitectura_propuesta_y_sitemap.md`: Taxonomía del sitemap en FlowMapp (26 nodos, 3 niveles, 5 ramas y footer utilitario).
-* `05_organizacion_jerarquica_y_bloques.md`: Microarquitectura modular en Octopus.do, depuración de plantillas en inglés y sincronización a Figma.
-* `06_validacion_empirica_taxonomia.md`: Estudio de Card Sorting Abierto y Treejack (Tree Testing) con métricas de encontrabilidad.
-* `07_composicion_contenido_wireframes.md`: Composición canónica (navegación, funcional, contenido), Atomic Design y enlace al prototipo en Figma.
-* `08_evaluacion_usabilidad_friccion.md`: Pruebas de tareas en Maze y erradicación de rage/dead clicks en Microsoft Clarity (SUS Score de 48 a 89).
-* `09_estrategia_busqueda_inteligente.md`: Motores de búsqueda Algolia y Azure AI Search, tolerancia a typos y sinónimos locales.
-* `10_metadatos_taxonomias_cms.md`: Content Modeling desacoplado en Strapi, Schema.org JSON-LD y vocabularios controlados.
-* `11_customer_journey_contenido_social.md`: Customer Journey Map en Miro, señales de confianza gremial y moderación anti-spam.
-* `12_inteligencia_artificial_personalizacion.md`: Asistente Virtual CCA con RAG, personalización adaptativa y análisis crítico ético.
-* `13_comercio_electronico_pagos.md`: Arquitectura transaccional de afiliaciones, pasarelas SINPE Móvil y BAC, cálculo de IVA y radicado.
-* `14_conclusiones_recomendaciones.md`: Conclusiones de consultoría, justificación técnica JAMstack vs monolito y hoja de ruta.
-* `15_referencias_bibliograficas.md`: Bibliografía académica completa bajo formato APA 7.
+1. `01_portada.md` *(y generación formal en `compilar_documento_final.py`)*: Portada institucional UNA, autores y metadatos del curso.
+2. `02_indice.md`: Índice general de contenidos sincronizado con las secciones del reporte.
+3. `03_resumen_ejecutivo.md`: Síntesis ejecutiva del diagnóstico, subsanaciones, herramientas de Avance 2 y viabilidad a costo $0/mes.
+4. `04_objetivos.md`: Objetivo general y 6 objetivos específicos medibles.
+5. `05_dominio_y_objeto_estudio.md`: Contexto institucional de la CCA (1983) y matriz de los 3 arquetipos de usuario.
+6. `06_enfoque_arquitectura_informacion.md`: Enfoque de consultoría en Arquitectura de Información y rol del prototipo como laboratorio empírico de validación.
+7. `07_resumen_avance_1.md`: Diagnóstico heurístico del sitio previo, sitemap macro de 26 nodos en FlowMapp y bloques en Octopus.do.
+8. `08_subsanaciones_avance_1_feedback.md`: Subsanación de observaciones docentes (+1.5 pts): estudio real en Optimal Workshop (N=18) con polijerarquía y las 4 pantallas de alta fidelidad en Figma con tokens de Atomic Design.
+9. `09_avance_2/`: Seis herramientas evaluadas bajo la ficha metodológica de 7 puntos (*¿Qué es? / Costos y capa gratuita / Alternativas Open Code / Principios de AI / Demostración en nuestro dominio / Ajustes y justificación / Evidencias*):
+   - `01_maze_y_clarity.md`: Pruebas de misiones en Maze, telemetría en Microsoft Clarity y cálculo de SUS (89.5 pts).
+   - `02_algolia_search.md`: Indexación de los 171 asociados reales, 52 grupos de sinónimos, ajuste de atributos buscables y corrector ortográfico.
+   - `03_strapi_cms.md`: Modelado headless en Strapi v5.61, listas cerradas de 16 cantones y vigencia automática de vacantes.
+   - `04_miro_cjm.md`: Matriz de 25 cuadrantes del Customer Journey Map en Miro, curva de satisfacción (−2 a +2) y estrategia social omnicanal.
+   - `05_asistente_rag_ia.md`: Asistente institucional RAG en Python con similitud coseno por bigramas sobre el corpus legal de la CCA.
+   - `06_ecommerce_sinpe.md`: Pasarela transaccional de 3 pasos con SINPE Móvil (`8703-0792`), BAC Compra-Click, protección anti-replay y deducibilidad fiscal (Art. 8, Ley 7092).
+10. `10_decisiones_finales.md`: Matriz de Decisiones de Arquitectura y Matriz de Viabilidad Financiera ($0.00/mes).
+11. `11_conclusiones_recomendaciones.md`: Conclusiones estratégicas y Hoja de Ruta en 3 fases para la Junta Directiva.
+12. `12_referencias_bibliograficas.md`: Bibliografía académica consolidada bajo normativa APA 7 con DOIs verificados.
+
+> **Respaldo Histórico:** La versión extensa previa de 95 páginas se conserva íntegra en `docs/trabajo-escrito-final/historico_95_paginas/`.
 
 ---
 
-## 2. Instrucciones para Compilar a Word (.docx) y PDF
+## 2. Compilación Automatizada a Word (.docx) y PDF
 
-El proyecto incluye un script automatizado en Python que lee los 16 capítulos en orden, procesa tablas y títulos con estilo visual universitario formal, y genera los entregables consolidados en la carpeta `entrega_final/output/`:
+Para compilar los capítulos en orden y generar los entregables oficiales en escala de grises:
 
-### Paso 1: Ejecutar el Compilador Python
-Abra la terminal en la raíz del proyecto y ejecute:
 ```powershell
-python entrega_final/compilador/compilar_documento_final.py
+python docs/trabajo-escrito-final/compilador/compilar_documento_final.py --pdf
 ```
 
-### Paso 2: Archivos Generados
-El script depositará los resultados en:
-1. **Documento Word Editable:** `entrega_final/output/Reporte_Final_Consultoria_CCA_UNA.docx`
-2. **Documento PDF Formal:** `entrega_final/output/Reporte_Final_Consultoria_CCA_UNA.pdf`
-
----
-
-## 3. Banco Gráfico Privado para Capturas de Pantalla
-
-Si requiere capturar imágenes de alta resolución de las figuras, sitemaps o matrices para ilustrar aún más el informe de Word, abra en su navegador local la siguiente ruta:
-```text
-entrega_final/visualizador_figuras/index.html
-```
-Allí encontrará 6 lienzos gráficos de alta definición listos para ser capturados con la herramienta de recorte de Windows (**Win + Shift + S**).
+Los documentos generados se guardan en:
+- `docs/trabajo-escrito-final/output/Reporte_Final_Consultoria_CCA_UNA.docx`
+- `docs/trabajo-escrito-final/output/Reporte_Final_Consultoria_CCA_UNA.pdf`

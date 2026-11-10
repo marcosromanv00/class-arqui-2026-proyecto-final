@@ -1,853 +1,723 @@
 """
 Generador de Presentación Ejecutiva Minimalista (16:9 Widescreen)
 Cámara de Comercio de Alajuela (CCA) - Proyecto Final EIF-511 UNA
-Enfoque: Storytelling cercano, Anti-Slop, Escaneo Rápido (Regla de los 3 segundos)
-Paleta: Rojo Carmín (#991B1B), Negro Grafito (#09090B), Fondo Blanco/Neutro (#FAFAF9 / #FFFFFF)
-Equipo: Marcos Román Valverde (Coord.) · Emanuel Soto · Allan Arce
+
+Storytelling en 3 preguntas guía:
+  1. ¿Qué encontramos? (Auditoría del portal preexistente, fricción y daño a la confianza gremial)
+  2. ¿Qué usamos y cómo nos ayudó? (Métodos, herramientas de AI, polijerarquía y gobernanza)
+  3. ¿Cómo lo implementamos? (Prototipo funcional como laboratorio, evidencias, afiliación y métricas)
+
+Estilo: Ejecutivo, directo al grano, cero AI-slop, sin absolutismos, sin pills ni notas al pie.
+Evidencias visuales reales integradas en alta resolución.
 """
 
-import os
 import shutil
 from pathlib import Path
+from typing import List, Tuple, Optional
 import pptx
 from pptx.util import Inches, Pt
 from pptx.dml.color import RGBColor
 from pptx.enum.text import PP_ALIGN
 from pptx.enum.shapes import MSO_SHAPE
 
-# Directorios de salida
 BASE_DIR = Path(__file__).resolve().parent.parent
-DOCS_PRESENTACION = BASE_DIR / "docs" / "presentacion"
-DOCS_PRESENTACION.mkdir(parents=True, exist_ok=True)
+DOCS_DIR = BASE_DIR / "docs" / "trabajo-escrito-final" / "documento"
+FIG_DIR = DOCS_DIR / "figuras"
+PRES_DIR = BASE_DIR / "docs" / "presentacion"
+PRES_DIR.mkdir(parents=True, exist_ok=True)
 
-PPTX_OUT_LOCAL = DOCS_PRESENTACION / "Presentacion_Final_CCA_UNA.pptx"
-PPTX_OUT_DRIVE_ROOT = BASE_DIR / "DRIVE_ENTREGA_FINAL_CCA_ACTUALIZADA" / "Presentacion_Final_CCA_UNA.pptx"
-PPTX_OUT_DRIVE_MARCOS = BASE_DIR / "DRIVE_ENTREGA_FINAL_CCA_ACTUALIZADA" / "03_Marcos_Roman" / "presentacion_ppt" / "Presentacion_Final_CCA_UNA.pptx"
+PPTX_OUT_LOCAL = PRES_DIR / "Presentacion_Final_CCA_UNA.pptx"
+DRIVE_ROOT = BASE_DIR / "DRIVE_ENTREGA_FINAL_CCA_ACTUALIZADA"
+PPTX_OUT_DRIVE_ROOT = DRIVE_ROOT / "Presentacion_Final_CCA_UNA.pptx"
+PPTX_OUT_DRIVE_MARCOS = DRIVE_ROOT / "03_Marcos_Roman" / "presentacion_ppt" / "Presentacion_Final_CCA_UNA.pptx"
+PPTX_OUT_DRIVE_EMANUEL = DRIVE_ROOT / "01_Emanuel_Soto" / "presentacion_ppt" / "Presentacion_Final_CCA_UNA.pptx"
+PPTX_OUT_DRIVE_ALLAN = DRIVE_ROOT / "02_Allan_Arce" / "presentacion_ppt" / "Presentacion_Final_CCA_UNA.pptx"
 
-# Paleta Cromática Semántica
-COLOR_BG = RGBColor(0xFA, 0xFA, 0xF9)        # Fondo neutro suave (#FAFAF9)
-COLOR_CARD_BG = RGBColor(0xFF, 0xFF, 0xFF)   # Tarjeta blanca (#FFFFFF)
+# Paleta cromática ejecutiva y sobria
+COLOR_BG = RGBColor(0xFA, 0xFA, 0xF9)          # Fondo neutro suave (#FAFAF9)
+COLOR_CARD_BG = RGBColor(0xFF, 0xFF, 0xFF)     # Tarjeta blanca (#FFFFFF)
 COLOR_CARD_BORDER = RGBColor(0xE4, 0xE4, 0xE7) # Borde sutil (#E4E4E7)
-COLOR_GRAPHITE = RGBColor(0x09, 0x09, 0x0B)  # Texto oscuro (#09090B)
-COLOR_CARMIN = RGBColor(0x99, 0x1B, 0x1B)    # Rojo Carmín CCA (#991B1B)
-COLOR_RED_BRIGHT = RGBColor(0xB9, 0x1C, 0x1C)# Rojo acento (#B91C1C)
-COLOR_MUTED = RGBColor(0x71, 0x71, 0x7A)     # Gris texto secundario (#71717A)
-COLOR_TAG_BG = RGBColor(0xFE, 0xE2, 0xE2)    # Fondo de etiqueta (#FEE2E2)
+COLOR_GRAPHITE = RGBColor(0x09, 0x09, 0x0B)    # Texto principal (#09090B)
+COLOR_CARMIN = RGBColor(0x99, 0x1B, 0x1B)      # Rojo Carmín institucional (#991B1B)
+COLOR_MUTED = RGBColor(0x52, 0x52, 0x5B)       # Texto secundario (#52525B)
+COLOR_WHITE = RGBColor(0xFF, 0xFF, 0xFF)
 
-FONT_HEADING = "Arial"
-FONT_BODY = "Arial"
+FONT_FAMILY = "Arial"
 
-def create_presentation():
+
+def apply_background(slide):
+    bg = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, 0, 0, Inches(13.333), Inches(7.5))
+    bg.fill.solid()
+    bg.fill.fore_color.rgb = COLOR_BG
+    bg.line.fill.background()
+    return bg
+
+
+def add_slide_header(slide, tag_text: str, title_text: str, oneliner_text: str):
+    tb = slide.shapes.add_textbox(Inches(0.9), Inches(0.45), Inches(11.533), Inches(1.4))
+    tf = tb.text_frame
+    tf.word_wrap = True
+    tf.margin_left = tf.margin_top = tf.margin_right = tf.margin_bottom = 0
+
+    p_tag = tf.paragraphs[0]
+    p_tag.text = tag_text.upper()
+    p_tag.font.name = FONT_FAMILY
+    p_tag.font.size = Pt(10)
+    p_tag.font.bold = True
+    p_tag.font.color.rgb = COLOR_CARMIN
+    p_tag.space_after = Pt(4)
+
+    p_title = tf.add_paragraph()
+    p_title.text = title_text
+    p_title.font.name = FONT_FAMILY
+    p_title.font.size = Pt(23)
+    p_title.font.bold = True
+    p_title.font.color.rgb = COLOR_GRAPHITE
+    p_title.space_after = Pt(4)
+
+    p_one = tf.add_paragraph()
+    p_one.text = oneliner_text
+    p_one.font.name = FONT_FAMILY
+    p_one.font.size = Pt(13)
+    p_one.font.color.rgb = COLOR_MUTED
+
+
+def add_split_slide(
+    slide,
+    tag: str,
+    title: str,
+    oneliner: str,
+    bullets: List[Tuple[str, str]],
+    image_name: str,
+    caption: str = "",
+):
+    apply_background(slide)
+    add_slide_header(slide, tag, title, oneliner)
+
+    # Columna izquierda: tarjeta con puntos concisos
+    card = slide.shapes.add_shape(
+        MSO_SHAPE.ROUNDED_RECTANGLE,
+        Inches(0.9),
+        Inches(2.05),
+        Inches(5.6),
+        Inches(4.9),
+    )
+    card.fill.solid()
+    card.fill.fore_color.rgb = COLOR_CARD_BG
+    card.line.color.rgb = COLOR_CARD_BORDER
+    tf = card.text_frame
+    tf.word_wrap = True
+    tf.margin_left = tf.margin_right = Inches(0.35)
+    tf.margin_top = tf.margin_bottom = Inches(0.35)
+
+    for idx, (lead, desc) in enumerate(bullets):
+        p = tf.paragraphs[0] if idx == 0 else tf.add_paragraph()
+        p.space_after = Pt(14)
+        r1 = p.add_run()
+        r1.text = lead + "  "
+        r1.font.name = FONT_FAMILY
+        r1.font.size = Pt(13)
+        r1.font.bold = True
+        r1.font.color.rgb = COLOR_GRAPHITE
+
+        r2 = p.add_run()
+        r2.text = desc
+        r2.font.name = FONT_FAMILY
+        r2.font.size = Pt(12)
+        r2.font.color.rgb = COLOR_MUTED
+
+    # Columna derecha: imagen de evidencia
+    img_path = FIG_DIR / image_name
+    if img_path.exists():
+        slide.shapes.add_picture(
+            str(img_path),
+            left=Inches(6.8),
+            top=Inches(2.05),
+            width=Inches(5.633),
+        )
+        if caption:
+            tb_cap = slide.shapes.add_textbox(
+                Inches(6.8), Inches(6.55), Inches(5.633), Inches(0.4)
+            )
+            tf_cap = tb_cap.text_frame
+            tf_cap.word_wrap = True
+            p_cap = tf_cap.paragraphs[0]
+            p_cap.text = caption
+            p_cap.font.name = FONT_FAMILY
+            p_cap.font.size = Pt(10)
+            p_cap.font.italic = True
+            p_cap.font.color.rgb = COLOR_MUTED
+
+
+def add_cards_slide(
+    slide,
+    tag: str,
+    title: str,
+    oneliner: str,
+    cards_data: List[Tuple[str, str, str]],
+):
+    apply_background(slide)
+    add_slide_header(slide, tag, title, oneliner)
+
+    card_w = Inches(3.64)
+    gap = Inches(0.3)
+    start_x = Inches(0.9)
+
+    for idx, (badge, heading, body) in enumerate(cards_data):
+        x = start_x + idx * (card_w + gap)
+        c = slide.shapes.add_shape(
+            MSO_SHAPE.ROUNDED_RECTANGLE,
+            x,
+            Inches(2.05),
+            card_w,
+            Inches(4.9),
+        )
+        c.fill.solid()
+        c.fill.fore_color.rgb = COLOR_CARD_BG
+        c.line.color.rgb = COLOR_CARD_BORDER
+        ctf = c.text_frame
+        ctf.word_wrap = True
+        ctf.margin_left = ctf.margin_right = Inches(0.3)
+        ctf.margin_top = ctf.margin_bottom = Inches(0.35)
+
+        p0 = ctf.paragraphs[0]
+        p0.text = badge
+        p0.font.name = FONT_FAMILY
+        if any(char.isdigit() for char in badge) or len(badge) <= 7:
+            p0.font.size = Pt(26)
+        else:
+            p0.font.size = Pt(16)
+        p0.font.bold = True
+        p0.font.color.rgb = COLOR_CARMIN
+        p0.space_after = Pt(6)
+
+        p1 = ctf.add_paragraph()
+        p1.text = heading
+        p1.font.name = FONT_FAMILY
+        p1.font.size = Pt(13)
+        p1.font.bold = True
+        p1.font.color.rgb = COLOR_GRAPHITE
+        p1.space_after = Pt(12)
+
+        p2 = ctf.add_paragraph()
+        p2.text = body
+        p2.font.name = FONT_FAMILY
+        p2.font.size = Pt(12)
+        p2.font.color.rgb = COLOR_MUTED
+
+
+def build_deck():
     prs = pptx.Presentation()
     prs.slide_width = Inches(13.333)
-    prs.slide_height = Inches(7.5) # Widescreen 16:9
-    blank_layout = prs.slide_layouts[6] # Blank slide
-    
-    def apply_background(slide):
-        bg = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, 0, 0, Inches(13.333), Inches(7.5))
-        bg.fill.solid()
-        bg.fill.fore_color.rgb = COLOR_BG
-        bg.line.fill.background()
-        return bg
-
-    def add_header(slide, tag_text, title_text, subtitle_text=None):
-        tb_tag = slide.shapes.add_textbox(Inches(0.9), Inches(0.55), Inches(11.5), Inches(0.35))
-        p_tag = tb_tag.text_frame.paragraphs[0]
-        p_tag.text = tag_text.upper()
-        p_tag.font.name = FONT_HEADING
-        p_tag.font.size = Pt(11)
-        p_tag.font.bold = True
-        p_tag.font.color.rgb = COLOR_CARMIN
-        
-        tb_title = slide.shapes.add_textbox(Inches(0.9), Inches(0.9), Inches(11.5), Inches(0.75))
-        p_title = tb_title.text_frame.paragraphs[0]
-        p_title.text = title_text
-        p_title.font.name = FONT_HEADING
-        p_title.font.size = Pt(26)
-        p_title.font.bold = True
-        p_title.font.color.rgb = COLOR_GRAPHITE
-        
-        if subtitle_text:
-            tb_sub = slide.shapes.add_textbox(Inches(0.9), Inches(1.65), Inches(11.5), Inches(0.45))
-            p_sub = tb_sub.text_frame.paragraphs[0]
-            p_sub.text = subtitle_text
-            p_sub.font.name = FONT_BODY
-            p_sub.font.size = Pt(13.5)
-            p_sub.font.color.rgb = COLOR_MUTED
+    prs.slide_height = Inches(7.5)
+    blank = prs.slide_layouts[6]
 
     # =========================================================================
     # SLIDE 1: PORTADA
     # =========================================================================
-    s1 = prs.slides.add_slide(blank_layout)
+    s1 = prs.slides.add_slide(blank)
     apply_background(s1)
-    
-    bar = s1.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(0.9), Inches(1.1), Inches(0.6), Inches(0.08))
+
+    logo_cca = FIG_DIR / "Logo-camara-hi.png"
+    if logo_cca.exists():
+        s1.shapes.add_picture(str(logo_cca), Inches(0.9), Inches(0.9), width=Inches(3.2))
+
+    bar = s1.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(0.9), Inches(2.2), Inches(0.7), Inches(0.06))
     bar.fill.solid()
     bar.fill.fore_color.rgb = COLOR_CARMIN
     bar.line.fill.background()
 
-    tb1 = s1.shapes.add_textbox(Inches(0.9), Inches(1.4), Inches(11.5), Inches(3.6))
-    tf1 = tb1.text_frame
+    tb_title = s1.shapes.add_textbox(Inches(0.9), Inches(2.4), Inches(11.5), Inches(2.6))
+    tf1 = tb_title.text_frame
     tf1.word_wrap = True
-    
-    p_inst = tf1.paragraphs[0]
-    p_inst.text = "UNIVERSIDAD NACIONAL DE COSTA RICA · EIF-511 ARQUITECTURA DE INFORMACIÓN"
-    p_inst.font.name = FONT_HEADING
-    p_inst.font.size = Pt(11)
-    p_inst.font.bold = True
-    p_inst.font.color.rgb = COLOR_MUTED
-    p_inst.space_after = Pt(14)
-    
-    p_h1 = tf1.add_paragraph()
-    p_h1.text = "Por el comercio.\nPor Alajuela."
-    p_h1.font.name = FONT_HEADING
-    p_h1.font.size = Pt(46)
-    p_h1.font.bold = True
-    p_h1.font.color.rgb = COLOR_GRAPHITE
-    p_h1.space_after = Pt(14)
-    
-    p_sub = tf1.add_paragraph()
-    p_sub.text = "Reingeniería Integral de Arquitectura de Información y Plataforma Digital · Cámara de Comercio de Alajuela (CCA)"
-    p_sub.font.name = FONT_BODY
-    p_sub.font.size = Pt(17)
-    p_sub.font.color.rgb = COLOR_CARMIN
 
-    meta_box = s1.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(0.9), Inches(5.4), Inches(11.5), Inches(1.4))
-    meta_box.fill.solid()
-    meta_box.fill.fore_color.rgb = COLOR_CARD_BG
-    meta_box.line.color.rgb = COLOR_CARD_BORDER
-    meta_tf = meta_box.text_frame
-    meta_tf.word_wrap = True
-    
-    p_m1 = meta_tf.paragraphs[0]
-    p_m1.text = "Equipo Consultor: Marcos Román Valverde (Coordinador) · Emanuel Soto · Allan Arce"
-    p_m1.font.name = FONT_HEADING
-    p_m1.font.size = Pt(13)
-    p_m1.font.bold = True
-    p_m1.font.color.rgb = COLOR_GRAPHITE
-    
-    p_m2 = meta_tf.add_paragraph()
-    p_m2.text = "Docente: MSc. Cynthia Bolaños Espinoza · II Ciclo 2026 · Proyecto Integrador Final de Consultoría (30%)"
-    p_m2.font.name = FONT_BODY
-    p_m2.font.size = Pt(12)
-    p_m2.font.color.rgb = COLOR_MUTED
+    p0 = tf1.paragraphs[0]
+    p0.text = "EIF-511 ARQUITECTURA DE INFORMACIÓN · PROYECTO INTEGRADOR FINAL"
+    p0.font.name = FONT_FAMILY
+    p0.font.size = Pt(11)
+    p0.font.bold = True
+    p0.font.color.rgb = COLOR_CARMIN
+    p0.space_after = Pt(10)
 
-    # =========================================================================
-    # SLIDE 2: CONTEXTO Y PUNTO DE PARTIDA
-    # =========================================================================
-    s2 = prs.slides.add_slide(blank_layout)
-    apply_background(s2)
-    add_header(s2, "01. Contexto & Punto de Partida", 
-               "Una institución de 43 años con un portal que alejaba a sus propios socios",
-               "La Cámara nació en 1983 para respaldar al comerciante. En internet, ocurría exactamente lo opuesto.")
+    p1 = tf1.add_paragraph()
+    p1.text = "Por el comercio. Por Alajuela."
+    p1.font.name = FONT_FAMILY
+    p1.font.size = Pt(40)
+    p1.font.bold = True
+    p1.font.color.rgb = COLOR_GRAPHITE
+    p1.space_after = Pt(8)
 
-    cards_data_s2 = [
-        ("1983", "AÑO DE FUNDACIÓN", "Más de cuatro décadas defendiendo al comercio formal, MIPYMES y zonas francas de la provincia de Alajuela."),
-        ("16", "CANTONES DE INFLUENCIA", "Representación estratégica provincial desde Alajuela Centro hasta El Coyol, Grecia, San Ramón y San Carlos."),
-        ("4", "CLICS CIEGOS PREVIOS", "El portal anterior forzaba al usuario a adivinar categorías ocultas para encontrar un simple número de teléfono.")
-    ]
-    for idx, (num, label, desc) in enumerate(cards_data_s2):
-        x = Inches(0.9 + idx * 3.9)
-        c = s2.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, x, Inches(2.3), Inches(3.6), Inches(4.5))
-        c.fill.solid()
-        c.fill.fore_color.rgb = COLOR_CARD_BG
-        c.line.color.rgb = COLOR_CARD_BORDER
-        ctf = c.text_frame
-        ctf.word_wrap = True
-        
-        p1 = ctf.paragraphs[0]
-        p1.text = num
-        p1.font.name = FONT_HEADING
-        p1.font.size = Pt(46)
-        p1.font.bold = True
-        p1.font.color.rgb = COLOR_CARMIN
-        p1.space_after = Pt(4)
-        
-        p2 = ctf.add_paragraph()
-        p2.text = label
-        p2.font.name = FONT_HEADING
-        p2.font.size = Pt(11)
-        p2.font.bold = True
-        p2.font.color.rgb = COLOR_GRAPHITE
-        p2.space_after = Pt(12)
-        
-        p3 = ctf.add_paragraph()
-        p3.text = desc
-        p3.font.name = FONT_BODY
-        p3.font.size = Pt(13)
-        p3.font.color.rgb = COLOR_MUTED
+    p2 = tf1.add_paragraph()
+    p2.text = "Reorganización de la Arquitectura de Información para la Cámara de Comercio de Alajuela"
+    p2.font.name = FONT_FAMILY
+    p2.font.size = Pt(17)
+    p2.font.color.rgb = COLOR_MUTED
+
+    meta_card = s1.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(0.9), Inches(5.3), Inches(11.533), Inches(1.4))
+    meta_card.fill.solid()
+    meta_card.fill.fore_color.rgb = COLOR_CARD_BG
+    meta_card.line.color.rgb = COLOR_CARD_BORDER
+    mtf = meta_card.text_frame
+    mtf.word_wrap = True
+    mtf.margin_left = mtf.margin_right = Inches(0.4)
+    mtf.margin_top = mtf.margin_bottom = Inches(0.25)
+
+    pm1 = mtf.paragraphs[0]
+    pm1.text = "Equipo Consultor: Marcos Román Valverde (Coord.) · Emanuel Soto · Allan Arce"
+    pm1.font.name = FONT_FAMILY
+    pm1.font.size = Pt(13)
+    pm1.font.bold = True
+    pm1.font.color.rgb = COLOR_GRAPHITE
+
+    pm2 = mtf.add_paragraph()
+    pm2.text = "Universidad Nacional de Costa Rica · Escuela de Informática · Docente: MSc. Cynthia Bolaños Espinoza · II Ciclo 2026"
+    pm2.font.name = FONT_FAMILY
+    pm2.font.size = Pt(11.5)
+    pm2.font.color.rgb = COLOR_MUTED
 
     # =========================================================================
-    # SLIDE 3: LA FRICCIÓN HUMANA (BUYER PERSONAS)
+    # ACTO I: ¿QUÉ ENCONTRAMOS?
     # =========================================================================
-    s3 = prs.slides.add_slide(blank_layout)
-    apply_background(s3)
-    add_header(s3, "02. La Fricción Humana", 
-               "Realidades alajuelenses frente a un muro digital de desinformación",
-               "La mala arquitectura no es un tecnicismo: es tiempo perdido y frustración real para quienes generan empleo.")
 
-    profiles = [
-        ("Don Carlos / Doña Rosa", "COMERCIANTE TRADICIONAL (Calle Ancha, Alajuela Centro)",
-         "Ferretero / dueña de soda con más de 12 años de actividad formal. Buscan publicar vacantes y afiliarse.",
-         "Fricción previa: La sección /oferentes/ daba error de base de datos vacía. Debían viajar en bus a la oficina física.",
-         "Solución: Acceso directo a Bolsa de Empleo a 1 clic, wizard simple y soporte guiado por WhatsApp institucional."),
-        ("Licda. Valeria / Mariana", "PROFESIONAL B2B & EMPRESA (La Guácima / El Coyol)",
-         "Cofundadora de empresa en crecimiento. Requiere afiliarse para convenios interempresariales y deducibilidad fiscal.",
-         "Fricción previa: Cuotas ocultas. El único documento era un PDF huérfano de 62 KB para imprimir a mano.",
-         "Solución: Wizard digital en 3 minutos, pago con SINPE Móvil / tarjeta y acreditación de ahorro fiscal (Ley 7092).")
-    ]
-    for idx, (title, tag, bio, pain, sol) in enumerate(profiles):
-        x = Inches(0.9 + idx * 5.9)
-        c = s3.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, x, Inches(2.3), Inches(5.6), Inches(4.5))
-        c.fill.solid()
-        c.fill.fore_color.rgb = COLOR_CARD_BG
-        c.line.color.rgb = COLOR_CARD_BORDER
-        ctf = c.text_frame
-        ctf.word_wrap = True
-        
-        p1 = ctf.paragraphs[0]
-        p1.text = title
-        p1.font.name = FONT_HEADING
-        p1.font.size = Pt(18)
-        p1.font.bold = True
-        p1.font.color.rgb = COLOR_GRAPHITE
-        
-        p2 = ctf.add_paragraph()
-        p2.text = tag
-        p2.font.name = FONT_HEADING
-        p2.font.size = Pt(10)
-        p2.font.bold = True
-        p2.font.color.rgb = COLOR_CARMIN
-        p2.space_after = Pt(10)
-        
-        p3 = ctf.add_paragraph()
-        p3.text = bio
-        p3.font.name = FONT_BODY
-        p3.font.size = Pt(12)
-        p3.font.color.rgb = COLOR_MUTED
-        p3.space_after = Pt(8)
-        
-        p4 = ctf.add_paragraph()
-        p4.text = "■ " + pain
-        p4.font.name = FONT_BODY
-        p4.font.size = Pt(12)
-        p4.font.color.rgb = COLOR_GRAPHITE
-        p4.space_after = Pt(8)
+    # Slide 2: Contexto y credibilidad institucional
+    s2 = prs.slides.add_slide(blank)
+    add_cards_slide(
+        s2,
+        tag="¿Qué encontramos? · Contexto y Credibilidad",
+        title="La brecha entre el peso gremial de la Cámara y su portal digital",
+        oneliner="Un hub empresarial que transmitía descuido, dañando la confianza y frenando la afiliación de nuevas empresas.",
+        cards_data=[
+            (
+                "43 años",
+                "Brecha Institucional",
+                "Representa al 2.° polo económico del país, pero su portal digital proyectaba desorganización y alejaba al empresariado moderno.",
+            ),
+            (
+                "Invisibilidad",
+                "Pérdida de Confianza",
+                "Un catálogo inusable con faltas ortográficas le quitaba seriedad a los socios y transmitía falta de rigor técnico.",
+            ),
+            (
+                "Embudo roto",
+                "Fuga de Afiliaciones",
+                "Descargar un Word manual rompía la captación: las Pymes no se afiliaban y la Cámara perdía representatividad gremial.",
+            ),
+        ],
+    )
 
-        p5 = ctf.add_paragraph()
-        p5.text = "✓ " + sol
-        p5.font.name = FONT_BODY
-        p5.font.size = Pt(12)
-        p5.font.bold = True
-        p5.font.color.rgb = COLOR_CARMIN
+    # Slide 3: Portada y navegación inicial
+    s3 = prs.slides.add_slide(blank)
+    add_split_slide(
+        s3,
+        tag="¿Qué encontramos? · Portada y Navegación",
+        title="Doble inicio y servicios de valor invisibles en el menú",
+        oneliner="Dos portadas compitiendo entre sí y los motores de captación gremial ocultos de la barra principal.",
+        bullets=[
+            (
+                "Doble página de inicio:",
+                "La ruta raíz (/) y la subruta (/home) confundían la ubicación espacial y dividían el tráfico institucional en buscadores.",
+            ),
+            (
+                "Afiliación y empleo ocultos:",
+                "Los dos servicios con mayor impacto económico estaban fuera del menú superior, relegados a páginas auxiliares huérfanas.",
+            ),
+            (
+                "Cifras en conflicto:",
+                "La portada anunciaba 185 asociados frente a conteos internos opuestos, minando la transparencia gremial.",
+            ),
+        ],
+        image_name="auditoria_original_home.png",
+        caption="Evidencia: Portada de camaraalajuela.com sin enlace a Empleo ni Afiliación en el menú superior.",
+    )
 
-    # =========================================================================
-    # SLIDE 4: DIAGNÓSTICO FORENSE (PATOLOGÍAS HEURÍSTICAS)
-    # =========================================================================
-    s4 = prs.slides.add_slide(blank_layout)
-    apply_background(s4)
-    add_header(s4, "03. Diagnóstico Heurístico", 
-               "Tres patologías críticas destruían la credibilidad del portal anterior",
-               "Auditoría técnica sobre el WordPress preexistente basada en las heurísticas de Nielsen y principios de Halvorson.")
+    # Slide 4: Directorio y taxonomía
+    s4 = prs.slides.add_slide(blank)
+    add_split_slide(
+        s4,
+        tag="¿Qué encontramos? · Sistema de Etiquetado",
+        title="64 categorías caóticas que devaluaban a los comercios socios",
+        oneliner="Un catálogo desordenado que frustraba al cliente y restaba seriedad a las empresas que pagan su membresía.",
+        bullets=[
+            (
+                "Descontrol taxonómico:",
+                "Categorías duplicadas, espanglish y erratas visibles ('Constuctora') que perjudicaban la imagen institucional.",
+            ),
+            (
+                "Conteo contradictorio en pantalla:",
+                "En una misma vista coexistían 173 empresas certificadas y 171 resultados, sembrando dudas sobre el padrón.",
+            ),
+            (
+                "Cero filtrado territorial:",
+                "Imposible filtrar por cantón o distrito en una provincia de 16 cantones con realidades productivas diversas.",
+            ),
+        ],
+        image_name="auditoria_original_directorio.png",
+        caption="Evidencia: Directorio original con 64 categorías sin normalizar y sin barra de búsqueda predictiva.",
+    )
 
-    flaws = [
-        ("Canibalización SEO", "/ vs /home", "La portada existía bajo dos URLs con menús distintos. Confundía a Google y hacía que el visitante sintiera que navegaba en dos webs distintas."),
-        ("Secciones Fantasma", "/oferentes/ y /noticias/", "Promesas rotas en el menú principal. El usuario hacía clic y encontraba pantallas en blanco con 'No se encontraron entradas'."),
-        ("El Trámite Huérfano", "/documentos/ (PDF 62 KB)", "Cero comercio electrónico. Quien deseaba afiliarse debía descargar un PDF manual, imprimirlo y llevarlo físicamente.")
-    ]
-    for idx, (title, path, desc) in enumerate(flaws):
-        x = Inches(0.9 + idx * 3.9)
-        c = s4.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, x, Inches(2.3), Inches(3.6), Inches(4.5))
-        c.fill.solid()
-        c.fill.fore_color.rgb = COLOR_CARD_BG
-        c.line.color.rgb = COLOR_CARD_BORDER
-        ctf = c.text_frame
-        ctf.word_wrap = True
-        
-        p1 = ctf.paragraphs[0]
-        p1.text = title
-        p1.font.name = FONT_HEADING
-        p1.font.size = Pt(18)
-        p1.font.bold = True
-        p1.font.color.rgb = COLOR_GRAPHITE
-        
-        p2 = ctf.add_paragraph()
-        p2.text = path
-        p2.font.name = FONT_HEADING
-        p2.font.size = Pt(12)
-        p2.font.bold = True
-        p2.font.color.rgb = COLOR_CARMIN
-        p2.space_after = Pt(14)
-        
-        p3 = ctf.add_paragraph()
-        p3.text = desc
-        p3.font.name = FONT_BODY
-        p3.font.size = Pt(13)
-        p3.font.color.rgb = COLOR_MUTED
+    # Slide 5: Servicios y trámites
+    s5 = prs.slides.add_slide(blank)
+    add_split_slide(
+        s5,
+        tag="¿Qué encontramos? · Sistema de Organización",
+        title="Módulos vacíos que transmitían inoperancia institucional",
+        oneliner="Secciones anunciadas como servicios de valor que no entregaban ninguna información al usuario.",
+        bullets=[
+            (
+                "Bolsa de Empleo inactiva:",
+                "La sección /oferentes/ devolvía de forma permanente 'No hay ofertas', proyectando estancamiento ante el talento local.",
+            ),
+            (
+                "Afiliación enteramente en papel:",
+                "Un formulario manual en Word (62 KB) como único canal de ingreso, incompatible con la agilidad empresarial actual.",
+            ),
+            (
+                "Noticias en blanco:",
+                "Mensajes de error de base de datos vacía en la sección informativa, transmitiendo una entidad desatendida.",
+            ),
+        ],
+        image_name="auditoria_original_oferentes.png",
+        caption="Evidencia: Sección de empleo original vacía y repositorio limitado a un formulario manual descargable.",
+    )
 
     # =========================================================================
-    # SLIDE 5: VALIDACIÓN EMPÍRICA (OPTIMAL WORKSHOP N=18)
+    # ACTO II: ¿QUÉ USAMOS Y CÓMO NOS AYUDÓ?
     # =========================================================================
-    s5 = prs.slides.add_slide(blank_layout)
-    apply_background(s5)
-    add_header(s5, "04. Validación Empírica", 
-               "Dejamos de adivinar: 18 participantes reales modelaron la estructura",
-               "Sustitución de consensos artificiales por variabilidad real mediante OptimalSort y Treejack (Kuric et al., 2025).")
 
-    stats = [
-        ("N=18", "PARTICIPANTES REALES", "Estratificados en 3 cohortes: Comerciantes tradicionales (7), Profesionales B2B (6) y Emprendedores (5)."),
-        ("540", "CLASIFICACIONES", "100% de tasa de completitud en OptimalSort evaluando 30 conceptos representativos de la Cámara."),
-        ("72% - 94%", "DISPERSIÓN NATURAL", "Afinidad empírica que desnudó fricciones en patentes, empleo y convenios antes de programar una sola línea.")
-    ]
-    for idx, (num, label, desc) in enumerate(stats):
-        x = Inches(0.9 + idx * 3.9)
-        c = s5.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, x, Inches(2.3), Inches(3.6), Inches(4.5))
-        c.fill.solid()
-        c.fill.fore_color.rgb = COLOR_CARD_BG
-        c.line.color.rgb = COLOR_CARD_BORDER
-        ctf = c.text_frame
-        ctf.word_wrap = True
-        
-        p1 = ctf.paragraphs[0]
-        p1.text = num
-        p1.font.name = FONT_HEADING
-        p1.font.size = Pt(44)
-        p1.font.bold = True
-        p1.font.color.rgb = COLOR_CARMIN
-        p1.space_after = Pt(4)
-        
-        p2 = ctf.add_paragraph()
-        p2.text = label
-        p2.font.name = FONT_HEADING
-        p2.font.size = Pt(11)
-        p2.font.bold = True
-        p2.font.color.rgb = COLOR_GRAPHITE
-        p2.space_after = Pt(12)
-        
-        p3 = ctf.add_paragraph()
-        p3.text = desc
-        p3.font.name = FONT_BODY
-        p3.font.size = Pt(13)
-        p3.font.color.rgb = COLOR_MUTED
+    # Slide 6: FlowMapp y microarquitectura
+    s6 = prs.slides.add_slide(blank)
+    add_split_slide(
+        s6,
+        tag="¿Qué usamos? · Mapeo Estructural",
+        title="De 42 enlaces dispersos a 26 nodos en 3 niveles",
+        oneliner="Modelamos la jerarquía global en FlowMapp y la microarquitectura de cada pantalla en Octopus.do antes de diseñar.",
+        bullets=[
+            (
+                "Ley de Hick aplicada:",
+                "Redujimos la barra superior a 5 secciones temáticas principales más un botón magnético de llamada a la acción para Afiliarse.",
+            ),
+            (
+                "Microarquitectura de bloques:",
+                "Con Octopus.do definimos la intención y el contenido de cada bloque funcional, depurando módulos redundantes.",
+            ),
+            (
+                "Regla de los 3 clics:",
+                "Garantizamos que cualquier comercio, trámite de patente o vacante laboral esté a un máximo de 3 pasos desde el inicio.",
+            ),
+        ],
+        image_name="figura_02_sitemap_macro.png",
+        caption="Evidencia: Sitemap macro balanceado en FlowMapp con 26 nodos y máxima profundidad de 3 niveles.",
+    )
 
-    # =========================================================================
-    # SLIDE 6: HALLAZGO: DE MONO A POLIJERARQUÍA
-    # =========================================================================
-    s6 = prs.slides.add_slide(blank_layout)
-    apply_background(s6)
-    add_header(s6, "05. Hallazgo Científico", 
-               "La rigidez del árbol expulsaba a los usuarios: adoptamos Polijerarquía",
-               "Forzar una única ruta lógica provocaba que el 33% de los usuarios no encontrara el servicio (Ladisa et al., 2023).")
+    # Slide 7: Optimal Workshop
+    s7 = prs.slides.add_slide(blank)
+    add_split_slide(
+        s7,
+        tag="¿Qué usamos? · Validación Empírica",
+        title="El modelo mental de los usuarios cuestionó la jerarquía rígida",
+        oneliner="Una muestra de 18 participantes evaluó la agrupación lógica mediante Card Sorting y Treejack.",
+        bullets=[
+            (
+                "540 clasificaciones analizadas:",
+                "Participantes con perfiles de comerciantes tradicionales, empresas B2B y emprendedores evaluaron 30 conceptos clave.",
+            ),
+            (
+                "Dispersión natural de categorías:",
+                "La matriz de similitud reveló que trámites como patentes y convenios no pertenecen a un único contenedor estático.",
+            ),
+            (
+                "Fundamento empírico:",
+                "Confirmó que obligar al usuario a seguir una sola ruta jerárquica provocaba desorientación y abandono.",
+            ),
+        ],
+        image_name="figura_matriz_similitud_optimalsort.png",
+        caption="Evidencia: Matriz de similitud de OptimalSort con dispersión natural en trámites, convenios y empleo.",
+    )
 
-    insights = [
-        ("Guía de Patente Municipal", "67% en Servicios · 22% en Institucional · 11% en Afiliación",
-         "Ubicación canónica en Servicios, pero con accesos cruzados en el formulario de ingreso ('Verifique su patente') y en reglamentos."),
-        ("Bolsa de Empleo Cantonal", "50% de perfiles B2B la buscaban vinculada al Directorio",
-         "Se elevó a nodo de navegación principal de 1 clic y se enlazó como filtro dentro de las fichas de los comercios afiliados."),
-        ("Convenios y Descuentos", "Dividida entre Afiliaciones (beneficio) y Directorio (catálogo)",
-         "Catálogo interactivo en el Directorio y cálculo del retorno de inversión (ROI) visible dentro del wizard de afiliación.")
-    ]
-    for idx, (title, stats_line, desc) in enumerate(insights):
-        x = Inches(0.9 + idx * 3.9)
-        c = s6.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, x, Inches(2.3), Inches(3.6), Inches(4.5))
-        c.fill.solid()
-        c.fill.fore_color.rgb = COLOR_CARD_BG
-        c.line.color.rgb = COLOR_CARD_BORDER
-        ctf = c.text_frame
-        ctf.word_wrap = True
-        
-        p1 = ctf.paragraphs[0]
-        p1.text = title
-        p1.font.name = FONT_HEADING
-        p1.font.size = Pt(17)
-        p1.font.bold = True
-        p1.font.color.rgb = COLOR_GRAPHITE
-        
-        p2 = ctf.add_paragraph()
-        p2.text = stats_line
-        p2.font.name = FONT_HEADING
-        p2.font.size = Pt(10.5)
-        p2.font.bold = True
-        p2.font.color.rgb = COLOR_CARMIN
-        p2.space_after = Pt(12)
-        
-        p3 = ctf.add_paragraph()
-        p3.text = desc
-        p3.font.name = FONT_BODY
-        p3.font.size = Pt(13)
-        p3.font.color.rgb = COLOR_MUTED
+    # Slide 8: Polijerarquía
+    s8 = prs.slides.add_slide(blank)
+    add_cards_slide(
+        s8,
+        tag="¿Cómo nos ayudó? · Arquitectura de Información",
+        title="Polijerarquía: Múltiples caminos para respaldar la conversión",
+        oneliner="Conectamos los servicios clave en múltiples puntos del portal para que ningún usuario se quede sin respuesta.",
+        cards_data=[
+            (
+                "Trámites",
+                "Servicios + Afiliación",
+                "Ubicados de forma canónica en Servicios al Comercio y vinculados como requisito previo dentro del registro empresarial.",
+            ),
+            (
+                "Empleo",
+                "Menú Principal + Directorio",
+                "Elevada a sección de navegación primaria a 1 clic, y vinculada directamente en las fichas de los comercios contratantes.",
+            ),
+            (
+                "Beneficios",
+                "Directorio + Retorno Fiscal",
+                "Catálogo de descuentos visible en el Directorio y cálculo de la cuota deducible (Ley 7092) integrado en el registro.",
+            ),
+        ],
+    )
 
-    # =========================================================================
-    # SLIDE 7: SITEMAP MACRO Y ARQUITECTURA PROPUESTA
-    # =========================================================================
-    s7 = prs.slides.add_slide(blank_layout)
-    apply_background(s7)
-    add_header(s7, "06. Arquitectura Propuesta", 
-               "Cinco ramas maestras. Cero callejones sin salida.",
-               "Estructura balanceada en 3 niveles de profundidad máxima: ningún contenido vital a más de 2 clics.")
+    # Slide 9: Algolia Search
+    s9 = prs.slides.add_slide(blank)
+    add_split_slide(
+        s9,
+        tag="¿Qué usamos? · Sistema de Búsqueda",
+        title="Búsqueda predictiva para devolverle valor al Directorio",
+        oneliner="Respuestas en milisegundos y comprensión del lenguaje coloquial de los comerciantes alajuelenses.",
+        bullets=[
+            (
+                "171 comercios indexados:",
+                "Índice estructurado con datos normalizados de cantón, distrito, sector formal y convenios gremiales verificados.",
+            ),
+            (
+                "52 grupos de sinónimos locales:",
+                "Equivalencias prácticas ('taller' ↔ 'mecánica', 'tornillos' ↔ 'ferretería') que redujeron búsquedas vacías del 23% al 6%.",
+            ),
+            (
+                "Tolerancia tipográfica real:",
+                "Recuperación instantánea ante errores comunes de digitación como 'fereteria', 'biyares', 'farmasia' o 'dos pinoz'.",
+            ),
+        ],
+        image_name="figura_9_5_algolia_analytics_queries.png",
+        caption="Evidencia: Analítica real de Algolia con consultas ortográficas procesadas y recuperadas con éxito.",
+    )
 
-    branches = [
-        ("1. Institucional", "/la-camara", "Misión, Junta Directiva, Estatutos transparentes e Historia gremial desde 1983."),
-        ("2. Servicios", "/servicios", "Arbitraje Mercantil (Ley 7727), Trámites de Patentes y Convenios provinciales."),
-        ("3. Directorio", "/directorio", "Buscador facetado por cantón, distintivo verificado CCA y enlace WhatsApp directo."),
-        ("4. Bolsa Empleo", "/empleo", "Vacantes activas en El Coyol y Alajuela Centro + formulario de postulación ágil."),
-        ("5. Contacto", "/contacto", "Sede en Plaza Tomás Guardia, canal oficial de WhatsApp y Preguntas Frecuentes.")
-    ]
-    for idx, (title, url, desc) in enumerate(branches):
-        x = Inches(0.9 + idx * 2.3)
-        c = s7.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, x, Inches(2.3), Inches(2.15), Inches(3.7))
-        c.fill.solid()
-        c.fill.fore_color.rgb = COLOR_CARD_BG
-        c.line.color.rgb = COLOR_CARD_BORDER
-        ctf = c.text_frame
-        ctf.word_wrap = True
-        
-        p1 = ctf.paragraphs[0]
-        p1.text = title
-        p1.font.name = FONT_HEADING
-        p1.font.size = Pt(14)
-        p1.font.bold = True
-        p1.font.color.rgb = COLOR_GRAPHITE
-        
-        p2 = ctf.add_paragraph()
-        p2.text = url
-        p2.font.name = FONT_HEADING
-        p2.font.size = Pt(10)
-        p2.font.bold = True
-        p2.font.color.rgb = COLOR_CARMIN
-        p2.space_after = Pt(8)
-        
-        p3 = ctf.add_paragraph()
-        p3.text = desc
-        p3.font.name = FONT_BODY
-        p3.font.size = Pt(11.5)
-        p3.font.color.rgb = COLOR_MUTED
+    # Slide 10: Strapi CMS
+    s10 = prs.slides.add_slide(blank)
+    add_split_slide(
+        s10,
+        tag="¿Qué usamos? · Gobernanza de Contenido",
+        title="Vocabularios controlados para garantizar profesionalismo",
+        oneliner="Esquemas cerrados en Strapi que blindan la calidad del dato y evitan que el portal vuelva a desordenarse.",
+        bullets=[
+            (
+                "Validación estricta por esquema:",
+                "Campos estructurados en Strapi para los 16 cantones oficiales y 5 macro-sectores, bloqueando erratas manuales.",
+            ),
+            (
+                "Gestión editorial autónoma:",
+                "El personal de la Cámara actualiza comercios, convenios y vacantes desde un panel intuitivo sin depender de terceros.",
+            ),
+            (
+                "Soberanía de datos:",
+                "Arquitectura desacoplada que reemplaza la fragilidad de plugins de WordPress por una API estructurada y segura.",
+            ),
+        ],
+        image_name="captura_strapi_content_manager_comercios.png",
+        caption="Evidencia: Content Manager de Strapi con validación de cantones y atributos comerciales obligatorios.",
+    )
 
-    cta_box = s7.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(0.9), Inches(6.2), Inches(11.5), Inches(0.75))
-    cta_box.fill.solid()
-    cta_box.fill.fore_color.rgb = COLOR_CARMIN
-    cta_box.line.fill.background()
-    cta_tf = cta_box.text_frame
-    p_cta = cta_tf.paragraphs[0]
-    p_cta.alignment = PP_ALIGN.CENTER
-    p_cta.text = "BOTÓN MAGNÉTICO DESTACADO: 'AFILIAR MI EMPRESA' (/afiliarse) — Visible en todo el viewport"
-    p_cta.font.name = FONT_HEADING
-    p_cta.font.size = Pt(12)
-    p_cta.font.bold = True
-    p_cta.font.color.rgb = RGBColor(255, 255, 255)
-
-    # =========================================================================
-    # SLIDE 8: DISEÑO EDITORIAL ANTI-SLOP (BENCHMARK ICC)
-    # =========================================================================
-    s8 = prs.slides.add_slide(blank_layout)
-    apply_background(s8)
-    add_header(s8, "07. Sistema de Diseño Visual", 
-               "Inspiración editorial ICC: 85% fondo blanco y cero adornos inútiles",
-               "Benchmark oficial: International Chamber of Commerce (iccwbo.org). Erradicación de clichés genéricos de IA.")
-
-    principles = [
-        ("Paleta con Identidad Cívica", "Rojo Carmín (#991B1B) + Negro (#09090B)", "Eliminamos los azules genéricos de plantillas. Restauramos los colores oficiales de la Cámara y de la bandera alajuelense."),
-        ("Tipografía Asimétrica Serena", "Titulares Newsreader + Plus Jakarta Sans", "Elegancia editorial con jerarquía clara. Prohibido el uso de pesos ultra-pesados que saturan la vista del lector."),
-        ("Erradicación de 'AI Slop'", "Cero gradientes morados, cero badges falsos", "Bordes milimétricos de 1px, fotografía documental auténtica de comercio local y espacios negativos que dejan respirar al contenido.")
-    ]
-    for idx, (title, sub, desc) in enumerate(principles):
-        x = Inches(0.9 + idx * 3.9)
-        c = s8.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, x, Inches(2.3), Inches(3.6), Inches(4.5))
-        c.fill.solid()
-        c.fill.fore_color.rgb = COLOR_CARD_BG
-        c.line.color.rgb = COLOR_CARD_BORDER
-        ctf = c.text_frame
-        ctf.word_wrap = True
-        
-        p1 = ctf.paragraphs[0]
-        p1.text = title
-        p1.font.name = FONT_HEADING
-        p1.font.size = Pt(17)
-        p1.font.bold = True
-        p1.font.color.rgb = COLOR_GRAPHITE
-        
-        p2 = ctf.add_paragraph()
-        p2.text = sub
-        p2.font.name = FONT_HEADING
-        p2.font.size = Pt(11)
-        p2.font.bold = True
-        p2.font.color.rgb = COLOR_CARMIN
-        p2.space_after = Pt(14)
-        
-        p3 = ctf.add_paragraph()
-        p3.text = desc
-        p3.font.name = FONT_BODY
-        p3.font.size = Pt(13)
-        p3.font.color.rgb = COLOR_MUTED
+    # Slide 11: Miro, RAG y SINPE
+    s11 = prs.slides.add_slide(blank)
+    add_split_slide(
+        s11,
+        tag="¿Qué usamos? · Experiencia y Conversión",
+        title="Digitalización del viaje: De la consulta a la afiliación activa",
+        oneliner="Mapeamos la fricción en Miro, resolvimos dudas con IA y transformamos la afiliación en un trámite digital.",
+        bullets=[
+            (
+                "Customer Journey Map en Miro:",
+                "Reveló que el mayor abandono histórico ocurría por falta de claridad en las cuotas y por el trámite físico de pago.",
+            ),
+            (
+                "Asistente RAG con base jurídica:",
+                "Explica al instante requisitos, arbitraje comercial (Ley 7727) y la deducibilidad de la cuota (Art. 8, Ley 7092).",
+            ),
+            (
+                "Validación transaccional SINPE:",
+                "Verificación inmediata de teléfonos de 8 dígitos y emisión de comprobante con radicado formal para seguimiento.",
+            ),
+        ],
+        image_name="figura_05_flujo_checkout_afiliacion.png",
+        caption="Evidencia: Flujo de checkout digital en 3 pasos con validación de comprobante SINPE y radicado formal.",
+    )
 
     # =========================================================================
-    # SLIDE 9: BÚSQUEDA INTELIGENTE CON ALGOLIA (ALLAN ARCE)
+    # ACTO III: ¿CÓMO LO IMPLEMENTAMOS?
     # =========================================================================
-    s9 = prs.slides.add_slide(blank_layout)
-    apply_background(s9)
-    add_header(s9, "08. Búsqueda Inteligente (Allan Arce)", 
-               "Algolia Cloud indexa los 171 comercios reales con latencia < 20 ms",
-               "De un mock de 12 comercios a un índice en la nube con 52 grupos de sinónimos alajuelenses.")
 
-    algolia_features = [
-        ("171 Comercios Reales", "ÍNDICE 'cca_directorio_comercial'", "Directorio completo del sector formal de Alajuela cargado desde el corpus oficial (`src/lib/directorio_cca.json`)."),
-        ("52 Grupos de Sinónimos", "TOLERANCIA A JERGAS Y ERRATAS", "Resuelve términos locales (e.g., 'taller' ↔ 'mecánica', 'ferretería' ↔ 'tornillos'). Las búsquedas vacías cayeron de 23% a 6%."),
-        ("Facetado Geográfico", "CANTÓN → DISTRITO & 5 SECTORES", "Filtro reactivo jerárquico que permite localizar proveedores por cercanía física en milisegundos.")
-    ]
-    for idx, (title, sub, desc) in enumerate(algolia_features):
-        x = Inches(0.9 + idx * 3.9)
-        c = s9.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, x, Inches(2.3), Inches(3.6), Inches(4.5))
-        c.fill.solid()
-        c.fill.fore_color.rgb = COLOR_CARD_BG
-        c.line.color.rgb = COLOR_CARD_BORDER
-        ctf = c.text_frame
-        ctf.word_wrap = True
-        
-        p1 = ctf.paragraphs[0]
-        p1.text = title
-        p1.font.name = FONT_HEADING
-        p1.font.size = Pt(18)
-        p1.font.bold = True
-        p1.font.color.rgb = COLOR_GRAPHITE
-        
-        p2 = ctf.add_paragraph()
-        p2.text = sub
-        p2.font.name = FONT_HEADING
-        p2.font.size = Pt(11)
-        p2.font.bold = True
-        p2.font.color.rgb = COLOR_CARMIN
-        p2.space_after = Pt(14)
-        
-        p3 = ctf.add_paragraph()
-        p3.text = desc
-        p3.font.name = FONT_BODY
-        p3.font.size = Pt(13)
-        p3.font.color.rgb = COLOR_MUTED
+    # Slide 12: Prototipo como laboratorio de AI
+    s12 = prs.slides.add_slide(blank)
+    add_split_slide(
+        s12,
+        tag="¿Cómo lo implementamos? · Laboratorio de AI",
+        title="Un entorno funcional para restaurar la confianza",
+        oneliner="El prototipo web valida en condiciones reales la claridad, sobriedad y accesibilidad de la nueva arquitectura.",
+        bullets=[
+            (
+                "Identidad institucional sólida:",
+                "Portada canónica unificada con el escudo oficial de la Cámara, buscador central y acceso a los 5 ejes gremiales.",
+            ),
+            (
+                "Diseño sobrio y accesible:",
+                "Contraste certificado, tipografía legible y jerarquía espacial limpia para transmitir rigor profesional.",
+            ),
+            (
+                "Entorno de pruebas operativas:",
+                "Permitió auditar con usuarios tareas reales de búsqueda por cantón, contacto comercial y solicitud de servicios.",
+            ),
+        ],
+        image_name="figura_web_resultado_home.png",
+        caption="Evidencia: Portada canónica del prototipo con el emblema oficial y accesos directos estructurados.",
+    )
 
-    # =========================================================================
-    # SLIDE 10: CORRECCIÓN SEMÁNTICA CON IA (ALLAN ARCE)
-    # =========================================================================
-    s10 = prs.slides.add_slide(blank_layout)
-    apply_background(s10)
-    add_header(s10, "09. Corrección Semántica con IA (Allan Arce)", 
-               "Endpoint `/api/corregir` con Azure OpenAI y fallback heurístico local",
-               "Recuperación automática de consultas mal formuladas sin frustración para el usuario.")
+    # Slide 13: Directorio y Bolsa de Empleo
+    s13 = prs.slides.add_slide(blank)
+    add_split_slide(
+        s13,
+        tag="¿Cómo lo implementamos? · Sistemas Funcionales",
+        title="Directorio útil y Bolsa de Empleo activa para la provincia",
+        oneliner="Herramientas que devuelven a los comercios el valor de su membresía y generan impacto social tangible.",
+        bullets=[
+            (
+                "171 comercios localizables en 18 ms:",
+                "Filtrado simultáneo por cantón y sector comercial, proyectando orden y modernidad empresarial.",
+            ),
+            (
+                "Conexión comercial directa:",
+                "Acceso inmediato a WhatsApp y ruta en Waze sin intermediarios ni datos desactualizados.",
+            ),
+            (
+                "Bolsa de empleo funcional:",
+                "Ofertas vigentes en Alajuela Centro y El Coyol, transformando una sección vacía en un servicio de alto impacto.",
+            ),
+        ],
+        image_name="figura_web_resultado_directorio.png",
+        caption="Evidencia: Directorio oficial con facetas por cantón, sectores normalizados y tiempos de respuesta de 18 ms.",
+    )
 
-    ia_search_cards = [
-        ("Corrección en la Nube", "AZURE OPENAI (GPT-4o-MINI)", "Interpreta la intención semántica ante frases complejas y deformaciones fonéticas ('fereteria en el collor' → 'Ferretería en El Coyol')."),
-        ("Resiliencia Total", "FALLBACK HEURÍSTICO LOCAL", "Si la API de Azure no responde o no hay llave configurada, el endpoint aplica diccionario de distancias local sin fallar jamás."),
-        ("Re-búsqueda Invisible", "CERO PANTALLAS EN BLANCO", "Si Algolia reporta 0 resultados, el frontend consulta `/api/corregir` y vuelve a buscar de inmediato con sugerencia visible.")
-    ]
-    for idx, (title, sub, desc) in enumerate(ia_search_cards):
-        x = Inches(0.9 + idx * 3.9)
-        c = s10.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, x, Inches(2.3), Inches(3.6), Inches(4.5))
-        c.fill.solid()
-        c.fill.fore_color.rgb = COLOR_CARD_BG
-        c.line.color.rgb = COLOR_CARD_BORDER
-        ctf = c.text_frame
-        ctf.word_wrap = True
-        
-        p1 = ctf.paragraphs[0]
-        p1.text = title
-        p1.font.name = FONT_HEADING
-        p1.font.size = Pt(18)
-        p1.font.bold = True
-        p1.font.color.rgb = COLOR_GRAPHITE
-        
-        p2 = ctf.add_paragraph()
-        p2.text = sub
-        p2.font.name = FONT_HEADING
-        p2.font.size = Pt(11)
-        p2.font.bold = True
-        p2.font.color.rgb = COLOR_CARMIN
-        p2.space_after = Pt(14)
-        
-        p3 = ctf.add_paragraph()
-        p3.text = desc
-        p3.font.name = FONT_BODY
-        p3.font.size = Pt(13)
-        p3.font.color.rgb = COLOR_MUTED
+    # Slide 14: Wizard de Afiliación Digital
+    s14 = prs.slides.add_slide(blank)
+    add_split_slide(
+        s14,
+        tag="¿Cómo lo implementamos? · Proceso Transaccional",
+        title="Afiliación digital: El motor para captar nuevas empresas",
+        oneliner="Sustituimos el formulario manual por un flujo asistido en 3 pasos que demuestra profesionalismo y genera ingresos.",
+        bullets=[
+            (
+                "Paso 1: Transparencia y modalidades:",
+                "Tarifas claras para Pymes (₡15.000/mes) y Empresas (₡35.000/mes) destacando el beneficio de deducibilidad fiscal.",
+            ),
+            (
+                "Paso 2: Pago digital asistido:",
+                "Instrucciones directas de transferencia SINPE Móvil al número oficial de la Cámara con validación de comprobante.",
+            ),
+            (
+                "Paso 3: Certeza jurídica y radicado:",
+                "Generación de comprobante digital numerado para que la empresa tenga constancia inmediata de su registro gremial.",
+            ),
+        ],
+        image_name="figura_web_resultado_afiliacion.png",
+        caption="Evidencia: Wizard de afiliación con desglose de beneficios fiscales (Ley 7092) y selección de membresía.",
+    )
 
-    # =========================================================================
-    # SLIDE 11: CMS HEADLESS STRAPI 5.61 (EMANUEL SOTO)
-    # =========================================================================
-    s11 = prs.slides.add_slide(blank_layout)
-    apply_background(s11)
-    add_header(s11, "10. CMS Headless & Taxonomías (Emanuel Soto)", 
-               "Strapi v5.61 desacopla el contenido y erradica los errores ortográficos",
-               "Transición de un WordPress rígido a una arquitectura desacoplada con vocabularios controlados cerrados.")
+    # Slide 15: Evaluación Cuantitativa
+    s15 = prs.slides.add_slide(blank)
+    add_cards_slide(
+        s15,
+        tag="¿Qué logramos? · Evaluación Cuantitativa",
+        title="Métricas que respaldan el retorno de la confianza",
+        oneliner="La evaluación con usuarios y la analítica confirmaron la eliminación de barreras críticas de usabilidad.",
+        cards_data=[
+            (
+                "89.5 SUS",
+                "Escala de Usabilidad",
+                "De un puntaje inicial reprobatorio de 48.2 a 89.5 puntos (grado A+), alcanzando el rango de excelencia percibida.",
+            ),
+            (
+                "86%",
+                "Éxito directo Treejack",
+                "Los usuarios navegaron la estructura sin titubear ni extraviarse en tareas prioritarias de localización.",
+            ),
+            (
+                "0.8%",
+                "Clics de frustración",
+                "Descenso drástico en Microsoft Clarity frente al 18.4% del portal anterior, validando una interacción sin fricciones.",
+            ),
+        ],
+    )
 
-    strapi_cards = [
-        ("Vocabularios Cerrados", "16 CANTONES & 5 MACRO-SECTORES", "Listas cerradas de valores validadas por esquema JSON (`comercio.schema.json`). Impiden errores como 'Alajuel' o 'San Ramon'."),
-        ("Siembra Automatizada", "SCRIPT `seed_strapi.js`", "Población automática y reproducible del Content Manager con registros estructurados y relaciones normalizadas."),
-        ("Gestión Autónoma", "PUBLICACIÓN EN 30 SEGUNDOS", "El personal de la Cámara publica y despublica afiliados desde un panel web intuitivo, reduciendo la espera de 72 horas a 30 segundos.")
-    ]
-    for idx, (title, sub, desc) in enumerate(strapi_cards):
-        x = Inches(0.9 + idx * 3.9)
-        c = s11.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, x, Inches(2.3), Inches(3.6), Inches(4.5))
-        c.fill.solid()
-        c.fill.fore_color.rgb = COLOR_CARD_BG
-        c.line.color.rgb = COLOR_CARD_BORDER
-        ctf = c.text_frame
-        ctf.word_wrap = True
-        
-        p1 = ctf.paragraphs[0]
-        p1.text = title
-        p1.font.name = FONT_HEADING
-        p1.font.size = Pt(18)
-        p1.font.bold = True
-        p1.font.color.rgb = COLOR_GRAPHITE
-        
-        p2 = ctf.add_paragraph()
-        p2.text = sub
-        p2.font.name = FONT_HEADING
-        p2.font.size = Pt(11)
-        p2.font.bold = True
-        p2.font.color.rgb = COLOR_CARMIN
-        p2.space_after = Pt(14)
-        
-        p3 = ctf.add_paragraph()
-        p3.text = desc
-        p3.font.name = FONT_BODY
-        p3.font.size = Pt(13)
-        p3.font.color.rgb = COLOR_MUTED
-
-    # =========================================================================
-    # SLIDE 12: CUSTOMER JOURNEY MAP & ESTRATEGIA SOCIAL (EMANUEL SOTO)
-    # =========================================================================
-    s12 = prs.slides.add_slide(blank_layout)
-    apply_background(s12)
-    add_header(s12, "11. Customer Journey Map (Emanuel Soto)", 
-               "Tablero 5×5 en Miro transforma la mayor fricción en la mayor conversión",
-               "La satisfacción en el proceso de afiliación salta de −2 a +2 gracias al nuevo embudo digital.")
-
-    cjm_cards = [
-        ("Matriz 5×5 en Miro", "API AUTOMATIZADA (`tools/08_miro_cjm/`)", "25 cuadrantes que cruzan 5 etapas temporales con 5 carriles (acciones, puntos de contacto, emociones, dolor y AI)."),
-        ("Salto Emocional: -2 a +2", "RESOLUCIÓN DE CUELLO DE BOTELLA", "El trámite presencial en papel (peor momento histórico) se reemplaza por un checkout ágil de 3 pasos con radicado digital."),
-        ("Estrategia Omnicanal", "LINKEDIN, INSTAGRAM Y WHATSAPP", "LinkedIn para convenios B2B, Instagram para destacar 'Comercio del Mes' y WhatsApp como canal de soporte cercano.")
-    ]
-    for idx, (title, sub, desc) in enumerate(cjm_cards):
-        x = Inches(0.9 + idx * 3.9)
-        c = s12.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, x, Inches(2.3), Inches(3.6), Inches(4.5))
-        c.fill.solid()
-        c.fill.fore_color.rgb = COLOR_CARD_BG
-        c.line.color.rgb = COLOR_CARD_BORDER
-        ctf = c.text_frame
-        ctf.word_wrap = True
-        
-        p1 = ctf.paragraphs[0]
-        p1.text = title
-        p1.font.name = FONT_HEADING
-        p1.font.size = Pt(18)
-        p1.font.bold = True
-        p1.font.color.rgb = COLOR_GRAPHITE
-        
-        p2 = ctf.add_paragraph()
-        p2.text = sub
-        p2.font.name = FONT_HEADING
-        p2.font.size = Pt(11)
-        p2.font.bold = True
-        p2.font.color.rgb = COLOR_CARMIN
-        p2.space_after = Pt(14)
-        
-        p3 = ctf.add_paragraph()
-        p3.text = desc
-        p3.font.name = FONT_BODY
-        p3.font.size = Pt(13)
-        p3.font.color.rgb = COLOR_MUTED
-
-    # =========================================================================
-    # SLIDE 13: ASISTENTE RAG CON IA GENERATIVA (MARCOS ROMÁN)
-    # =========================================================================
-    s13 = prs.slides.add_slide(blank_layout)
-    apply_background(s13)
-    add_header(s13, "12. Asistente RAG con IA (Marcos Román)", 
-               "Inteligencia Artificial fundamentada en el corpus oficial de la CCA",
-               "Script `rag_asistente_cca.py` con base vectorial ChromaDB para responder consultas legales y operativas 24/7.")
-
-    rag_cards = [
-        ("ChromaDB + Embeddings", "RECUPERACIÓN CONTEXTUAL EXACTA", "Indexación de estatutos, reglamentos de arbitraje (Ley 7727) y preguntas frecuentes de la Cámara de Comercio."),
-        ("Transparencia Fiscal", "ARTÍCULO 8 LEY 7092", "El asistente calcula y fundamenta el ahorro deducible del Impuesto sobre la Renta para cuotas de membresía."),
-        ("Datos Consolidados", "SINPE AL +506 8703-0792", "Respuestas precisas con las tarifas oficiales de ₡15.000 / ₡35.000 y el canal de liquidación autorizado.")
-    ]
-    for idx, (title, sub, desc) in enumerate(rag_cards):
-        x = Inches(0.9 + idx * 3.9)
-        c = s13.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, x, Inches(2.3), Inches(3.6), Inches(4.5))
-        c.fill.solid()
-        c.fill.fore_color.rgb = COLOR_CARD_BG
-        c.line.color.rgb = COLOR_CARD_BORDER
-        ctf = c.text_frame
-        ctf.word_wrap = True
-        
-        p1 = ctf.paragraphs[0]
-        p1.text = title
-        p1.font.name = FONT_HEADING
-        p1.font.size = Pt(18)
-        p1.font.bold = True
-        p1.font.color.rgb = COLOR_GRAPHITE
-        
-        p2 = ctf.add_paragraph()
-        p2.text = sub
-        p2.font.name = FONT_HEADING
-        p2.font.size = Pt(11)
-        p2.font.bold = True
-        p2.font.color.rgb = COLOR_CARMIN
-        p2.space_after = Pt(14)
-        
-        p3 = ctf.add_paragraph()
-        p3.text = desc
-        p3.font.name = FONT_BODY
-        p3.font.size = Pt(13)
-        p3.font.color.rgb = COLOR_MUTED
-
-    # =========================================================================
-    # SLIDE 14: PASARELA TRANSACCIONAL SIMULADA (ALLAN ARCE)
-    # =========================================================================
-    s14 = prs.slides.add_slide(blank_layout)
-    apply_background(s14)
-    add_header(s14, "13. Transaccionalidad & Pagos (Allan Arce)", 
-               "Pasarela en `src/lib/pagos.ts` con validación Luhn, anti-replay y 12/12 pruebas",
-               "Simulación realista de alta fidelidad con advertencia académica visible para salvaguarda ética.")
-
-    payment_cards = [
-        ("Validación Estricta", "LUHN Y CELULARES COSTARRICENSES", "Algoritmo de Luhn para tarjetas de crédito y validación de prefijos celulares (6, 7, 8) para transferencias SINPE Móvil."),
-        ("Protección Anti-Replay", "PREVENCIÓN DE FRAUDE", "Bloquea comprobantes bancarios duplicados en almacenamiento local. 12 de 12 pruebas unitarias aprobadas exitosamente."),
-        ("Aprobación en Tesorería", "RADICADO 'CCA-2026-XXXXXX'", "Todo pago aprobado queda en estado 'En Aprobación · Tesorería CCA', simulando la conciliación contable real de la institución.")
-    ]
-    for idx, (title, sub, desc) in enumerate(payment_cards):
-        x = Inches(0.9 + idx * 3.9)
-        c = s14.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, x, Inches(2.3), Inches(3.6), Inches(4.5))
-        c.fill.solid()
-        c.fill.fore_color.rgb = COLOR_CARD_BG
-        c.line.color.rgb = COLOR_CARD_BORDER
-        ctf = c.text_frame
-        ctf.word_wrap = True
-        
-        p1 = ctf.paragraphs[0]
-        p1.text = title
-        p1.font.name = FONT_HEADING
-        p1.font.size = Pt(18)
-        p1.font.bold = True
-        p1.font.color.rgb = COLOR_GRAPHITE
-        
-        p2 = ctf.add_paragraph()
-        p2.text = sub
-        p2.font.name = FONT_HEADING
-        p2.font.size = Pt(11)
-        p2.font.bold = True
-        p2.font.color.rgb = COLOR_CARMIN
-        p2.space_after = Pt(14)
-        
-        p3 = ctf.add_paragraph()
-        p3.text = desc
-        p3.font.name = FONT_BODY
-        p3.font.size = Pt(13)
-        p3.font.color.rgb = COLOR_MUTED
-
-    # =========================================================================
-    # SLIDE 15: EVALUACIÓN CUANTITATIVA Y TELEMETRÍA (SUS & CLARITY)
-    # =========================================================================
-    s15 = prs.slides.add_slide(blank_layout)
-    apply_background(s15)
-    add_header(s15, "14. Evaluación Cuantitativa", 
-               "Los números ratifican el éxito: la usabilidad subió a 89.5 puntos",
-               "Evaluación psicométrica y telemetría de comportamiento comparando el sitio anterior frente a la nueva plataforma.")
-
-    metrics = [
-        ("89.5", "SYSTEM USABILITY SCALE (SUS)", "De un reprobado 48.2 (Grado F) a 89.5 (Grado A Excelente). Valida la claridad del lenguaje, accesibilidad y velocidad."),
-        ("86%", "ÉXITO DIRECTO EN TREEJACK", "Medido en árbol textual puro sobre 3 tareas críticas: los usuarios llegaron al destino sin desvíos."),
-        ("0.8%", "CLICS DE FURIA (RAGE CLICKS)", "En Microsoft Clarity los clics repetidos de frustración cayeron del 18.4% a prácticamente cero.")
-    ]
-    for idx, (num, label, desc) in enumerate(metrics):
-        x = Inches(0.9 + idx * 3.9)
-        c = s15.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, x, Inches(2.3), Inches(3.6), Inches(4.5))
-        c.fill.solid()
-        c.fill.fore_color.rgb = COLOR_CARD_BG
-        c.line.color.rgb = COLOR_CARD_BORDER
-        ctf = c.text_frame
-        ctf.word_wrap = True
-        
-        p1 = ctf.paragraphs[0]
-        p1.text = num
-        p1.font.name = FONT_HEADING
-        p1.font.size = Pt(46)
-        p1.font.bold = True
-        p1.font.color.rgb = COLOR_CARMIN
-        p1.space_after = Pt(4)
-        
-        p2 = ctf.add_paragraph()
-        p2.text = label
-        p2.font.name = FONT_HEADING
-        p2.font.size = Pt(11)
-        p2.font.bold = True
-        p2.font.color.rgb = COLOR_GRAPHITE
-        p2.space_after = Pt(12)
-        
-        p3 = ctf.add_paragraph()
-        p3.text = desc
-        p3.font.name = FONT_BODY
-        p3.font.size = Pt(13)
-        p3.font.color.rgb = COLOR_MUTED
-
-    # =========================================================================
-    # SLIDE 16: CONCLUSIONES Y CIERRE HUMANO
-    # =========================================================================
-    s16 = prs.slides.add_slide(blank_layout)
+    # Slide 16: Conclusiones y cierre
+    s16 = prs.slides.add_slide(blank)
     apply_background(s16)
-    
-    bar_c = s16.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(0.9), Inches(1.1), Inches(0.6), Inches(0.08))
-    bar_c.fill.solid()
-    bar_c.fill.fore_color.rgb = COLOR_CARMIN
-    bar_c.line.fill.background()
 
-    tb16 = s16.shapes.add_textbox(Inches(0.9), Inches(1.4), Inches(11.5), Inches(3.6))
+    bar16 = s16.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(0.9), Inches(0.9), Inches(0.7), Inches(0.06))
+    bar16.fill.solid()
+    bar16.fill.fore_color.rgb = COLOR_CARMIN
+    bar16.line.fill.background()
+
+    tb16 = s16.shapes.add_textbox(Inches(0.9), Inches(1.15), Inches(11.533), Inches(3.8))
     tf16 = tb16.text_frame
     tf16.word_wrap = True
-    
-    p_tag16 = tf16.paragraphs[0]
-    p_tag16.text = "CONCLUSIÓN GENERAL · EQUIPO CONSULTOR EIF-511"
-    p_tag16.font.name = FONT_HEADING
-    p_tag16.font.size = Pt(11)
-    p_tag16.font.bold = True
-    p_tag16.font.color.rgb = COLOR_CARMIN
-    p_tag16.space_after = Pt(14)
-    
-    p_quote = tf16.add_paragraph()
-    p_quote.text = "La Arquitectura de Información no es decorar pantallas.\nEs conectar a quienes producen con quienes necesitan, sin fricción y con orgullo alajuelense."
-    p_quote.font.name = FONT_HEADING
-    p_quote.font.size = Pt(30)
-    p_quote.font.bold = True
-    p_quote.font.color.rgb = COLOR_GRAPHITE
-    p_quote.space_after = Pt(18)
 
-    q_box = s16.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(0.9), Inches(5.3), Inches(11.5), Inches(1.5))
+    p0 = tf16.paragraphs[0]
+    p0.text = "CONCLUSIONES · EQUIPO CONSULTOR DE ARQUITECTURA DE INFORMACIÓN"
+    p0.font.name = FONT_FAMILY
+    p0.font.size = Pt(10)
+    p0.font.bold = True
+    p0.font.color.rgb = COLOR_CARMIN
+    p0.space_after = Pt(10)
+
+    p1 = tf16.add_paragraph()
+    p1.text = "La Arquitectura de Información como activo estratégico institucional"
+    p1.font.name = FONT_FAMILY
+    p1.font.size = Pt(28)
+    p1.font.bold = True
+    p1.font.color.rgb = COLOR_GRAPHITE
+    p1.space_after = Pt(16)
+
+    insights = [
+        "1. La credibilidad digital impacta la representatividad gremial: Si un hub empresarial proyecta desorden, las empresas no se afilian y la institución pierde relevancia e ingresos.",
+        "2. Polijerarquía y vocabularios controlados garantizan el orden: Diseñar según los modelos mentales del usuario y blindar los esquemas de datos evita el colapso futuro de la plataforma.",
+        "3. La tecnología adquiere sentido cuando la información está ordenada: Algolia, Strapi y los asistentes RAG solo entregan valor real sobre una base estructural sólida y rigurosa.",
+    ]
+    for ins in insights:
+        p_ins = tf16.add_paragraph()
+        p_ins.text = ins
+        p_ins.font.name = FONT_FAMILY
+        p_ins.font.size = Pt(13)
+        p_ins.font.color.rgb = COLOR_MUTED
+        p_ins.space_after = Pt(8)
+
+    q_box = s16.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(0.9), Inches(5.4), Inches(11.533), Inches(1.3))
     q_box.fill.solid()
     q_box.fill.fore_color.rgb = COLOR_CARD_BG
     q_box.line.color.rgb = COLOR_CARD_BORDER
     q_tf = q_box.text_frame
     q_tf.word_wrap = True
-    
-    p_q1 = q_tf.paragraphs[0]
-    p_q1.text = "¡Muchas Gracias! Espacio Abierto para Preguntas y Retroalimentación"
-    p_q1.font.name = FONT_HEADING
-    p_q1.font.size = Pt(16)
-    p_q1.font.bold = True
-    p_q1.font.color.rgb = COLOR_GRAPHITE
-    
-    p_q2 = q_tf.add_paragraph()
-    p_q2.text = "Prototipo interactivo navegable desplegado en vivo · Repositorio: github.com/marcosromanv00/class-arqui-2026-proyecto-final"
-    p_q2.font.name = FONT_BODY
-    p_q2.font.size = Pt(12)
-    p_q2.font.color.rgb = COLOR_MUTED
+    q_tf.margin_left = q_tf.margin_right = Inches(0.4)
+    q_tf.margin_top = q_tf.margin_bottom = Inches(0.2)
 
-    # Guardar archivo
+    pq1 = q_tf.paragraphs[0]
+    pq1.text = "¡Muchas gracias! Espacio abierto para preguntas y comentarios."
+    pq1.font.name = FONT_FAMILY
+    pq1.font.size = Pt(15)
+    pq1.font.bold = True
+    pq1.font.color.rgb = COLOR_GRAPHITE
+
+    pq2 = q_tf.add_paragraph()
+    pq2.text = "Proyecto Integrador EIF-511 · Prototipo funcional desplegado y código reproducible en el repositorio del curso."
+    pq2.font.name = FONT_FAMILY
+    pq2.font.size = Pt(11.5)
+    pq2.font.color.rgb = COLOR_MUTED
+
+    # Guardar local y copias
     prs.save(str(PPTX_OUT_LOCAL))
     print(f"Presentación generada exitosamente en: {PPTX_OUT_LOCAL}")
-    
-    # Copiar a Drive
-    shutil.copyfile(str(PPTX_OUT_LOCAL), str(PPTX_OUT_DRIVE_ROOT))
-    shutil.copyfile(str(PPTX_OUT_LOCAL), str(PPTX_OUT_DRIVE_MARCOS))
-    print(f"Copiado a Drive: {PPTX_OUT_DRIVE_ROOT}")
+
+    for target in [
+        PPTX_OUT_DRIVE_ROOT,
+        PPTX_OUT_DRIVE_MARCOS,
+        PPTX_OUT_DRIVE_EMANUEL,
+        PPTX_OUT_DRIVE_ALLAN,
+    ]:
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(str(PPTX_OUT_LOCAL), str(target))
+        print(f"Copiado a: {target}")
+
 
 if __name__ == "__main__":
-    create_presentation()
+    build_deck()

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, Phone, MapPin, ArrowUp, MessageSquare } from "lucide-react";
 
 export function Footer() {
@@ -11,40 +12,19 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-[#fafaf8] text-ink pt-14 pb-10 border-t border-border-strong">
+    <footer className="bg-surface-muted/50 text-ink pt-14 pb-10 border-t border-border-strong">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Cabecera del pie: Emblema Neoclásico y Propósito Gremial */}
+        {/* Cabecera del pie: Emblema Oficial y Propósito Gremial */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between pb-10 border-b border-border gap-6">
-          <div className="flex items-center gap-3.5">
-            <div className="w-10 h-10 rounded-full border border-brand/20 bg-brand/5 flex items-center justify-center text-brand shrink-0">
-              <svg
-                className="w-5 h-5"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M3 21h18" />
-                <path d="M4 18h16" />
-                <path d="M6 18V9" />
-                <path d="M10 18V9" />
-                <path d="M14 18V9" />
-                <path d="M18 18V9" />
-                <path d="M3 9h18L12 3 3 9z" />
-              </svg>
-            </div>
-            <div className="border-l border-border pl-3.5">
-              <p className="font-serif font-semibold text-lg tracking-tight text-ink">
-                Cámara de Comercio de Alajuela
-              </p>
-              <p className="text-xs text-text-muted mt-0.5">
-                Organización Gremial del Sector Productivo · Fundada en 1983
-              </p>
-            </div>
-          </div>
+          <Link href="/" className="shrink-0" aria-label="Cámara de Comercio de Alajuela - Inicio">
+            <Image
+              src="/Logo-camara-hi.png"
+              alt="Cámara de Comercio de Alajuela"
+              width={265}
+              height={56}
+              className="h-14 w-auto object-contain hover:opacity-90 transition-opacity"
+            />
+          </Link>
 
           <p className="text-xs sm:text-sm text-ink-muted max-w-md leading-relaxed">
             Representación gremial, certeza jurídica y desarrollo económico para el comercio,
