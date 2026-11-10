@@ -24,6 +24,10 @@ export const metadata: Metadata = {
   title: "Cámara de Comercio de Alajuela | Representación Empresarial y Competitividad",
   description:
     "Sitio oficial de la Cámara de Comercio de Alajuela. Respaldamos a más de 800 empresas en los 16 cantones de la provincia: defensa gremial, arbitraje mercantil, trámites municipales, bolsa de empleo y directorio verificado.",
+  icons: {
+    icon: "/logo_cca.png",
+    apple: "/logo_cca.png",
+  },
 };
 
 export default function RootLayout({

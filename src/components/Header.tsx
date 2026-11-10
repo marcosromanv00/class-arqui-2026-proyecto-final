@@ -29,17 +29,17 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-surface/95 backdrop-blur-md border-b border-border">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 gap-4" ref={navRef}>
-          {/* Logo Neoclásico Geométrico de Línea Fina */}
-          <Link href="/" className="flex items-center gap-3 group shrink-0">
-            <div className="w-10 h-10 rounded-full border border-ink/20 flex items-center justify-center text-ink group-hover:border-brand group-hover:text-brand transition-colors bg-surface-muted/50">
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="M3 21h18" /><path d="M4 18h16" /><path d="M6 18V9" /><path d="M10 18V9" /><path d="M14 18V9" /><path d="M18 18V9" /><path d="M3 9h18L12 3 3 9z" />
-              </svg>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-semibold text-sm tracking-tight text-ink uppercase leading-none">Cámara de Comercio</span>
-              <span className="text-[11px] text-text-muted tracking-wider uppercase mt-1 leading-none">Alajuela · 1983</span>
-            </div>
+          {/* Logo Oficial de la Cámara de Comercio de Alajuela */}
+          <Link
+            href="/"
+            className="flex items-center group shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 rounded"
+            aria-label="Cámara de Comercio de Alajuela - Inicio"
+          >
+            <img
+              src="/Logo-camara-hi.png"
+              alt="Cámara de Comercio de Alajuela"
+              className="h-12 w-auto object-contain group-hover:opacity-95 transition-opacity"
+            />
           </Link>
 
           {/* Navegación Validada en Optimal Workshop */}

@@ -70,18 +70,18 @@ function FacetChips({
  * variant="page": dentro de /directorio (la página ya tiene título); lee ?q= de la URL.
  */
 export function DirectorySection({ variant = "home" }: { variant?: "home" | "page" }) {
-  const [searchQuery, setSearchQuery] = useState("");
+  // Consulta inicial desde la URL (/directorio?q=...), enviada por el buscador del Hero
+  const [searchQuery, setSearchQuery] = useState(() => {
+    if (typeof window !== "undefined") {
+      return new URLSearchParams(window.location.search).get("q") ?? "";
+    }
+    return "";
+  });
   const [filters, setFilters] = useState<Filters>({});
   const [visible, setVisible] = useState(PAGE_SIZE);
   // Render inicial con datos locales (171 registros); Algolia toma el control al montar
   const [result, setResult] = useState<SearchResult>(() => searchLocal("", {}));
   const [correccion, setCorreccion] = useState<Correccion | null>(null);
-
-  // Consulta inicial desde la URL (/directorio?q=...), enviada por el buscador del Hero
-  useEffect(() => {
-    const q = new URLSearchParams(window.location.search).get("q");
-    if (q) setSearchQuery(q);
-  }, []);
 
   // Búsquedas enviadas por evento cuando el directorio está en la misma página
   useEffect(() => {
