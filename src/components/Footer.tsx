@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, Phone, MapPin, ArrowUp, MessageSquare } from "lucide-react";
 
 export function Footer() {
@@ -16,9 +17,11 @@ export function Footer() {
         {/* Cabecera del pie: Emblema Oficial y Propósito Gremial */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between pb-10 border-b border-border gap-6">
           <Link href="/" className="shrink-0" aria-label="Cámara de Comercio de Alajuela - Inicio">
-            <img
+            <Image
               src="/Logo-camara-hi.png"
               alt="Cámara de Comercio de Alajuela"
+              width={265}
+              height={56}
               className="h-14 w-auto object-contain hover:opacity-90 transition-opacity"
             />
           </Link>

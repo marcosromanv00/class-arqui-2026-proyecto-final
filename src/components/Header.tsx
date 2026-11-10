@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { ChevronDown, ArrowUpRight, Menu, X, ArrowRight } from "lucide-react";
 import { OPTIMAL_NAV } from "@/lib/nav";
@@ -35,9 +36,12 @@ export function Header() {
             className="flex items-center group shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 rounded"
             aria-label="Cámara de Comercio de Alajuela - Inicio"
           >
-            <img
+            <Image
               src="/Logo-camara-hi.png"
               alt="Cámara de Comercio de Alajuela"
+              width={227}
+              height={48}
+              priority
               className="h-12 w-auto object-contain group-hover:opacity-95 transition-opacity"
             />
           </Link>

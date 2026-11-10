@@ -39,6 +39,7 @@ export default function RootLayout({
     <html
       lang="es"
       suppressHydrationWarning
+      data-scroll-behavior="smooth"
       className={`scroll-smooth ${plusJakartaSans.variable} ${newsreader.variable}`}
     >
       <body
