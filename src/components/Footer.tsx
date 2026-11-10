@@ -12,7 +12,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-[#fafaf8] text-ink pt-14 pb-10 border-t border-border-strong">
+    <footer className="bg-surface-muted/50 text-ink pt-14 pb-10 border-t border-border-strong">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Cabecera del pie: Emblema Oficial y Propósito Gremial */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between pb-10 border-b border-border gap-6">
